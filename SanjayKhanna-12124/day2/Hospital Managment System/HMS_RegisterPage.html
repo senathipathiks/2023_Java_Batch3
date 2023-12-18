@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register Page</title>
+        <Style>
+        body{
+            padding-left: 400px;
+            padding-right: 400px;
+            padding-top: 50px;
+            color: rgb(2, 2, 2);
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-7RLYuxVfa4_kOIj5GdTQo4p3TZuO2hOa1A&usqp=CAU');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            font-size: larger;
+        
+        }
+        table{
+            border: 10px solid gray;
+            font-size: x-large;
+            padding: 20px;
+        }
+        .submit{
+            color: rgb(18, 21, 21);
+        }
+        .submit:hover{
+            color: orangered;
+            background-color: aqua
+        }
+    </Style>
+    </head>
+    <body>
+        <p><h1><b><u>Register</u></b></h1></p>
+       <table>
+           <tr>
+            <td>FullName : </td>
+            <td><input type="text" placeholder="Enter your FullName" required></td>
+           </tr>
+           <tr>
+            <td>DOB :</td>
+            <td><input type="date" placeholder="Enter your password" required></td>
+           </tr>
+           <tr>
+            <td> Gender : </td>
+            <td>
+                <input type="radio">Male
+            <input type="radio">Female
+            </td>
+           </tr>
+           <tr>
+            <td>Email :</td>
+            <td><input type="email" placeholder="Enter your email id" required></td>
+           </tr>
+           <tr>
+            <td>Password :</td>
+            <td><input type="password" placeholder="Enter your password" required></td>
+           </tr>
+           <tr>
+            <td>Reenter Password :</td>
+            <td><input type="password" placeholder="Enter your password" required></td>
+           </tr>
+    </table>
+        <input type="submit" placeholder="Register" class="submit">
+    </body>
+</html>

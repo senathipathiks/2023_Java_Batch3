@@ -1,0 +1,19 @@
+body{
+    color: rgb(84, 84, 178);
+    text-align: center;
+}
+h1{
+    color: red;
+    border: 3px solid gold;
+    border-width: 40px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: aqua;
+}
+h6{
+    color: rgb(135, 125, 125);
+    font-size: large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
