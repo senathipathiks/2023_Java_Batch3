@@ -4,48 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration</title>
-    <style>
-      body{
-        color: rgb(64, 255, 47);
-      }
-      .center {
-        margin: auto;
-        width: 60%;
-      }
-      .center > h1 {
-        text-align: center;
-      }
-    </style>
+    <link rel="stylesheet" href="./loginStyle.css">
   </head>
   <body>
+    <div class="container">
     <section class="center">
       <h1>Registration</h1>
-      <form action="">
-        <table>
-            <tr>
+      <form action="" class="form">
+        <table class="tab">
+            <tr class="row">
                 <td><label for="">UserName : </label></td>
                 <td> <input type="text" placeholder="username" /></td>
             </tr>
-            <tr>
+            <tr class="row">
                 <td><label for="">mobile number : </label></td>
                 <td><input type="tel" placeholder="number" /></td>
             </tr>
-            <tr>
+            <tr class="row">
                 <td><label for="">Password : </label></td>
                 <td><input type="password" placeholder="password" /></td>
             </tr>
-            <tr>
+            <tr class="row">
                 <td><label for="">Re-enter Password : </label></td>
                 <td> <input type="password" placeholder="password" /></td>
             </tr>
-            <tr></tr>
-            <tr>
+            <tr class="row">
                 <td colspan="2" align="center">
-                    <input type="submit" value="register" />
+                    <input class= "button" type="submit" value="register" />
                 </td>
             </tr>
         </table>
       </form>
     </section>
+  </div>
   </body>
 </html>
