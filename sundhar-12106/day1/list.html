@@ -4,17 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>list</title>
+    <style>
+      body {
+        /* height: 100vh; */
+        background-image: url(./newhp.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* background-size: 100%; */
+      }
+      .container {
+        height: 95vh;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .center > ul {
+        text-decoration: none;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      .center > ul > li{
+        margin-bottom: 20px;
+      }
+      .reg-link > a {
+        text-decoration: none;
+        color: rgb(62, 241, 71);
+      }
+      .reg-link > a:hover {
+        background-color: white;
+        color: #2ec3fe;
+      }
+    </style>
   </head>
   <body>
-    <ol>
-      <li>
-        <a href="./Registration.html" target="display">Registration</a>
-      </li>
-      <li><a href="./login.html" target="display">login</a></li>
-      <li>
-        <a href="./userDetails.html" target="display">user_details</a>
-      </li>
-      <li><a href="./home.html" target="display">home_page</a></li>
-    </ol>
+    <div class="container">
+      <aside class="center">
+        <ul>
+          <li class="reg-link">
+            <a href="./Registration.html" target="display">Registration</a>
+          </li>
+          <li class="reg-link">
+            <a href="./login.html" target="display">login</a>
+          </li>
+          <li class="reg-link">
+            <a href="./userDetails.html" target="display">user_details</a>
+          </li>
+          <li class="reg-link">
+            <a href="./home.html" target="display">home_page</a>
+          </li>
+        </ul>
+      </aside>
+    </div>
   </body>
 </html>
