@@ -1,0 +1,19 @@
+h1{
+    color:blue;
+    font-size: xx-large;
+    border: 2px solid green;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+
+b{
+    color: red;
+    text-align: justify;
+    
+}
+body{
+    
+    background-image: url(https://i.pinimg.com/originals/da/7a/0a/da7a0abf272ae889f7285f56bca1f7f4.jpg);
+}
