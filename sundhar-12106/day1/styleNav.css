@@ -51,6 +51,9 @@ body{
     color: #2EFE2E ;
 }
 .nav-section > .inner-nav > ul > a :hover{
+    padding: 4px;
+    border: 1px solid #2EFE2E;
+    border-radius: 30px;
    color: rgb(97, 250, 255);
 }
 .nav-section > .inner-nav > ul > a >li{
