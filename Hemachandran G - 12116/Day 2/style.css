@@ -1,0 +1,16 @@
+h1{
+    color: red;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    text-align: center;
+    border: 3px solid rgb(133, 54, 8);
+    cursor: pointer;
+}
+h2{
+    color: rgb(14, 109, 109);
+    text-align: center;
+    cursor: context-menu;
+}
+
+body{
+    background-color: bisque;
+}

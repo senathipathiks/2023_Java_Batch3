@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>Chess Pattern</title> 
+
+    <!-- The repeating-linear-gradient() CSS function creates repeating linear gradients. 
+        It is similar to linear-gradient() and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container. -->
+
+	<style> 
+		.heram { 
+			position: fixed; 
+			 top: 25%; 
+			left: 25%; 
+			width: 23%; 
+			height: 50%; 
+            border: 3px solid black;
+            
+		} 
+
+        /* the gradient starts from bottom rigth and end with 
+        top left, positioned in 0deg , color starts from black and end with white */
+		.heram::before { 
+			content: ""; 
+			position: absolute; 
+			width: 100%; 
+			height: 100%; 
+			background: repeating-linear-gradient( 
+					0deg,#000 0, #000 40px, 
+					#fff 40px, #fff 80px); 
+                   
+		} 
+                /* the gradient starts from bottom rigth and end with 
+        top left, positioned in 90deg , color starts from black and end with white */
+
+		.heram::after { 
+			content: ""; 
+			position: absolute; 
+			width: 100%; 
+			height: 100%; 
+			background: repeating-linear-gradient( 
+				90deg, #000 0, #000 40px, 
+				#fff 40px, #fff 80px); 
+			mix-blend-mode: difference; 
+		} 
+	</style> 
+</head> 
+
+<body> 
+	<div class="heram"></div> 
+</body> 
+
+</html> 
