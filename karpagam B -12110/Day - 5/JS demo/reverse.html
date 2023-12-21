@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse of a number</title>
+</head>
+
+<body>
+    <!-- <script>
+        let i=123; var res=0;
+    while(i>0)
+      {
+        rem=i%10;
+        res=res*10+rem; //32 //320
+        i=Math.floor(i/10); //1  //
+      }
+       document.write(res);
+    </script> -->
+    <script>
+        let n=123;
+        var reverse=0;
+        // let remainder;
+        while(n>0){
+            remainder=n%10;
+            reverse=reverse*10+remainder;
+            n=Math.floor(n/10);
+         }
+        document.write("reverse is:"+reverse);
+            
+    
+
+    </script>
+    
+</body>
+</html>

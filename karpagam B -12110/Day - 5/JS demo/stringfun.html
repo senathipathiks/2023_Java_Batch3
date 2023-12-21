@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var msg="This is my javascript code";
+
+        document.writeln(msg+"<br>");
+        document.writeln(msg.substring(2)+"<br>");
+        document.writeln(msg.substring(2,5)+"<br>");
+        document.writeln(msg.substr(2,5)+"<br>");
+        document.writeln(msg.slice(2,5)+"<br>");
+        document.writeln(msg.indexOf('i')+"<br>"); // index of first occurence of i
+        document.writeln(msg.indexOf('i',3)+"<br>"); // starting from the third position to find the occurence
+        document.writeln(msg.lastIndexOf('i')+"<br>");
+        document.writeln(msg.charAt(3)+"<br>"); //3rd space after letter will displayed
+        var arr=msg.split(" "); //consider space as to divide
+        document.writeln(arr[1]+"<br>");
+
+</script>
+</body>
+</html>
