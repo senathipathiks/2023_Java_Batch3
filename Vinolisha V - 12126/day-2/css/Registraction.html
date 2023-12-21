@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        .reg{
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        body{
+            background-color: #eee;
+            display: flex;
+            font-family: sans-serif;
+        }
+         .container{
+            margin-top: 17px;
+            margin-left: 450px;
+           max-width: 50px;
+         }
+         form{
+            width: 400px;
+            height: 550px;
+            padding: 20px;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 5px 16px rgba(0, 0, 0, 3)
+         }
+         .form-control{
+            padding-top:15px;
+         }
+         .form-group{
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 5px 20px;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 2)
+         }
+         .form-group:hover{
+            opacity: .8;
+         }
+         .check{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 15px;
+         }
+
+         .btn{
+            text-align: center;
+            width: 140px;
+            outline: none;
+            background-color: rgb(19, 91, 173);
+            margin-top: 20px;
+            margin-left: 150px;
+            color: white;
+            font-size: 20px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 2)
+         }
+         .btn:hover{
+            opacity: .7;
+         }
+         a{
+            
+            color: red;
+         }
+         .new{
+            margin-top: 0px;
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h1 class="reg">Registration Form</h1>
+
+            <div class="form-control">
+                <lable for="user name">User Name</lable>
+                <input type="text" class="form-group" placeholder="First Name" required><br><br>
+                <input type="text" class="form-group" placeholder="Last Name" required>
+            </div>
+
+            <div class="form-control">
+                <td><lable for="Phone Number">Phone Number</lable></td>
+                <input type="number" class="form-group" placeholder="phone no" required> 
+            </div>
+
+            <div class="form-control">
+                <lable for="gender">Sex</lable>
+                </div>
+
+                <div class="form-control">
+                <lable for="male">Male</lable>
+                <input type="radio" name="gender" id="male" value="male" checked>
+                <lable for="femlae">Female</lable>
+                <input type="radio" name="gender"id="female" value="female" checked> 
+            </div>
+
+           <div class="form-control">
+            <lable for="password">Password</lable>
+            <input type="password" class="form-group" placeholder="Enter Password" required>
+           </div>
+
+            <div class="form-control">
+            <label for="Confirm Password">Re-Enter Password</label>
+            <input type="password" class="form-group" placeholder="Enter Correct Password" required>
+            </div>
+
+            <div class="check">
+                <lable>
+                <input type="checkbox" checked="checked" name="remember">I Agree this 
+                </lable>
+                <a href="./Login1.html">
+                <input type="Register" class="btn" value="Register">
+            </a>
+               
+                </div>
+
+                <div class="new">
+                <a href="./Login1.html">Sign-In-Here</a>
+
+                </div>
+           
+        </form>
+    </div>
+</body>
+</html>

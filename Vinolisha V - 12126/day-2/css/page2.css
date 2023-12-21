@@ -1,0 +1,9 @@
+h1{
+    background-color: bisque;
+    color: blue;
+    font-size: xx-large;
+    border: 2px solid rgb(14, 13, 13); 
+    text-align: center; 
+    border-radius: 20px;
+    cursor: pointer;
+}

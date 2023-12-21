@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .port{
+            position: relative;
+            width: 30%;
+            height: 100vh;
+            background: #fdfeff;
+        }
+        .logo{
+            width: 300px;
+            height: 250px;
+        }
+        nav{
+            display: flex;
+            width: 500px;
+            margin: auto;
+            padding: 30px 0;
+            align-items: center;
+            justify-content: space-between;
+        }
+       
+        nav ul{
+            display: flex;
+             list-style:none ;
+            margin: 0;
+             padding: 0;
+        }
+        nav li{
+            margin-right: 30px;
+            display: flex;
+            margin: 10px 20px;
+            margin-top: -50px;
+            margin-bottom: 100px;
+            text-align: center;  
+            font-weight: bolder;
+        }
+        
+    
+        nav ul li a{
+            text-decoration: none;
+            color: orange;
+           
+            
+        }
+        nav ul li a:hover{
+            color: red;
+        }
+        .detel{
+            margin-left: 10%;
+            margin-top: 5%;
+        }
+        .detel h1{
+            font-size: 50px;
+            color:#212121;
+            margin-bottom: 19px;
+        }
+     
+        span{
+            color: orange;
+        }
+        .detel p{
+            color: #555;
+            line-height: 22px;
+            text-align: center;
+        }
+        .detel a{
+            background-color: #212121;
+            padding: 10px 18px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #fff;
+            display: inline-block;
+            margin: 30px 0;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+        .detel a:hover{
+            opacity: .7;
+        }
+        .images{
+            height: 50%;
+            width: 80%;
+            position: absolute;
+            bottom: 50px;
+            left: 100px;
+            margin-left: 100px;
+        }
+        .shape{
+            border-radius: 200px;
+            height: 350px;
+            position: absolute;
+            left: 100%;
+            
+            bottom: 100px;
+            transform: translateX(-50%);
+            transition: bottom 1s, left ls;
+            margin-left: 500px;
+        }
+        .images.img{
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%);
+            transition: bottom 1s, left 1s;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="port">
+        <nav>
+            <img src="./v-logo.png" class="logo" >
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">PORTFOLIO</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">HIRE ME</a></li>
+            </ul>
+
+        </nav>
+        <div class="detel">
+        <h1>I,m Vino<span>Vinolisha</span></h1>
+        <p>This is my Official portfolio Website to shows all
+            <br>Details and work experience web development
+        </p>
+        <p><a href="#">DOWNLOAD CV</a></p>
+        </div>
+        <div class="images">
+            <img src="./InShot_20231220_184356417.jpg" class="shape">
+           
+        </div>
+    </div>
+</body>
+</html>
