@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="Enter Username" onfocus="displayOnFocus()" onblur="displayOnBlur()" ><br><br>
+        <input type="password" placeholder="Enter password" onblur="displayOnBlur()"><br><br>
+        <button type="submit" name="submit" onclick="helloWorld() " style="padding: 14px 28px;">Submit</button>                   <!--Event and Function call-->
+    </form>
+    <script>
+        function helloWorld(){                              //Function Definition
+            alert('Hello, This is Sanjay Khanna S');
+        }
+        function displayOnBlur(){
+            alert("Out of Focus")
+        }
+        function displayOnFocus(){
+            alert('On Focus')
+        }
+    </script>
+</body>
+</html>
