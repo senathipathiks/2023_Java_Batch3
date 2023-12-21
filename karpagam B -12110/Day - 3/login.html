@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        .container {font-family: Arial, Helvetica, sans-serif;
+        border:4px solid black;
+        text-align: center;
+        position: absolute;
+        top: 25%;
+        left: 37%;
+        padding: 2%;
+        background-color: rgb(10, 10, 10);
+        color: white;
+        border-radius: 30px;
+
+        }
+        input [type=text] , input [type= password]{
+            width: 50%;
+            padding-top: 10%,9%;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: content-box;
+            
+        }
+        button {
+            background-color: #DC143C;
+            color: white;
+            padding: 10px 10px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 20%;
+        }
+        button:hover{
+            opacity:0.9;;
+        }
+        a{
+            text-decoration: none;
+
+        }
+        a:hover{
+            color : red;
+        }
+       
+        body{
+            background-color:rgb(238, 211, 247);
+        }
+</style>
+</head>
+    
+<body>
+    <form action="" >
+        <div class="container">
+            <center><h1  style="color:rgb(247, 233, 236)"><i>ALPHA THEME PARK </i></h1></center>
+
+            <center><h1  style="color:crimson"><i>USER LOGIN </i></h1></center>
+            <hr>
+            <br><br><label for="uname">USERNAME</label>
+            <input type="text" placeholder="Enter Username" name="uname" required><br>
+             <br>
+            <label for="psw">PASSWORD</label>
+            <input type="password" placeholder="Enter Password" name="psw" required><br>
+            <br>
+            <a href="userdetails.html">
+            <button type="submit">Login</button></a>
+            <label> 
+                <a href="Register.html" >New user Register Here!</a>
+            </label>
+          </div>
+
+        
+    </form>
+
+</body>
+</html>
