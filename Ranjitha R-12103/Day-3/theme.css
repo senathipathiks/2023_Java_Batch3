@@ -1,0 +1,101 @@
+/* style.css */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Times New Roman', Times, serif;
+    background-image: url(https://funtripswithkids.com/wp-content/uploads/2021/03/Navrh-bez-nazvu-65.png);
+    background-repeat: no-repeat;
+    background-position:absolute;
+    background-size: 2000px;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ li {
+	display: inline-block;
+	margin-right: 20px;
+    color: #fff;
+}
+
+
+
+.body1 {
+	background-image: url('https://i.imgur.com/7Wd6z6n.jpg');
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	padding: 100px;
+	text-align: center;
+    padding-left: 50px;
+    padding-top: 2px;
+}
+
+.body1 h2 {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+.body1 p {
+	font-size: 24px;
+	margin-bottom: 40px;
+}
+
+.button {
+	background-color: red;
+	color: #fff;
+	display: inline-block;
+	font-size: 18px;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+
+.button:hover {
+	background-color: #fff;
+	color: #f00;
+}
+
+.themepark {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 50px;
+    text-align: center;
+    padding-left: 200px;
+    padding-top: 0px;
+}
+
+.theme{
+	background-color:rosybrown;
+	border-radius: 5px;
+	margin: 20px;
+	padding: 20px;
+	text-align: center;
+	width: 300px;
+
+}
+.theme h3 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.theme p {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
