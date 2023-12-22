@@ -1,0 +1,24 @@
+<html>
+    <head>
+<script>
+    function convertFirstAndLastLettersToUpperCase(str) {
+  return str.split(' ').map(word => {
+    if (word.length === 1) {
+      return word.toUpperCase();
+    }
+    return word.charAt(0).toUpperCase() + word.slice(1, -1) + word.slice(-1).toUpperCase();
+  }).join(' ');
+}
+
+</script>
+</head>
+<body>
+    <script>
+    // Log the result of calling uppercase with the input string "the quick brown fox" to the console
+document.write(convertFirstAndLastLettersToUpperCase("the quick brown fox")); 
+</script>
+
+</body>
+
+
+</html>

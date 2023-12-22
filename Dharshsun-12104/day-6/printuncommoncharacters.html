@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script>
+            const findUncommon = (str1 = '', str2 = '') => {
+  const res = [];
+  for (let i = 0; i < str1.length; i++) {
+    if (! (str2.includes(str1[i]))) {
+      res.push(str1[i])
+    }
+  }
+  for (let i = 0; i < str2.length; i++) {
+    if (! (str1.includes(str2[i]))) {
+      res.push(str2[i])
+    }
+  }
+  return res.join("");
+};
+</script>
+</head>
+<body>
+    <script>
+const a = "hello";
+const b = "world";
+document.write(a+"<br/>");
+document.write(b+"<br/>"+"<br/>"+"<br/>");
+document.write(findUncommon(a, b)); // Output: "heowrd"
+
+        </script>
+    </body>
+</html>
