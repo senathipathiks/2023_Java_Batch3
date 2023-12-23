@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>validae E-Mail</title>
+    <script>
+       function validateEmail(email) {
+        const emailPattern = /^ [a-zA-Z0-9._%+-]+@ [a-zA-Z0-9.-]+\. [a-zA-Z] {2,}$/;
+        return emailPattern.test(email);
+        }
+    </script>
+</head>
+<body>
+    <script>
+        document.write(validateEmail("ranjithaclg@gmail.com")); 
+        document.write("<br>"+validateEmail("ram@gmail,com")); 
+        document.write("<br>"+validateEmail("priya@.com")); 
+
+    </script>
+</body>
+</html>
