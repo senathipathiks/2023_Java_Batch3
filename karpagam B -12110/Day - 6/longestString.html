@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Longest string</title>
+    <script>
+        function Longest_word(str)
+          {
+        var string1 =str.match(/\w[a-z]{0,}/gi);
+        var output = string1[0];
+
+         for(var k = 1 ; k< string1.length ; k++)
+         {
+          if(output.length < string1[k].length)
+         {
+         output= string1[k];
+         } 
+         }
+         return output;
+        }
+    </script>
+</head>
+<body>
+    <script>
+     document.write(Longest_word('I love India'));
+    </script>
+</body>
+</html>
