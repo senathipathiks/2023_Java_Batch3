@@ -6,10 +6,32 @@
     <title>unCommon</title>
   </head>
   <body>
+
+    <input type="text" id="inp11" /><br /><br />
+    <input type="text" id="inp12" /><br /><br />
+    <button id="btn">validate</button>
+
     <script>
-      function uncom(a, b) {
-        let one = new Set(a);
-        let two = new Set(b);
+      let btn = document.getElementById("btn");
+      btn.addEventListener("click", (e) => {
+        let inp1 = document.getElementById("inp11").value;
+        console.log(inp1);
+        let inp2 = document.getElementById("inp12").value;
+        console.log(inp2);
+        let c = uncom(inp1, inp2);
+        document.writeln("<h1>the uncommon characters are :</h1> <br>");
+        if (c.size != 0) {
+          c.forEach((e) => {
+            document.writeln(e + "<br>");
+          });
+        } else {
+          document.writeln("<h1>all the given characters are matching</h1>");
+        }
+      });
+
+      function uncom(inp1, inp2) {
+        let one = new Set(inp1);
+        let two = new Set(inp2);
         let res = new Set();
         one.forEach((e) => {
           if (!two.has(e)) {
@@ -23,21 +45,6 @@
           }
         });
         return res;
-      }
-      // console.log(uncom("sathish","sundhar"));
-      var c = uncom("java", "java");
-    //   console.log(typeof(c));
-    c.forEach((e) => {
-          console.log("hello");
-          document.writeln(e + "<br/>");
-        });
-
-      if (c != null) {
-        c.forEach((e) => {
-          console.log("hello");
-          document.writeln(e + "<br/>");
-        });} else {
-        document.writeln("all the given characters are matching");
       }
     </script>
   </body>
