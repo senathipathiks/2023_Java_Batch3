@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>unCommon</title>
+  </head>
+  <body>
+    <script>
+      function uncom(a, b) {
+        let one = new Set(a);
+        let two = new Set(b);
+        let res = new Set();
+        one.forEach((e) => {
+          if (!two.has(e)) {
+            res.add(e);
+          }
+        });
+
+        two.forEach((e) => {
+          if (!one.has(e)) {
+            res.add(e);
+          }
+        });
+        return res;
+      }
+      // console.log(uncom("sathish","sundhar"));
+      var c = uncom("java", "java");
+    //   console.log(typeof(c));
+    c.forEach((e) => {
+          console.log("hello");
+          document.writeln(e + "<br/>");
+        });
+
+      if (c != null) {
+        c.forEach((e) => {
+          console.log("hello");
+          document.writeln(e + "<br/>");
+        });} else {
+        document.writeln("all the given characters are matching");
+      }
+    </script>
+  </body>
+</html>

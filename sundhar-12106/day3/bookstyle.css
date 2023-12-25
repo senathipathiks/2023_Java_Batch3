@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://cdn.pixabay.com/photo/2015/09/25/20/48/sunset-958145_1280.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.container > .center{
+    background-color: white;
+   height: 300px;
+   width: 300px;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.container > .center > h1{
+    text-align: center;
+    color: #ecad00;
+}
+.button{
+    height: 25px;
+    width: 200px;
+    /* background-color: #2EFE2E;*/
+     background-image: linear-gradient( 45deg,#ecad00,#fffc30 );
+    background-repeat: no-repeat; 
+    color: black;
+    border-style: none;
+    border-radius: 10px;
+    font-size: 1em;
+}
+.button:hover{
+    /* background-color: white; */
+    border: 1px solid #fffc30;
+    color: white;
+}
+.reg-link > a{
+    text-decoration: none;
+    color: rgb(62, 155, 241);
+    
+}
+.reg-link > a:hover{
+
+    background-color: white;
+    color: #fffc30;
+}
+.tab {
+    border-collapse:separate; 
+    border-spacing: 0 1em;
+  }
+  .row > td > input{
+    border-style: none;
+    border-bottom: 1px solid;
+  }
