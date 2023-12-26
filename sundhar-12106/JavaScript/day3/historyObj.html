@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>historyObj</title>
+</head>
+<body>
+    <form>
+        <button onclick=goBack()>Back </button>
+        <button onclick=goForward()>Forward </button>
+    </form>
+    
+    <script>
+        function goBack()
+        {
+            window.history.back();
+        }
+        function goForward()
+        {
+            window.history.forward();
+        }
+    </script>
+
+</body>
+</html>
