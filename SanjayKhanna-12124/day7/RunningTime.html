@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Time</title>
+</head>
+<body>
+    <div id="timer"></div>
+    <script>
+        window.onload=func();
+        function func(){
+            var today = new Date();
+            var hour = today.getHours();
+            var min = today.getMinutes();
+            var sec = today.getSeconds();
+            var milSec = today.getMilliseconds();
+            document.getElementById("timer").innerHTML="<h2> Time : "+hour+":"+min+":"+sec+":"+milSec+"</h2>";
+            setTimeout(()=>{func()},1000);
+        }
+    </script>
+</body>
+</html>

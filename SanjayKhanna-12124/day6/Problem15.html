@@ -15,9 +15,9 @@
    </table> 
    <script>
     function validate(){
-        let defaultCardNo = 1234567890;
+        let defaultCardNo = /^[0-9]{16}$/;
         let cardNo = parseInt(document.getElementById("cardNumber").value);
-        if(defaultCardNo===cardNo)
+        if(defaultCardNo.test(cardNo))
             alert("Validation Success");
         else
             alert("Validation fails");
