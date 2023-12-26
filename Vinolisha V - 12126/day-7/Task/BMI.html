@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BML Calculation</title>
+   <style>
+        .outer{
+            text-align: center;
+            margin-top: 20px;
+        }
+        body{
+            background-color: #eee;
+           
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #cal{
+            width: 100px;
+            outline: none;
+            background-color: green;
+            color: white;
+            font-size: 16px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: progress;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 3)
+       }
+       .cal:hover{
+        opacity: .7;
+       }
+
+
+        
+   </style>
+</head>
+<body>
+    <div class="outer">
+        
+            <div>
+                <h1 class="bmi">BMI Calculator</h1>
+
+                <lable for="Heigth">Height</lable>
+                <input type="text" class="height" placeholder="Enter Your Height" required><br><br>
+
+                <lable for="Weight">Weight</lable>
+                <input type="text" class="weight" placeholder="Enter your Weight" required><br><br>
+            </div>
+
+            <div>
+                <input type="Calculate" id="cal" value="Calculate"><br><br>
+            </div>
+
+            <div class="result">result</div>
+        
+        
+        
+        
+    </div>
+    
+</body>
+</html>
+<script>
+    window.onload=()=>{
+    let button=document.querySelector("#cal");
+
+    button.addEventListener("click",calculateBMI);
+};
+
+function calculateBMI(){
+    let height=parseInt(document.querySelector(".height").value);
+
+    let weight=parseInt(document.querySelector(".weight").value);
+
+    let result=document.querySelector(".result");
+
+    if(height===""|| isNaN(height))
+        result.innerHTML="Provide a valid Height!";
+    
+    else if(weight===""|| isNaN(weight))
+        result.innerHTML="Provide a Valid Weight!";
+    
+    else{
+        let bmi = (weight/ ((height*height)/10000)).toFixed(2);
+    
+        if(bmi <18.6)
+        result.innerHTML=`Under Weight:<span>${bmi}</span>`;
+       
+        else if(bmi >=18.6 && bmi <24.9)
+        result.innerHTML=`Normal Weight:<span>${bmi}</span>`;
+        else 
+        result.innerHTML=`Over Weight:<span>${bmi}</span>`;
+    }
+}
+</script>
