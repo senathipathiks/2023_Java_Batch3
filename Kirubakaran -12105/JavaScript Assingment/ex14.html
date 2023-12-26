@@ -1,0 +1,43 @@
+<!-- you will be given two strings a and b and your task is to return the 
+  characters that are not common in the two strings. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function common (a,b) {
+   
+ let p= new Set(a);
+ let q= new Set(b);
+//  let res=new Set();
+    
+
+ p.forEach(e => {
+
+  if (!q.has(e)) {
+     document.write(e); 
+  }
+  
+ });  
+ 
+ q.forEach(e => {
+
+if (!p.has(e)) {
+   document.write(e); 
+}
+
+});
+        }
+          common ("sundhar","kiruba");
+          
+
+    </script>
+</body>
+</html>
+
+
+ 
