@@ -1,0 +1,28 @@
+<!-- 19. Write a javascript function to validate the mobile number. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validate the mobile number</title>
+    <script>
+        function validateMobileNumber(mobileNumber) {
+         let valid = /^[6-9]\d{9}$/;
+         if (valid.test(mobileNumber)) {
+         return true;
+         } 
+         else {
+         return false;
+              }
+         }
+ </script>
+ </head>
+ <body>
+     <script>
+        let output=validateMobileNumber(98765432);
+        document.write(" Mobile number is valid?: "+output);
+        let output1=validateMobileNumber(9876543222);
+        document.write("<br> Mobile number is valid?: "+ output1);
+        </script>
+</body>
+</html>

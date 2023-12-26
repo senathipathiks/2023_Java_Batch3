@@ -1,0 +1,45 @@
+<!-- 15.Write a javascript function to validate credit card number. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function validate(cardnum){
+            cardnumber=String(cardnum).replace(/\s/g,"");
+            if(!/^\d+$/.test(cardnum)){
+            return false;
+            }
+            if(cardnum.length!==16){
+            return false;
+            }
+            let sum=0;
+            for(let i=0;i<cardnum.length;i++){
+                let digit=parseInt(cardnum[i],10);
+                if(i%2==0){
+                digit*=2;
+                if(digit>9){
+                digit -=9;
+                }
+                }
+                sum+=digit;
+            }
+              return sum%10==0;
+} 
+</script>
+</head>
+<body>
+    <script>
+        let cardnum="134 5678 9876 3465";
+        if(validate(cardnum)){
+        document.write("Valid credit card number");
+         }
+         else{
+            document.write("Invalid credit card number");
+         }
+    </script>
+
+    
+</body>
+</html>

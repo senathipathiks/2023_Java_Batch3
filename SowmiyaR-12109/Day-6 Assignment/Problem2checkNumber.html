@@ -1,0 +1,41 @@
+<!-- 2. Write a function to check the given input
+if it is divisible by 2 print ==> Fizz
+if it is divisible by 3 print ==> Buzz
+if it is divisible by both 2 and 3 print ==> Fizz Buzz
+Not divisible print number itself
+other than the number means ==> Not a Number -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check the given input</title>
+    <script>
+        function divisible(a){ 
+        
+        if(typeof a !=='number'){
+          return 'not a number';
+        }
+        else if( a%2==0 & a%3==0){
+            return "Fizz buzz";
+        }
+        else if(a%3==0){
+            return "Buzz";
+        }
+        else if(a%2==0 ){
+            return "Fizz ";
+        }
+        
+    }
+    </script>
+</head>
+<body>
+    <script>
+        let res=divisible(6);
+        document.write(res);
+    </script>
+    
+
+    
+</body>
+</html>

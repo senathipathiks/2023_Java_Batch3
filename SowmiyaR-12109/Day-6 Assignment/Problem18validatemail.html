@@ -1,0 +1,23 @@
+<!-- 18. Write a javascript function to validate the email-id entered. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateEmail(email) {
+         const emailPattern = /^ [a-zA-Z0-9._%+-]+@ [a-zA-Z0-9.-]+\. [a-zA-Z] {2,}$/;
+         return emailPattern.test(email);
+         }
+     </script>
+ </head>
+ <body>
+     <script>
+         document.write(validateEmail("Sowmiyar678@gmail.com")); 
+         document.write("<br>"+validateEmail("sowmi@gmail;com")); 
+         document.write("<br>"+validateEmail("hari@123")); 
+ 
+     </script>
+</body>
+</html>

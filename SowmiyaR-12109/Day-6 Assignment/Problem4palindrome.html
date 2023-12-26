@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>palindrome</title>
+    </head>
+    <body>
+       
+        
+        <script>
+        var str="moon";
+        
+        let len = str.length
+
+        for ( let i = 0; i < len / 2; i++) {
+        if (str[i] !== str[len- 1 - i]) {
+            document.write("It is not a palindrome");
+            break;
+            }
+        else{ 
+     document.write("It is a palindrome");
+     break;
+    } 
+}
+    </script>
+    </body>
+</html>
