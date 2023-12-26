@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+      function speedcalculation(speed){
+        if(speed <=50){
+            return("Safe Driving");
+        }
+        else if(speed>50 && speed<=60){
+            return("Drive Safely");
+        }
+        else if (speed>60 && speed<=70){
+            return("Speed Limit Crossed, resuce your speed !!!");
+
+        }
+        else {
+            return("Over Speed");
+        }
+      }
+  </script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let calculation=speedcalculation(80);
+        document.write(calculation);
+    </script>
+</body>
+</html>
