@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>stopwatch</title>
+    <link rel="stylesheet" href="./stopStyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>stopwatch</h1>
+      <section class="in-con">
+        <label for="min">Enter the time to set : </label><br />
+        <div class="in">
+          <!-- <input type="number" id="hr"  placeholder="hours"/> -->
+          <input type="number" id="min" placeholder="minutes" /><span>min</span>
+          <input type="number" id="sec" placeholder="seconds" /><span>sec</span>
+        </div>
+        <input type="button" id="btn" onclick="startTimer()" value="Start" />
+        <span id="timer"></span>
+      </section>
+    </div>
+    <script>
+      function startTimer() {
+        let minute = document.getElementById('min').value;
+        let sec = document.getElementById('sec').value;
+        let tik  = setInterval(function () {
+          document.getElementById("timer").innerHTML = minute + ":" + sec;
+          sec--;
+
+          if (sec == 0) {
+            minute--;
+            sec = 60;
+
+            if (minute < 0) {
+            //    minute = minute ;
+            clearInterval(tik);
+            document.getElementById("timer").innerHTML= "Expired";
+
+            }
+          }
+        }, 1000);
+      };
+    </script>
+  </body>
+</html>
