@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query querySelectorAll</title>
+</head>
+<body>
+        <h2>query selector() Method Example</h2>
+        <p>This is a Element 1 </p>
+        <p>This is a Element 2 </p>
+
+    <script>
+        var arr=(document.querySelectorAll("p")); // to access using queryselectorAll we have to store first it in array to access all
+        for(let i=0;i<arr.length;i++){
+            document.write("<br>"+arr[i].innerHTML+"<br>");
+        }
+    </script> 
+    
+</body>
+</html>

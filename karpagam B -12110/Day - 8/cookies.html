@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body>
+
+    <select id="color" onchange="display()">
+    <option value="Select Color">Select Color</option>
+    <option value="yellow">yellow</option>
+    <option value="blue">blue</option>
+    <option value="red">red</option>
+</select>
+<script>
+     window.onload=function()  
+                {  
+                    if (document.cookie.length != 0)  
+                    {  
+                        var array = document.cookie.split("=");  
+                        document.getElementById("color").value = array[1];  
+                        document.bgColor = array[1];                 // if use cookies means the function remains same after we refresh
+                    }  
+                }    
+                function display()  
+                {  
+                    var value = document.getElementById("color").value;  
+                    if (value != "Select Color")  
+                    {  
+                        document.bgColor = value;  
+                        document.cookie = "color=" + value;  
+                    }  
+                }  
+                
+</script>
+
+
+    
+</body>
+</html>
