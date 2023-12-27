@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!-- <link rel="stylesheet" href="Login.css"> -->
+  </head>
+  <body>
+    <div class="d1">
+      <center>
+        <h1 style="color: rgb(190, 209, 190)">Login</h1>
+        <form>
+          <table id="t1">
+            <tr>
+              <td align="center">
+                <b>Username:</b>
+                <input id="tb1" type="username" placeholder="Enter username" />
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center">
+                <b>Password:</b>
+                <input id="tb2" type="password" placeholder="Enter passwd" />
+              </td>
+            </tr>
+
+            <tr align="center">
+              <td id="b1">
+                <button
+                  type="Login"
+                  onclick="Validation()"
+                  style="background-color: rgb(190, 209, 190)"
+                >
+                  <b style="color: white">Login</b></button
+                ><br />
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center">
+                <a id="fpwd" href="forgot password">forgot password?</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center">
+                <a class="newuser" href="Registration.html"
+                  >Don't have an account? Reg here!</a
+                >
+              </td>
+            </tr>
+          </table>
+        </form>
+        <br />
+      </center>
+    </div>
+
+    <script>
+      window.onload = function () {
+        if (document.cookie != 0) {
+          //    console.log(document.cookie);
+          let i = 0,
+            arr1 = [];
+
+          var arr = document.cookie.split(";");
+
+          arr.forEach((e) => {
+            arr1[i++] = e.split("=");
+          });
+
+          console.log(arr1);
+
+          document.getElementById("tb1").value = arr1[0][1];
+          document.getElementById("tb2").value = arr1[1][1];
+        }
+      };
+
+      function Validation() {
+        var usernameRegEx = "^[a-zA-Z0-9]{5,16}$";
+        var passwordRegEx = "^[a-zA-Z0-9!@#$%^&*]{6,16}$";
+
+        var username = document.getElementById("tb1").value;
+        var password = document.getElementById("tb2").value;
+        if (username == "") {
+          alert("User name can not be empty");
+        } else if (!username.match(usernameRegEx)) {
+          alert("Enter valid username");
+        } else if (password == "") {
+          alert("Password is must");
+        } else if (password.length < 6 && !password.match(passwordRegEx)) {
+          alert("Enter Valid Password!");
+        } else {    
+          alert("Login Successfull");
+          document.cookie = "tb1=" + username;
+          document.cookie = "tb2=" + password;
+        }
+      }
+    </script>
+  </body>
+</html>
+        
