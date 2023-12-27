@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;
-    color: rgb(241, 193, 104);
+    color: rgb(255, 166, 0);
 }
 
 .container{
@@ -19,8 +19,8 @@
 }
 .container > .in-con{
     /* margin-bottom: 50px; */
-    height: 400px;
-    width: 300px;
+    height: 300px;
+    width: 450px;
     backdrop-filter: blur(25px);
     /* border: 2px solid greenyellow; */
     border-radius: 30px;
@@ -60,6 +60,10 @@ input[type='button']:hover{
     border:2px solid orange;
 }
 h1{
-    color: rgb(253, 210, 129);
+    color: rgb(253, 165, 0);
     text-transform: uppercase;
+}
+.op{
+    display: flex;
+    gap: 10px;
 }
