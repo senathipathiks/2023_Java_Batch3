@@ -35,7 +35,7 @@
         margin-left: 25px;
       }
       #res{
-        color: orange;
+        color: rgb(255, 0, 34);
       }
       #height,#weight{
         width: 60%;
@@ -119,13 +119,13 @@
           console.log(bmi);
           //    document.getElementById('res').innerHTML= "your BMI is : "+bmi;
           if (bmi <= 18) {
-            document.getElementById("res").innerHTML = "<h1>under weight</h1>";
+            document.getElementById("res").innerHTML = "<h1>under weight</h1>"+"<span>BMI value is : </span>"+bmi;
           } else if (bmi <= 25 && bmi > 18) {
-            document.getElementById("res").innerHTML = "<h1>Normal</h1>";
+            document.getElementById("res").innerHTML = "<h1>Normal</h1>"+"<span>BMI value is : </span>"+bmi;
           } else if (bmi > 25 && bmi < 30) {
-            document.getElementById("res").innerHTML = "<h1>Over Weight</h1>";
+            document.getElementById("res").innerHTML = "<h1>Over Weight</h1>"+"<span>BMI value is : </span>"+bmi;
           } else {
-            document.getElementById("res").innerHTML = "<h1>Obesity</h1>";
+            document.getElementById("res").innerHTML = "<h1>Obesity</h1>"+"<span>BMI value is : </span>"+bmi;
           }
         }
       }
