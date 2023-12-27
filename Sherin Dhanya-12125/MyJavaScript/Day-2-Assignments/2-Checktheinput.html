@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script>
+            function fizzBuzz(a) {
+        if(typeof a!=="number"){
+            return "Not a number";
+        }
+            else if(a%2 ==0)
+            {
+                return "Fizz";
+            }
+            else if(a%3==0)
+            {
+                return"Buzz";
+            }
+            else if(a%2==0 && a%3==0)
+            {
+                return"Fizz Buzz";
+            }
+            else 
+            {
+                return a.toString();
+            }
+        }
+       
+</script>
+</head>
+    <body>
+    <script>
+    
+    let result = fizzBuzz('gh');
+    document.write(result);
+        </script>
+    </body>
+</html>

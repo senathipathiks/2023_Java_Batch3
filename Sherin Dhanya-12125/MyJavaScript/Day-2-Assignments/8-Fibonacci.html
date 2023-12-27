@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+            function fib(n)
+            {
+                let a =0,b=1;
+                if(n==0)
+                return a;
+            for(i=2;i<=n;i++)
+            {
+                c=a+b;
+                a=b;
+                b=c;
+            }
+            return b;
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+       
+        document.write(fib(9));
+    </script>
+    </body>
+</html>

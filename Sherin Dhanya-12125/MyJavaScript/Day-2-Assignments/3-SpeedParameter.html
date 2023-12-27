@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script>
+        function speedparameter(a) {
+        if(a<=50){
+            return "Safe Driving";
+        }
+        else if(a>50 && a<=60){
+            return "Drive Safely";
+        }
+        else if(a>60 && a<=70){
+            return "Speed Limit Crossed, reduce your speed !!!";
+
+        }
+        else if (a>70){
+            return "Over Speed";
+        }
+        }
+        </script>
+
+    </head>
+    <body>
+        <script>
+    let result = speedparameter(110);
+    document.write(result);
+        </script>
+    </body>
+</html>
