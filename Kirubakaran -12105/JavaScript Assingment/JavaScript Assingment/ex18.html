@@ -1,0 +1,25 @@
+<!-- Write a javascript function to check if the entered password 
+    is matching with the given criteria or not. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pass(p) {
+            let pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()\-+.]).{6,20}$/ ;
+            if(pattern.test(p)){
+                document.write("valid password");
+            }
+            else{
+                document.write("invalid password");
+            }
+            
+        }
+        pass("Kiruba@1234");
+    </script>
+</body>
+</html>
