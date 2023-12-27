@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<body>
+    <div id="Timer"></div>
+    <script>
+        window.onload=function(){checktime();}
+        function checktime(){
+            var today=new Date();
+            var h=today.getHours();
+            var m=today.getMinutes();
+            var s=today.getSeconds();
+            document.getElementById('Timer').innerHTML="<h1>Current time is:"+h+":"+m+":"+s+"</h1>";
+            setTimeout(function(){checktime()},1000);
+        }
+    </script>
+    
+</body>
+</html>
