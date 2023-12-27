@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Countdown Timer</title>
+  <link rel="stylesheet" type="text/css" href="countdown.css">
+  <style src="countdown.css"></style>
+</head>
+<body>
+  <div id="countdown">
+    <h2>Countdown Timer</h2>
+    <div id="timer">
+      <div>
+        <span id="days">0</span>
+        <span>Days</span>
+      </div>
+      <div>
+        <span id="hours">0</span>
+        <span>Hours</span>
+      </div>
+      <div>
+        <span id="minutes">0</span>
+        <span>Minutes</span>
+      </div>
+      <div>
+        <span id="seconds">0</span>
+        <span>Seconds</span>
+      </div>
+    </div>
+  </div>
+
+  <script data-two_delay_id="two_658ab0b341cff" data-two_delay_src="countdown.js">
+    const targetDate = new Date("June 10, 2023 15:00:00").getTime();
+
+// Update the countdown every second
+const countdownInterval = setInterval(() => {
+  // Get the current date and time
+  const now = new Date().getTime();
+
+  // Calculate the time difference between the current date/time and the target date/time
+  const timeDifference = targetDate - now;
+
+  // Calculate days, hours, minutes, and seconds
+  const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+  // Display the calculated time in the HTML elements
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent = hours;
+  document.getElementById("minutes").textContent = minutes;
+  document.getElementById("seconds").textContent = seconds;
+
+  // Check if the countdown has expired
+  if (timeDifference < 0) {
+    clearInterval(countdownInterval);
+    document.getElementById("timer").innerHTML = "Countdown expired";
+  }
+}, 1000);
+
+  </script>
+</body>
+</html>
