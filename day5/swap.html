@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swapping Number</title>
+</head>
+<body>
+    <script>
+        function swap(a,b){             //Function
+        document.write("<br>Before Swaping A : "+a);
+        document.write("<br>Before Swaping B : "+b);
+        a = a+b;
+        b = a-b;                        //Swapping without temp variable
+        a = a-b;
+        document.write("<br>After Swaping A : "+a);
+        document.write("<br>After Swaping B : "+b);
+        }
+
+        swap(10,20);                    //Function call
+        swap(5,100);                    //Function call
+    </script>
+</body>
+</html>

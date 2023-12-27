@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date validation</title>
+</head>
+<body>
+   <table>
+    <tr>
+        <td>DOB :</td>
+        <td><input type="text" placeholder="DD-MM-YYYY" id="date" required></td>
+        <td><button type="submit" onclick="validate()">Submit</button></td>
+    </tr>
+   </table> 
+   <script>
+    function validate(){
+        let date = document.getElementById("date").value;
+        const dateRegExp = /^\d{2}-\d{2}-\d{4}$/;; 
+        if(dateRegExp.test(date))
+            alert("Date is valid");
+        else
+            alert(" Date is not Valid");
+    }
+   </script>
+</body>
+</html>

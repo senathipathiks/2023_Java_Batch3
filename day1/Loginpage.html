@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loginpage</title>
+</head>
+<body>
+    <h1>Please Login your Account</h1>
+    <form>
+        User Name:<input type="Text" id="name"> <br>
+        Password:<input type="password"  id="password"> <br>
+        <button type="button" onclick="validate()">Submit</button>
+        <br>
+        <br>
+        <button type="button">Create an Account ?</button>
+    </form>
+
+    <script>
+        function validate(){
+        var name = document.getElementById("name").value;
+        var password = document.getElementById("password").value;
+        var nameRegExp = "^[a-z]+[a-z]+\.[a-z]$";
+        var passRegExp = "^[a-zA-z0-9@.$#]{8,20}$";
+        if(!name.match(nameRegExp))
+        alert("name is Not Valid");
+
+        if(!password.match(passRegExp))
+        alert("Password is not Valid");
+        
+        }
+        
+      </script>
+    
+</body>
+</html>
