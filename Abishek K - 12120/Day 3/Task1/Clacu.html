@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .container{
+            box-sizing: border-box;
+            height: 550px;
+            width: 460px;
+            border:2px solid;
+            background:linear-gradient(to right, #66ffcc 55%, #ff33cc 100%)
+            
+        }
+        .row{
+            display: inline-block;
+            margin-top:5px;
+            
+
+        }
+        #text{
+            height: 100px;
+            width: 330px;
+            border: solid 1px;
+            display: inline-block;
+            margin-top: 7px;
+            margin-left: 2px;
+            background-color:aqua;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 40px;
+        }
+        #c{
+            height: 100px;
+            width: 104px;
+            border: solid 1px;
+            display: inline-block;
+            margin-top: 2px;
+            background-color: chartreuse;
+            border-radius: 20px;
+            font-size: 40px;
+            text-align: center;
+        }
+        .num{
+            height:100px ;
+            width:104px;
+            display: inline-block;
+            background-color: chartreuse;
+            margin-left: 5px;
+            border: 1px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 40px;
+            text-shadow: 10px;
+            
+        }
+        .num:hover{
+            background-color: crimson;
+        }
+        
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="row">
+        <div id="text" > 123</div>
+        <div id="c">C</div>
+    </div>
+    <div class="row">
+        <div class="num">1</div>
+        <div class="num">2</div>
+        <div class="num">3</div>
+        <div class="num">/</div>
+        
+    </div>
+    <div class="row">
+        <div class="num">4</div>
+        <div class="num">5</div>
+        <div class="num">6</div>
+        <div class="num">*</div>
+        
+    </div>
+    <div class="row">
+        <div class="num">7</div>
+        <div class="num">8</div>
+        <div class="num">9</div>
+        <div class="num">-</div>
+       
+    </div>
+    <div class="row">
+        <div class="num">0</div>
+        <div class="num">.</div>
+        <div class="num">=</div>
+        <div class="num">+</div>
+        
+
+    </div>
+
+
+   </div>
+</body>
+</html>
