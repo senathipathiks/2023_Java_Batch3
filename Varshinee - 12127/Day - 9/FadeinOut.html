@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#btn").click(function(){
+            $("img").fadeIn(1000);
+            // $("img").css(
+            //     {
+            //         'text-align': 'center'
+            //     }
+            // )
+            // $("img").fadeOut(1000);
+
+
+            });
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sunset</title>
+</head>
+<body>
+    <img src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*" id="img" style="display: none;" width="600px">
+    <input type="button" id="btn" value="click">
+</body>
+</html>
