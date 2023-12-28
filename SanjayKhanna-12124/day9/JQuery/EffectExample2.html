@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effects jQuery</title>
+    <script src="jQuery.js"></script>
+</head>
+<body>
+    <img src="https://cache.desktopnexus.com/thumbseg/150/150109-bigthumbnail.jpg" alt="img">
+    <button id="btn1">FadeIn</button>
+    <button id="btn2">FadeOut</button>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("img").fadeIn(2000);
+            })
+
+            $("#btn2").click(function(){
+                $("img").fadeOut(2000);
+            })
+        })
+    </script>
+</body>
+</html>
