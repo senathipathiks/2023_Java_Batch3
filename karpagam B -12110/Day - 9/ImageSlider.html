@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        .slide {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 100%;
+	height: 100vh;
+	overflow-x: hidden;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.slide1 {
+	background-image: url(
+"https://upload.wikimedia.org/wikipedia/commons/b/bb/Helianthus-yellow-flower-pixabay.jpg");
+}
+
+.slide2 {
+	background-image: url(
+"https://i.pinimg.com/736x/b0/1a/50/b01a506364d736780e619da15182de14.jpg");
+}
+.slide3 {
+	background-image: url(
+"https://cdn.pixabay.com/photo/2016/07/11/21/23/water-lily-1510707_640.jpg");
+}
+
+
+.slide4 {
+	background-image: url(
+"https://cdn.pixabay.com/photo/2021/08/31/09/10/lotus-6588182_1280.jpg");
+}
+.slide5{
+    background-image: url('https://cdn.pixabay.com/photo/2018/06/01/22/50/beautiful-flower-3447424_1280.jpg');
+    }
+.slide6{
+    background-image: url('https://cdn.pixabay.com/photo/2017/06/05/13/10/flower-2374062_1280.jpg');
+    }
+    
+
+.arrow {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	margin-top: -35px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+}
+
+#arrow-left {
+	border-width: 20px 30px 20px 0;
+	border-color: transparent #fff transparent transparent;
+	left: 0;
+	margin-left: 20px;
+}
+
+#arrow-right {
+	border-width: 20px 0 20px 30px;
+	border-color: transparent transparent transparent #fff;
+	right: 0;
+	margin-right: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;"><i>IMAGE GALLERY</i></h1>
+
+	<div id="arrow-left" class="arrow"></div>
+	<div class="slide slide1"></div>
+	<div class="slide slide2"></div>
+	<div class="slide slide3"></div>
+    <div class="slide slide4"></div>
+    <div class="slide slide5"></div>
+    <div class="slide slide6"></div>
+
+    <div id="arrow-right" class="arrow"></div>
+</body>
+
+</html>
+
+      
+<script src="ImageSlider.js"></script>
+    
+</body>
+</html>

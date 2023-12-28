@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(function(){
+            $('#btn1').click(function(){ // when the user click the specific button fade in or fade out will be displayed
+            $('#img1').fadeOut();
+        });
+        $('#btn2').click(function(){
+        $('#img1').fadeIn(2);
+
+       });
+        });
+
+    </script>
+</head>
+<body>
+    <img src="https://cdn.pixabay.com/photo/2015/04/19/08/33/flower-729512_640.jpg" alt="" id="img1" style="display: none;">
+    <input type="button" id="btn1" value="Fadeout">
+    <input type="button" id="btn2" value="Fadein">
+
+    
+</body>
+</html>
