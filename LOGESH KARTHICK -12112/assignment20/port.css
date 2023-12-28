@@ -1,0 +1,65 @@
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .img{
+    float: left;
+    border: 2px groove;
+    background-attachment: fixed;
+    margin-top: 1%;
+    
+  }
+
+  body{
+    text-align: center;
+  }
+
+  form{
+    border: 2px solid;
+    position: absolute;
+    margin-left: 56%;
+    padding: 1%;
+  }
+  footer{
+    position: absolute;
+    margin-left: 56%;
+    margin-top: 15%;
+  }
+
+  body{
+    background-color: #d4d4d4;
+    cursor:default;
+  }
+
+  #one,#two{
+    color: black;
+    font-weight: bolder;
+    
+  }
+
+  #contact{
+    text-align: center;
+    
+  }
