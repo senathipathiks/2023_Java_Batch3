@@ -3,82 +3,77 @@
     <html>
         <head>
             <style>
-                .MyDivClass {
-                    border:2 px solid blue;
+                .aStyle{
+                    /* text-decoration: none; */
+                    color: rgb(247, 30, 214);
+                    cursor: pointer;
+                }
+                a:hover{
+                    color: rgb(244, 25, 25);
+                }
+                body{
+                    background-image: url(https://images1-fabric.practo.com/practices/1249653/kauvery-hospitals-chennai-5cc066e8a856d.jpg);
+                    background-repeat:no-repeat;
+                    background-size:cover;
+                    padding: 40px;
+                    }
+                .div{
+                    
                     width: 40%;
-                    position: absolute;
+                    position:absolute;
                     top:10%;
                     left:20%;
                     border-radius:20 px;
-                    background-color: rgb(193, 196, 196);
-                    color: blueviolet;
-                 
-                    
-                }
-                table {
-                    /* border: 1px solid red; */
-                    width: 90%;
-                    height: 90%;
-                    
-                }
-                .Txtstyle{
-                    width: 90%;
-                    height: 34%;
+                    background-color: rgb(121, 191, 252);
+                    color: rgb(237, 233, 241);
                     border-radius: 10px;
-                }
-                .aStyle{
-                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     color: blue;
-                    cursor: pointer;
-                    
-                }
-                a:hover{
-                    color: rgb(243, 9, 9);
-                }
-                .style{
-                    margin: 48px;
-                }
-                body{
-                    background-image: url(https://images1-fabric.practo.com/practices/1249653/kauvery-hospitals-chennai-5cc06366a62d8.JPG);
-                    background-size: cover;
-                    background-repeat: no-repeat;
+                
                 }
                 
                 </style>
-        </head>
-        <body>
-        <div class="MyDivClass" align="center"> Login
-            <center>
-            <table>
+                
+        
+            <script>
+                function Validation()
+                {
+                    var emailRegEx ='^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$'; 
+                    var passwordRegEx = '^[a-zA-Z0-9!@#$%^&*]{6,16}$';
+                    var email = document.getElementById("email").value;
+                    var pwd = document.getElementById("pwd").value;
+                    if(email == ""){
+                        alert("Email can not be empty");
+                    }
+                    else if(! email.match(emailRegEx)){
+                        alert("Enter valid email address")
+                    }
+                     else if(pwd == ""){
+                        alert("Create your strong password");
+                    }
+                    else if(pwd.length <6 && ! pwd.match(passwordRegEx)){
+                        alert("Enter Valid Password!")
+                    }
+                }
                
-            <tr>
-               <td> <h1> Email:</h1> </td>
-               <td> <input class="Txtstyle" type="text" placeholder="enter your email"></td>
-            </tr>
-            <tr>
-               <td><h1> Password :</h1></td>
-               <td> <input class="Txtstyle" type="password" placeholder="enter 15 character"></td>
-            </tr>
-            <tr>
-                <td><input type="Reset" class="style"></td>
-                <td><input type="Submit"></td>
-             </tr>
-        </table>
-            <tr>
-
-            
-               if you didn't have an account click
-               <td> <a class="aStyle" href="Registrationpage.html">Register </a></td>
-            </tr>
-            
-          
-        </center>
-        </div>
+            </script>
+        
+        </head>
+            <body> 
+                
+                <div class="div" > 
+              <form >
+                <h1 align="center">Login</h1>
+                    Enter Your E-Mail ID:<input type="Text" id="email" /><br/> <br>
+                    Create your Password :<input type="password" id="pwd" /><br/> <br>
+                    <input type="Reset"> &nbsp;
+                    <button onclick="Validation()">Login</button> <br>
+                   if you didn't have an account click
+                   <a href="Registrationpage.html">Register</a>
+         
+               </form>
         </body>
     </html>
 
-<!-- 
-<div align="center" >
-    if you didn't have an account click
-    <a href="Registrationpage.html">Register</a>
-</div> -->
