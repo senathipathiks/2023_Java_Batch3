@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List</title>
+  
+  <script src="jquery.js"></script>
+  <style>
+   
+    #task-input {
+      width: 80%;
+      margin: 10px auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+    }
+
+   
+    #add-button {
+      width: 10%;
+      margin: 10px auto;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #28a745;
+      color: white;
+      cursor: pointer;
+    }
+
+    
+    #task-list {
+      width: 80%;
+      margin: 10px auto;
+      list-style: none;
+      padding: 0;
+    }
+
+   
+    .task-item {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+    }
+
+    
+    .task-text {
+      flex: 1;
+      font-size: 18px;
+    }
+
+   
+    .task-button {
+      margin-left: 10px;
+      padding: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    
+    .done-button {
+      background-color: #28a745;
+      color: white;
+    }
+
+   
+    .delete-button {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    
+    .completed {
+      text-decoration: line-through;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="task-input" placeholder="Enter a task">
+  <button id="add-button">Add</button>
+  <ul id="task-list"></ul>
+  <script>
+    var input = $("#task-input");
+    var addButton = $("#add-button");
+    var taskList = $("#task-list");
+
+    addButton.click(function() {
+      var value = input.val();
+      if (value.length != 0) {
+        var taskItem = $("<li></li>");
+        taskItem.addClass("task-item");
+        var taskText = $("<span></span>");
+        taskText.addClass("task-text");
+        taskText.text(value);
+
+        var doneButton = $("<button></button>");
+        doneButton.addClass("task-button done-button");
+        doneButton.text("Done");
+
+        doneButton.click(function() {
+          taskText.toggleClass("completed");
+        });
+
+        var deleteButton = $("<button></button>");
+        deleteButton.addClass("task-button delete-button");
+        deleteButton.text("Delete");
+        deleteButton.click(function() {
+          taskItem.remove();
+        });
+
+        taskItem.append(taskText);
+        taskItem.append(doneButton);
+        taskItem.append(deleteButton);
+        taskList.append(taskItem);
+        input.val("");
+      } else {
+        alert("Enter some text!");
+      }
+    });
+  </script>
+</body>
+</html>
