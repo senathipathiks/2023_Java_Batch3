@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Fizz Buzz</title>
+</head>
+<body>
+    
+    <form onsubmit="fizzBuzz();">
+        <label for="number">Enter a number:</label><br>
+        <input type="text" id="number" name="number"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function fizzBuzz() {
+            var input = document.getElementById('number').value;
+            var output = document.getElementById('result');
+            if (isNaN(input)) {
+                alert("Not a Number");
+            } else if (input % 2 === 0 && input % 3 === 0) {
+                alert("Fizz Buzz");
+            } else if (input % 2 === 0) {
+                alert("Fizz");
+            } else if (input % 3 === 0) {
+                alert("Buzz");
+            } else {
+               alert("no input give");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <style>
+        .style{
+            color: red;
+        }
+        .style1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: larger;
+            color: blue;
+
+        }
+        .style2{
+            background-color: lemonchiffon;
+            font-family: Arial, Helvetica, sans-serif;
+            color: orange;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src ="jquery.js">
+
+    </script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#btn1").click(function(){
+                    $("#par1").addClass("style1")
+                });
+
+                $("#btn2").click(function(){
+                    $("#par1").removeClass("style1 style2")
+                });
+
+                $("#btn3").click(function(){
+                    $("#par1").toggleClass("style2")
+                });
+
+
+        });
+    </script>
+     
+</head>
+<body>
+
+    <p id="par1">
+        this is the paragraph
+       </p>
+       <input type="button" id="btn1" value="add class">
+       <input type="button" id="btn2" value="remove class">
+       <input type="button" id="btn3" value="toggle class">
+    
+</body>
+</html>

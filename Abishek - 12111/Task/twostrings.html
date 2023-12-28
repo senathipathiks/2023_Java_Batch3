@@ -1,0 +1,31 @@
+<html>
+<body>
+
+<input id="string1" placeholder="First string">
+<input id="string2" placeholder="Second string">
+<button onclick="showUncommon()">Add two different string</button>
+<p id="output"></p>
+
+<script>
+function showUncommon() {
+    var str1 = document.getElementById('string1').value;
+    var str2 = document.getElementById('string2').value;
+
+    var uncommon = '';
+    for (var i = 0; i < str1.length; i++) {
+        if (str2.indexOf(str1[i]) === -1) {
+            uncommon += str1[i];
+        }
+    }
+    for (var i = 0; i < str2.length; i++) {
+        if (str1.indexOf(str2[i]) === -1) {
+            uncommon += str2[i];
+        }
+    }
+
+    document.getElementById('output').innerHTML = uncommon;
+}
+</script>
+
+</body>
+</html>

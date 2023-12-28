@@ -1,0 +1,19 @@
+<html>
+<body>
+
+
+<p>Sort the array in ascending order:</p>
+
+<p id="bfrsrt"></p>
+<p id="aftsrt"></p>
+
+<script>
+const arr = [4, 1, 7, 5, 25, 10];
+document.getElementById("bfrsrt").innerHTML = arr;  
+
+arr.sort(function(a, b){return a - b});
+document.getElementById("aftsrt").innerHTML = arr;
+</script>
+
+</body>
+</html>

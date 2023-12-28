@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Speed as Parameter</title>
+</head>
+<body>
+    
+    <form onsubmit="Speed();">
+        <label for="number">Enter the speed:</label><br>
+        <input type="text" id="number" name="number"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function Speed() {
+            var input = document.getElementById('number').value;
+            var output = document.getElementById('result');
+            if (input > 50 && input <= 60) {
+                alert("Drive Safely");
+            } else if (input <= 50 ) {
+                alert("Safe Driving");
+            } else if (input > 60 && input <=70 ) {
+                alert("Speed Limit Crossed reduce your speed !!!");
+            } else if (input > 70) {
+                alert("Over Speed !!!!");
+            } 
+        }
+    </script>
+</body>
+</html>
