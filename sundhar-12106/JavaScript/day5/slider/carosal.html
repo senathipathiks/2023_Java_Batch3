@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>slider</title>
+    <style>
+      .slider {
+        width: 100%;
+        height: 510px;
+        position: relative;
+      }
+
+      .slider img {
+        width: 100%;
+        height: 500px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* transition: all 0.5s ease-in-out; */
+      }
+
+      .slider img:first-child {
+        z-index: 1;
+      }
+
+      .slider img:nth-child(2) {
+        z-index: 0;
+      }
+
+      .navigation-button {
+        text-align: center;
+        position: relative;
+      }
+
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      .active,
+      .dot:hover {
+        background-color: #717171;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <img
+        id="img-1"
+        src="https://cdn.pixabay.com/photo/2020/07/05/02/46/nature-5371398_1280.jpg"
+        alt="Image 1"
+      />
+      <img
+        id="img-2"
+        src="https://cdn.pixabay.com/photo/2020/05/29/22/00/field-5236879_1280.jpg"
+        alt="Image 2"
+      />
+      <img
+        id="img-3"
+        src="https://cdn.pixabay.com/photo/2016/11/06/05/36/lake-1802337_1280.jpg"
+        alt="Image 3"
+      />
+    </div>
+    <div class="navigation-button">
+      <span class="dot active" onclick="changeSlide(0)">1</span>
+      <span class="dot" onclick="changeSlide(1)">2</span>
+      <span class="dot" onclick="changeSlide(2)">3</span>
+      <span class="dot" onclick="changeSlide(10)">S</span>
+    </div>
+  </body>
+  
+  <script>
+      var currentImg = 0;
+  var imgs = document.querySelectorAll('.slider img');
+  let dots = document.querySelectorAll('.dot');
+  var interval = 2000;
+
+  var timer = setInterval(changeSlide, interval);
+
+  function changeSlide(n) {
+    console.log(imgs.length);
+    for (var i = 0; i < imgs.length; i++) {
+      imgs[i].style.opacity = 0;
+      dots[i].className = dots[i].className.replace(' active', '');
+    }
+
+    currentImg = (currentImg + 1) % imgs.length;
+
+    if (n != undefined) {
+      clearInterval(timer);
+    //   timer = setInterval(changeSlide, interval);
+    //   currentImg = n;
+    }
+
+    imgs[currentImg].style.opacity = 1;
+    dots[currentImg].className += ' active';
+  }
+  </script>
+</html>

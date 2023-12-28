@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appendText</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(e=>{
+            $("#ap").click(e=>{
+                $("#para").append("</br>this is append");
+            });
+            $("#pr").click(e=>{
+                $("#para").prepend("this is prepond</br>");
+            });
+            $("#re").click(e=>{
+                $("#para").remove();
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <p id="para">this is from paragraph</p>
+    <button id="ap">append</button>
+    <button id="pr">prepond</button>
+    <button id="re">remove</button>
+</body>
+</html>

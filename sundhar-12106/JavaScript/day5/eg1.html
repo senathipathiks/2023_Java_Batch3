@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eg1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(e=>{
+            $(".btn").click(e=>{
+                let num1 = parseInt($("#num1").val());
+                let num2 = parseInt($("#num2").val());
+                console.log(num1+num2);
+                $("#res").val(num1+num2);
+                $("#res").show();
+                $("#res").css({
+                    "backgroundColor": "aqua",
+                    "border-radius":"10px",
+                    });
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="text" id="num1" placeholder="entrer number 1"><br><br>
+    <input type="text" id="num2" placeholder="entrer number 2"><br><br>
+    <button class="btn">calculate</button><br><br>
+    <input type="text" id="res" placeholder="result here" style="display: none;">
+</body>
+</html>

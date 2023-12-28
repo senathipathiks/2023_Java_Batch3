@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>carosal</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      .container {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+      .fa-solid {
+        height: 30px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border: 2px solid; */
+        border-radius: 50px;
+        background-color: rgb(212, 226, 241);
+      }
+      .fa-solid:hover {
+        background-color: rgb(36, 10, 59);
+        color: aliceblue;
+      }
+      #left {
+        display: none;
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <i class="fa-solid fa-angle-left" id="left"></i>
+      <img
+        id="pic"
+        src="https://cdn.pixabay.com/photo/2017/10/10/07/48/beach-2836300_1280.jpg"
+        alt="nature"
+        style="height: 30%; width: 30%"
+      />
+      <i class="fa-solid fa-angle-right" id="right"></i>
+    </div>
+    <script>
+      $(document).ready((e) => {
+        let pic = [
+          "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg",
+          "https://cdn.pixabay.com/photo/2020/03/21/15/11/composing-4954278_640.jpg",
+          "https://cdn.pixabay.com/photo/2017/10/10/07/48/beach-2836300_1280.jpg",
+        ];
+        let i = 0,
+          j = 0;
+        $("#right").click((e) => {
+          if (i < 2) {
+            console.log("hello");
+            j++;
+            $("#pic").attr("src", pic[i++]);
+            $("#left").show();
+          } else {
+            $("#right").css("display", "none");
+          }
+        });
+        //! left
+        $("#left").click((e) => {
+            console.log("hii");
+            // i--;
+            $("#pic").attr("src", pic[i--]);
+            $("#right").show();
+          
+          // $("#left").show();
+        });
+        // if (j == 0) {
+        //   j = 3;
+        // }
+        // if (i == 3) {
+        //   $("#left").css("display", "none");
+        //   i = 0;
+        // }
+      });
+    </script>
+  </body>
+</html>
