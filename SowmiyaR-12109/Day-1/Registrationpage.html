@@ -4,37 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
-    <!-- <link rel="stylesheet" href="./Registrationpage.css"> -->
+    
     
     <style>
-        .MyDivClass {
-            /* border:2 px solid blue; */
-            /* width: 40%; */
-            position: absolute;
-            top:10%;
-            left:20%;
-            /* border-radius:20 px; */
-            color: rgb(238, 10, 10);
-            background-color: rgb(157, 220, 243);
-            margin: -37px;
-            
-        }
-        table {
-            /* border: 1px solid red; */
-            width: 90%;
-            height: 85%;
-            
-        }
-        .Txtstyle{
-            width: 90%;
-            height: 30%;
-            border-radius: 5px;
-        }
         .aStyle{
-            text-decoration: none;
-            color: blue;
+            /* text-decoration: none; */
+            color: rgb(244, 21, 211);
             cursor: pointer;
-            
         }
         a:hover{
             color: rgb(220, 69, 9);
@@ -44,62 +20,82 @@
             background-repeat:no-repeat;
             background-size:cover;
             padding: 40px;
-           
-           
+            }
+        .div{
+            border:2 px solid blue;
+            width: 40%;
+            position:absolute;
+            top:10%;
+            left:20%;
+            border-radius:20 px;
+            background-color: rgb(4, 58, 106);
+            color: rgb(237, 233, 241);
+            border-radius: 10px;
+            padding-inline-start: 40px;
+            padding-left: 88px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
         }
         
         </style>
-</head>
-<body>
-<div class="MyDivClass" align="center"> <h1>Register </h1>
-    <center>
-    <table>
+        
+
+    <script>
+        function Validation()
+        {
+            var emailRegEx ='^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$'; 
+            var passwordRegEx = '^[a-zA-Z0-9!@#$%^&*]{6,16}$';
+            var email = document.getElementById("email").value;
+            var pwd = document.getElementById("pwd").value;
+            var cpwd = document.getElementById("cpwd").value;
+            var address = document.getElementById("address").value;
+            // var submit=document.getElementById("submit").value
+            if(email == ""){
+                alert("Email can not be empty");
+            }
+            else if(! email.match(emailRegEx)){
+                alert("Enter valid email address")
+            }
+             else if(pwd == ""){
+                alert("Create your strong password");
+            }
+            else if(pwd.length <6 && ! pwd.match(passwordRegEx)){
+                alert("Enter Valid Password!")
+            }
+            else if(cpwd == ""){
+                alert(" enter your confirm Password");
+            }
+            else if(cpwd.length <6 && ! cpwd.match(passwordRegEx)){
+                alert("Enter Valid  Password!")
+            }
+           
+            else if(address == ""){
+                alert(" enter your current Address");
+            }
        
-    <tr>
-       <td> <h4>Email:</h4> </td>
-       <td> <input class="Txtstyle" type="text" placeholder="enter your name" autofocus></td>
-    </tr>
-    <tr>
-       <td><h4> Create Password:</h4>  </td>
-       <td> <input class="Txtstyle" type="text" placeholder="enter 15 character"></td>
-    </tr>
-    <tr>
-        <td><h4> Confirm Password:</h4>  </td>
-        <td> <input class="Txtstyle" type="text" placeholder="enter 15 character"></td>
-     </tr>
-    <tr>
-        <td><h4>Address :</h4></td>
-        <td><textarea class="Txtstyle" name="text" id="" cols="50" rows="2" placeholder="enter your address" required></textarea>
-    </tr>
-     <tr>
-        <td><h4>Gender:</h4></td>
-        <td><input type="checkbox">Male
-        <input type="checkbox">Female</td>
-    </tr>
-    <tr>
-        <td><h4>Phone Number:</h4></td>
-        <td><input  class="Txtstyle" name="number" placeholder="enter 10 digit number"></td>
-    </tr>
-
-    <tr>
-       <td><input type="Reset"></td> &nbsp;
-       <td><input type="Submit"></td>
-    </tr>
-
-     <tr align="center">
-       
-       </tr>
-
+        }
         
        
-   
+    </script>
+
+</head>
+    <body> <div class="div" >
+      <form >
+        <h1 >Registration page</h1>
+            Enter Your E-Mail ID: <br> <input type="Text" id="email" /><br/> <br>
+            Create your Password : <br> <input type="password" id="pwd" /><br/> <br>
+            Confirm Your password : <br><input type="Text" id="cpwd" />  <br> <br>
+            Enter Your Address : <br><textarea type="Text" id="address" col="1" row="3"></textarea> <br>  <br>
+           <input type="Reset"> &nbsp;
+           <button onclick="Validation()">Register</button> <br>
     
-    </table>
-    <tr>
-        If you have already account,click
-        <td> <a class="aStyle" href="Login.html">Login </a></td>
-    </tr>
-</center>
-</div>
-</body>
+           If you have already account,click
+           <td> <a class="aStyle" href="Login.html">Login </a></td>
+    
+   
+ 
+       </form>
+   </body>
 </html>
