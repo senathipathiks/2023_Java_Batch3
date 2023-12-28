@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<style>
+    .style1{
+        color: aquamarine;
+    }
+    .style2{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: larger;
+        color: blueviolet;
+    }
+    .style3{
+        font-style:oblique ;
+        font-size: small;
+        color: brown;
+        background-color: blanchedalmond;
+    }
+</style>
+<script>
+      $(document).ready(function(){
+        $("#b1").click(function(){
+            $("#p1").addClass("style2");
+        });
+        $("#b2").click(function(){
+            $("#p1").removeClass("style1 style2 style3");
+        });
+        $("#b3").click(function(){
+            $("#p1").toggleClass("style3")
+        })
+      })
+</script>
+
+</head>
+<body>
+    <form action="">
+        <p id="p1" class="style1">Hiiii..!!..I'm Srini</p>
+        <input type="button" value="AddClass" id="b1">;
+        <input type="button" value="RemoveClass" id="b2">;
+        <input type="button" value="ToggleClass" id="b3">;
+    </form>
+    
+
+</body>
+</html>
