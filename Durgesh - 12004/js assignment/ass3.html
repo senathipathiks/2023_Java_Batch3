@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Speed Limit Checker</title>
+  </head>
+  <body>
+    <label for="input">Enter the speed:</label>
+    <input type="text" id="input" name="input"><br><br>
+    <button onclick="checkSpeed()">Check Speed</button>
+    <p id="result"></p>
+    <script>
+      function checkSpeed() {
+        let speed = document.getElementById("input").value;
+        if (isNaN(speed)) {
+          document.getElementById("result").innerHTML = "Not a Number";
+        } else if (speed <= 50) {
+          document.getElementById("result").innerHTML = "Safe Driving";
+        } else if (speed > 50 && speed <= 60) {
+          document.getElementById("result").innerHTML = "Drive Safely";
+        } else if (speed > 60 && speed <= 70) {
+          document.getElementById("result").innerHTML = "Speed Limit Crossed, reduce your Speed !!!";
+        } else if (speed > 70) {
+          document.getElementById("result").innerHTML = "Over speed !!!";
+        }
+      }
+    </script>
+  </body>
+</html>
