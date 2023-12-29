@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding styles</title>
+        <style>
+            .style1{
+              color: blue;
+            }
+            .style2{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: x-large;
+                color: rgb(69, 4, 131);
+            }
+            .style3{
+                background-color: violet;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: xx-large;
+                color: rgb(244, 7, 145);
+            }
+        </style>
+        <script src="./jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#btn1").click(function(){
+                    $("#para1").addClass("style2");
+                });
+                $("#btn2").click(function(){
+                    $("#para1").removeClass(" style2 style3");
+                });
+                $("#btn3").click(function(){
+                    $("#para1").toggleClass("style3");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p id="para1" class="style1">This is paragraph 1</p>
+        <input type="button" id="btn1" value="add Class">
+        <input type="button" id="btn2" value="removeClass">
+        <input type="button" id="btn3" value="toggleClass">
+
+    </body>
+</html>

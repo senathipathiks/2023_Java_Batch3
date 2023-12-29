@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <style>
+        body {
+            
+            font-size: larger;
+        }
+        .div {
+            width: 500px;
+            margin: 30px 450px;
+            padding: 20px;
+            background-color:rgb(129, 201, 250);
+            border-radius: 5px;
+            margin-bottom: 20px;
+            /* margin-right: 20px; */
+        }
+        
+        input{
+            width: 475px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+        ul {
+            /* border-radius:10px; */
+            padding: 0;
+        }
+        li {
+            background-color: #ffffff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid white;
+            border-radius: 5px;
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+        } 
+        .remove {
+            cursor: pointer;
+           color: rgb(247, 87, 87);
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        <h1 align="center">To-Do List App</h1>
+
+        <input type="text" id="input" placeholder="Enter task">
+        <ul id="taskList"> </ul>
+    </div>
+    <script>
+        let input=document.getElementById("input");
+        let taskList=document.getElementById("taskList");
+
+        input.addEventListener("keypress",function(event)
+        {
+            if(event.key==="Enter"){
+                addTaskToList(input.value);
+                input.value=" ";
+            }
+        }
+        
+        )
+        function addTaskToList(task){
+            let li=document.createElement("li");
+            li.innerText=task;
+            let removeBtn=document.createElement("listbelow");
+            removeBtn.innerText="X"
+            removeBtn.classList.add("remove");
+            removeBtn.addEventListener("click",function()
+            {
+                taskList.removeChild(li);
+            });
+            li.appendChild(removeBtn);
+            taskList.appendChild(li);
+        }
+    </script>
+</body>
+</html>

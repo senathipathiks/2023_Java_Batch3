@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        .slider-container {
+            width: 800px;
+           
+            margin: 30px auto;
+            padding: 20px;
+            background-color: black;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+        .slider-container img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+        /* .slider-container img:none{
+            display: flex;
+        } */
+        .slider-container img:first-child {
+            display: block;
+        }
+        .slider-controls {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .slider-controls span {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #175acc;
+            margin: 0 5px;
+           
+        }
+        .slider-controls span.active {
+            background-color: #ff6b6b;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <img src="https://www.treehugger.com/thmb/Hyg2sesubjZLnnsk4lFIdQr3lkc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1281387151-2bf3cd2cc08f4d279f879ea2b7af3e95.jpg" alt="Image 1">
+        <img src="https://facts.net/wp-content/uploads/2023/08/17-extraordinary-facts-about-mountain-ranges-1692758736.jpg" alt="Image 2">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/ama-dablam-mountain-peak-view-from-chola-pass-royalty-free-image-1623254695.jpg" alt="Image 3">
+        <div class="slider-controls">
+        </div>
+           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    
+    <script>
+        let images = document.querySelectorAll('.slider-container img');
+        let controls = document.querySelector('.slider-controls');
+        let currentIndex = 0;
+
+        images.forEach((img, i) => {
+            let span = document.createElement('span');
+            span.addEventListener('click', function() {
+                showImage(i);
+            });
+            controls.appendChild(span);
+        });
+
+            function showImage(index) {
+            images[currentIndex].style.display = 'none';
+            images[index].style.display = 'block';
+            controls.children[currentIndex].classList.remove('active');
+            controls.children[index].classList.add('active');
+            currentIndex = index;
+           }
+
+        
+    </script>
+</body>
+</html>
+    
