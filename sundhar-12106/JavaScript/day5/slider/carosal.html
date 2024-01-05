@@ -51,6 +51,7 @@
   </head>
   <body>
     <div class="slider">
+      <span class="dot">left</span>
       <img
         id="img-1"
         src="https://cdn.pixabay.com/photo/2020/07/05/02/46/nature-5371398_1280.jpg"
@@ -71,7 +72,7 @@
       <span class="dot active" onclick="changeSlide(0)">1</span>
       <span class="dot" onclick="changeSlide(1)">2</span>
       <span class="dot" onclick="changeSlide(2)">3</span>
-      <span class="dot" onclick="changeSlide(10)">S</span>
+      <!-- <span class="dot" onclick="changeSlide(10)">S</span> -->
     </div>
   </body>
   
@@ -94,8 +95,8 @@
 
     if (n != undefined) {
       clearInterval(timer);
-    //   timer = setInterval(changeSlide, interval);
-    //   currentImg = n;
+      timer = setInterval(changeSlide, interval);
+      currentImg = n;
     }
 
     imgs[currentImg].style.opacity = 1;
