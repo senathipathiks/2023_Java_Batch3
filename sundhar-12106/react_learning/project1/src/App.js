@@ -1,6 +1,6 @@
 // import './App.css';
 import React from 'react'
-import RouterEx from './components/RouterEx';
+// import RouterEx from './components/RouterEx';
 // import Login from "./components/Login";
 // import Nav from "./components/Nav";
 // import MyApp from "./components/MyApp";
@@ -16,7 +16,7 @@ import RouterEx from './components/RouterEx';
 
 // import ClsForm from "./components/ClsForm";
 // import ClsFormOnSubmit from "./components/ClsFormOnSubmit";
-// import ListRendering from "./components/ListRendering";
+import ListRendering from "./components/ListRendering";
 
 
 function App() {

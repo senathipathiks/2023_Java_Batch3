@@ -3,7 +3,7 @@ import React from 'react'
 function ListRendering() {
     const nameArr = ["sundhar","raj","srini"];
     const ele=(
-        <ul>
+        <ul className='list-group-horizontal'>
             <li key="1">First item</li>
             <li key="2">Second Item</li>
             <li key="3">Third Item</li>
