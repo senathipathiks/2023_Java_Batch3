@@ -1,0 +1,89 @@
+.container{
+    width: max-content;
+    height: 500px;
+    padding: 50px 100px;
+    background: rgb(206, 204, 204,0.5);
+    
+    margin-top: 100px;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    border: 5xp solid black;
+    border-radius: 20xp;
+}
+
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    text-shadow:  0.5 greenyellow;
+    text-align: center;
+}
+
+label{
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+body{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeTVTKnDMGnGdwE9PYa1fNS0tGclbMEu2f0zDL-hTRBiuh1NIBXrFVe9YFGY37Iezpq14&usqp=CAU');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: black;
+    font-size: 26px;
+}
+
+i{
+    font-size: 20px;
+    background-color: black;
+    color: yellow;
+}
+
+p{
+    padding: 10px;
+    text-align: center;
+}
+
+@media(max-width:80%){
+
+    html{
+        font-size: 88%;     
+    }
+
+}
+
+@media(max-width:70%){
+    
+    html{
+        font-size: 85%;     
+    }
+    
+}
+
+@media(max-width:60%)
+{
+    html{
+        font-size: 83%;     
+    }
+}
+
+@media(max-width:50%){
+
+    html{
+        font-size: 80%;     
+    }
+
+}
+
+@media(max-width:30%){
+
+    html{
+        font-size: 80%;     
+    }
+
+}
