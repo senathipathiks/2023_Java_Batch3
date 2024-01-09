@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <style>
+    #slider-container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    #prev, #next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    #prev {
+      left: 10px;
+    }
+
+    #next {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="slider-container">
+  <div id="slider">
+    <div class="slide"><img src="2.jpeg" alt="Image 1"></div></div>
+    <div class="slide"><img src="./download.jpeg" alt="Image 2"></div>
+    <div class="slide"><img src="./3.jpeg" alt="Image 3"></div>
+    <!-- Add more slides as needed -->
+  </div>
+
+  <div id="prev">&#10094;</div>
+  <div id="next">&#10095;</div>
+</div>
+
+<script>
+  const slider = document.getElementById('slider');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    const slideWidth = document.querySelector('.slide').offsetWidth;
+    const newPosition = -index * slideWidth;
+    slider.style.transform = `translateX(${newPosition}px)`;
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slider.children.length) % slider.children.length;
+    showSlide(currentIndex);
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slider.children.length;
+    showSlide(currentIndex);
+  }
+
+  prevBtn.addEventListener('click', prevSlide);
+  nextBtn.addEventListener('click', nextSlide);
+</script>
+
+</body>
+</html>

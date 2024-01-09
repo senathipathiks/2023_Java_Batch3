@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+
+        body,html{
+            height: 100%;
+            margin: 0;
+        }
+        .bg{
+            background-image:  url('st.png');
+             /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+          
+            
+        }
+        .maintop{
+            background-color: rgb(34, 163, 223);
+           font-size: 50px;
+           height: 70px;
+           width: 100%;
+           border-color: rgb(36, 131, 215);
+           
+
+
+        }
+        .btnlog{
+            align-content: flex-end;
+            height:  10px;
+            align-items: last baseline;
+            margin-left: 500px;
+            
+            
+        }
+        input{
+            background-color: white ;
+            
+
+        }
+        input:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body class="bg">
+    <div class="maintop"  >
+        Student Management System 
+        <span class="btnlog">
+          
+            <input onclick="location.href='login.html'"   type="button"  value="login">
+            <input type="button" onclick="location.href='registration.html'" value="register">
+        </span>
+        
+        
+    </div>
+    <div>
+    </div>
+
+    
+    
+</body>
+</html>

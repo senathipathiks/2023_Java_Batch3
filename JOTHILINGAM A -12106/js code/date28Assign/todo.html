@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'poppins', sans-serif;
+        box-sizing: border-box;
+        
+    }
+    .container{
+        width: 100%;
+        min-height: 100vh;
+        background: linear-gradient(135deg,blue,red);
+        padding: 10px;
+
+    }
+    .todo-app{
+        width: 100;
+        max-width: 540px;
+        background: white;
+        margin: 100px auto 20px;
+        padding: 40px 30px 70px;
+       }
+       .todo-app h2{
+        color: rgb(59, 105, 184);
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+       }
+       .row{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: #edeef0;
+        border-radius: 30px;
+        padding-left: 20px;
+        margin-bottom: 25px;
+
+      }
+      input{
+        flex: 1;
+        border: none;
+        outline: none;
+        background: transparent;
+        padding: 10px;
+        font-weight: 14px;
+      }
+      button{
+        border: none;
+        outline: none;
+        padding: 16px 50px;
+        background: blueviolet;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 40px;
+
+      }
+    
+
+</style>
+</head>
+<body>
+    <div class="container">
+    <div class="todo-app">
+    <h2>To-Do-List</h2>
+    <div class="row">
+        <input type="text" id="input1" placeholder="Add Your Task">
+        <button>Add</button>
+    </div>
+</div>
+ </div>
+    
+</body>
+</html>

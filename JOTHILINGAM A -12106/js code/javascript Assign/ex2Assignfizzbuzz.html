@@ -1,0 +1,38 @@
+<html>
+    <head>
+        
+
+    </head>
+    <body>
+        <script>
+            function fizzBuzz(input) {
+                var input = document.getElementById('number').value;
+                var output = document.getElementById('result');
+                if (isNaN (input)) {
+                    alert("Not a Number");
+                } else if (input % 2 === 0 && input % 3 === 0) {
+                    alert("Fizz Buzz");
+                } else if (input % 2 === 0) {
+                    alert("Fizz");
+                } else if (input % 3 === 0) {
+                    alert("Buzz");
+                }
+                   else{
+                    alert ("enter a number")
+                }
+}
+        </script>
+        
+        <form onsubmit="fizzBuzz();">
+            
+                  <label>Enter the number You want to check:</label><br>  
+               <input type="text" id="number" name="number">
+               <br>
+                <input type="submit" value="submit"><br>
+              
+            
+        </form>
+            
+
+    </body>
+</html>
