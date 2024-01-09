@@ -1,0 +1,33 @@
+#cont{
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    /* height: 100vh; */
+   }
+   .form1{
+    background-color:#e2d5de;
+    height: 100vh;
+    padding: 50px;
+   }
+   #empass1{
+
+    background-color: white;
+    margin-left: 40px;
+    height: 60px;
+    width: 450px;
+    border-radius: 10px;
+    /* padding: 40px; */
+   
+   }
+   input{
+    margin-top: 20px;
+   }
+   
+   .address{
+    margin-left: 40px;
+    height: 60px;
+    font-size: 2em;
+    border-radius: 8px;
+    
+
+   }

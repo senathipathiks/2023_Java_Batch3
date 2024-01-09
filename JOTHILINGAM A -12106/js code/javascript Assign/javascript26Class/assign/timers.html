@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        #input {
+            margin-bottom: 20px;
+        }
+        input {
+            width: 50px;
+            text-align: center;
+        }
+        #display {
+            font-size: 24px;
+        }
+    </style>
+    <title>Countdown Timer</title>
+</head>
+<body>
+    <h1>Countdown Timer</h1>
+    <div id="input">
+        <form>
+            Hours: <input type="number" placeholder="HH" id="hour" min="0">
+            Minutes: <input type="number" placeholder="MM" id="min" min="0">
+            Seconds: <input type="number" placeholder="SS" id="sec" min="0">
+        </form>
+    </div>
+    <div id="display"></div>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="resetTimer()">Reset</button>
+
+    <script>
+        var countdownTime;
+        var intervalId;
+
+        function startTimer() {
+            var hour = parseInt(document.getElementById("hour").value) || 0;
+            var min = parseInt(document.getElementById("min").value) || 0;
+            var sec = parseInt(document.getElementById("sec").value) || 0;
+
+            var now = new Date().getTime();
+            countdownTime = now + (hour * 3600000) + (min * 60000) + (sec * 1000);
+
+            intervalId = setInterval(updateTimer, 1000);
+        }
+
+        function updateTimer() {
+            var now = new Date().getTime();
+            var duration = countdownTime - now;
+
+            var hours = Math.floor(duration / (1000 * 60 * 60));
+            var minutes = Math.floor((duration % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((duration % (1000 * 60)) / 1000);
+
+            document.getElementById("display").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+
+            if (duration < 0) {
+                clearInterval(intervalId);
+                document.getElementById("display").innerHTML = "Time ended";
+            }
+        }
+
+        function resetTimer() {
+            clearInterval(intervalId);
+            document.getElementById("display").innerHTML = "";
+            document.getElementById("hour").value = "";
+            document.getElementById("min").value = "";
+            document.getElementById("sec").value = "";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 100px;
+      
+
+      
+    }
+    
+    
+
+    #timer {
+      font-size: 2em;
+      margin-top: 250px;
+      margin-left: -300px;
+     
+    }
+    .timbox{
+        background-color: gray;
+        width: 400px;
+        height: 150px;
+        padding-top: 10px;
+        
+    }
+    input{
+        margin-top: 30px;
+        height: 20px;
+        width: 30px;
+    }
+
+    button{
+        margin-top: 30px;
+        margin-left: 130px;
+    }
+  </style>
+  <title>Countdown Timer</title>
+</head>
+<body>
+
+<div class="timbox">
+  <label for="days">Days:</label>
+  <input type="number" id="days" min="0" step="1" value="0">
+  <label for="hours">Hours:</label>
+  <input type="number" id="hours" min="0" step="1" value="0">
+  <label for="minutes">Minutes:</label>
+  <input type="number" id="minutes" min="0" step="1" value="5">
+  <label for="minutes">Seconds:</label>
+  <input type="number" id="seconds" min="0" step="1" value="0">
+  <button onclick="startCountdown()">Start Countdown</button>
+</div>
+
+<div id="timer" class=""></div>
+
+<script>
+  let countdown;
+
+  function startCountdown() {
+    // Clear any existing countdown
+    clearInterval(countdown);
+
+    // Get the user-entered duration
+    const days = parseInt(document.getElementById("days").value) || 0;
+    const hours = parseInt(document.getElementById("hours").value) || 0;
+    const minutes = parseInt(document.getElementById("minutes").value) || 0;
+
+    // Set the date we're counting down to
+    const countDownDate = new Date().getTime() + (days * 24 * 60 * 60 * 1000) + (hours * 60 * 60 * 1000) + (minutes * 60 * 1000);
+
+    // Update the countdown every 1 second
+    countdown = setInterval(function() {
+      // Get the current date and time
+      const now = new Date().getTime();
+
+      // Calculate the remaining time
+      const distance = countDownDate - now;
+
+      // Calculate days, hours, minutes, and seconds
+      const daysRemaining = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hoursRemaining = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutesRemaining = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const secondsRemaining = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the countdown
+      document.getElementById("timer").innerHTML = `${daysRemaining}d ${hoursRemaining}h ${String(minutesRemaining).padStart(2, '0')}m ${String(secondsRemaining).padStart(2, '0')}s`;
+
+      // If the countdown is over, display a message
+      if (distance < 0) {
+        clearInterval(countdown);
+        document.getElementById("timer").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  }
+</script>
+
+</body>
+</html>

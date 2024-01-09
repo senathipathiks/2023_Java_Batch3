@@ -1,0 +1,28 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fibonacci(a){
+            let x=5;
+            let y=10;
+            if(a===0){
+                return x;
+            }
+            for(let i=2; i<=a; i++){
+                let z=x+y;
+                x=y;
+                y=z;
+
+            }
+            return "The"+ a + "element is" + y;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        document.write(fibonacci(1));
+    </script>
+    
+</body>
+</html>
