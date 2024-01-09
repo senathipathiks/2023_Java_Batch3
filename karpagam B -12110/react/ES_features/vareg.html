@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var Example</title>
+</head>
+<body>
+    <script>
+        let greetmsg="Hello There !!"
+        function greet(i){
+            if(i==1)
+            {
+               let greetmsg="Welcome";
+            }
+            else{
+                let greetmsg="Hello"; // let-let--> it is a block scope
+            }
+            document.write(greetmsg);
+        }
+        document.write(greetmsg);
+        greet(1);
+    </script>
+    
+</body>
+</html>
