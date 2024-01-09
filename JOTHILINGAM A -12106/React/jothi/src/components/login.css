@@ -1,0 +1,54 @@
+/* ligon css */
+container{
+    background-color: rgba(245, 245, 245, 0.582);
+}
+.MyDivCLass{
+    border: solid 2px;
+    height: 300px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    
+    
+    }
+    .lg{
+        text-decoration-line: underline;
+    }
+    /* form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    } */
+    input{
+        border: solid 2px;
+        margin-top: 20px;
+        height: 20px;
+
+    
+        
+    }
+    body{
+        font-family: Arial, sans-serif;
+        
+        }
+        .btn{
+            display: inline-block;
+            height: 30px;
+            width: 100px;
+
+          
+          
+           
+            margin-top: 30px;
+           
+            
+           
+                 }
+        .btn:hover{
+            background-color: rgb(156, 233, 156);
+        }
+    
+    
