@@ -1,0 +1,30 @@
+What is React.js?
+Definition: React.js, often referred to as React, is an open-source JavaScript library primarily used for building user interfaces (UIs)
+ 	    and single-page applications (SPAs).
+
+Developed by: Developed and maintained by Facebook.
+
+Key Features: Known for its simplicity, efficiency, and component-based architecture.
+
+Key Concepts:
+
+Components:
+
+Components are the building blocks of React applications.
+They are reusable, encapsulated elements that manage their state and can be composed to build complex UIs.
+Components can be functional (using functions) or class-based (using ES6 classes).
+JSX (JavaScript XML):
+
+JSX is a syntax extension that allows mixing HTML-like code within JavaScript.
+It simplifies the process of creating React elements and makes code more readable.
+Virtual DOM (Document Object Model):
+
+React uses a virtual DOM, which is an in-memory representation of the actual DOM.
+This virtual representation helps in efficiently rendering UI components by minimizing direct manipulation of the DOM.
+Unidirectional Data Flow:
+  
+Basic Setup:
+Create React App:
+Use create-react-app to set up a new React project quickly without complex configurations.
+Command to create a new React app: npx create-react-app my-app.
+Start the development server: cd my-app then npm start.

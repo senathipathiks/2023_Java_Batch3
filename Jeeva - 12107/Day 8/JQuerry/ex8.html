@@ -1,0 +1,40 @@
+<html>
+    <head>
+    <style>
+        .style1{
+            color: blue;
+        }
+        .style2{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: larger;
+            color:orange;
+        }
+        .style3{
+            background: yellow;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size:medium;
+            color: red;
+        }
+    </style>
+    <script src="jquery.js"></script>
+   <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#para1").addClass("style2");
+            });
+            $("#btn2").click(function(){
+                $("#para1").removeClass("style1 style2 style3");
+            });
+            $("#btn3").click(function(){
+                $("#para1").toggleClass("style3");
+            });
+        });
+    </script>
+   </head>
+    <body>
+     <p id="para1"class="style1">This is Paragraph 1 </p>
+     <input type="button" id="btn1" value="Add Class">
+     <input type="button" id="btn2" value="Remove Class">
+     <input type="button" id="btn3" value="Toggle Class">
+    </body>
+</html>

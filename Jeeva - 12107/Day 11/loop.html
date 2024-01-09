@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<h1>Course details</h1>
+
+<script>
+  // ... (other code blocks)
+
+  // Rest parameter and spread operator examples:
+
+  function display(message, ...colors) {
+    document.write("<br/>" + message + " (using rest parameters):");
+    for (let i in colors) {
+      document.write("<br>" + colors[i]);
+    }
+    document.write("<br>Spread operator applied to array:");
+  }
+
+  let message = "List of colors";
+  display(message, "red");
+  document.writeln("<br>-------------------<br>");
+
+  display(message, "red", "blue");
+  document.writeln("<br>-------------------<br>");
+
+  let colorArray = ["skyblue", "orange", "yellow"];
+  display(message, ...colorArray);
+
+  // Additional examples:
+
+  // Combining arrays with spread operator:
+  let combinedColors = [...colorArray, "purple", ...["pink", "green"]];
+  document.write("<br>Combined array: " + combinedColors + "<br>");
+
+  // Passing rest parameter to another function:
+  function logAllArguments(...args) {
+    document.write("<br>All arguments: ");
+    for (let arg of args) {
+      document.write(arg + " ");
+    }
+  }
+  logAllArguments("hello", 123, true);
+
+  // Destructuring arrays with rest parameters:
+  let [firstColor, secondColor, ...restColors] = colorArray;
+  document.write("<br>First color: " + firstColor);
+  document.write("<br>Rest of the colors: " + restColors);
+
+</script>
+
+</body>
+</html>
