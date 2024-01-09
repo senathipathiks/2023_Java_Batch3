@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Today's Date and Time</title>
+</head>
+<body>
+    <h1>Today's Date is:</h1>
+    <script>
+        var today = new Date();
+        document.write(today + "<br/>");
+        var day = today.getDate();
+        var month = today.getMonth() + 1;
+        var year = today.getFullYear();
+        document.write("<br/>Date is: " + day + "/" + month + "/" + year);
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        document.write("<br/>Time is: " + h + ":" + m + ":" + s + "<br/>");
+    </script>
+</body>
+</html>

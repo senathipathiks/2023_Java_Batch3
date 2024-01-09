@@ -1,0 +1,90 @@
+#img{
+    /* padding-bottom: 800px; */
+    padding-top: 10px;
+}
+#container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+ #input{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  
+ }
+ .para{
+  /* padding-top: 1000px; */
+  padding-bottom: px;
+ }
+ /* .body{
+
+ } */
+ .img-container img {
+    display: block;
+    width: 100px;
+    height: auto;
+ } 
+ .img-container{
+  position: relative;
+  display: inline-block;
+  text-align: justify;
+  margin: lem 0 0 0;
+  margin: 0%;
+  right: 800px;
+ }
+ .content{
+  position: absolute;
+  /* top:2px; */
+  bottom: 150px;
+  left:150px;
+  justify-items: auto;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  font-size: 20px;
+  text-align: center;
+ }
+ .p{
+  text-align: justify;
+  margin: lem 0 0 0;
+ }
+ .p+p{
+  text-indent: 2em;
+  margin: 0;
+ }
+ .para{
+  text-align: justify;
+  margin: lem 0 0 0;
+ }
+ .para+para{
+  text-align: justify;
+  margin: 0;
+ }
+ #label{
+  text-align: justify;
+  margin: lem 0 0 0;
+ }
+ #label+label{
+  text-align: justify;
+  margin: 0;
+ }
+ .btn btn-dark{
+  text-align: justify;
+  margin: lem 0 0 0;
+  margin-left: 50px;
+ }
+ #icon{
+  content:"";
+  /* display: block; */
+  background: url("icon.jpg")no-repeat;
+  width:0px;
+  height: 0px;
+  /* float: left; */
+  /* margin:0 6px 0 0; */
+ }

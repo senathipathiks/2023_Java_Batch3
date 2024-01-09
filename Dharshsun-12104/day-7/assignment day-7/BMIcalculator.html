@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+    <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+    <div class="bmi-calculator">
+        <h1>BMI Calculator</h1>
+        <div class="input">
+          <label for="height">Height (cm)</label>
+          <input type="text" id="height" placeholder="Height in cm">
+        </div>
+        <div class="input">
+          <label for="weight">Weight (kg)</label>
+          <input type="text" id="weight" placeholder="Weight in kg">
+        </div>
+        <button type="submit" class="calculate">Check BMI</button>
+        <div class="result"></div>
+      </div>
+      <div class="category">
+        <div class="Underweight">Underweight: 0 - 18.5</div>
+        <div class="Normal">Normal: 18.5 - 25</div>
+        <div class="Overweight">Overweight: 25 - 30</div>
+        <div class="Obese">Obese: 30 - 35</div>
+      </div>
+      <script>
+        // select the calculate button
+        var calculate = document.querySelector('.calculate');
+    
+        // attach event listener to the button
+        calculate.addEventListener('click', findBMI);
+    
+        // function to find the BMI
+        function findBMI() {
+          var height = +document.querySelector('#height').value;
+          var weight = +document.querySelector('#weight').value;
+          // check height & weight are a valid number
+          if (height <= 0 || weight <= 0 || isNaN(height) || isNaN(weight)) {
+            alert('Please fill all fields with valid numbers');
+            return;
+          }
+          // convert height to meters
+          height = height / 100;
+          var bmi = weight / (height * height);
+          showResult(bmi);
+        }
+    
+        // function to show the result
+        function showResult(bmi) {
+          var result = document.querySelector('.result');
+          var bmiStatus;
+          if (bmi < 18.5) {
+            bmiStatus = 'Underweight';
+          } else if (bmi < 25) {
+            bmiStatus = 'Normal';
+          } else if (bmi < 30) {
+            bmiStatus = 'Overweight';
+          } else {
+            bmiStatus = 'Obese';
+          }
+          result.innerHTML = `<div class=${bmiStatus}>Your BMI is ${bmi.toFixed(2)} and you are ${bmiStatus}.</div>`;
+        }
+      </script>
+</body>
+</html>

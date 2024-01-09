@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Simple Calculator</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <style>
+    .container {
+      width: 300px;
+      margin: auto;
+      min-height: 400px;
+      box-shadow: 0 8px 50px -7px black;
+      background: #3A4655;
+    }
+    .screen {
+      padding: 1rem;
+    }
+
+    #operation {
+      font-size: 1.3rem;
+      text-align: right;
+      color: #727B86;
+      padding-bottom: .5rem;
+    }
+
+    #result {
+      font-size: 2rem;
+      text-align: right;
+      color: #fff;
+    }
+    .button-row {
+      display: table;
+    }
+
+    .button-row button {
+      display: table-cell;
+      width: 25%;
+      background: #425062;
+      color: #fff;
+      height: 65px;
+      font-size: 1.3rem;
+      border: none;
+      border-color: #3C4857;
+      border-width: 1px 1px 0px 0;
+      border-style: solid;
+    }
+
+    .button-row button.ac {
+      color: #ff7665;
+    }
+
+    .button-row button.opt {
+      color: #ffbc56;
+    }
+    .button-row button:nth-child(4n) {
+      border-right: none;
+    }
+    .button-row button:active {
+      position: relative;
+      top: 1px;
+    }
+
+    .button-row button:hover {
+      background: #3e4b5c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="screen">
+      <div id="operation">1234 + 567 + </div>
+      <div id="result">890</div>
+    </div>
+    <div class="button-row">
+      <button class="ac">AC</button>
+      <button class="opt">+/−</button>
+      <button class="opt">%</button>
+      <button class="opt">÷</button>
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button class="opt">×</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button class="opt">−</button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button class="opt">+</button>
+      <button>0</button>
+      <button>.</button>
+      <button>⌫</button>
+      <button class="opt">=</button>
+    </div>
+  </div>
+</body>
+</html>

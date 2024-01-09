@@ -1,0 +1,30 @@
+<!-- 12.Write a function to accept an array as an argument and print the numbers which are multiples of 5. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function MultiplesOfFive(array) {
+    for (let i = 0; i < array.length;i++) {
+        if (array[i] % 5 === 0) {
+            document.write(array[i]+"</br>");
+            
+        }
+        
+        
+    }
+}
+    </script>
+</head>
+<body>
+    <script>
+        let res=MultiplesOfFive([9 , 60, 25,10]);
+        document.write(res);
+        // var array=[5,9,20,21];
+        // MultiplesOfFive(array);
+    </script>
+    
+</body>
+</html>

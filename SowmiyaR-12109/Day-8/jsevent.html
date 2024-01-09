@@ -1,0 +1,46 @@
+<html>
+<head> Javascript Events</head>
+<body>
+
+<form>
+<input type="button" onclick="clickevent()" value="OnClick"/>
+<input type="button" id="btn1" value="OnClick 2"/>
+<input type="text" id="text1" onfocus="focusevent()">
+<input type="button" id="btn2" onmouseover="mouseover()" onmouseout="mouseout()" value="OnMouseover"/>
+<input type="text" id="text3" onkeydown="keypressed()" onkeyup="keyreleased()" />
+
+</form>
+<script>
+	
+	function clickevent()
+	{
+		alert("onclick Event");
+	}
+    document.getElementById("btn1").addEventListener("click",click);
+	function click()
+	{
+		alert("on click Event2");
+	}
+    function focusevent()
+    {
+       document.getElementById("text1").style.background="blue"; 
+    }
+    function mouseover()
+    {
+       document.getElementById("btn2").style.backgroundColor="white"; 
+    }
+    function mouseout()
+    {
+       document.getElementById("btn2").style.backgroundColor="gray"; 
+    }
+    function keypressed()
+    {
+       alert("Key Pressed"); 
+    }
+    function keyreleased()
+    {
+        document.getElementById("text3").style.background="red";
+    }
+</script>
+</body>
+</html> 

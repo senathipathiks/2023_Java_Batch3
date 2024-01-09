@@ -1,0 +1,15 @@
+
+    *{
+        color:blue ;
+        font-size:large ;
+        border: 2px solid gold;
+        text-align:center;
+    }
+    
+    {
+        color: red;
+        text-align: center;
+        font-size: medium;
+         font-weight:bolder ;
+
+    }

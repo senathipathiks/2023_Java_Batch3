@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Speed Message</title>
+    <h1>Speed alert for vehicles</h1>
+  </head>
+  <body>
+    <script>
+      function SpeedPrompt(speed) {
+        if (speed <= 50) {
+          document.write("Safe Driving");
+        } else if (speed > 50 && speed <= 60) {
+          document.write("Driving Safely");
+        } else if (speed > 60 && speed <= 70) {
+          document.write("Speed Limit Crossed, reduce your Speed !!!");
+        } else if (speed > 70) {
+          document.write("Over speed !!!");
+        }
+      }
+      SpeedPrompt(80);
+    </script>
+  </body>
+</html>

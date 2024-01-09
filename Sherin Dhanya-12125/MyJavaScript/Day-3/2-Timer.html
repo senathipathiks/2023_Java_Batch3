@@ -1,0 +1,20 @@
+<html>
+<head>
+
+</head>   
+<body>
+    <div id="Timer"></div>    
+        <script>
+            window.onload=function(){checktime()};
+            function checktime()
+            {
+var today= new Date();
+var hour=today.getHours();
+var minute=today.getMinutes();
+var second=today.getSeconds();
+document.getElementById("Timer").innerHTML="<h1> Time is:"+hour+":"+minute+":"+second+"</h1>";
+setTimeout(function(){checktime()},1000);
+            }
+</script>
+</body> 
+  </html>

@@ -1,0 +1,17 @@
+<html><head>
+    <script>
+        function calculate_age(dob){
+        
+        var month_diff = Date.now() - dob.getTime();
+        var age_dt = new Date(month_diff);
+        return Math.abs(age_dt.getUTCFullYear()-1970)
+        }
+       console.log(calculate_age(new Date(1982,11,4)));
+    </script>
+</head>
+<body>
+    <script>
+        
+    </script>
+</body>
+</html>

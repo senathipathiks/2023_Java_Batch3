@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            background-color:gold;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>BMI Calculator</h1>
+    <div class="container">
+        <form>
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" placeholder="Enter your weight" required>
+
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height" placeholder="Enter your height" required>
+
+            <input type="submit" value="Calculate">
+            
+        </form>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        const result = document.createElement('p');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const weight = Number(event.target.weight.value);
+            const height = Number(event.target.height.value) / 100;
+            const bmi = weight / (height * height);
+            result.textContent = `Your BMI is ${bmi.toFixed(2)}.`;
+            form.appendChild(result);
+        });
+    </script>
+</body>
+</html>

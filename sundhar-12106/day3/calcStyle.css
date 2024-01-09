@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  color: rgb(129, 129, 129);
+}
+body {
+  background-image: url(https://www.teachingchannel.com/wp-content/uploads/2023/03/cropped_Copy20of20Math_Blog-8-scaled.jpg);
+  object-fit: cover;
+}
+.main {
+  height: 100vh;
+  width: 100vw;
+  /* border: 2px solid; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main > .cal {
+  height: 450px;
+  width: 400px;
+  border: 2px solid rgb(151, 155, 154);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgb(133, 202, 179); */
+  border-radius: 10px;
+}
+.disp {
+  height: 80px;
+  width: 350px;
+  /* background-color: aqua; */
+  border-radius: 4px;
+}
+/* .cal > form input[type=reset]{
+
+    background-color: yellowgreen;
+    height: 80px;
+    width: 100px;
+    border-style: none;
+    margin: 2px;
+    border-radius: 4px;
+
+} */
+.cal > form input[type="button"],
+.cal > form input[type="reset"] {
+    color: black;
+  background-color: rgb(100, 117, 126);
+  height: 50px;
+  width: 80px;
+  border-style: none;
+  margin: 2px;
+  border-radius: 4px;
+}
+.cal > form input[type="button"]:hover,
+.cal > form input[type="reset"]:hover {
+  background-color: white;
+  color: rgb(37, 37, 35);
+  border: 2px solid rgb(115, 117, 110);
+}

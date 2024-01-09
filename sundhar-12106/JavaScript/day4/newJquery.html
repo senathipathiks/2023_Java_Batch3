@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formValidWithJquery</title>
+    <!-- <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</head>
+<body>
+    <form action="">
+        <label for="fir">First Name : </label>
+        <input type="text" id="fir" placeholder="enter first name"><br><br>
+        <label for="las">last Name : </label>
+        <input type="text" id="las" placeholder="enter last name"><br><br>
+        <label for="pwd">Password : </label>
+        <input type="password" name="pass" id="pwd" placeholder="password"><br><br>
+        <input type="submit" value="Register">
+    </form>
+       
+    <script>
+        $(document).ready(e=>{
+            $("form").submit(e=>{
+                e.preventDefault();
+                let pat = /\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+/;
+                let fir_name = $("#fir").val();
+                console.log("fir name "+fir_name);
+                if (pat.test(fir_name)) {
+                    console.log("valid first name");
+                }else{
+                    console.log("not valid");
+                }
+            })
+        });
+    </script>
+</body>
+</html>

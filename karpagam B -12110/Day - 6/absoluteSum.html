@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>absolute sum</title>
+    <script>
+        const arr = [1, -5, -34, 5 ];
+        const absoluteSum = arr => {
+         let res = 0;
+
+        for(let i = 0; i < arr.length; i++){
+        if(arr[i] < 0){
+        res=res+(arr[i] * -1);
+        continue;
+      }
+      res += arr[i];
+   }
+   return res;
+}
+
+    </script>
+</head>
+<body>
+    <script>
+        document.write("Sum of the array is:  "+absoluteSum(arr));
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function ValidateEmail(emailId){
+            var mailformat=/^([A-Za-zO-9_])+\@([A-Za-zO-9_\-\.])+\.([A-Za-z]){2,4})$/;
+            if(emailid.value.match(mailformat)){
+                document.form1.text1.focus();
+                return true;
+            }
+            else{
+                alert("Invalid email address");
+                document.form1.text1.focus();
+                return false;
+            
+            }
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

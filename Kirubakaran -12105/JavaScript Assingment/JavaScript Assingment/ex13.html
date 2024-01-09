@@ -1,0 +1,23 @@
+<!-- Write a JavaScript program to display the current day and date in the following format
+Today is Friday.
+Current date is 22 : 12 : 23
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <script>
+          function date() {
+            let q=new Date();
+            document.write("Today is "+q.toLocaleString('en-us',{weekday:"long"})+"<br>"); 
+            document.write("Curent date is "+q.toLocaleString('en-us',{day:"2-digit"})+":"+q.toLocaleString('en-us',{month:"2-digit"})+":"+q.toLocaleString('en-us',{year:"2-digit"}));
+              
+          }
+          date();
+      </script>
+</body>
+</html>

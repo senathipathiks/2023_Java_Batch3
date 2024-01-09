@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>third_small_element</title>
+</head>
+<body>
+    <script>
+        function findThirdSmallest(arr) {
+        arr.sort((a, b) => a - b); 
+        return arr[2]; 
+  }
+
+         
+       var arr = prompt("Enter the Array:");  
+        
+       document.write(findThirdSmallest(arr));
+
+    </script>
+</body>
+</html>

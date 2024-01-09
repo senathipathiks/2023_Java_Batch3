@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Append,prepend,remove</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(function(){
+            $("#btn1").click(function(){
+                 $("#para1").append(" <b>From Tenkasi!!</b>");
+            });
+            $("#btn2").click(function(){
+                 $("#para1").prepend(" <i> Hii :)</i> ");
+            });
+            $("#btn3").click(function(){
+                 $("#para1").remove();
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <p id="para1">Iam Kaviya</p>
+    <input type="button" value="Append Text" id="btn1"><br><br>
+    <input type="button" value="Prepend Text" id="btn2"><br><br>
+    <input type="button" value="Remove Text" id="btn3"><br><br>
+
+</body>
+</html>

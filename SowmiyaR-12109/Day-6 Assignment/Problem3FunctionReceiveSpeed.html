@@ -1,0 +1,41 @@
+ <!-- 3. Write a function which receives speed as a parameter
+	if it is <= 50 print "Safe Driving"
+	if it is > 50 and <=60 print "Drive Safely"
+	if it is > 60 print "Speed Limit Crossed, reduce your Speed !!!"
+	if it is more than 70, print "Over speed !!!" -->
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>speed as a parameter</title>
+    <script>
+        function divisible(speed){ 
+        
+        if(speed>50 && speed<=60){
+          return  "Drive Safely"
+        }
+        else if( speed<=50){
+            return "Safe Driving"
+        }
+        else if(speed>60 && speed<=70){
+            return "Speed Limit Crossed, reduce your Speed !!!"
+        }
+        else if(speed>70 ){
+            return "Over speed !!!"
+        }
+        
+    }
+    </script>
+</head>
+<body>
+    <script>
+        let res=divisible(10);
+        document.write(res);
+    </script>
+    
+
+    
+</body>
+</html>

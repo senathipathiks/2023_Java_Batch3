@@ -1,0 +1,43 @@
+
+<!-- 6. Write a JavaScript function that accepts a string as a parameter and converts the first and last letters of each word 
+    of the string in upper case. -->
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>converts the first and last letters in upper case</title>
+   
+<script>  
+function UpperCase(str) {
+    
+    let arr = str.split(" ");
+
+    
+    for (let i = 0; i < arr.length; i++) {
+       
+        if (arr[i].length > 1) {
+            
+            arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1,-1) + arr[i][arr[i].length - 1].toUpperCase();
+        } else {
+            
+            arr[i] = arr[i].toUpperCase();
+        }
+    }
+
+    
+    return arr.join(' ');
+}
+  </script>
+</head>
+<body>
+   
+    <script>
+        var result=UpperCase("sowmiya ramu");
+        document.write(result);
+    </script>
+     
+    
+    
+</body>
+</html>

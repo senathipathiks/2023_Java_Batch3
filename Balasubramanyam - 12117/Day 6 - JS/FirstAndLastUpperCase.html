@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FL upper</title>
+    <script>
+       function FirstAndLast(str)
+{
+    var ch = str.split('');
+    for (var i = 0; i < ch.length; i++)
+    {
+        var k = i;
+        while (i < ch.length && ch[i] != ' ')
+            i++;
+        ch[k] = String.fromCharCode(ch[k] >= 'a' && 
+        ch[k] <= 'z' ? (ch[k].charCodeAt(0) - 32)
+                    : ch[k].charCodeAt(0));
+        ch[i - 1] = String.fromCharCode(ch[i - 1] >= 'a'
+        && ch[i - 1] <= 'z'? (ch[i - 1].charCodeAt(0) - 32) : ch[i - 1].charCodeAt(0));
+    }
+
+    return ch.join('');
+}
+    </script>
+</head>
+<body>
+    <script>
+         var str = "Hello Hi";
+        document.write( str + "<br>");
+        document.write( FirstAndLast(str));
+
+    </script>
+</body>
+</html>

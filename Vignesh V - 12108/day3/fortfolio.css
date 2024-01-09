@@ -1,0 +1,44 @@
+*{
+    margin: 0;   
+    
+}
+.logo{
+    width: 170px;
+    padding: 5px ;
+}
+.h{
+    padding-left: 50px;
+    color: rgb(84, 102, 117);
+}
+.t1{
+    border: 1px solid ;
+    height: 15p;
+     background-color: rgb(56, 54, 54);
+}
+.hero{
+   
+    padding-left: 600px;
+}
+.hero-text{
+    padding-top: 40px;
+    padding-left: 195px;
+    color: rgb(12, 12, 11);
+}
+.a{
+    padding-top: 40px;
+    padding-left: 200px;
+    
+}
+
+p{
+    font-size: 22px;
+    color: rgb(8, 145, 99);
+    font-style: italic;
+}
+.port{
+    padding-top: 40px;
+    padding-left: 200px;
+}
+/*align-items: center;
+    justify-content: space-between;
+

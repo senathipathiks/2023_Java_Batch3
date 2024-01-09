@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register Page</title>
+        <Style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-start;
+           padding-left: 300px;
+            color: rgb(2, 2, 2);
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-7RLYuxVfa4_kOIj5GdTQo4p3TZuO2hOa1A&usqp=CAU');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+
+    </Style>
+    </head>
+    <body>
+        <p><h1><b><u>Register</u></b></h1></p>
+       <form>
+            <label name="FullName" for="FullName">
+            FullName :      
+            <input type="text" placeholder="Enter your FullName" id="name" required autocomplete="off">
+        </label>
+        <br><br>
+        <label name="dob" for="DOB">
+            DOB :      
+            <input type="date" placeholder="Enter your Date of Birth"  required autocomplete="off">
+        </label>
+        <br><br>
+        <label name="gender" for="Gender">
+            Gender :     
+            <input type="radio">Male
+            <input type="radio">Female
+        </label>
+        <br><br>
+        <label name="email" for="Email">
+            Email :     
+            <input type="email" placeholder="Enter your email id" id="email" required>
+        </label>
+        <br><br>
+        <label name="password" for="Password">
+            Password :      
+            <input type="password" placeholder="Enter your password" id="password" onmouseleave="passwordLength()" required>
+        </label>
+        <br><br>
+        <label name="repassword" for="RePassword">
+            Re-Enter Password :      
+            <input type="password" placeholder="Enter your  Re-Enter Password" id="repassword" onmouseleave="passwordMatch()" required>
+        </label>
+        <br><br>
+        <label name="submit" for="Sumbit">
+            <input type="submit" placeholder="Register" onclick="validate()">
+        </label>
+      </form>
+      <script>
+        let validate = ()=>{
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var rePassword = document.getElementById("repassword").value;
+        var emailRegExp = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+        var passRegExp = /^[a-zA-z0-9@.$#]{8,20}$/
+        if(name=="")
+        alert("Name should not be empty");
+        else if(!email.match(emailRegExp))
+        alert("Email is Not Valid");
+        else if(!password.match(passRegExp))
+        alert("Password is not Valid");
+        else if(!rePassword.match(passRegExp))
+        alert("Password is not Valid");
+        }
+        let passwordLength = () =>{
+            var password = document.getElementById("password").value;
+            if(password.length<6)
+            alert("Password Should contain more six characters");
+        }
+        let passwordMatch = () =>{
+            var password = document.getElementById("password").value;
+            var rePassword = document.getElementById("repassword").value;
+            if(rePassword!=password)
+            alert("Password MisMatch");
+        }
+      </script>
+    </body>
+</html>

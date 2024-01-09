@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Palindrome Checker</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        text-align: center;
+      }
+      label {
+        display: inline-block;
+        width: 100px;
+        margin-bottom: 10px;
+      }
+      input[type="text"] {
+        width: 200px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      input[type="submit"] {
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #4CAF50;
+        color: #fff;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      #result {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Palindrome Checker</h1>
+    <form>
+      <label for="input">Enter a string:</label>
+      <input type="text" id="input" name="input"><br>
+      <input type="submit" value="Check" onclick="checkPalindrome()">
+    </form>
+    <div id="result"></div>
+    <script>
+      function checkPalindrome() {
+        let input = document.getElementById("input").value;
+        let result = document.getElementById("result");
+        if (input === "") {
+          result.innerHTML = "Please enter a string.";
+        } else {
+          let reversedInput = input.split("").reverse().join("");
+          if (input === reversedInput) {
+            result.innerHTML = `The string "${input}" is a palindrome.`;
+          } else {
+            result.innerHTML = `The string "${input}" is not a palindrome.`;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

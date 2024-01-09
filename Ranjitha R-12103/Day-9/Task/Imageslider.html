@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Slider</title>
+  
+  <script src="jquery.js"></script>
+
+  <style>
+    
+    .slider {
+      width: 800px;
+      height: 400px;
+      margin: 20px auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    
+    .slider img {
+      width: 800px;
+      height: 400px;
+      display: none;
+    }
+
+    
+    .slider-controls {
+      width: 800px;
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      text-align: center;
+    }
+
+    
+    .slider-button {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: white;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .active {
+      background-color: #28a745;
+    }
+
+    
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 20px;
+      line-height: 40px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+   
+    .prev {
+      left: 10px;
+    }
+
+    
+    .next {
+      right: 10px;
+    }
+    #h1{
+        flex: display;
+        text-align: center;
+        padding-left: 60px;
+    }
+    #body{
+        background-color:yellowgreen;
+    }
+  </style>
+</head>
+<body id="body">
+ <h1 id="h1">Nature images</h1>
+  <div class="slider">
+    <img src="images/img1.jpg" alt="Image 1">
+    <img src="images/img2.jpg" alt="Image 2">
+    <img src="images/img3.jpg" alt="Image 3">
+    
+   
+    <div class="slider-controls">
+      <span class="slider-button active"></span>
+      <span class="slider-button"></span>
+      <span class="slider-button"></span>
+      <span class="slider-button"></span>
+    </div>
+    
+    <span class="prev"><b><</b></span>
+    <span class="next"><b>></b></span>
+  </div>
+
+  
+  <script>
+    
+    var slider = $(".slider");
+    var images = slider.find("img");
+    var buttons = slider.find(".slider-button");
+    var prev = slider.find(".prev");
+    var next = slider.find(".next");
+    var currentIndex = 0;
+    images.eq(currentIndex).show();
+    buttons.click(function() {
+      var buttonIndex = $(this).index();
+      if (buttonIndex != currentIndex) {
+        images.eq(currentIndex).hide();
+        currentIndex = buttonIndex;
+        images.eq(currentIndex).show();
+        buttons.removeClass("active");
+        $(this).addClass("active");
+      }
+    });
+
+    prev.click(function() {
+      images.eq(currentIndex).hide();
+      currentIndex--;
+      if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+      }
+      images.eq(currentIndex).show();
+      buttons.removeClass("active");
+      buttons.eq(currentIndex).addClass("active");
+    });
+
+    next.click(function() {
+      images.eq(currentIndex).hide();
+      currentIndex++;
+      if (currentIndex > images.length - 1) {
+        currentIndex = 0;
+      }
+      images.eq(currentIndex).show();
+      buttons.removeClass("active");
+      buttons.eq(currentIndex).addClass("active");
+    });
+  </script>
+</body>
+</html>

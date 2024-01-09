@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JS functions</title>
+    <script>
+        function msg(){
+           alert("ensure that you fill out the password with meeting all creteria!");
+        }
+        function msg1(){
+            alert("ensure that you fill out all fields before submitting..")
+        }
+        function focus(){
+            alert("Please check all the fields!!")
+        }
+        
+
+    </script>
+</head>
+<body>
+    <input type="button" onclick="msg1()"  value="submit"></button><br><br>
+    <input type="password" onblur="msg()">
+    <input type="password" onfocus="focus()">
+</body>
+</html>

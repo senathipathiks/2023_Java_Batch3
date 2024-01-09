@@ -1,0 +1,58 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script>
+            function fizzBuzz(input) {
+	// Declare an array to store the results
+	let output = [];
+
+
+	// Loop from 1 to n (inclusive)
+	for (let i = 1; i <= input; ++i) {
+	
+		// Check if i is divisible by both 3 and 5
+		if (i % 3 === 0 && i % 5 === 0) {
+		
+			// Add "FizzBuzz" to the result array
+			console.log("FizzBuzz");
+		} 
+		
+		// Check if i is divisible by 3
+		else if (i % 3 === 0) {
+		
+			// Add "Fizz" to the result array
+			console.log("Fizz");
+		} 
+		
+		// Check if i is divisible by 5
+		else if (i % 5 === 0) {
+		
+			// Add "Buzz" to the result array
+			console.log("Buzz");
+		} 
+		else {
+		
+			// Add the current number as a string to the
+			// result array
+			console.log(i.toString());
+		}
+	}
+
+	// Return the result array
+	return output;
+}
+
+// Driver code
+let n = 20;
+
+// Call the fizzBuzz function to get the result
+let output = fizzBuzz(n);
+
+// Print the result
+console.log(output.join(' '));
+
+        </script>
+    </body>
+</html>

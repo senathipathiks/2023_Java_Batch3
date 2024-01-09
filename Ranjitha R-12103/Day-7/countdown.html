@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Timer</title>
+  <h1>Countdown Timer</h1>
+</head>
+<body id="body">
+ 
+  <div id="timer">00:00:00</div>
+  <div id="controls">
+    <button id="start">Start</button>
+    <button id="Pause">Pause</button>
+    <button id="reset">Reset</button>
+  </div>
+  <script>
+  
+    var timer = document.getElementById("timer");
+    var start = document.getElementById("start");
+    var stop = document.getElementById("Pause");
+    var reset = document.getElementById("reset");
+
+    let hours = 0;
+    let minutes = 0;
+    let seconds = 0;
+    let intervalId;
+
+    function formatTime() {
+      
+      let hoursString = hours < 10 ? "0" + hours : hours;
+      let minutesString = minutes < 10 ? "0" + minutes : minutes;
+      let secondsString = seconds < 10 ? "0" + seconds : seconds;
+
+      return hoursString + ":" + minutesString + ":" + secondsString;
+    }
+
+    function updateTimer() {
+      
+      timer.textContent = formatTime();
+    }
+
+    function startTimer() {
+      seconds++;
+
+      if (seconds === 60) {
+        seconds = 0;
+        minutes++;
+      }
+
+      if (minutes === 60) {
+        minutes = 0;
+        hours++;
+      }
+      updateTimer();
+    }
+
+    function PauseTimer() {
+    
+      clearInterval(intervalId);
+    }
+
+    function resetTimer() {
+      PauseTimer();
+      hours = 0;
+      minutes = 0;
+      seconds = 0;
+      updateTimer();
+    }
+
+    start.addEventListener("click", function() {
+      intervalId = setInterval(startTimer, 1000);
+    });
+
+    stop.addEventListener("click", function() {
+      PauseTimer();
+    });
+
+    reset.addEventListener("click", function() {
+      resetTimer();
+    });
+  </script>
+</body>
+</html>

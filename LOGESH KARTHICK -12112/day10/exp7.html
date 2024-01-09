@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .style1{
+            background-color: blue;
+            color: rgb(252, 247, 228);
+        }
+        .style2{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: larger;
+            font-weight: 100;
+            color: red;
+            background-color: darkturquoise;
+        }
+
+        .style3{
+            background: linear-gradient(red,orange,yellow);
+            color: black;
+            font-size: x-large;
+            font-weight: bolder;
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#para1").addClass("style2");
+            });
+            $("#btn2").click(function(){
+                $("#para1").removeClass("style2 style3");
+            });
+            $("#btn3").click(function(){
+                $("#para1").toggleClass("style3");
+            });
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para1" class="style1">This is my Paragraph </p>
+    <input type="button" id="btn1" value="Add class" style="cursor: pointer;" >
+    <input type="button" id="btn2" value="Remove class" style="cursor: pointer;" >
+    <input type="button" id="btn3" value="Toggle class" style="cursor: pointer;" >
+</body>
+</html>
+

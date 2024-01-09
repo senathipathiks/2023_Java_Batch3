@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #4ae1f9;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+#img-slide {
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#img-slide div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#img-slide img {
+    width: 100%;
+    height: 100%;
+}
+
+#button {
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+    </style>
+</head>
+<body>
+    <h1>Image Slider</h1>
+    <div id="img-slide">
+        <div id="d1" style="display: none;"><img src="https://t4.ftcdn.net/jpg/02/47/83/31/240_F_247833152_El8gFAYYFoVcwEZX9hvut3G3CBx3Wgbb.jpg" alt="Image1"></div>
+        <div id="d2" style="display: none;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr65gc96DUD_awiaGbBsIuNOGbYZCB3B4lOudtYo_yiuBxZQsWCnUspdJ7HQ&s" alt="Image2"></div>
+        <div id="d3" style="display: none;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIhB5BUhOwNgFQZXPuCvvwjus9pZURNxClWwbKHS8fV5Mwpa71oKpquSOlDg&s" alt="Image3"></div>
+        <div id="d4" style="display: none;"><img src="https://t3.ftcdn.net/jpg/05/68/49/90/240_F_568499083_q9QfafI1PkGJA8QQMIpiTT557xUUJ4Qq.jpg" alt="Image4"></div>
+        <div id="d5" style="display: none;"><img src="https://t3.ftcdn.net/jpg/06/60/75/38/240_F_660753827_u5TFFAVbMs9JNWMHMLiAU96mNCrF3QxC.jpg" alt="Image5"></div>
+    </div>
+    <div id="button">
+        <button id="btn-previous">Previous</button>
+        <button id="btn-next">Next</button>
+    </div>
+        <script>
+        var currPos = 1;
+        var totalImages = 5;
+
+        function display() {
+            for (var i = 1; i <= totalImages; i++) {
+                document.getElementById("d" + i).style.display = "none";
+            }
+            document.getElementById("d" + currPos).style.display = "block";
+        }
+
+        document.getElementById('btn-next').addEventListener("click", function() {
+            if (currPos < totalImages) {
+                currPos++;
+            } else {
+                currPos = 1;
+            }
+            display();
+        });
+
+        document.getElementById('btn-previous').addEventListener("click", function() {
+            if (currPos > 1) {
+                currPos--;
+            } else {
+                currPos = totalImages;
+            }
+            display();
+        });
+
+        display();
+    </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>stopwatch</title>
+    <link rel="stylesheet" href="./stopStyle.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>stopwatch</h1>
+      <section class="in-con">
+        <!-- <label for="min">Enter the time to set : </label><br /> -->
+        <div class="in">
+          <!-- <input type="number" id="hr"  placeholder="hours"/> -->
+          <input type="number" id="hr" placeholder="hours" /><span>hour</span>
+          <input type="number" id="min" placeholder="minutes" /><span>min</span>
+          <input type="number" id="sec" placeholder="seconds" /><span>sec</span>
+        </div>
+        <div class="op">
+          <input type="button" id="btn" onclick="startTimer()" value="Start" />
+          <input
+            type="button"
+            id="stop_btn"
+            onclick="stopTimer()"
+            value="stop"
+          />
+          <input
+            type="button"
+            id="reset_btn"
+            onclick="resetTimer()"
+            value="reset"
+          />
+        </div>
+        <span id="timer"></span>
+      </section>
+    </div>
+    <script>
+      const startBtn = document.querySelector("#start");
+      const stopBtn = document.querySelector("#stop");
+      const resetBtn = document.querySelector("#reset");
+
+      let sec = document.querySelector("#sec");
+      let min = document.querySelector("#min");
+      let hour = document.querySelector("#hr");
+
+      secInner = +sec.value;
+      minInner = +min.value;
+      hourInner = +hour.value;
+      // console.log(sec);
+      // console.log(secInner);
+      let timer;
+
+      const startProcess = function () {
+       
+        if (sec.value < 59) {
+          // console.log("hello");
+          if (sec.value < 9) {
+            
+            secInner += 1;
+            // console.log(secInner);
+            sec.value = "0" + secInner;
+          } else {
+            secInner += 1;
+            sec.value = secInner;
+          }
+        } else {
+          secInner = 0;
+          sec.value = "00";
+          // minutes
+          if (min.value< 59) {
+            if (min.value < 9) {
+              minInner += 1;
+              min.value = "0" + minInner;
+            } else {
+              minInner += 1;
+              min.value = minInner;
+            }
+          } else {
+            minInner = 0;
+            min.value = "00";
+
+            if (hour.value < 23) {
+              if (hour.value < 9) {
+                hourInner += 1;
+                hour.value = "0" + hourInner;
+              } else {
+                hourInner += 1;
+                hour.value = hourInner;
+              }
+            } else {
+              clearInterval(timer);
+
+              secInner = 0;
+              sec.value = "00";
+
+              minInner = 0;
+              min.value = "00";
+
+              hourInner = 0;
+              hour.value = "00";
+            }
+          }
+        }
+      };
+
+      function startTimer() {
+        timer = setInterval(startProcess, 1000);
+      }
+
+      function stopTimer(){
+        clearInterval(timer);
+      }
+
+      function resetTimer(){
+        clearInterval(timer);
+        secInner = 0;
+        minInner = 0;
+        hourInner = 0;
+        sec.value = "00";
+        min.value = "00";
+        hour.value = "00";
+      }
+
+      //! function toggle() {
+      //   if (startTimer) {
+      //     clearInterval(startTimer);
+      //     startTimer = null;
+      //     buttonElement.innerHTML = "Start";
+      //   } else {
+      //     buttonElement.innerHTML = "Stop";
+      //     startTimer = setInterval(myTimer, 1000);
+      //   }
+      // }
+      // function resetTimer(){
+      //   let hr=0,minute=0,sec=0;
+      //     clearInterval(start);
+      //     document.getElementById('hr').value=hr;
+      //     document.getElementById('min').value=minute;
+      //     document.getElementById('sec').value=sec;
+      // }
+      // let start =setInterval(function () {startTimer()}, 1000);
+
+      // function startTimer() {
+      //   // let minute = document.getElementById('min').value;
+      //   // let sec = document.getElementById('sec').value;
+      //   // if (minute == 0 && sec == 0) {
+      //   //   document.getElementById("timer").innerHTML= "Enter the timing";
+      //   // } else {
+
+      //     let hr=0,minute=0,sec=0;
+
+      //     // document.getElementById("timer").innerHTML = minute + ":" + sec;
+      //     console.log("hello");
+      //     document.getElementById('hr').value=hr;
+      //     document.getElementById('min').value=minute;
+      //     document.getElementById('sec').value=sec;
+      //     sec++;
+
+      //     if (sec == 60) {
+      //       minute++;
+      //       sec = 0;
+
+      //       if (minute == 60) {
+      //         hr++;
+      //       //    minute = minute ;
+      //       // clearInterval(tik);
+      //       // document.getElementById("timer").innerHTML= "Time Up..!";
+
+      //       }
+      //     }
+
+      //   // }
+      // }
+    </script>
+  </body>
+</html>

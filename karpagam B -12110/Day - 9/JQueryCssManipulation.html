@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Css Manipulation In Jquery</title>
+    <style>
+        .style1{
+            color:brown;
+        }
+        .style2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
+            color: yellowgreen;
+        }
+        .style3{
+            background:lightblue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rebeccapurple;
+            font-size: x-large;
+        }
+</style>
+<script src="jquery.js"></script>
+<script>
+    $(function(){
+        $("#btn1").click(function(){
+            $("#para1").addClass("style2"); // here we can  add the style
+
+        });
+        $("#btn2").click(function(){
+            $("#para1").removeClass("style2 style3"); // we can remove more than 1 class value
+
+        });
+        $("#btn3").click(function(){
+            $("#para1").toggleClass("style3"); //  it will  change the class to specific class
+
+        });
+    });
+</script>
+</head>
+<body>
+    <p id="para1" class="style1">This Is Jquery session</p>
+    <input type="button" value="Add class" id="btn1"><br><br>
+    <input type="button" value="Remove Class" id="btn2"><br><br>
+    <input type="button" value="Toggle class" id="btn3"><br><br>
+
+</body>
+</html>

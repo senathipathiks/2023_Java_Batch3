@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body{
+           background-color: skyblue;
+        }
+        .marquee{
+            font-family: Lucida;
+            font-style: italic;
+            font-size: 44px;
+            background-color: black;
+            color: aliceblue;
+        }
+        .img{
+            display: inline;
+            margin-left: 20px;
+            
+        }
+        img{
+            margin-left: 10px;
+            margin-top: 60px;
+        }
+        .upload{
+            display: inline;
+            font-weight: bold;
+            font-size: large;
+        }
+        input{
+            margin-top: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            float: right;
+        }
+        button{
+            margin-top: 40px;
+            padding: 8px 16px;
+            color: black;
+            cursor: pointer;
+            border-radius: 20px;
+            float: left;
+            margin-left: 50px;
+            background-color: rgb(228, 215, 215);
+        }
+
+        button:hover{
+            color: red;
+            background-color: blue;
+        }
+
+        .footer{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 65px;
+            opacity: 70%;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="marquee">
+        <marquee behavior="scroll" direction="left">Welcome to Sk Photo Forum</marquee>
+    </div>
+    <div class="img">
+        <img src="https://kinsta.com/wp-content/uploads/2020/04/Photo%20Gallery%20by%20GT3.jpg" alt="image1" style="width:400px ;height: 300px;">
+        <img src="https://kinsta.com/wp-content/uploads/2020/05/gallery-1-e1584714189727-1.jpg" alt="image2" style="width: 400px ;height: 300px;">
+        <img src="https://i0.wp.com/www.cssscript.com/wp-content/uploads/2021/01/Responsive-Justified-Photo-Gallery-In-JavaScript-Cube-Gallery.jpg?fit=581%2C433&ssl=1" alt="image2" style="width: 400px ;height: 300px;">
+    </div>
+    <div class="upload">
+        <input type="file" placeholder="Upload your file"><br>
+        <button type="submit" name="Upload" >Upload</button>
+    </div>
+
+    <div class="footer">
+        <p>Thank you for Visiting.<br>Contact: sanjaykhanna9122001@gmail.com</p>
+    </div>
+</body>
+</html>

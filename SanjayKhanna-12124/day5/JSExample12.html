@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <script>
+        var str = new String("this is sanjay khanna");
+        document.write(str);
+        document.write("<br> Sub String() : "+str.substring(10));
+        document.write("<br> Sub String(x,y) : "+str.substring(0,10));
+        document.write("<br> Sub Str(x,y) : "+str.substr(0,15));
+        document.write("<br> slice : "+str.slice(8,21));
+        document.write("<br> Indexof() : "+str.indexOf('k'));
+        document.write("<br> Indexof(x,y) : "+str.indexOf('s',5));
+        document.write("<br> LastIndexof() : "+str.indexOf('a'));
+        document.write("<br> CharAt() : "+str.charAt(5));
+        var arr = str.split(' ');
+        document.write("<br> Split into Array : ");
+        for(i=0;i<arr.length;i++){
+            document.write(arr[i],", ");
+        }
+    </script>
+</body>
+</html>

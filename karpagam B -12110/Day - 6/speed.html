@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Speed Analyzer</title>
+    <script>
+        function speed(n){
+                if(n<=50){
+                    return'Safe Driving';
+                }
+                 else if(n>50 && n<=60){
+                    return'Drive safely';
+                }
+                else if( n>60 && n<70){
+                    return'Speed Limit Crossed, reduce your Speed !!!';
+                }     
+                else if (n>=70){
+                    return'Over speed !!!';
+                }
+              
+            }
+</script>
+</head>
+<body>
+    <script>
+        let output= speed(76);
+        document.write(output);
+    </script>
+</body>
+</html>

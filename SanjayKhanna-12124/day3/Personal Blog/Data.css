@@ -1,0 +1,49 @@
+.img{
+    float: left;
+    width: 33.33%;
+    padding: 30px;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 50px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+
+tr{
+   background-color: rgb(181, 181, 182);
+   color: black;
+}
+
+td{
+    color: blue;
+    padding: 20px 30px;
+    margin: 10%;
+}
+td:hover{
+    color: greenyellow;
+}
+.content{
+    float: right;
+    width: 40%;
+    margin-top: 30px;
+    margin-right: 50px;
+    padding: 190px 50px ;
+    color: rgb(0, 0, 0);
+    opacity: 100%;
+    background-color: white;
+    font-size: large;
+}
+
+.container::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+body{
+    background-color: black;
+}

@@ -1,0 +1,45 @@
+.d1{
+    /* padding:10em; */
+}
+body{ 
+    background-image: url(pag.jpg);
+}
+#t1{
+    
+   align-items: first baseline;
+   height: 2000%;
+   width: 100%;
+   font-style: normal;
+   color: rgb(190, 209, 190);
+   position: relative;
+   
+}
+.tb1{
+    height: 200%;
+    width: 30%;
+    padding: 5px;
+}
+.tb2{
+    width: 30%;
+    padding: 5px;
+}
+#b1{
+    
+    width: 30%;
+    cursor: pointer;
+    color:rgb(71, 144, 71);
+    margin-inline: 40%;
+    
+}
+
+#fpwd{
+    font-size: 20px;
+    font-style: normal;
+}
+.button1{
+    width: 50%;
+}
+.newuser{
+    font-style: italic;
+    color: rgb(190, 209, 190);
+}

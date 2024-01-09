@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 20</title>
+</head>
+<body>
+    <h1 id="time"></h1>
+    <script>
+        var today = new Date();
+        var day = today.getDate();
+        var month = today.getMonth()+1;
+        var year = today.getFullYear();
+        document.write(day + ":" + month + ":" + year + "<br>");
+        var id = setInterval(time,1000);
+        function time()
+        {
+        
+        var H = today.getHours();
+        var M = today.getMinutes();
+        var S = today.getSeconds();
+        var dis = H + ":" + M + ":" + S ;
+        document.getElementById("time").innerHTML = dis;
+        
+        
+
+        
+        }
+        
+        
+    </script>
+    
+</body>
+</html>

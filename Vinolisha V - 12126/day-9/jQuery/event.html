@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    $(document).ready(function(){
+
+        $("#t1").focus(function(){
+        $(this).css("background-color","blue");
+        });
+
+        $("#btn1").click(function(){
+        alert("Button1 Clicked");
+        });
+
+        $("#btn2").dblclick(function(){
+        alert("Button2 Double CLicked");
+        });
+
+        $("#btn3").mouseover(function(){
+         $(this).css("background-color","white");   
+        });
+
+        $("#btn3").mouseout(function(){
+        $(this).css("background-color","cyan");
+        });
+
+        $("#t2").keydown(function(){
+        alert("Key Pressed");
+        });
+
+        $("#t2").keyuP(function(){
+        $(this).css("color","red");
+        });
+
+
+});
+
+    $()
+    </script>
+</head>
+<body>
+    <form>
+        <input type="button" id="btn1" value="Onclick"/>
+        <input type="button" id="btn2" value="Dblclick"/>
+        <input type="test" id="t1">
+        <input type="button" id="btn3" value="OnMouseover">
+        <input type="text" id="t2"/>
+
+    </form>
+</body>
+</html>

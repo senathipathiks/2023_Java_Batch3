@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=prompt("Enter your Name");
+        alert("Hello" +" "+ a);
+        function openEmail(){
+            var c=confirm("Are you sure to open Gmail !!!");
+            if(c==true)
+            open("http://www.gmail.com");
+            else
+            open("http://www.google.com");
+        }
+    </script>
+    <form>
+        <button onclick="openEmail()">Click to open Gmail</button>
+    </form>
+</body>
+</html>

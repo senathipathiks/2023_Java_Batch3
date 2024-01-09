@@ -1,0 +1,164 @@
+
+<html>
+    <head>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+  
+      h1 {
+        text-align: center;
+      }
+  
+      .container {
+        width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+  
+      .input-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+  
+      .input-group label {
+        width: 150px;
+        font-weight: bold;
+      }
+  
+      .input-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+  
+      .result {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #eee;
+      }
+  
+      .result p {
+        margin: 0;
+        font-size: 20px;
+      }
+  
+      .result span {
+        font-weight: bold;
+        color:red;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+  
+      .normal {
+        background-color: #4caf50;
+      }
+  
+      .overweight {
+        background-color: #ff9800;
+      }
+  
+      .obese {
+        background-color: #f44336;
+      }
+  
+      .underweight {
+        background-color: #2196f3;
+      }
+    </style>
+    <script src="BMI.js"></script>
+  </head>
+  <body>
+    <h1>BMI Calculator</h1>
+    <div class="container">
+      <form id="form">
+        <div class="input-group">
+          <label for="height">Height (cm)</label>
+          <input type="number" id="height" min="0" step="0.01" required>
+        </div>
+        <div class="input-group">
+          <label for="weight">Weight (kg)</label>
+          <input type="number" id="weight" min="0" step="0.01" required>
+        </div>
+        <button type="submit" onclick="preventDefault()">Calculate</button>
+      </form>
+      <div class="result" id="result" hidden>
+        <p>Your BMI is <span id="bmi"></span></p>
+        <p>You are <span id="status"></span></p>
+      </div>
+    </div>
+    <script>
+        // Get the form element
+    const form = document.getElementById("form");
+
+// Add an event listener to the form submit
+form.addEventListener("submit", function (event) {
+  // Prevent the default form submission
+  event.preventDefault();
+
+  // Get the input values
+  const height = parseFloat(document.getElementById("height").value);
+  const weight = parseFloat(document.getElementById("weight").value);
+
+  // Validate the input values
+  if (height > 0 && weight > 0) {
+    // Calculate the BMI
+    const bmi = weight / (height / 100) ** 2;
+
+    // Round the BMI to two decimal places
+    const bmiRounded = bmi.toFixed(2);
+
+    // Get the result element
+    const result = document.getElementById("result");
+
+    // Get the BMI and status elements
+    const bmiElement = document.getElementById("bmi");
+    const statusElement = document.getElementById("status");
+
+    // Display the BMI value
+    bmiElement.textContent = bmiRounded;
+
+    // Determine the BMI status and color
+    let status, color;
+    if (bmi < 18.5) {
+      status = "Underweight";
+      color = "underweight";
+    } else if (bmi < 25) {
+      status = "Normal";
+      color = "normal";
+    } else if (bmi < 30) {
+      status = "Overweight";
+      color = "overweight";
+    } else {
+      status = "Obese";
+      color = "obese";
+    }
+
+    // Display the BMI status
+    statusElement.textContent = status;
+
+    // Remove any previous color class
+    statusElement.classList.remove("normal", "overweight", "obese", "underweight");
+
+    // Add the current color class
+    statusElement.classList.add(color);
+
+    // Show the result element
+    result.hidden = false;
+  } else {
+    // Alert the user to enter valid values
+    alert("Please enter valid height and weight values");
+  }
+});
+
+
+    </script>
+  </body>
+  </html>
+  

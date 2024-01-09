@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #box{
+            text-align: center;
+            border: 2px solid black;
+            width: 400px;
+            height: 450px;
+            margin-left: 35%;
+            margin-top: 8%;
+            background-color: rgb(10, 9, 61);
+            color: rgb(255, 245, 103);
+            border-radius: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        body{
+            /* background-color: floralwhite; */
+            background-image: url(https://images.pexels.com/photos/1888009/pexels-photo-1888009.jpeg);
+            background-repeat: no-repeat;
+            background-size: 200%;
+            
+            background-position: 40%;
+        }
+
+        #add{
+            margin-top: 10%;
+            background-color: rgb(255, 250, 103);
+            /* font-family: Georgia, 'Times New Roman', Times, serif; */
+            height: 27px;
+            width: 50px;
+            border-radius: 10px;
+            cursor: copy;
+            font-weight: 600;
+            
+            
+        }
+
+        #input{
+            width: 200px;
+            height: 20px;
+            border-radius: 5px;
+
+        }
+        h2{
+            margin-top: 13%;
+        }
+
+        #todolist{
+            cursor: pointer;
+            color: ghostwhite;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+</head>
+<body>
+    <div id="box">
+        <h2>To-Do List</h2>
+        <input type="text" id="input">
+        <button id="add">Add</button>
+        <div id="todolist">
+
+
+        </div>
+    </div>
+
+    <script>
+        let button = document.getElementById('add');
+        let todolist = document.getElementById('todolist');
+        let input = document.getElementById('input');
+
+        let todos = [];
+
+        button.addEventListener('click',()=>{
+            todos.push(input.value)
+            console.log(todos)
+            addtodo(input.value)
+            input.value=''
+        })
+
+
+        function addtodo(todo){
+            let para = document.createElement('p')
+            para.innerText = todo
+            todolist.appendChild(para)
+         
+            para.addEventListener('click', ()=>{
+                todolist.removeChild(para)
+                remove(todo)
+            })
+        }
+
+
+        function remove(todo){
+            let index = todos.lastIndexOf(todo)
+            if(index>-1)
+            todos.splice(index,1)
+        }
+    </script>
+</body>
+</html>

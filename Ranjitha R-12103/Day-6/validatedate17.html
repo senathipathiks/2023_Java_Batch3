@@ -1,0 +1,22 @@
+<!-- Write a javascript function to validate the date -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Validate date</title>
+    <script>
+        function isValidDate(dateStr) {
+         let dateObj = new Date(dateStr);
+        return !isNaN(dateObj.getTime());
+}
+    </script>
+</head>
+<body>
+    <script>
+       document.write("<br>"+isValidDate("2023/09/08")); 
+       document.write("<br>"+isValidDate("08/16/2023")); 
+       document.write("<br>"+isValidDate("29/04/2023")); 
+       document.write("<br>"+isValidDate("2023/10/13")); 
+
+    </script>
+</body>
+</html>

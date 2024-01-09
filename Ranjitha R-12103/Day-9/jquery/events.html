@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Events</title>
+        <script src="jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                $("#t1").focus(function(){
+                 $(this).css("background-color","orange");
+                });
+
+                $("#btn1").click(function(){
+                    alert("button1 Clicked");
+                });
+
+                $("#btn2").dblclick(function(){
+                    alert("button2 double Clicked");
+                });
+
+                $("#btn3").mouseover(function(){
+                    $(this).css("background-color","red");
+                });
+
+                $("#btn3").mouseout(function(){
+                    $(this).css("background-color","blue");
+                });
+
+                $("#t2").keydown(function(){
+                    alert("Key pressed");
+                });
+
+                $("#t2").keyup(function(){
+                    $(this).css("color","green");
+                });
+                
+            });
+        </script>
+    </head>
+    <body>
+        <form action="">
+            <input type="button" id="btn1" value="Onclick"/>
+            <input type="button" id="btn2" value="dblclick"/>
+            <input type="text" id="t1"/>
+            <input type="button" id="btn3" value="OnMouseOver"/>
+            <input type="text" id="t2" />
+        </form>
+    </body>
+</html>

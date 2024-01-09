@@ -1,0 +1,44 @@
+<html>
+    <head>
+        
+        <style>
+            .style1{
+                color: black;
+            }
+            .style2{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: larger;
+                color: blue;
+            }
+            .style3{
+                background: yellowgreen;
+                
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: medium;
+                color: brown;
+            }
+        </style>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script>
+                $(document).ready(function(){
+                    $("#btn1").click(function(){
+                        $("#para1").addClass("style2");// here we can add the style
+                    });
+                    $("#btn2").click(function(){
+                        $("#para1").removeClass(" style1 style2 style3"); //here we can add the style
+                    });
+                    $("#btn3").click(function(){
+                        $("#para1").toggleClass("style3"); // it will change the class to specific class
+                    });
+                });
+            </script>
+            
+        </script>
+    </head>
+    <body>
+        <p id="para1" class="style1">This is My Page</p>
+        <input type="button" id="btn1" value="Add class"><br><br>
+        <input type="button" id="btn2" value="Remove class"><br><br>
+        <input type="button" id="btn3" value="Toggle class"><br><br>
+    </body>
+</html>

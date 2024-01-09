@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="timer">
+    </div>
+    <script>
+        window.onload=function() {check();}
+            
+        function check() {
+        let today=new Date();
+        let hour=today.getHours();
+        let minute=today.getMinutes();
+        let sec=today.getSeconds();
+        document.getElementById('timer').innerHTML=("Time is :"+hour +":"+minute +":"+sec);
+        setTimeout(function(){check()},10);
+        }
+    
+    
+    </script>
+</body>
+</html>

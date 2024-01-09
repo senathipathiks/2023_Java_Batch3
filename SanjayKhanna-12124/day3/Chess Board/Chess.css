@@ -1,0 +1,22 @@
+.WhiteBox{
+    background-color: white;
+    padding: 20px 20px 20px 20px;
+    border: white;
+}
+
+.BlackBox{
+    background-color: Black;
+    padding: 20px 20px 20px 20px;
+    border: black;
+}
+
+
+table{
+    background-color: black;
+    border : 6px solid brown;    
+}
+
+*{
+    margin-left: 100px;
+    background-color: rgb(211, 216, 219);
+}

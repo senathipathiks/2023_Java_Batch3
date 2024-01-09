@@ -1,0 +1,29 @@
+<!-- Write a JavaScript program to display the current day and date in the following format -->
+<!-- Today is Friday. -->
+<!-- Current date is 22 : 12 : 23 -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Display current date and day</title>
+        <script>
+            let today = new Date();
+            let daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            let  day = daysOfWeek[today.getDay()];
+            let  date = today.getDate();
+            let  month = today.getMonth() + 1;
+            let  year = today.getFullYear();
+            let  hours = today.getHours();
+            let  minutes = today.getMinutes();
+            let  seconds = today.getSeconds();
+
+
+        </script>
+    </head>
+    <body>
+        <script>
+            document.write(`Today is ${day}.`);
+           document.write(`<br> Current date is ${date} : ${month} : ${year}`);
+
+        </script>
+    </body>
+    </html>

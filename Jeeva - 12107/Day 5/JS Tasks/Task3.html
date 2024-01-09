@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+</head>
+<body>
+    <script>
+        function speed(a)
+        {
+            if(a<=50){
+                document.write("Safe Driving" + "<br>");
+
+            }
+            else if(a>50 && a<=60){
+                document.write("Drive Safely");
+
+            }
+            else if(a>60 && a<=70){
+                document.write("Speed limit Crossed, Reduce your Speed!!!!!");
+            }
+            else if(a>70){
+               document.write("Over Spedd!!!!");
+            }
+        }
+        speed(100);
+    </script>
+</body>
+</html>

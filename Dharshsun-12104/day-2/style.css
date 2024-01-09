@@ -1,0 +1,18 @@
+h1{
+    color:blue;
+    font-size:xx-large;
+    border: 240px solid green;height: 100px; width: auto;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+b{
+    color:brown;
+    font-weight: bolder;
+}
+p{
+    color: rgb(72, 121, 86);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}

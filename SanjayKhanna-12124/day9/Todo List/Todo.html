@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+    <link rel="stylesheet" href="Todo.css">
+</head>
+<body>
+    <div class="todo-list">
+        <h1>TODO list</h1>
+        <div class="input"><input type="text" placeholder="Enter the Task" id="task"><button id="btn">Add</button></div>
+        <div class="output"><ul id="list"></ul></div>
+    </div>
+    <script>
+        document.getElementById("btn").addEventListener("click",click);
+        function click() {
+            let inputValue = document.getElementById("task").value;
+            const li = document.createElement("li");
+            let value = document.createTextNode(inputValue);
+            let button = document.createElement("button");
+            let del = document.createTextNode("Delete");
+            button.appendChild(del);
+            li.appendChild(value);
+            li.appendChild(button);
+            if(inputValue=="")
+            alert("Don't Leave blank in Task Bar")
+            else{
+                document.getElementById("list").appendChild(li);
+            }
+            button.addEventListener("click",function(){
+                this.parentElement.remove();
+            });
+        }
+    </script>
+</body>
+</html>

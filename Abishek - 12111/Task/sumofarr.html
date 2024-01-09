@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="printAbsoluteSum()">Click me</button>
+
+<div id="result"></div>
+
+<script>
+function printAbsoluteSum() {
+ 
+    var arr = [25,25, 50, 50, 100];
+
+    
+    var sum = 0;
+
+    
+    for (var i = 0; i < arr.length; i++) {
+        // Add the absolute value of the current number to our sum
+        sum += Math.abs(arr[i]);
+    }
+
+    
+    document.getElementById('result').innerHTML = "The absolute sum is: " + sum;
+}
+
+</script>
+
+</body>
+</html>

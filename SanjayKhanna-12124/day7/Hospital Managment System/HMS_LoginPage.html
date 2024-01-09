@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <style>
+            body{
+                padding-top: 100px;
+                text-decoration: black;
+                text-align: center;
+                background-image: url('https://static.vecteezy.com/system/resources/thumbnails/007/164/537/small/fingerprint-identity-sensor-data-protection-system-podium-hologram-blue-light-and-concept-free-vector.jpg');
+                background-size:cover;
+                color: #fffefe;
+            }
+        </style>
+    </head>
+    <body>
+       <p><h3>Login</h3></p>
+       <form>
+        <label name="username" for="UserName">
+            User Name :     
+            <input type="email" placeholder="Enter your email id" id="email" required>
+        </label>
+        <br><br>
+        <label name="password" for="Password">
+            Password :      
+            <input type="password" placeholder="Enter your password" id="password" required>
+        </label>
+        <br><br>
+        <label name="submit" for="Sumbit">
+            <input type="submit" placeholder="Submit" onclick="validate()">
+        </label>
+      </form>
+      <script>
+        function validate(){
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var emailRegExp = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+        var passRegExp = /^[a-zA-z0-9@.$#]{8,20}$/
+        if(!email.match(emailRegExp))
+        alert("Email is Not Valid");
+        else if(!password.match(passRegExp))
+        alert("Password is not Valid");
+        else{
+        alert("Login Successful");
+        window.open("MainPage.html");
+        }
+        }
+      </script>
+    </body>
+</html>

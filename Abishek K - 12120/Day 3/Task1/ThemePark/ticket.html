@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket</title>
+    <style>
+        .container{
+            border: 2px solid;
+            box-sizing: border-box;
+            resize: vertical;
+            background-color: gray;
+            padding: 100px;
+            width: 700px;
+            height: 700px;
+            margin-left: 400px;
+        
+
+        }
+        input[type=text],select,textarea{
+            border: 1px solid white;
+            box-sizing: border-box;
+            width: 80%;
+            height: 30px;
+            border-radius: 10px;
+            
+            
+        }
+        input[type=number]{
+            border: 1px solid white;
+            box-sizing: border-box;
+            width: 80%;
+            height: 30px;
+            border-radius: 10px;
+
+        }
+        input[type=submit]{
+            background-color: chartreuse;
+            color: aliceblue;
+            width: 25%;
+            height: 30%;
+            border-radius: 10px;
+            
+
+
+        }
+        input[type=submit]:hover{
+            background-color: black;
+        }
+        label{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+           font-weight: bolder;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form action="">
+        <label for="name">Enter your Name:</label><br><br>
+        <input type="text" name="" id="name"><br><br>
+        <label for="age">Age:</label><br><br>
+        <input type="number" name="" id="age"><br><br>
+        <label for="gender">Gender:</label><br><br>
+        <input type="radio" name="gender" id="gender">
+        <label for="gender">Male</label>
+        <input type="radio" name="gender" id="">
+        <label for="gender">Female</label>
+        <input type="radio" id="gender" name="gender">
+        <label for="gender">Others</label><br><br>
+        <label for="">Enter the number of People:</label><br><br>
+        <input type="number"><br><br>
+        <label for="pay">Select the anyone of the Payment:</label><br><br>
+        <select name="pay" id="">
+            <option value="pay">--select--</option>
+            <option value="pay">UPI PAYMENT</option>
+            <option value="pay">DEBIT CARD</option>
+            <option value="pay">CREDIT CARD</option>
+        </select><br><br>
+        <label for="add">Address</label><br><br>
+        <textarea name="add" id="" cols="20" rows="10"></textarea><br><br><br>
+        <input type="submit" name="" id="">
+
+    </form>
+    </div>
+</body>
+</html>

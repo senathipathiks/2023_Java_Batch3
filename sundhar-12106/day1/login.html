@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./loginStyle.css" />
+  </head>
+  <body>
+    <!--  -->
+    <div class="container">
+      <section class="center">
+        <h1>Login</h1>
+        <form action="" class="form">
+          <table class="tab">
+            <tr class="row">
+              <td><label for="usr">UserName : </label></td>
+              <td><input id="usr" type="text" placeholder=" username" /></td>
+            </tr>
+            <tr class="row">
+              <td><label for="pass">Password : </label></td>
+              <td>
+                <input id="pass" type="password" placeholder="password" />
+              </td>
+            </tr>
+            <tr class="row">
+              <td colspan="2" align="center">
+                <input class="button" type="submit" value="login" />
+              </td>
+            </tr>
+            <tr class="row">
+              <td colspan="2" align="center">
+                <span class="res"></span>
+              </td>
+            </tr>
+            <tr class="row">
+              <td colspan="2" align="center">
+                <span class="reg-link"
+                  ><a href="#">forget password? </a>or</span
+                >
+              </td>
+            </tr>
+            <tr class="row">
+              <td colspan="2" align="center">
+                <span class="reg-link"
+                  >Don't have account ?
+                  <a href="./Registration.html">register here..!</a></span
+                >
+              </td>
+            </tr>
+          </table>
+        </form>
+      </section>
+    </div>
+  </body>
+  <script>
+    let btn = document.querySelector(".button");
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      let pass = document.querySelector('#pass').value ;
+      if (validPass(pass)) {
+        window.location.href="./userDetails.html"
+      } else {
+        document.querySelector('.res').innerHTML="enter valid password"
+      }
+    });
+
+    function validPass(pass) {
+      let pattern =
+        /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()\-+.]).{6,20}$/;
+      // console.log(pass);
+      // console.log(pattern.test(pass));
+      return pattern.test(pass);
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</html>

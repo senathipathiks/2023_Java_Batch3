@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src ="jquery.js">
+
+        </script>
+        <script>
+            $(document).ready(function()
+            {
+                $("#btn").click(function()
+                {
+                    var x = parseInt($("#t1").val());
+                    var y = parseInt($(".t2").val());
+                    var z=x+y;
+                    $("#t3").val(z);
+                })
+            })
+        </script>
+
+    </head>
+    <body>
+        <input type="text" id="t1">
+    <input type="text" class="t2">
+    <input type="button" id="btn" value="sum">
+    <input type="text" id="t3">
+    </body>
+</html>

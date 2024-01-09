@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        #myUL li {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #ddd;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        #myInput {
+            margin: 10px 0;
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>To-Do List</h2>
+    <input type="text" id="myInput" placeholder="New task...">
+    <button onclick="newElement()">Add</button>
+    <ul id="myUL"></ul>
+
+    <script>
+        function newElement() {
+            var li = document.createElement("li");
+            var inputValue = document.getElementById("myInput").value;
+            var t = document.createTextNode(inputValue);
+            li.appendChild(t);
+            if (inputValue === '') {
+                alert("You must write something!");
+            } else {
+                document.getElementById("myUL").appendChild(li);
+            }
+            document.getElementById("myInput").value = "";
+        }
+    </script>
+</body>
+</html>

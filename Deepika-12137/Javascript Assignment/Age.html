@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculateAge(birthDateString) {
+            let birthDate = new Date(birthDateString);
+            let today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            let monthDifference = today.getMonth() - birthDate.getMonth();
+
+            if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            return age;
+        }
+
+        let age = calculateAge("2003-06-15");
+        document.write(age);
+
+    </script>
+</body>
+</html>
