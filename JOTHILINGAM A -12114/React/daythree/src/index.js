@@ -6,14 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import FormValidTskOne from './Day3New/FormValidTskOne';
 import ParentComponent from './DaY4/ParentComponent';
 import TodoList from './DaY4/TodoList';
+import clientcrud from './Day5/clientcrud';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-
+  <clientcrud/>
     {/* <FormValidTskOne></FormValidTskOne> */}
-    <TodoList></TodoList>
+    {/* <TodoList></TodoList> */}
     {/* <ParentComponent></ParentComponent> */}
   </React.StrictMode>
 );
