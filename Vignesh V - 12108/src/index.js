@@ -1,31 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import reportWebVitals from "./reportWebVitals";
-
-// import Myclasscounter from './components/Myclasscounter';
-// import Functioncounter from './components/Functioncounter';
-// import Conditionalrender from './components/Conditionalrender';
-// import Welcomeclass from './components/Welcomeclass';
-// import Form from './components/Form';
-// import Eventbindclass from './components/Eventbindclass';
-//import Functioncounter from './components/Functioncounter';
-//import Validation from './components/Validation';
-// import Listrender from './components/Listrender';
-// import SubmitForm from './components/SubmitForm';
-//import User from './components/User';
-//import YupValidation from './components/YupValidation';
-//import ValidationForm from './components/Validationform';
-//import RouterExample from './components/RouterExample';
-import Responsiveform from './components/Responsiveform';
-import Parentmemo from './components/Parentmemo';
-import App from '../../client/src/App';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-  
-
   </React.StrictMode>
 );
 
