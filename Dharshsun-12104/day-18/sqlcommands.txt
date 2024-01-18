@@ -1,0 +1,41 @@
+select distinct(phoneno) from user1_tbl;
+ select * from user1_tbl;
+ select uname as username from user1_tbl;
+ select * from user1_tbl limit 2;
+ select count(*) from user1_tbl where phoneno>3524789;
+select count(*) from user1_tbl where phoneno>3524789 and address='Puducherry';
+ select sum(phoneno) from user1_tbl where phoneno>3587412;
+select avg(phoneno) from user1_tbl where phoneno>3687485;
+select address,count(*) from user1_tbl group by address having address='Thirunelveli';
+select address,count(*) from user1_tbl group by address having address='puducherry';
+  update user1_tbl set phoneno=97892104 where userid=123;
+update user1_tbl set userid=userid+userid*2;
+ select * from user1_tbl;
+ drop myview;
+select * from myview;
+insert into myview values(376,"Dharan singh",9621483,"Chennai");
+update user_tbl set address="Trichy" where userid=375;
+ update myview set phoneno=3247895 where userid=417;
+CREATE TABLE Persons (
+    ->     Personid int NOT NULL AUTO_INCREMENT,
+    ->     LastName varchar(255) NOT NULL,
+    ->     FirstName varchar(255),
+    ->     Age int,
+    ->     PRIMARY KEY (Personid)
+    -> );
+ update tbl_dept2
+    -> set salary=salary+salary*0.3
+    -> where userid=(select userid from user1_tbl where address="Chennai");
+select distinct(address) from user1_tbl;
+ select * from user1_tbl where address in (select distinct(address) from user1_tbl);
+select * from user1_tbl right join tbl_students on user1_tbl.userid=tbl_students.id;
+select * from user1_tbl inner join tbl_students on user1_tbl.userid=tbl_students.id;
+select * from user1_tbl left join tbl_students on user1_tbl.userid=tbl_students.id;
+select * from user1_tbl cross join tbl_students;
+SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName
+FROM ((Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
+INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID);
+mysqldump -u root -p taskday3 > D:/mysql_db/taskday3.sql
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysqldump -u root -p taskday3 > D:/mysql_db/taskday3.sql   ---for export.
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p taskday3 > D:/mysql_db/taskday3.sql
