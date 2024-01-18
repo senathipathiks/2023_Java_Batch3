@@ -1,0 +1,52 @@
+body{
+    background-image: url('https://img.freepik.com/premium-vector/interbank-currency-exchange_387612-259.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    image-resolution: 10px;
+}
+.mb-3{
+width: 30%;
+color: rgb(158, 13, 241);
+text-align: center;
+margin: auto;
+border-color: black;
+border-radius: 5px;
+
+}
+.mr-2{
+
+    width: 30%;
+color: rgb(158, 13, 241);
+text-align: center;
+margin: auto;
+border-color: black;
+border-radius: 5px;
+}
+container{
+    text-align: center;
+    color: rgb(158, 13, 241);
+}
+.mt-4{
+    text-align: center;
+    color: black;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+.mt-5{
+    margin-top: 60px;
+    color: black;
+   position: absolute;
+    width: 80%;
+   padding-right: 300px;
+   border: 3px solid black;
+   right: 40px;
+   background-color: whitesmoke;
+}
+  h4 {
+    text-align: center;
+    text-overflow: inherit;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    text-decoration:underline;
+    color: aqua;
+}

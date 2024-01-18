@@ -1,0 +1,14 @@
+{
+  "name": "database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "database":"json-server --watch db.json --port 3003"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^1.0.0-alpha.14"
+  }
+}

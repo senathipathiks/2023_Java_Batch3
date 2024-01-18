@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "json-server  db.json --port 4000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^1.0.0-alpha.16"
+  }
+}

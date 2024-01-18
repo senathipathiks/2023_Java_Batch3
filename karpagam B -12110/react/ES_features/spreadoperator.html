@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread operator</title>
+    <!-- spread operator is used to combine / opposite action of the rest operator-->
+</head>
+<body>
+    <script>
+           function display(message,...colors){ // rest operator--occur in arguments and function creation--used to combine
+            document.write("<br>" +message);
+            for (let i in colors)
+            document.write("<br>"+colors[i]); 
+        }
+        let message="Colors List";
+        let colorarray=["red","blue","green"];
+        display(message,...colorarray); // spread operator---occur in function call
+        
+    </script>
+    
+</body>
+</html>

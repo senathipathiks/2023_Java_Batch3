@@ -1,0 +1,40 @@
+
+.one, .first{
+    background-color: blue;
+    color: darkorange
+}
+.Table{
+    margin: 250px;
+    padding: 10px;
+    border: 2px;
+    border-style: solid;
+}
+.txtstyle {
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    width: 250px;
+    height: 25px;
+}
+
+.submit{
+    border-radius: 6px;
+    background-color: lightblue;
+    color: black;
+    font-weight: bold;
+}
+
+.submit:hover{
+    background-color: rgb(87, 198, 87);
+}
+
+.astyle{
+    text-decoration: none;
+    color: red;
+}
+
+.astyle:hover{
+    color: blue;
+}

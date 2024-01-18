@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest function</title>
+</head>
+<body>
+    <script>
+        function display(message,...colors){ // rest operator--used to combine
+            document.write("<br>" +message);
+            for (let i in colors)
+            document.write("<br>"+colors[i]); // increment by one by one --for each loop
+        }
+        let message="Colors List";
+        display(message,"Red");
+        display(message,"Red","Blue");
+        display(message,"Red","Blue","Green");
+        </script>
+    
+</body>
+</html>

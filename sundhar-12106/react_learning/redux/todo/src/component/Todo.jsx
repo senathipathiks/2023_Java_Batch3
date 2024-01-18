@@ -12,6 +12,7 @@ const Todo = createSlice({
         text: action.payload,
         completed: false,
       };
+      console.log(newTodo.id)
       state.push(newTodo);
     },
     toggleComplete: (state, action) => {

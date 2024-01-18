@@ -1,0 +1,21 @@
+.container{
+    margin-top: 200px;
+    margin-left: 250px;
+    font-family: serif;
+    font-size: 25px;
+}
+.form-group {
+    width: 1000px;
+    border: 1px;
+    border-radius: 10px;
+    border-style: solid;
+    padding: 20px;
+}
+.form-control {
+    margin: 10px;
+    border: 1px;
+    border-style: solid;
+}
+.btn btn-primary {
+    margin-bottom: 10px;
+}

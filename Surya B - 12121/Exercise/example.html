@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOcument</title>
+    </head>
+    <body>
+        <h1 id = "course">Course Details</h1>
+        <script>
+            class Course{
+                constructor(name){
+                    this.topic = name;
+                }
+                duration(){
+                    return "<br>"+this.topic + "duration is one week";
+                }
+            }
+            const mycourse=new Course("React ");
+            document.write(mycourse.duration());
+        </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+Employee Management System
+
+	-ems_db
+		-tbl_employee
+			-emp_id - primary key,
+			-emp_name - not null
+			-emp_designation - not null
+			-emp_address - not null
+			-salary - not null
+		-tbl_company
+			-company_id - primary key
+			-company_name - not null
+			-company_address - not null
+			-dept_id - not null
+		-tbl_dept
+			-dept_id - primary key
+			-dept_name - not null
