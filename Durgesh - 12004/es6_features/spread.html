@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function show() {
+        function show(message,...brands) //rest operator
+        {
+            document.write(message);
+            for (let i in brands)
+            document.write(brands[i])
+        }
+        let message="Brand - ";
+        let brandarr = ["puma, ","nike, ","skechers"];
+        show(message,...brandarr); //spread operator
+    </script>
+    
+</body>
+</html>
