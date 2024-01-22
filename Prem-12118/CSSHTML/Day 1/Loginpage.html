@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loginpage</title>
+    <link rel="stylesheet" href="Loginpage.css">
+</head>
+<body>
+    <h1>Please Login to Your Account</h1>
+    <form class="formlayer">
+        <table class="table-container">
+            <tr>
+                <td><b>User name:</b></td>
+                <td><input type="text" id="username"></td>
+            </tr>
+            <tr>
+                <td><b>Password:</b></td>
+                <td><input type="password" id="password"></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="validateForm()"><b>Sign in</b></button></td>
+            </tr>
+            <tr>
+                <td><a href="Registration.html">Create an account?</a></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function validateForm() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username.trim() === '' || password.trim() === '') {
+                alert('Please enter both username and password.');
+            } else {
+                // Here you can perform further actions like submitting the form or logging in the user.
+                // For demonstration purposes, an alert is shown for a valid form.
+                alert('Form submitted successfully!');
+                // You might redirect the user or perform other actions in place of this alert.
+            }
+        }
+    </script>
+</body>
+</html>
