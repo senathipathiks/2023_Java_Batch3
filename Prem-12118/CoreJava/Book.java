@@ -22,7 +22,5 @@ public class Book {
 	 Book b1=new Book(1123,"The moka Surya",0,"Prem");
 	  b1.displayBook();
 	 
-	 
 	}
-
 }
