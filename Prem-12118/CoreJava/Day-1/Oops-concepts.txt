@@ -1,0 +1,24 @@
+ Oops major concepts as notes:
+
+
+Class:
+Blueprint or template for creating objects.
+
+Object: 
+Instance of a class with its own state and behavior.
+
+Encapsulation:
+Bundling data (attributes) and methods that operate on the data into a single unit (class).
+Access to data is controlled, and the internal representation is hidden.
+
+Inheritance:
+Mechanism for creating a new class (subclass/derived class) that is a modified version of an existing class (superclass/base class).
+Allows code reuse and promotes the "is-a" relationship.
+
+Polymorphism:
+Ability of objects to take on multiple forms.
+Involves method overriding (same method name in derived class) and method overloading (same method name with different parameters).
+
+Abstraction:
+Simplifying complex systems by modeling classes based on the essential properties and behavior.
+Reduces code complexity by focusing on relevant details.
