@@ -35,6 +35,4 @@ public class WeekDay {
 			default:
 				System.out.println("There is no day for your input");
  }
-		}
-
-}
+		}}
