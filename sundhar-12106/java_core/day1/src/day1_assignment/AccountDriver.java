@@ -51,7 +51,12 @@ public class AccountDriver {
 			}
 			case 2: {
 				System.out.println("enter the principle amount");
-				System.out.println(current.calcIntrest(sc.nextDouble()));
+				try {
+					System.out.println(current.calcIntrest(sc.nextDouble()));
+				} catch (Exception e) {
+					System.out.println("enter valid input..!");
+					sc.next();
+				}
 				break;
 			}
 			case 3: {
