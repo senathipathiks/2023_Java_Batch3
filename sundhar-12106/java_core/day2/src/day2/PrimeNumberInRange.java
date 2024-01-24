@@ -19,6 +19,7 @@ public class PrimeNumberInRange {
 				for (int j = 2; j < i; j++) {
 					if(i%j == 0) {
 						flag=1;
+//						System.out.println(i%j + " : "+ j);
 						break;
 					}else {
 						flag=0;
