@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register Page</title>
+        <Style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-start;
+           padding-left: 300px;
+            color: rgb(2, 2, 2);
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-7RLYuxVfa4_kOIj5GdTQo4p3TZuO2hOa1A&usqp=CAU');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+
+    </Style>
+    </head>
+    <body>
+        <p><h1><b><u>Register</u></b></h1></p>
+       <form>
+            <label name="fullname" for="FullName">
+            FullName :      
+            <input type="text" placeholder="Enter your FullName" required>
+        </label>
+        <br><br>
+        <label name="dob" for="DOB">
+            DOB :      
+            <input type="date" placeholder="Enter your password" required>
+        </label>
+        <br><br>
+        <label name="gender" for="Gender">
+            Gender :     
+            <input type="radio">Male
+            <input type="radio">Female
+        </label>
+        <br><br>
+        <label name="email" for="Email">
+            Email :     
+            <input type="email" placeholder="Enter your email id" required>
+        </label>
+        <br><br>
+        <label name="password" for="Password">
+            Password :      
+            <input type="password" placeholder="Enter your password" required>
+        </label>
+        <br><br>
+        <label name="repassword" for="RePassword">
+            Reenter Password :      
+            <input type="password" placeholder="Enter your  reenterpassword" required>
+        </label>
+        <br><br>
+        <label name="submit" for="Sumbit">
+            <input type="submit" placeholder="Register">
+        </label>
+      </form>
+    </body>
+</html>
