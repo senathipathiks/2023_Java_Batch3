@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                // $("#i1").fadeOut(1000);
+                $("#i1").fadeIn(1000);
+            });
+        });
+    </script>
+
+    <style>
+        #i1{
+            height: 100px;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <img style="display: none;" id="i1" src="https://i.guim.co.uk/img/media/1c06179404306359dde9dd6bc706791f3e181b33/619_607_3768_2260/master/3768.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=77a04d53e007b6ff63548c1ac9aa3304" alt="virat">
+    <input type="button" id="btn1" value="click">
+
+</body>
+</html>

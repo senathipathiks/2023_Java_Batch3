@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+
+    <script>
+        function FizzBuzz(num){      
+         var num;
+        if (num%2===0 ) {
+            return'Fizz';
+            
+        }
+        else if (num%3===0) {
+            return'Buzz';
+        }
+       if(num%2===0 && num%3===0){
+            return'Fizz Buzz';
+        }
+         else if( num%=1){
+            return'Not divisible '+num;
+        }
+        else{
+            return'Not a number divisible by 2 and 3';
+        }
+    }
+    </script>
+</head>
+<body>
+    <script>
+        document.write(FizzBuzz(777));
+    </script>
+    
+</body>
+</html>

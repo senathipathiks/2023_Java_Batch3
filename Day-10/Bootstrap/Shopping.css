@@ -1,0 +1,42 @@
+
+#r1{
+    height: 5%;
+}
+#i1{
+    padding-top: 5%;
+    height: 55px;
+    width: 55px;
+    display: flex;
+}
+#i2,#i4,#i5,#i6{
+   
+   height: 60px;
+   width: 60px;
+   display: flex;
+}
+#i3{
+    
+    height: 100px;
+    width: 120px;
+    display: flex ;
+    flex-direction: column;
+    margin-left: 210%; 
+}
+#simg1{
+    height:600px;
+    width: 1000px;
+}
+
+#nav1{
+    float: right;
+    margin-right:8%;
+}
+#nav2{
+    margin-left: 10%;
+}
+#nav3{
+    margin-right: 3%;
+}
+#carosel{
+    padding-top: 20px;
+}

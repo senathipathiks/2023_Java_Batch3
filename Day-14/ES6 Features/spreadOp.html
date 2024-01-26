@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function display(Message, ...colour) {
+        //rest
+        document.write("\n" + Message);
+        for (let i in colour) {
+          document.write("<br/>" + colour[i]);
+        }
+      }
+
+      let message = "list of colours";
+      let colorArray = ["red", "blue", "yellow"];
+      display(message, ...colorArray); //spread
+    </script>
+  </body>
+</html>

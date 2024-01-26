@@ -1,0 +1,2056 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">//<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+//]]>
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v17.5 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Carousel slider tutorial with HTML, CSS and JavaScript - Programming Duck</title>
+	<meta name="description" content="Here&#039;s how to make a simple carousel slider with HTML, CSS and JavaScript. We use good code practices, make it accessible and discuss testing." />
+	<link rel="canonical" href="https://programmingduck.com/articles/javascript-carousel" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Carousel slider tutorial with HTML, CSS and JavaScript - Programming Duck" />
+	<meta property="og:description" content="Here&#039;s how to make a simple carousel slider with HTML, CSS and JavaScript. We use good code practices, make it accessible and discuss testing." />
+	<meta property="og:url" content="https://programmingduck.com/articles/javascript-carousel" />
+	<meta property="og:site_name" content="Programming Duck" />
+	<meta property="article:published_time" content="2021-05-27T18:00:45+00:00" />
+	<meta property="article:modified_time" content="2022-03-07T18:01:10+00:00" />
+	<meta property="og:image" content="https://programmingduck.com/wp-content/uploads/2021/05/w-alan-PMjhRmQqEJg-unsplash-scaled.jpg" />
+	<meta property="og:image:width" content="3840" />
+	<meta property="og:image:height" content="2560" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Spyros Argalias" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="16 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://programmingduck.com/#website","url":"https://programmingduck.com/","name":"Programming Duck","description":"Improve your programming","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://programmingduck.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://programmingduck.com/articles/javascript-carousel#primaryimage","inLanguage":"en-US","url":"https://programmingduck.com/wp-content/uploads/2021/05/w-alan-PMjhRmQqEJg-unsplash-scaled.jpg","contentUrl":"https://programmingduck.com/wp-content/uploads/2021/05/w-alan-PMjhRmQqEJg-unsplash-scaled.jpg","width":3840,"height":2560},{"@type":"WebPage","@id":"https://programmingduck.com/articles/javascript-carousel#webpage","url":"https://programmingduck.com/articles/javascript-carousel","name":"Carousel slider tutorial with HTML, CSS and JavaScript - Programming Duck","isPartOf":{"@id":"https://programmingduck.com/#website"},"primaryImageOfPage":{"@id":"https://programmingduck.com/articles/javascript-carousel#primaryimage"},"datePublished":"2021-05-27T18:00:45+00:00","dateModified":"2022-03-07T18:01:10+00:00","author":{"@id":"https://programmingduck.com/#/schema/person/46730127720765af154214808615385e"},"description":"Here's how to make a simple carousel slider with HTML, CSS and JavaScript. We use good code practices, make it accessible and discuss testing.","breadcrumb":{"@id":"https://programmingduck.com/articles/javascript-carousel#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://programmingduck.com/articles/javascript-carousel"]}]},{"@type":"BreadcrumbList","@id":"https://programmingduck.com/articles/javascript-carousel#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://programmingduck.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://programmingduck.com/articles"},{"@type":"ListItem","position":3,"name":"Carousel slider tutorial with HTML, CSS and JavaScript"}]},{"@type":"Person","@id":"https://programmingduck.com/#/schema/person/46730127720765af154214808615385e","name":"Spyros Argalias","image":{"@type":"ImageObject","@id":"https://programmingduck.com/#personlogo","inLanguage":"en-US","url":"https://secure.gravatar.com/avatar/4408435267b54bf51dd363887f919b40?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/4408435267b54bf51dd363887f919b40?s=96&d=mm&r=g","caption":"Spyros Argalias"},"url":"https://programmingduck.com/articles/author/sargalias"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel="alternate" type="application/rss+xml" title="Programming Duck &raquo; Feed" href="https://programmingduck.com/feed" />
+<link rel="alternate" type="application/rss+xml" title="Programming Duck &raquo; Comments Feed" href="https://programmingduck.com/comments/feed" />
+<link rel="alternate" type="application/rss+xml" title="Programming Duck &raquo; Carousel slider tutorial with HTML, CSS and JavaScript Comments Feed" href="https://programmingduck.com/articles/javascript-carousel/feed" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/programmingduck.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.4.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://programmingduck.com/wp-includes/css/dist/block-library/style.min.css?ver=6.4.2' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<style id='md-style-inline-css' type='text/css'>
+ .copy-button { cursor: pointer; border: 0; font-size: 12px; text-transform: uppercase; font-weight: 500; padding: 3px 6px 3px 6px; background-color: rgba(255, 255, 255, 0.6); position: absolute; overflow: hidden; top: 5px; right: 5px; border-radius: 3px; } .copy-button:before { content: ""; display: inline-block; width: 16px; height: 16px; margin-right: 3px; background-size: contain; background-image: url("data:image/svg+xml,%3Csvg version=\'1.1\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\' x=\'0px\' y=\'0px\' width=\'16px\' height=\'16px\' viewBox=\'888 888 16 16\' enable-background=\'new 888 888 16 16\' xml:space=\'preserve\'%3E %3Cpath fill=\'%23333333\' d=\'M903.143,891.429c0.238,0,0.44,0.083,0.607,0.25c0.167,0.167,0.25,0.369,0.25,0.607v10.857 c0,0.238-0.083,0.44-0.25,0.607s-0.369,0.25-0.607,0.25h-8.571c-0.238,0-0.44-0.083-0.607-0.25s-0.25-0.369-0.25-0.607v-2.571 h-4.857c-0.238,0-0.44-0.083-0.607-0.25s-0.25-0.369-0.25-0.607v-6c0-0.238,0.06-0.5,0.179-0.786s0.262-0.512,0.428-0.679 l3.643-3.643c0.167-0.167,0.393-0.309,0.679-0.428s0.547-0.179,0.786-0.179h3.714c0.238,0,0.44,0.083,0.607,0.25 c0.166,0.167,0.25,0.369,0.25,0.607v2.929c0.404-0.238,0.785-0.357,1.143-0.357H903.143z M898.286,893.331l-2.67,2.669h2.67V893.331 z M892.571,889.902l-2.669,2.669h2.669V889.902z M894.321,895.679l2.821-2.822v-3.714h-3.428v3.714c0,0.238-0.083,0.441-0.25,0.607 s-0.369,0.25-0.607,0.25h-3.714v5.714h4.571v-2.286c0-0.238,0.06-0.5,0.179-0.786C894.012,896.071,894.155,895.845,894.321,895.679z M902.857,902.857v-10.286h-3.429v3.714c0,0.238-0.083,0.441-0.25,0.607c-0.167,0.167-0.369,0.25-0.607,0.25h-3.714v5.715H902.857z\' /%3E %3C/svg%3E"); background-repeat: no-repeat; position: relative; top: 3px; } pre { position: relative; } pre:hover .copy-button { background-color: rgba(255, 255, 255, 0.9); } 
+</style>
+<link rel='stylesheet' id='wpdiscuz-frontend-css-css' href='https://programmingduck.com/wp-content/plugins/wpdiscuz/themes/default/style.css?ver=7.6.8' type='text/css' media='all' />
+<style id='wpdiscuz-frontend-css-inline-css' type='text/css'>
+ #wpdcom .wpd-blog-administrator .wpd-comment-label{color:#ffffff;background-color:#00B38F;border:none}#wpdcom .wpd-blog-administrator .wpd-comment-author, #wpdcom .wpd-blog-administrator .wpd-comment-author a{color:#00B38F}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-administrator .wpd-avatar img{border-color:#00B38F}#wpdcom.wpd-layout-2 .wpd-comment.wpd-reply .wpd-comment-wrap.wpd-blog-administrator{border-left:3px solid #00B38F}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-administrator .wpd-avatar img{border-bottom-color:#00B38F}#wpdcom.wpd-layout-3 .wpd-blog-administrator .wpd-comment-subheader{border-top:1px dashed #00B38F}#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-administrator .wpd-comment-right{border-left:1px solid #00B38F}#wpdcom .wpd-blog-editor .wpd-comment-label{color:#ffffff;background-color:#00B38F;border:none}#wpdcom .wpd-blog-editor .wpd-comment-author, #wpdcom .wpd-blog-editor .wpd-comment-author a{color:#00B38F}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-editor .wpd-avatar img{border-color:#00B38F}#wpdcom.wpd-layout-2 .wpd-comment.wpd-reply .wpd-comment-wrap.wpd-blog-editor{border-left:3px solid #00B38F}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-editor .wpd-avatar img{border-bottom-color:#00B38F}#wpdcom.wpd-layout-3 .wpd-blog-editor .wpd-comment-subheader{border-top:1px dashed #00B38F}#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-editor .wpd-comment-right{border-left:1px solid #00B38F}#wpdcom .wpd-blog-author .wpd-comment-label{color:#ffffff;background-color:#00B38F;border:none}#wpdcom .wpd-blog-author .wpd-comment-author, #wpdcom .wpd-blog-author .wpd-comment-author a{color:#00B38F}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-author .wpd-avatar img{border-color:#00B38F}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-author .wpd-avatar img{border-bottom-color:#00B38F}#wpdcom.wpd-layout-3 .wpd-blog-author .wpd-comment-subheader{border-top:1px dashed #00B38F}#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-author .wpd-comment-right{border-left:1px solid #00B38F}#wpdcom .wpd-blog-contributor .wpd-comment-label{color:#ffffff;background-color:#00B38F;border:none}#wpdcom .wpd-blog-contributor .wpd-comment-author, #wpdcom .wpd-blog-contributor .wpd-comment-author a{color:#00B38F}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-contributor .wpd-avatar img{border-color:#00B38F}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-contributor .wpd-avatar img{border-bottom-color:#00B38F}#wpdcom.wpd-layout-3 .wpd-blog-contributor .wpd-comment-subheader{border-top:1px dashed #00B38F}#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-contributor .wpd-comment-right{border-left:1px solid #00B38F}#wpdcom .wpd-blog-subscriber .wpd-comment-label{color:#ffffff;background-color:#00B38F;border:none}#wpdcom .wpd-blog-subscriber .wpd-comment-author, #wpdcom .wpd-blog-subscriber .wpd-comment-author a{color:#00B38F}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-subscriber .wpd-avatar img{border-bottom-color:#00B38F}#wpdcom.wpd-layout-3 .wpd-blog-subscriber .wpd-comment-subheader{border-top:1px dashed #00B38F}#wpdcom .wpd-blog-wpseo_manager .wpd-comment-label{color:#ffffff;background-color:#00B38F;border:none}#wpdcom .wpd-blog-wpseo_manager .wpd-comment-author, #wpdcom .wpd-blog-wpseo_manager .wpd-comment-author a{color:#00B38F}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-wpseo_manager .wpd-avatar img{border-color:#00B38F}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-wpseo_manager .wpd-avatar img{border-bottom-color:#00B38F}#wpdcom.wpd-layout-3 .wpd-blog-wpseo_manager .wpd-comment-subheader{border-top:1px dashed #00B38F}#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-wpseo_manager .wpd-comment-right{border-left:1px solid #00B38F}#wpdcom .wpd-blog-wpseo_editor .wpd-comment-label{color:#ffffff;background-color:#00B38F;border:none}#wpdcom .wpd-blog-wpseo_editor .wpd-comment-author, #wpdcom .wpd-blog-wpseo_editor .wpd-comment-author a{color:#00B38F}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-wpseo_editor .wpd-avatar img{border-color:#00B38F}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-wpseo_editor .wpd-avatar img{border-bottom-color:#00B38F}#wpdcom.wpd-layout-3 .wpd-blog-wpseo_editor .wpd-comment-subheader{border-top:1px dashed #00B38F}#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-wpseo_editor .wpd-comment-right{border-left:1px solid #00B38F}#wpdcom .wpd-blog-post_author .wpd-comment-label{color:#ffffff;background-color:#00B38F;border:none}#wpdcom .wpd-blog-post_author .wpd-comment-author, #wpdcom .wpd-blog-post_author .wpd-comment-author a{color:#00B38F}#wpdcom .wpd-blog-post_author .wpd-avatar img{border-color:#00B38F}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-post_author .wpd-avatar img{border-color:#00B38F}#wpdcom.wpd-layout-2 .wpd-comment.wpd-reply .wpd-comment-wrap.wpd-blog-post_author{border-left:3px solid #00B38F}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-post_author .wpd-avatar img{border-bottom-color:#00B38F}#wpdcom.wpd-layout-3 .wpd-blog-post_author .wpd-comment-subheader{border-top:1px dashed #00B38F}#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-post_author .wpd-comment-right{border-left:1px solid #00B38F}#wpdcom .wpd-blog-guest .wpd-comment-label{color:#ffffff;background-color:#00B38F;border:none}#wpdcom .wpd-blog-guest .wpd-comment-author, #wpdcom .wpd-blog-guest .wpd-comment-author a{color:#00B38F}#wpdcom.wpd-layout-3 .wpd-blog-guest .wpd-comment-subheader{border-top:1px dashed #00B38F}#comments, #respond, .comments-area, #wpdcom{}#wpdcom .ql-editor > *{color:#777777}#wpdcom .ql-editor::before{}#wpdcom .ql-toolbar{border:1px solid #DDDDDD;border-top:none}#wpdcom .ql-container{border:1px solid #DDDDDD;border-bottom:none}#wpdcom .wpd-form-row .wpdiscuz-item input[type="text"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="email"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="url"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="color"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="date"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="datetime"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="datetime-local"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="month"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="number"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="time"], #wpdcom textarea, #wpdcom select{border:1px solid #DDDDDD;color:#777777}#wpdcom .wpd-form-row .wpdiscuz-item textarea{border:1px solid #DDDDDD}#wpdcom input::placeholder, #wpdcom textarea::placeholder, #wpdcom input::-moz-placeholder, #wpdcom textarea::-webkit-input-placeholder{}#wpdcom .wpd-comment-text{color:#777777}#wpdcom .wpd-thread-head .wpd-thread-info{border-bottom:2px solid #00B38F}#wpdcom .wpd-thread-head .wpd-thread-info.wpd-reviews-tab svg{fill:#00B38F}#wpdcom .wpd-thread-head .wpdiscuz-user-settings{border-bottom:2px solid #00B38F}#wpdcom .wpd-thread-head .wpdiscuz-user-settings:hover{color:#00B38F}#wpdcom .wpd-comment .wpd-follow-link:hover{color:#00B38F}#wpdcom .wpd-comment-status .wpd-sticky{color:#00B38F}#wpdcom .wpd-thread-filter .wpdf-active{color:#00B38F;border-bottom-color:#00B38F}#wpdcom .wpd-comment-info-bar{border:1px dashed #33c3a6;background:#e6f8f4}#wpdcom .wpd-comment-info-bar .wpd-current-view i{color:#00B38F}#wpdcom .wpd-filter-view-all:hover{background:#00B38F}#wpdcom .wpdiscuz-item .wpdiscuz-rating > label{color:#DDDDDD}#wpdcom .wpdiscuz-item .wpdiscuz-rating:not(:checked) > label:hover, .wpdiscuz-rating:not(:checked) > label:hover ~ label{}#wpdcom .wpdiscuz-item .wpdiscuz-rating > input ~ label:hover, #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:not(:checked) ~ label:hover ~ label, #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:not(:checked) ~ label:hover ~ label{color:#FFED85}#wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label:hover, #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label:hover, #wpdcom .wpdiscuz-item .wpdiscuz-rating > label:hover ~ input:checked ~ label, #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked + label:hover ~ label, #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label:hover ~ label, .wpd-custom-field .wcf-active-star, #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label{color:#FFD700}#wpd-post-rating .wpd-rating-wrap .wpd-rating-stars svg .wpd-star{fill:#DDDDDD}#wpd-post-rating .wpd-rating-wrap .wpd-rating-stars svg .wpd-active{fill:#FFD700}#wpd-post-rating .wpd-rating-wrap .wpd-rate-starts svg .wpd-star{fill:#DDDDDD}#wpd-post-rating .wpd-rating-wrap .wpd-rate-starts:hover svg .wpd-star{fill:#FFED85}#wpd-post-rating.wpd-not-rated .wpd-rating-wrap .wpd-rate-starts svg:hover ~ svg .wpd-star{fill:#DDDDDD}.wpdiscuz-post-rating-wrap .wpd-rating .wpd-rating-wrap .wpd-rating-stars svg .wpd-star{fill:#DDDDDD}.wpdiscuz-post-rating-wrap .wpd-rating .wpd-rating-wrap .wpd-rating-stars svg .wpd-active{fill:#FFD700}#wpdcom .wpd-comment .wpd-follow-active{color:#ff7a00}#wpdcom .page-numbers{color:#555;border:#555 1px solid}#wpdcom span.current{background:#555}#wpdcom.wpd-layout-1 .wpd-new-loaded-comment > .wpd-comment-wrap > .wpd-comment-right{background:#FFFAD6}#wpdcom.wpd-layout-2 .wpd-new-loaded-comment.wpd-comment > .wpd-comment-wrap > .wpd-comment-right{background:#FFFAD6}#wpdcom.wpd-layout-2 .wpd-new-loaded-comment.wpd-comment.wpd-reply > .wpd-comment-wrap > .wpd-comment-right{background:transparent}#wpdcom.wpd-layout-2 .wpd-new-loaded-comment.wpd-comment.wpd-reply > .wpd-comment-wrap{background:#FFFAD6}#wpdcom.wpd-layout-3 .wpd-new-loaded-comment.wpd-comment > .wpd-comment-wrap > .wpd-comment-right{background:#FFFAD6}#wpdcom .wpd-follow:hover i, #wpdcom .wpd-unfollow:hover i, #wpdcom .wpd-comment .wpd-follow-active:hover i{color:#00B38F}#wpdcom .wpdiscuz-readmore{cursor:pointer;color:#00B38F}.wpd-custom-field .wcf-pasiv-star, #wpcomm .wpdiscuz-item .wpdiscuz-rating > label{color:#DDDDDD}.wpd-wrapper .wpd-list-item.wpd-active{border-top:3px solid #00B38F}#wpdcom.wpd-layout-2 .wpd-comment.wpd-reply.wpd-unapproved-comment .wpd-comment-wrap{border-left:3px solid #FFFAD6}#wpdcom.wpd-layout-3 .wpd-comment.wpd-reply.wpd-unapproved-comment .wpd-comment-right{border-left:1px solid #FFFAD6}#wpdcom .wpd-prim-button{background-color:#07B290;color:#FFFFFF}#wpdcom .wpd_label__check i.wpdicon-on{color:#07B290;border:1px solid #83d9c8}#wpd-bubble-wrapper #wpd-bubble-all-comments-count{color:#1DB99A}#wpd-bubble-wrapper > div{background-color:#1DB99A}#wpd-bubble-wrapper > #wpd-bubble #wpd-bubble-add-message{background-color:#1DB99A}#wpd-bubble-wrapper > #wpd-bubble #wpd-bubble-add-message::before{border-left-color:#1DB99A;border-right-color:#1DB99A}#wpd-bubble-wrapper.wpd-right-corner > #wpd-bubble #wpd-bubble-add-message::before{border-left-color:#1DB99A;border-right-color:#1DB99A}.wpd-inline-icon-wrapper path.wpd-inline-icon-first{fill:#1DB99A}.wpd-inline-icon-count{background-color:#1DB99A}.wpd-inline-icon-count::before{border-right-color:#1DB99A}.wpd-inline-form-wrapper::before{border-bottom-color:#1DB99A}.wpd-inline-form-question{background-color:#1DB99A}.wpd-inline-form{background-color:#1DB99A}.wpd-last-inline-comments-wrapper{border-color:#1DB99A}.wpd-last-inline-comments-wrapper::before{border-bottom-color:#1DB99A}.wpd-last-inline-comments-wrapper .wpd-view-all-inline-comments{background:#1DB99A}.wpd-last-inline-comments-wrapper .wpd-view-all-inline-comments:hover,.wpd-last-inline-comments-wrapper .wpd-view-all-inline-comments:active,.wpd-last-inline-comments-wrapper .wpd-view-all-inline-comments:focus{background-color:#1DB99A}#wpdcom .ql-snow .ql-tooltip[data-mode="link"]::before{content:"Enter link:"}#wpdcom .ql-snow .ql-tooltip.ql-editing a.ql-action::after{content:"Save"}.comments-area{width:auto}
+</style>
+<link rel='stylesheet' id='wpdiscuz-fa-css' href='https://programmingduck.com/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/css/fa.min.css?ver=7.6.8' type='text/css' media='all' />
+<link rel='stylesheet' id='wpdiscuz-combo-css-css' href='https://programmingduck.com/wp-content/plugins/wpdiscuz/assets/css/wpdiscuz-combo.min.css?ver=6.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cmplz-general-css' href='https://programmingduck.com/wp-content/plugins/complianz-gdpr/assets/css/cookieblocker.min.css?ver=6.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='hello-elementor-css' href='https://programmingduck.com/wp-content/themes/hello-elementor/style.min.css?ver=2.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://programmingduck.com/wp-content/themes/hello-elementor/theme.min.css?ver=2.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-css' href='https://programmingduck.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.15.0' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-legacy-css' href='https://programmingduck.com/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.6.4' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://programmingduck.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.6.4' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-13-css' href='https://programmingduck.com/wp-content/uploads/elementor/css/post-13.css?ver=1649966322' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-pro-css' href='https://programmingduck.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css?ver=3.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-5-all-css' href='https://programmingduck.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.6.4' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-4-shim-css' href='https://programmingduck.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.6.4' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-83-css' href='https://programmingduck.com/wp-content/uploads/elementor/css/post-83.css?ver=1649966322' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-301-css' href='https://programmingduck.com/wp-content/uploads/elementor/css/post-301.css?ver=1667664078' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-54-css' href='https://programmingduck.com/wp-content/uploads/elementor/css/post-54.css?ver=1649968345' type='text/css' media='all' />
+<link rel='stylesheet' id='prism-css-0-css' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-okaidia.min.css?ver=1.23.0' type='text/css' media='all' />
+<link rel='stylesheet' id='prism-css-1-css' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/line-numbers/prism-line-numbers.min.css?ver=1.23.0' type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://programmingduck.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://programmingduck.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-brands-css' href='https://programmingduck.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3' type='text/css' media='all' />
+<script type="text/javascript" src="https://programmingduck.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://programmingduck.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://programmingduck.com/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.13.1" id="gtm4wp-form-move-tracker-js"></script>
+<script type="text/javascript" src="https://programmingduck.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.6.4" id="font-awesome-4-shim-js"></script>
+<link rel="https://api.w.org/" href="https://programmingduck.com/wp-json/" /><link rel="alternate" type="application/json" href="https://programmingduck.com/wp-json/wp/v2/posts/1178" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://programmingduck.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.4.2" />
+<link rel='shortlink' href='https://programmingduck.com/?p=1178' />
+<link rel="alternate" type="application/json+oembed" href="https://programmingduck.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fprogrammingduck.com%2Farticles%2Fjavascript-carousel" />
+<link rel="alternate" type="text/xml+oembed" href="https://programmingduck.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fprogrammingduck.com%2Farticles%2Fjavascript-carousel&#038;format=xml" />
+<style>.cmplz-hidden{display:none!important;}</style>
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">//<![CDATA[
+var google_tag_params = {"pageTitle":"Carousel slider tutorial with HTML, CSS and JavaScript - Programming Duck","pagePostType":"post","pagePostType2":"single-post","pageCategory":["tutorials"],"pagePostAuthorID":2,"pagePostAuthor":"Spyros Argalias","pagePostDate":"27th May 2021","pagePostDateYear":"2021","pagePostDateMonth":"05","pagePostDateDay":"27","browserName":"Chrome","browserVersion":"117.0.0.0","browserEngineName":"Blink","browserEngineVersion":"","postCountOnPage":1,"postCountTotal":1,"postID":1178};
+	var dataLayer_content = {"visitorLoginState":"logged-out","visitorType":"visitor-logged-out","pageTitle":"Carousel slider tutorial with HTML, CSS and JavaScript - Programming Duck","pagePostType":"post","pagePostType2":"single-post","pageCategory":["tutorials"],"pagePostAuthorID":2,"pagePostAuthor":"Spyros Argalias","pagePostDate":"27th May 2021","pagePostDateYear":"2021","pagePostDateMonth":"05","pagePostDateDay":"27","browserName":"Chrome","browserVersion":"117.0.0.0","browserEngineName":"Blink","browserEngineVersion":"","postCountOnPage":1,"postCountTotal":1,"postID":1178,"google_tag_params":window.google_tag_params};
+	dataLayer.push( dataLayer_content );//]]>
+</script>
+<script data-cfasync="false">//<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KVKGD7Q');//]]>
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><link rel="icon" href="https://programmingduck.com/wp-content/uploads/2020/11/cropped-timothy-dykes-LhqLdDPcSV8-unsplash-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://programmingduck.com/wp-content/uploads/2020/11/cropped-timothy-dykes-LhqLdDPcSV8-unsplash-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://programmingduck.com/wp-content/uploads/2020/11/cropped-timothy-dykes-LhqLdDPcSV8-unsplash-180x180.png" />
+<meta name="msapplication-TileImage" content="https://programmingduck.com/wp-content/uploads/2020/11/cropped-timothy-dykes-LhqLdDPcSV8-unsplash-270x270.png" />
+</head>
+<body data-cmplz=1 class="post-template-default single single-post postid-1178 single-format-standard elementor-default elementor-kit-13 elementor-page-54">
+
+		<div data-elementor-type="header" data-elementor-id="83" class="elementor elementor-83 elementor-location-header">
+		<div class="elementor-section-wrap">
+					<header class="elementor-section elementor-top-section elementor-element elementor-element-16b3356e elementor-section-content-middle elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="16b3356e" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7f3eb42d" data-id="7f3eb42d" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-6660b23 elementor-widget elementor-widget-theme-site-title elementor-widget-heading" data-id="6660b23" data-element_type="widget" data-widget_type="theme-site-title.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default"><a href="https://programmingduck.com">Programming Duck</a></h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-c0085aa elementor-widget elementor-widget-text-editor" data-id="c0085aa" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				Improve your programming					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-6b70a825" data-id="6b70a825" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-621395bb elementor-nav-menu__align-right elementor-nav-menu--stretch elementor-nav-menu--dropdown-mobile elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="621395bb" data-element_type="widget" data-settings="{&quot;full_width&quot;:&quot;stretch&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+						<nav migration_allowed="1" migrated="0" role="navigation" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade"><ul id="menu-1-621395bb" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-70"><a href="https://programmingduck.com/" class="elementor-item">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-has-children menu-item-71"><a href="https://programmingduck.com/articles" class="elementor-item">Articles</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1282"><a href="https://programmingduck.com/articles/clean-code" class="elementor-sub-item">Clean code &#038; programming principles</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1305"><a href="https://programmingduck.com/articles/functional-programming" class="elementor-sub-item">Functional programming</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-720"><a href="https://programmingduck.com/articles/version-control" class="elementor-sub-item">Version control – Everything you need to know</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-443"><a href="https://programmingduck.com/articles/urls" class="elementor-sub-item">URLs for websites, SEO and developers – The ultimate guide</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-835"><a href="https://programmingduck.com/articles/accessibility" class="elementor-sub-item">Accessibility – Everything you need to know</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-781"><a href="https://www.linkedin.com/in/sargalias/" class="elementor-item">Hire me</a></li>
+</ul></nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="eicon-menu-bar"></i>			<span class="elementor-screen-only">Menu</span>
+		</div>
+			<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" role="navigation" aria-hidden="true"><ul id="menu-2-621395bb" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-70"><a href="https://programmingduck.com/" class="elementor-item" tabindex="-1">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-has-children menu-item-71"><a href="https://programmingduck.com/articles" class="elementor-item" tabindex="-1">Articles</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1282"><a href="https://programmingduck.com/articles/clean-code" class="elementor-sub-item" tabindex="-1">Clean code &#038; programming principles</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1305"><a href="https://programmingduck.com/articles/functional-programming" class="elementor-sub-item" tabindex="-1">Functional programming</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-720"><a href="https://programmingduck.com/articles/version-control" class="elementor-sub-item" tabindex="-1">Version control – Everything you need to know</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-443"><a href="https://programmingduck.com/articles/urls" class="elementor-sub-item" tabindex="-1">URLs for websites, SEO and developers – The ultimate guide</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-835"><a href="https://programmingduck.com/articles/accessibility" class="elementor-sub-item" tabindex="-1">Accessibility – Everything you need to know</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-781"><a href="https://www.linkedin.com/in/sargalias/" class="elementor-item" tabindex="-1">Hire me</a></li>
+</ul></nav>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</header>
+				</div>
+		</div>
+				<div data-elementor-type="single" data-elementor-id="54" class="elementor elementor-54 elementor-location-single post-1178 post type-post status-publish format-standard has-post-thumbnail hentry category-tutorials">
+		<div class="elementor-section-wrap">
+					<div class="elementor-section elementor-top-section elementor-element elementor-element-2b267c5c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2b267c5c" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-35575533" data-id="35575533" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-0a34694 elementor-widget elementor-widget-global elementor-global-146 elementor-widget-breadcrumbs" data-id="0a34694" data-element_type="widget" data-widget_type="breadcrumbs.default">
+				<div class="elementor-widget-container">
+			<p id="breadcrumbs"><span><span><a href="https://programmingduck.com/">Home</a> » <span><a href="https://programmingduck.com/articles">Articles</a> » <span class="breadcrumb_last" aria-current="page">Carousel slider tutorial with HTML, CSS and JavaScript</span></span></span></span></p>		</div>
+				</div>
+				<div class="elementor-element elementor-element-6f34d3c0 elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-id="6f34d3c0" data-element_type="widget" data-widget_type="theme-post-featured-image.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-image">
+												<picture class="attachment-large size-large">
+<source type="image/webp" srcset="https://programmingduck.com/wp-content/uploads/2021/05/w-alan-PMjhRmQqEJg-unsplash-1024x683.jpg.webp 1024w, https://programmingduck.com/wp-content/uploads/2021/05/w-alan-PMjhRmQqEJg-unsplash-300x200.jpg.webp 300w, https://programmingduck.com/wp-content/uploads/2021/05/w-alan-PMjhRmQqEJg-unsplash-768x512.jpg.webp 768w, https://programmingduck.com/wp-content/uploads/2021/05/w-alan-PMjhRmQqEJg-unsplash-1536x1024.jpg.webp 1536w, https://programmingduck.com/wp-content/uploads/2021/05/w-alan-PMjhRmQqEJg-unsplash-2048x1365.jpg.webp 2048w" sizes="(max-width: 800px) 100vw, 800px"/>
+<img width="800" height="534" src="https://programmingduck.com/wp-content/uploads/2021/05/w-alan-PMjhRmQqEJg-unsplash-1024x683.jpg" alt="" srcset="https://programmingduck.com/wp-content/uploads/2021/05/w-alan-PMjhRmQqEJg-unsplash-1024x683.jpg 1024w, https://programmingduck.com/wp-content/uploads/2021/05/w-alan-PMjhRmQqEJg-unsplash-300x200.jpg 300w, https://programmingduck.com/wp-content/uploads/2021/05/w-alan-PMjhRmQqEJg-unsplash-768x512.jpg 768w, https://programmingduck.com/wp-content/uploads/2021/05/w-alan-PMjhRmQqEJg-unsplash-1536x1024.jpg 1536w, https://programmingduck.com/wp-content/uploads/2021/05/w-alan-PMjhRmQqEJg-unsplash-2048x1365.jpg 2048w" sizes="(max-width: 800px) 100vw, 800px"/>
+</picture>
+														</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-2f31b523 elementor-author-box--layout-image-above elementor-author-box--align-center elementor-author-box--avatar-yes elementor-author-box--name-yes elementor-widget elementor-widget-author-box" data-id="2f31b523" data-element_type="widget" data-widget_type="author-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-author-box">
+							<a href="https://programmingduck.com/articles/author/sargalias" class="elementor-author-box__avatar">
+					<img src="https://secure.gravatar.com/avatar/4408435267b54bf51dd363887f919b40?s=300&amp;d=mm&amp;r=g" alt="Spyros Argalias">
+				</a>
+			
+			<div class="elementor-author-box__text">
+									<a href="https://programmingduck.com/articles/author/sargalias">
+						<h4 class="elementor-author-box__name">Spyros Argalias</h4>					</a>
+				
+				
+							</div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-5d2cf0be elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="5d2cf0be" data-element_type="widget" data-widget_type="theme-post-title.default">
+				<div class="elementor-widget-container">
+			<h1 class="elementor-heading-title elementor-size-default">Carousel slider tutorial with HTML, CSS and JavaScript</h1>		</div>
+				</div>
+				<div class="elementor-element elementor-element-27be57ec elementor-mobile-align-center elementor-align-center elementor-widget elementor-widget-post-info" data-id="27be57ec" data-element_type="widget" data-widget_type="post-info.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-inline-items elementor-icon-list-items elementor-post-info">
+					<li class="elementor-icon-list-item elementor-repeater-item-80592f6 elementor-inline-item">
+													<span class="elementor-icon-list-text elementor-post-info__item elementor-post-info__item--type-custom">
+										Updated on 7th March 2022					</span>
+								</li>
+				<li class="elementor-icon-list-item elementor-repeater-item-afbda51 elementor-inline-item" itemprop="about">
+													<span class="elementor-icon-list-text elementor-post-info__item elementor-post-info__item--type-terms">
+										<span class="elementor-post-info__terms-list">
+				<a href="https://programmingduck.com/articles/categories/tutorials" class="elementor-post-info__terms-list-item">Tutorials</a>				</span>
+					</span>
+								</li>
+				</ul>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-7a34a243 elementor-widget elementor-widget-theme-post-content" data-id="7a34a243" data-element_type="widget" data-widget_type="theme-post-content.default">
+				<div class="elementor-widget-container">
+			<p>In this post we&#8217;ll look at how to make a simple carousel with HTML, CSS and JavaScript. We will use good code practices, keep accessibility in mind and also consider how we can test the carousel.</p>
+<p>The carousel will be a &quot;moving carousel&quot;. Slides will move in from left to right, or right to left, with a transition. It won&#8217;t be an in-place carousel where a slide fades out while another one fades-in.</p>
+<p>If you prefer a video version, here it is. It goes into much more detail than this post.</p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/QruodbmSq0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<h2>Basic functionality</h2>
+<p>We&#8217;ll start with the basic functionality. That&#8217;s the basic HTML, CSS and JavaScript.</p>
+<h3>HTML</h3>
+<p>We&#8217;ll keep the HTML fairly simple. We basically need:</p>
+<ul>
+<li>a container for the carousel</li>
+<li>the carousel controls</li>
+<li>the slides</li>
+</ul>
+<p>We won&#8217;t focus very much on the HTML head or anything other than the carousel. The rest is standard stuff.</p>
+<p>As for the actual carousel, here is some HTML we can use.</p>
+<pre><code class="language-html">&lt;head&gt;
+&lt;!-- Import font-awesome somewhere in the HTML --&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css&quot; integrity=&quot;sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot; /&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;./index.css&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;carousel&quot; data-carousel&gt;
+    &lt;div class=&quot;carousel-buttons&quot;&gt;
+      &lt;button
+        class=&quot;carousel-button carousel-button_previous&quot;
+        data-carousel-button-previous
+      &gt;
+        &lt;span class=&quot;fas fa-chevron-circle-left&quot;&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;button
+        class=&quot;carousel-button carousel-button_next&quot;
+        data-carousel-button-next
+      &gt;
+        &lt;span class=&quot;fas fa-chevron-circle-right&quot;&gt;&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;slides&quot; data-carousel-slides-container&gt;
+      &lt;div class=&quot;slide&quot;&gt;
+        &lt;!-- Anything can be here. Each slide can have any content --&gt;
+        &lt;h2&gt;Slide 1 heading&lt;/h2&gt;
+        &lt;p&gt;Slide 1 content
+      &lt;/div&gt;
+      &lt;div class=&quot;slide&quot;&gt;
+        &lt;!-- Anything can be here. Each slide can have any content --&gt;
+        &lt;h2&gt;Slide 2 heading&lt;/h2&gt;
+        &lt;p&gt;Slide 2 content
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+<p>In the head, we are linking font awesome and also our custom styles CSS file.</p>
+<p>In the body:</p>
+<ul>
+<li>we have an outer <code>div</code> for the entire carousel.</li>
+<li>we have two buttons, one for &quot;previous slide&quot; and one for &quot;next slide&quot;. The buttons use font-awesome icons.</li>
+<li>we have a <code>div</code> for the slides. Inside that, we have a <code>div</code> for each slide. The content inside each slide is irrelevant to us, it can be anything.</li>
+</ul>
+<p>As for the <code>data-</code> attributes, those are what we&#8217;ll use as selectors in JavaScript.</p>
+<p>I personally prefer using <code>data-</code> attributes for JavaScript because I want to separate concerns. For example, classes are standard to use for CSS. When someone tries to change the styling of the carousel in the future, they may replace the class name for a more descriptive one. They may also change some CSS modifier classes or something. I don&#8217;t want them to be paranoid that if they change the CSS they may break the JavaScript, or the automated tests, or the asynchronous content insertions, or anything else. I want them to feel safe when working with the CSS.</p>
+<p>This means, that I do not use classes to select elements with JavaScript.</p>
+<p>An exception to this is if you use classes with a prefix such as <code>js-</code>. E.g. <code>&lt;div class=&quot;js-carousel&quot;&gt;&lt;/div&gt;</code>, which are exclusively for JavaScript use. That achieves the same result.</p>
+<p>But my preference is to use <code>data-</code> attributes. That&#8217;s what <code>data-carousel</code> and the others are for.</p>
+<h3>CSS</h3>
+<p>Our CSS:</p>
+<ol>
+<li>is going to have the basic styling for our carousel</li>
+<li>is going to have the mechanism for changing the slides</li>
+</ol>
+<p>The way our carousel will work is by having all slides horizontally next to each other. However, only one slide will show at a time. That&#8217;s because every slide, except the one that&#8217;s visible, will be overflowing outside of the top-level carousel <code>div</code>. That <code>div</code> will have <code>overflow: hidden</code>, so nothing that&#8217;s overflowing will show.</p>
+<p>We&#8217;ll decide which slide is currently showing with the line <code>transform: translateX(/* something */)</code>. That way, we&#8217;ll translate the <code>slides</code> div, so that only the correct slide is visible.</p>
+<p>Here is the CSS.</p>
+<pre><code class="language-css">.carousel {
+  --current-slide: 0;
+  /* we set position relative so absolute position works properly for the buttons */
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-button {
+  /* vertically centering the buttons */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+
+  /* basic styling */
+  padding: 0;
+  margin: 0.5rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  transition: color 0.1s;
+}
+
+.carousel-button:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-button_next {
+  /* The &quot;next slide button&quot; will be at the right */
+  right: 0;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s;
+  transform: translateX(calc(-100% * var(--current-slide)));
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-button {
+    font-size: 2rem;
+    margin: 1rem;
+  }
+}</code></pre>
+<p>With this CSS, every <code>div</code> has its default width of 100%. This means that the carousel will take the full width of its parent container. Every slide will also take up the full width of the carousel.</p>
+<h4>Controls</h4>
+<p>In the <code>carousel-button</code> class, we provide some simple styling for the buttons. We&#8217;re using font-awesome icons, so we give them a font-size so they&#8217;re large and visible. We also remove some of the default button styling (things like borders and background color).</p>
+<p>Also, we position the buttons in the middle (vertically) of the entire carousel. We do this by using the <code>position: absolute; top: 50%; transform: translateY(-50%);</code> trick.</p>
+<h4>Changing slides</h4>
+<p>The trick for how the carousel actually changes slides is the CSS in <code>.slides</code> and <code>.slide</code>. In <code>.slide</code>, we make each slide have 100% of the width of the carousel. This is done with the <code>flex</code> property. In other words, one slide will take up the entire width of the carousel.</p>
+<p>Since <code>.slides</code> is <code>display: flex;</code>, all of the slides will be horizontally next to each other. This means that one slide will take up the entire width of the carousel and all other slides will overflow horizontally next to it. The carousel div has <code>overflow: hidden;</code>, so none of the overflowing slides will show.</p>
+<p>At some point, using JavaScript, we&#8217;ll do something to move the <code>.slides</code> div to the right or left. Since the slides will move, a different slide will be visible inside the carousel.</p>
+<p>The declaration <code>transform: translateX(calc(-100% * var(--current-slide)));</code> is our movement mechanism. Here we&#8217;re saying to move the slides container -100% (the full-width of the carousel, or the full width of a slide) to the left (the negative sign means to the left), as many times as the slide index we&#8217;re on.</p>
+<p>For example, if we&#8217;re on slide index 0 (first slide), <code>-100% * 0</code> = 0, so we don&#8217;t translate at all and the first slide is visible.</p>
+<p>If we&#8217;re on slide index 1 (second slide), then <code>-100% * 1</code> = -100%, so we translate 100% (one slide width) to the left. This means that we&#8217;re displaying the second slide.</p>
+<p>We&#8217;ll set the <code>--current-slide</code> property using JavaScript.</p>
+<h3>JavaScript</h3>
+<p>Our JavaScript needs to:</p>
+<ul>
+<li>handle events for the two buttons (switch to previous slide and next slide)</li>
+<li>work independently for any number of different carousels on the page</li>
+</ul>
+<p>Here is the JavaScript.</p>
+<pre><code class="language-javascript">function modulo(number, mod) {
+  let result = number % mod;
+  if (result &lt; 0) {
+    result += mod;
+  }
+  return result;
+}
+
+function setUpCarousel(carousel) {
+  function handleNext() {
+    currentSlide = modulo(currentSlide + 1, numSlides);
+    changeSlide(currentSlide);
+  }
+
+  function handlePrevious() {
+    currentSlide = modulo(currentSlide - 1, numSlides);
+    changeSlide(currentSlide);
+  }
+
+  function changeSlide(slideNumber) {
+    carousel.style.setProperty(&#039;--current-slide&#039;, slideNumber);
+  }
+
+  // get elements
+  const buttonPrevious = carousel.querySelector(&#039;[data-carousel-button-previous]&#039;);
+  const buttonNext = carousel.querySelector(&#039;[data-carousel-button-next]&#039;);
+  const slidesContainer = carousel.querySelector(&#039;[data-carousel-slides-container]&#039;);
+
+  // carousel state we need to remember
+  let currentSlide = 0;
+  const numSlides = slidesContainer.children.length;
+
+  // set up events
+  buttonPrevious.addEventListener(&#039;click&#039;, handlePrevious);
+  buttonNext.addEventListener(&#039;click&#039;, handleNext);
+}
+
+const carousels = document.querySelectorAll(&#039;[data-carousel]&#039;);
+carousels.forEach(setUpCarousel);</code></pre>
+<p>This code may be appear a bit confusing because of the nested functions. If you&#8217;re not used to this syntax, then here is a class alternative for the <code>setUpCarousel</code> function which does exactly the same thing.</p>
+<pre><code class="language-javascript">class Carousel {
+  constructor(carousel) {
+    // find elements
+    this.carousel = carousel;
+    this.buttonPrevious = carousel.querySelector(&#039;[data-carousel-button-previous]&#039;);
+    this.buttonNext = carousel.querySelector(&#039;[data-carousel-button-next]&#039;);
+    this.slidesContainer = carousel.querySelector(&#039;[data-carousel-slides-container]&#039;);
+
+    // state
+    this.currentSlide = 0;
+    this.numSlides = this.slidesContainer.children.length;
+
+    // add events
+    this.buttonPrevious.addEventListener(&#039;click&#039;, this.handlePrevious.bind(this));
+    this.buttonNext.addEventListener(&#039;click&#039;, this.handleNext.bind(this));
+  }
+
+  handleNext() {
+    this.currentSlide = modulo(this.currentSlide + 1, this.numSlides);
+    this.carousel.style.setProperty(&#039;--current-slide&#039;, this.currentSlide);
+  }
+
+  handlePrevious() {
+    this.currentSlide = modulo(this.currentSlide - 1, this.numSlides);
+    this.carousel.style.setProperty(&#039;--current-slide&#039;, this.currentSlide);
+  }
+}
+
+const carousels = document.querySelectorAll(&#039;[data-carousel]&#039;);
+carousels.forEach(carousel =&gt; new Carousel(carousel));</code></pre>
+<p>Basically, we&#8217;re holding some state, the <code>currentSlide</code> and the <code>numSlides</code> variables. We&#8217;re also holding references to some HTML elements, such as the carousel element, because we&#8217;ll need them when changing slides. Finally, we add event listeners to the buttons.</p>
+<p>When the user clicks on the &quot;next slide&quot; button, we run the <code>handleNext</code> function. The call to <code>modulo(currentSlide, numSlides)</code> sets <code>currentSlide</code> to the correct index for the next slide. So, if there are 5 slides, and we&#8217;re on slide index 0, it will set <code>currentSlide</code> to 1. But, if we&#8217;re already on slide index 4 (the fifth and final slide), then the next slide index is 0, not 5. The modulo function takes care of the wrapping back to 0 for us.</p>
+<p>Really, we could have used the <code>%</code> (modulo) operator for this. The reason why we have the <code>modulo</code> function is because <code>%</code> doesn&#8217;t play well with negative numbers. <code>-1 % 5</code> evaluates to <code>-1</code>, rather than <code>4</code> (the index of the slide we would actually want). We created our own <code>modulo</code> function to handle that case.</p>
+<p>Finally, we set the CSS property <code>--current-slide</code> to the correct number. Then, the CSS changes the visible slide by translating the slides <code>div</code> appropriately.</p>
+<p>The independence of different carousels on the page happens because we use <code>querySelector</code> on the parent carousel element, not on the <code>document</code>. This means that, for example, <code>carouselElement1.querySelector([data-carousel-button-next])</code>, will only get the button inside that carousel element. Whereas <code>document.querySelector(&#039;[data-carousel-button-next]&#039;)</code> would get the first matching element it finds on the page, rather than the target carousel.</p>
+<h2>Accessibility</h2>
+<p>At the moment, this carousel is very unfriendly to screen reader users. You&#8217;ll need to actually use a screen reader and listen to it to hear it for yourself (or watch the accessibility section of the embedded video), but basically:</p>
+<ul>
+<li>it doesn&#8217;t mention anything about the content being a carousel</li>
+<li>for the buttons, it just says &quot;button&quot; and nothing else (because the buttons don&#8217;t have text or a label)</li>
+<li>on &quot;auto read&quot;, it reads through all of the content of every slide, as though it was a normal web page full of text (because we&#8217;re not telling it to only read the visible slide)</li>
+</ul>
+<p>To fix those issues, we need to go to the <a href="https://www.w3.org/TR/wai-aria-practices-1.1/">WAI-ARIA authoring practices document</a>. There is a section for carousels. We just go to it and follow the instructions. It&#8217;s actually not too difficult. It has step-by-step instructions for us.</p>
+<p>In the end, our HTML looks like this:</p>
+<pre><code class="language-html">&lt;div
+  class=&quot;carousel&quot;
+  role=&quot;group&quot;
+  aria-roledescription=&quot;carousel&quot;
+  aria-label=&quot;Student testimonials&quot;
+  data-carousel
+>
+  &lt;div class=&quot;carousel-buttons&quot;&gt;
+    &lt;button
+      class=&quot;carousel-button carousel-button_previous&quot;
+      aria-label=&quot;Previous slide&quot;
+      data-carousel-button-previous
+    &gt;
+      &lt;span class=&quot;fas fa-chevron-circle-left&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button
+      class=&quot;carousel-button carousel-button_next&quot;
+      aria-label=&quot;Next slide&quot;
+      data-carousel-button-next
+    &gt;
+      &lt;span class=&quot;fas fa-chevron-circle-right&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div
+    class=&quot;slides&quot;
+    aria-live=&quot;polite&quot;
+    data-carousel-slides-container
+  &gt;
+    &lt;div
+      class=&quot;slide&quot;
+      role=&quot;group&quot;
+      aria-roledescription=&quot;slide&quot;
+      aria-hidden=&quot;false&quot;
+      aria-labelledby=&quot;bob&quot;
+    &gt;
+      &lt;h2 id=&quot;bob&quot;&gt;Bob&lt;/h2&gt;
+    &lt;/div&gt;
+
+    &lt;div
+      class=&quot;slide&quot;
+      role=&quot;group&quot;
+      aria-roledescription=&quot;slide&quot;
+      aria-hidden=&quot;true&quot;
+      aria-labelledby=&quot;alice&quot;
+    &gt;
+      &lt;h2 id=&quot;alice&quot;&gt;Alice&lt;/h2&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>A quick summary of what we did is:</p>
+<ul>
+<li>we added an <code>aria-role</code>, <code>aria-roledescription</code> and <code>aria-label</code> to the carousel <code>div</code>. Now, the screen reader says something like &quot;Student testimonials carousel&quot;, immediately indicating that this is a carousel and what content it represents.</li>
+<li>for each button, we added an <code>aria-label</code>. Now the screen reader says something like &quot;button previous slide&quot;, instead of just &quot;button&quot;. (An alternative technique here would be to add &quot;screen-reader only text&quot;. This is text that exists in the HTML but is hidden visually using particular methods.)</li>
+<li>we added an <code>aria-role</code> and <code>aria-roledescription</code> to each slide. Now the screen reader knows when it&#8217;s entering a slide or leaving a slide and it will notify the user as necessary.</li>
+<li>we also added a label to each slide using <code>aria-labelledby</code>. This is the same as <code>aria-label</code> except that you point it to some text that already exists on the page, using an HTML ID. In this case, since our label already exists on the page (the heading for each slide), we used <code>aria-labelledby</code> instead of <code>aria-label</code>.</li>
+<li>we added <code>aria-hidden=&quot;true&quot;</code> to the hidden slides. Now the screen reader won&#8217;t read them.</li>
+<li>we added an <code>aria-live</code> region. Now the screen reader will re-read the content of the carousel whenever there are changes (when the user changes the slide).</li>
+</ul>
+<p>There are some other aria attributes that would be useful, but I&#8217;m ignoring them for now because they&#8217;re not mentioned in the carousel part of the WAI-ARIA authoring practices. One example is <a href="https://tink.uk/using-the-aria-controls-attribute/">aria-controls</a>. If you want to learn more about these, it might be worth looking at the <a href="https://www.w3.org/TR/wai-aria-practices-1.1/">WAI-ARIA authoring practices</a> in your own time. If you want to learn more about accessibility in general, I&#8217;ve written a learning guide in <a href="/articles/accessibility">Web accessibility &#8211; Everything you need to know</a>.</p>
+<p>Our JavaScript needs some updates as well. Specifically, when we change slides, we need to change the <code>aria-hidden</code> property to <code>false</code> for the new active slide. We also need to hide the previous slide that we&#8217;re no longer looking at.</p>
+<p>Here is some example code we can use:</p>
+<pre><code class="language-javascript">function changeSlide(slideNumber) {
+  // change current slide visually
+  carousel.style.setProperty(&#039;--current-slide&#039;, slideNumber);
+
+  // handle screen reader accessibility
+  // here we&#039;re getting the elements for the previous slide, current slide and next slide
+  const previousSlideNumber = modulo(slideNumber - 1, numSlides);
+  const nextSlideNumber = modulo(slideNumber + 1, numSlides);
+  const previousSlide = slidesContainer.children[previousSlideNumber];
+  const currentSlideElement = slidesContainer.children[slideNumber];
+  const nextSlide = slidesContainer.children[nextSlideNumber];
+
+  // here, we&#039;re hiding the previous and next slides and unhiding the current slide
+  previousSlide.setAttribute(&#039;aria-hidden&#039;, true);
+  nextSlide.setAttribute(&#039;aria-hidden&#039;, true);
+  currentSlideElement.setAttribute(&#039;aria-hidden&#039;, false);
+}</code></pre>
+<h2>Testing</h2>
+<p>What ways are there to test something like this?</p>
+<p>In short, I would write end-to-end tests for it. I would hesitate to write unit tests for it.</p>
+<p>Here&#8217;s why.</p>
+<p>An end-to-end test shows you that the entire thing works correctly.</p>
+<p>Depending on your test framework, you could do things like:</p>
+<ul>
+<li>check that only a particular <code>div</code> (slide) is visible on the page, and the others aren&#8217;t</li>
+<li>check that the correct <code>div</code> (slide) is visible after pressing the next / previous slide button</li>
+<li>check that the transition for changing slides works correctly</li>
+</ul>
+<p>But if you unit test, you can only check that your JavaScript works correctly.</p>
+<p>You could do a test where you set up some HTML, then run your JavaScript and finally check that the resulting HTML is what you expect.</p>
+<p>Or you could do something like spy on your JavaScript code, run your JavaScript and ensure your spies were called.</p>
+<p>With the first unit test example (where you check the final HTML), the problem is that, while your tests may be passing, your carousel may not be working. For example, someone may have changed how the CSS works. They may have renamed the property <code>--current-slide</code> to <code>--index</code> or whatever else. Maybe they changed the entire CSS mechanism for changing the slides (for example, to improve performance).</p>
+<p>In this case, your JavaScript will be executing without errors and the tests will be passing, but the carousel won&#8217;t be working.</p>
+<p>The tests won&#8217;t provide confidence that your code works.</p>
+<p>The only thing they&#8217;ll do is freeze your JavaScript implementation. This is the scenario where you&#8217;ve already checked the carousel yourself, manually, in the browser. You think &quot;I can see that it&#8217;s working, let me write some unit tests for it that check that the JavaScript is doing X&quot;. What this does, is it prevents anyone from accidentally changing the JavaScript in the future. If they do so, the tests will fail.</p>
+<p>But, it also makes intentional changes more difficult. Now, if you want to change the implementation in the future, you need to change your CSS, JavaScript and your 10 tests. This is one of the reasons why people dislike unit tests. They make changes to the implementation more difficult (at least with unit tests like these).</p>
+<p>So, for these reasons, I would personally recommend writing end-to-end tests instead. Now, if you really want to prevent accidental changes in the JavaScript, that&#8217;s fine. You need to do what you need to do. It&#8217;s up to you to decide if the peace of mind is worth the downsides and the time it takes to write those tests.</p>
+<p>As for the other scenario of unit testing, where you check that your spies were called, I just don&#8217;t see a benefit to that. With those tests, you&#8217;re not even testing that your JavaScript is doing what you think. You could break the JavaScript implementation in the future and your tests would still pass, as long as you&#8217;re calling the same functions.</p>
+<p>But, those are just my thoughts on the matter. I&#8217;m open to differences in opinion. Please leave a comment below if you think I&#8217;m missing something.</p>
+<h2>Final notes</h2>
+<p>So that&#8217;s it. I hope that you found this article useful.</p>
+<p>If you want a fuller view of the code, <a href="https://github.com/Programming-Duck/carousel">here is the code repository</a>.</p>
+<p>Please note that this is not meant to be production-ready. The code can be cleaned up more. It can probably be made more appropriate to what you need to use. Etc.</p>
+<p>This is just a little tutorial to show you the general idea on how to make a simple carousel.</p>
+<p>If you have any feedback, anything that was missed or could have been done better, or anything else, please leave a comment below.</p>
+<p>Alright, thanks very much and see you next time.</p>
+		</div>
+				</div>
+				<div class="elementor-element elementor-element-70a7ad6 elementor-widget elementor-widget-post-comments" data-id="70a7ad6" data-element_type="widget" data-widget_type="post-comments.theme_comments">
+				<div class="elementor-widget-container">
+			    <div class="wpdiscuz_top_clearing"></div>
+	<div id='comments' class='comments-area'><div id='respond' style='width: 0;height: 0;clear: both;margin: 0;padding: 0;'></div>    <div id="wpdcom" class="wpdiscuz_unauth wpd-default wpd-layout-3 wpd-comments-open">
+		            <div class="wc_social_plugin_wrapper">
+				            </div>
+            <div class="wpd-form-wrap">
+                <div class="wpd-form-head">
+					                        <div class="wpd-sbs-toggle">
+                            <i class="far fa-envelope"></i> <span
+                                    class="wpd-sbs-title">Subscribe</span>
+                            <i class="fas fa-caret-down"></i>
+                        </div>
+						                    <div class="wpd-auth">
+						                        <div class="wpd-login">
+							<a rel="nofollow" href="https://programmingduck.com/wp-login.php?redirect_to=https%3A%2F%2Fprogrammingduck.com%2Farticles%2Fjavascript-carousel"><i class='fas fa-sign-in-alt'></i> Login</a>                        </div>
+                    </div>
+                </div>
+								                    <div class="wpdiscuz-subscribe-bar wpdiscuz-hidden">
+						                            <form action="https://programmingduck.com/wp-admin/admin-ajax.php?action=wpdAddSubscription"
+                                  method="post" id="wpdiscuz-subscribe-form">
+                                <div class="wpdiscuz-subscribe-form-intro">Notify of </div>
+                                <div class="wpdiscuz-subscribe-form-option"
+                                     style="width:40%;">
+                                    <select class="wpdiscuz_select" name="wpdiscuzSubscriptionType">
+										                                            <option value="post">new follow-up comments</option>
+																					                                            <option value="all_comment" >new replies to my comments</option>
+											                                    </select>
+                                </div>
+								                                    <div class="wpdiscuz-item wpdiscuz-subscribe-form-email">
+                                        <input class="email" type="email" name="wpdiscuzSubscriptionEmail"
+                                               required="required" value=""
+                                               placeholder="Email"/>
+                                    </div>
+									                                <div class="wpdiscuz-subscribe-form-button">
+                                    <input id="wpdiscuz_subscription_button" class="wpd-prim-button wpd_not_clicked"
+                                           type="submit"
+                                           value="&rsaquo;"
+                                           name="wpdiscuz_subscription_button"/>
+                                </div>
+								<input type="hidden" id="wpdiscuz_subscribe_form_nonce" name="wpdiscuz_subscribe_form_nonce" value="043bc28378" /><input type="hidden" name="_wp_http_referer" value="/articles/javascript-carousel" />                            </form>
+							                    </div>
+					        <div class="wpd-form wpd-form-wrapper wpd-main-form-wrapper" id='wpd-main-form-wrapper-0_0'>
+						                <form  method="post" enctype="multipart/form-data" data-uploading="false" class="wpd_comm_form wpd_main_comm_form"                >
+					                    <div class="wpd-field-comment">
+                        <div class="wpdiscuz-item wc-field-textarea">
+                            <div class="wpdiscuz-textarea-wrap ">
+																	                                    <div class="wpd-avatar">
+										<img alt='guest' src='https://secure.gravatar.com/avatar/a6818a176040a743c1c05ecd44db4691?s=56&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/a6818a176040a743c1c05ecd44db4691?s=112&#038;d=mm&#038;r=g 2x' class='avatar avatar-56 photo' height='56' width='56' decoding='async'/>                                    </div>
+									            <div id="wpd-editor-wraper-0_0" style="display: none;">
+                <div id="wpd-editor-char-counter-0_0"
+                     class="wpd-editor-char-counter"></div>
+                <label style="display: none;" for="wc-textarea-0_0">Label</label>
+                <textarea id="wc-textarea-0_0" name="wc_comment"
+                          class="wc_comment wpd-field"></textarea>
+                <div id="wpd-editor-0_0"></div>
+				        <div id="wpd-editor-toolbar-0_0">
+			                <button title="Bold"
+                        class="ql-bold"  ></button>
+				                <button title="Italic"
+                        class="ql-italic"  ></button>
+				                <button title="Underline"
+                        class="ql-underline"  ></button>
+				                <button title="Strike"
+                        class="ql-strike"  ></button>
+				                <button title="Ordered List"
+                        class="ql-list" value='ordered' ></button>
+				                <button title="Unordered List"
+                        class="ql-list" value='bullet' ></button>
+				                <button title="Blockquote"
+                        class="ql-blockquote"  ></button>
+				                <button title="Code Block"
+                        class="ql-code-block"  ></button>
+				                <button title="Link"
+                        class="ql-link"  ></button>
+				                <button title="Source Code"
+                        class="ql-sourcecode"  data-wpde_button_name='sourcecode'>{}</button>
+				                <button title="Spoiler"
+                        class="ql-spoiler"  data-wpde_button_name='spoiler'>[+]</button>
+				            <div class="wpd-editor-buttons-right">
+				<span class='wmu-upload-wrap' wpd-tooltip='Attach an image to this comment' wpd-tooltip-position='left'><label class='wmu-add'><i class='far fa-image'></i><input style='display:none;' class='wmu-add-files' type='file' name='wmu_files[]'  accept='image/*'/></label></span>            </div>
+        </div>
+		            </div>
+			                            </div>
+                        </div>
+                    </div>
+                    <div class="wpd-form-foot" style='display:none;'>
+                        <div class="wpdiscuz-textarea-foot">
+							                            <div class="wpdiscuz-button-actions"><div class='wmu-action-wrap'><div class='wmu-tabs wmu-images-tab wmu-hide'></div></div></div>
+                        </div>
+						        <div class="wpd-form-row">
+                    <div class="wpd-form-col-left">
+                        <div class="wpdiscuz-item wc_name-wrapper wpd-has-icon">
+                                    <div class="wpd-field-icon"><i class="fas fa-user"></i></div>
+                                    <input id="wc_name-0_0" value="" required='required' aria-required='true' class="wc_name wpd-field" type="text" name="wc_name" placeholder="Name*" maxlength="50" pattern='.{3,50}' title="">
+                <label for="wc_name-0_0" class="wpdlb">Name*</label>
+                            </div>
+                        <div class="wpdiscuz-item wc_email-wrapper wpd-has-icon">
+                                    <div class="wpd-field-icon"><i class="fas fa-at"></i></div>
+                                    <input id="wc_email-0_0" value="" required='required' aria-required='true' class="wc_email wpd-field" type="email" name="wc_email" placeholder="Email*" />
+                <label for="wc_email-0_0" class="wpdlb">Email*</label>
+                            </div>
+                            <div class="wpdiscuz-item wc_website-wrapper wpd-has-icon">
+                                            <div class="wpd-field-icon"><i class="fas fa-link"></i></div>
+                                        <input id="wc_website-0_0" value="" class="wc_website wpd-field" type="text" name="wc_website" placeholder="Website" />
+                    <label for="wc_website-0_0" class="wpdlb">Website</label>
+                                    </div>
+                        </div>
+                <div class="wpd-form-col-right">
+                    <div class="wc-field-submit">
+															                        <label class="wpd_label"
+                               wpd-tooltip="Notify of new replies to this comment">
+                            <input id="wc_notification_new_comment-0_0"
+                                   class="wc_notification_new_comment-0_0 wpd_label__checkbox"
+                                   value="comment" type="checkbox"
+                                   name="wpdiscuz_notification_type" />
+                            <span class="wpd_label__text">
+                                <span class="wpd_label__check">
+                                    <i class="fas fa-bell wpdicon wpdicon-on"></i>
+                                    <i class="fas fa-bell-slash wpdicon wpdicon-off"></i>
+                                </span>
+                            </span>
+                        </label>
+													            <input id="wpd-field-submit-0_0"
+                   class="wc_comm_submit wpd_not_clicked wpd-prim-button" type="submit"
+                   name="submit" value="Post Comment"
+                   aria-label="Post Comment"/>
+        </div>
+		        </div>
+                    <div class="clearfix"></div>
+        </div>
+                            </div>
+					                    <input type="hidden" class="wpdiscuz_unique_id" value="0_0"
+                           name="wpdiscuz_unique_id">
+					                </form>
+				        </div>
+		        <div id="wpdiscuz_hidden_secondary_form" style="display: none;">
+			        <div class="wpd-form wpd-form-wrapper wpd-secondary-form-wrapper" id='wpd-secondary-form-wrapper-wpdiscuzuniqueid' style='display: none;'>
+			                <div class="wpd-secondary-forms-social-content"></div>
+                <div class="clearfix"></div>
+						                <form  method="post" enctype="multipart/form-data" data-uploading="false" class="wpd_comm_form wpd-secondary-form-wrapper"                >
+					                    <div class="wpd-field-comment">
+                        <div class="wpdiscuz-item wc-field-textarea">
+                            <div class="wpdiscuz-textarea-wrap ">
+																	                                    <div class="wpd-avatar">
+										<img alt='guest' src='https://secure.gravatar.com/avatar/6dc2b2c0fa48babd30450374f523d01c?s=56&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/6dc2b2c0fa48babd30450374f523d01c?s=112&#038;d=mm&#038;r=g 2x' class='avatar avatar-56 photo' height='56' width='56' loading='lazy' decoding='async'/>                                    </div>
+									            <div id="wpd-editor-wraper-wpdiscuzuniqueid" style="display: none;">
+                <div id="wpd-editor-char-counter-wpdiscuzuniqueid"
+                     class="wpd-editor-char-counter"></div>
+                <label style="display: none;" for="wc-textarea-wpdiscuzuniqueid">Label</label>
+                <textarea id="wc-textarea-wpdiscuzuniqueid" name="wc_comment"
+                          class="wc_comment wpd-field"></textarea>
+                <div id="wpd-editor-wpdiscuzuniqueid"></div>
+				        <div id="wpd-editor-toolbar-wpdiscuzuniqueid">
+			                <button title="Bold"
+                        class="ql-bold"  ></button>
+				                <button title="Italic"
+                        class="ql-italic"  ></button>
+				                <button title="Underline"
+                        class="ql-underline"  ></button>
+				                <button title="Strike"
+                        class="ql-strike"  ></button>
+				                <button title="Ordered List"
+                        class="ql-list" value='ordered' ></button>
+				                <button title="Unordered List"
+                        class="ql-list" value='bullet' ></button>
+				                <button title="Blockquote"
+                        class="ql-blockquote"  ></button>
+				                <button title="Code Block"
+                        class="ql-code-block"  ></button>
+				                <button title="Link"
+                        class="ql-link"  ></button>
+				                <button title="Source Code"
+                        class="ql-sourcecode"  data-wpde_button_name='sourcecode'>{}</button>
+				                <button title="Spoiler"
+                        class="ql-spoiler"  data-wpde_button_name='spoiler'>[+]</button>
+				            <div class="wpd-editor-buttons-right">
+				<span class='wmu-upload-wrap' wpd-tooltip='Attach an image to this comment' wpd-tooltip-position='left'><label class='wmu-add'><i class='far fa-image'></i><input style='display:none;' class='wmu-add-files' type='file' name='wmu_files[]'  accept='image/*'/></label></span>            </div>
+        </div>
+		            </div>
+			                            </div>
+                        </div>
+                    </div>
+                    <div class="wpd-form-foot" style='display:none;'>
+                        <div class="wpdiscuz-textarea-foot">
+							                            <div class="wpdiscuz-button-actions"><div class='wmu-action-wrap'><div class='wmu-tabs wmu-images-tab wmu-hide'></div></div></div>
+                        </div>
+						        <div class="wpd-form-row">
+                    <div class="wpd-form-col-left">
+                        <div class="wpdiscuz-item wc_name-wrapper wpd-has-icon">
+                                    <div class="wpd-field-icon"><i class="fas fa-user"></i></div>
+                                    <input id="wc_name-wpdiscuzuniqueid" value="" required='required' aria-required='true' class="wc_name wpd-field" type="text" name="wc_name" placeholder="Name*" maxlength="50" pattern='.{3,50}' title="">
+                <label for="wc_name-wpdiscuzuniqueid" class="wpdlb">Name*</label>
+                            </div>
+                        <div class="wpdiscuz-item wc_email-wrapper wpd-has-icon">
+                                    <div class="wpd-field-icon"><i class="fas fa-at"></i></div>
+                                    <input id="wc_email-wpdiscuzuniqueid" value="" required='required' aria-required='true' class="wc_email wpd-field" type="email" name="wc_email" placeholder="Email*" />
+                <label for="wc_email-wpdiscuzuniqueid" class="wpdlb">Email*</label>
+                            </div>
+                            <div class="wpdiscuz-item wc_website-wrapper wpd-has-icon">
+                                            <div class="wpd-field-icon"><i class="fas fa-link"></i></div>
+                                        <input id="wc_website-wpdiscuzuniqueid" value="" class="wc_website wpd-field" type="text" name="wc_website" placeholder="Website" />
+                    <label for="wc_website-wpdiscuzuniqueid" class="wpdlb">Website</label>
+                                    </div>
+                        </div>
+                <div class="wpd-form-col-right">
+                    <div class="wc-field-submit">
+															                        <label class="wpd_label"
+                               wpd-tooltip="Notify of new replies to this comment">
+                            <input id="wc_notification_new_comment-wpdiscuzuniqueid"
+                                   class="wc_notification_new_comment-wpdiscuzuniqueid wpd_label__checkbox"
+                                   value="comment" type="checkbox"
+                                   name="wpdiscuz_notification_type" />
+                            <span class="wpd_label__text">
+                                <span class="wpd_label__check">
+                                    <i class="fas fa-bell wpdicon wpdicon-on"></i>
+                                    <i class="fas fa-bell-slash wpdicon wpdicon-off"></i>
+                                </span>
+                            </span>
+                        </label>
+													            <input id="wpd-field-submit-wpdiscuzuniqueid"
+                   class="wc_comm_submit wpd_not_clicked wpd-prim-button" type="submit"
+                   name="submit" value="Post Comment"
+                   aria-label="Post Comment"/>
+        </div>
+		        </div>
+                    <div class="clearfix"></div>
+        </div>
+                            </div>
+					                    <input type="hidden" class="wpdiscuz_unique_id" value="wpdiscuzuniqueid"
+                           name="wpdiscuz_unique_id">
+					                </form>
+				        </div>
+		        </div>
+		            </div>
+			            <div id="wpd-threads" class="wpd-thread-wrapper">
+                <div class="wpd-thread-head">
+                    <div class="wpd-thread-info "
+                         data-comments-count="14">
+						<span class='wpdtc' title='14'>14</span> Comments                    </div>
+					                    <div class="wpd-space"></div>
+                    <div class="wpd-thread-filter">
+						                            <div class="wpd-filter wpdf-reacted wpd_not_clicked"
+                                 wpd-tooltip="Most reacted comment">
+                                <i class="fas fa-bolt"></i></div>
+							                            <div class="wpd-filter wpdf-hottest wpd_not_clicked"
+                                 wpd-tooltip="Hottest comment thread">
+                                <i class="fas fa-fire"></i></div>
+							                            <div class="wpd-filter wpdf-sorting">
+								                                        <span class="wpdiscuz-sort-button wpdiscuz-date-sort-asc wpdiscuz-sort-button-active"
+                                              data-sorting="oldest">Oldest</span>
+										                                <i class="fas fa-sort-down"></i>
+                                <div class="wpdiscuz-sort-buttons">
+									                                        <span class="wpdiscuz-sort-button wpdiscuz-date-sort-desc"
+                                              data-sorting="newest">Newest</span>
+										                                        <span class="wpdiscuz-sort-button wpdiscuz-vote-sort-up"
+                                              data-sorting="by_vote">Most Voted</span>
+										                                </div>
+                            </div>
+							                    </div>
+                </div>
+                <div class="wpd-comment-info-bar">
+                    <div class="wpd-current-view"><i
+                                class="fas fa-quote-left"></i> Inline Feedbacks                    </div>
+                    <div class="wpd-filter-view-all">View all comments</div>
+                </div>
+				                <div class="wpd-thread-list">
+					<div id='wpd-comm-8_0' class='comment even thread-even depth-1 wpd-comment wpd_comment_level-1'><div class="wpd-comment-wrap wpd-blog-guest">
+    <div class="wpd-comment-left ">
+    <div class="wpd-avatar ">
+    <img alt='Simmy' src='https://secure.gravatar.com/avatar/0b6a6ccff5969a04b3bca7ccd2a2ada4?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/0b6a6ccff5969a04b3bca7ccd2a2ada4?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/>
+</div>
+</div>
+    <div id="comment-8" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    Simmy
+</div>
+    
+    
+    <div class="wpd-comment-share wpd-hidden wpd-tooltip wpd-top">
+    <i class='fas fa-share-alt' aria-hidden='true'></i>
+    <div class="wpd-tooltip-content">
+        <a class='wc_tw' rel='noreferrer' target='_blank' href='https://twitter.com/intent/tweet?text=Thanks For sharing this article.It was really informative .
+&url=https%3A%2F%2Fprogrammingduck.com%2Farticles%2Fjavascript-carousel%23comment-8' title='Share On Twitter'><i class='fab fa-twitter wpf-cta' aria-hidden='true'></i></a><a class='wc_vk' rel='noreferrer' target='_blank' href='https://vk.com/share.php?url=https://programmingduck.com/articles/javascript-carousel' title='Share On VKontakte'><i class='fab fa-vk wpf-cta' aria-hidden='true'></i></a><a class='wc_ok' rel='noreferrer' target='_blank' href='https://connect.ok.ru/offer?url=https://programmingduck.com/articles/javascript-carousel' title='Share On Odnoklassniki'><i class='fab fa-odnoklassniki wpf-cta' aria-hidden='true'></i></a>
+    </div>
+</div>
+    
+    <div class="wpd-space"></div>
+    <div class="wpd-comment-link wpd-hidden">
+    <span wpd-tooltip='Comment Link' wpd-tooltip-position='left'><i class='fas fa-link' aria-hidden='true' data-wpd-clipboard='https://programmingduck.com/articles/javascript-carousel#comment-8'></i></span>
+</div>
+</div>
+    <div class="wpd-comment-subheader">
+    
+    <div class="wpd-comment-date" title="5th March 2022 9:10 am">
+    <i class='far fa-clock' aria-hidden='true'></i>
+    1 year ago
+</div>
+    
+</div>
+    
+    <div class="wpd-comment-text">
+    <p>Thanks For sharing this article.It was really informative .</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' class='svg-inline--fa fa-plus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+    <div class='wpd-vote-result wpd-up' title='8'>8</div>
+    <div class="wpd-vote-down wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z'/><path d='M0 0h24v24H0z' fill='none'/></svg>
+    <span>Reply</span>
+</div>
+<div class='wpd-wpanel'></div>
+    <div class="wpd-space"></div>
+    <div class="wpd-tool-wrap">
+    
+    <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies">
+    <i class='fas fa-chevron-up'></i>
+</div>
+</div>
+</div>
+</div>
+</div><div id='wpdiscuz_form_anchor-8_0'></div><div id='wpd-comm-10_8' class='comment byuser comment-author-sargalias bypostauthor odd alt depth-2 wpd-comment wpd-reply wpd_comment_level-2'><div class="wpd-comment-wrap wpd-blog-user wpd-blog-administrator wpd-blog-user wpd-blog-post_author">
+    <div class="wpd-comment-left ">
+    <div class="wpd-avatar ">
+    <a href='https://programmingduck.com/articles/author/sargalias' target='_blank' rel='noreferrer ugc'><img alt='Spyros Argalias' src='https://secure.gravatar.com/avatar/4408435267b54bf51dd363887f919b40?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/4408435267b54bf51dd363887f919b40?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/></a>
+</div>
+</div>
+    <div id="comment-10" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    <a href='https://programmingduck.com/articles/author/sargalias' rel='noreferrer ugc' target='_blank'>Spyros Argalias</a>
+</div>
+    <div class="wpd-comment-label" wpd-tooltip="Author" wpd-tooltip-position="top">
+    <span>Author</span>
+</div>
+    
+    <div class="wpd-comment-share wpd-hidden wpd-tooltip wpd-top">
+    <i class='fas fa-share-alt' aria-hidden='true'></i>
+    <div class="wpd-tooltip-content">
+        <a class='wc_tw' rel='noreferrer' target='_blank' href='https://twitter.com/intent/tweet?text=My pleasure, thank you for the nice comment
+&url=https%3A%2F%2Fprogrammingduck.com%2Farticles%2Fjavascript-carousel%23comment-10' title='Share On Twitter'><i class='fab fa-twitter wpf-cta' aria-hidden='true'></i></a><a class='wc_vk' rel='noreferrer' target='_blank' href='https://vk.com/share.php?url=https://programmingduck.com/articles/javascript-carousel' title='Share On VKontakte'><i class='fab fa-vk wpf-cta' aria-hidden='true'></i></a><a class='wc_ok' rel='noreferrer' target='_blank' href='https://connect.ok.ru/offer?url=https://programmingduck.com/articles/javascript-carousel' title='Share On Odnoklassniki'><i class='fab fa-odnoklassniki wpf-cta' aria-hidden='true'></i></a>
+    </div>
+</div>
+    
+    <div class="wpd-space"></div>
+    <div class="wpd-comment-link wpd-hidden">
+    <span wpd-tooltip='Comment Link' wpd-tooltip-position='left'><i class='fas fa-link' aria-hidden='true' data-wpd-clipboard='https://programmingduck.com/articles/javascript-carousel#comment-10'></i></span>
+</div>
+</div>
+    
+    <div class="wpd-reply-to">
+    <i class='far fa-comments'></i>
+    Reply to&nbsp;
+    <a href="#comment-8">
+        Simmy
+    </a>
+    <div class="wpd-comment-date" title="7th March 2022 6:02 pm">
+    <i class='far fa-clock' aria-hidden='true'></i>
+    1 year ago
+</div>
+</div>
+    <div class="wpd-comment-text">
+    <p>My pleasure, thank you for the nice comment</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' class='svg-inline--fa fa-plus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+    <div class='wpd-vote-result wpd-up' title='3'>3</div>
+    <div class="wpd-vote-down wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z'/><path d='M0 0h24v24H0z' fill='none'/></svg>
+    <span>Reply</span>
+</div>
+
+    <div class="wpd-space"></div>
+    
+</div>
+</div>
+</div><div id='wpdiscuz_form_anchor-10_8'></div></div></div><div id='wpd-comm-9_0' class='comment even thread-odd thread-alt depth-1 wpd-comment wpd_comment_level-1'><div class="wpd-comment-wrap wpd-blog-guest">
+    <div class="wpd-comment-left ">
+    <div class="wpd-avatar ">
+    <img alt='Simmy' src='https://secure.gravatar.com/avatar/0b6a6ccff5969a04b3bca7ccd2a2ada4?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/0b6a6ccff5969a04b3bca7ccd2a2ada4?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/>
+</div>
+</div>
+    <div id="comment-9" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    Simmy
+</div>
+    
+    
+    <div class="wpd-comment-share wpd-hidden wpd-tooltip wpd-top">
+    <i class='fas fa-share-alt' aria-hidden='true'></i>
+    <div class="wpd-tooltip-content">
+        <a class='wc_tw' rel='noreferrer' target='_blank' href='https://twitter.com/intent/tweet?text=Is aria-role and role the same ?I could find only role attribute in M... &url=https%3A%2F%2Fprogrammingduck.com%2Farticles%2Fjavascript-carousel%23comment-9' title='Share On Twitter'><i class='fab fa-twitter wpf-cta' aria-hidden='true'></i></a><a class='wc_vk' rel='noreferrer' target='_blank' href='https://vk.com/share.php?url=https://programmingduck.com/articles/javascript-carousel' title='Share On VKontakte'><i class='fab fa-vk wpf-cta' aria-hidden='true'></i></a><a class='wc_ok' rel='noreferrer' target='_blank' href='https://connect.ok.ru/offer?url=https://programmingduck.com/articles/javascript-carousel' title='Share On Odnoklassniki'><i class='fab fa-odnoklassniki wpf-cta' aria-hidden='true'></i></a>
+    </div>
+</div>
+    
+    <div class="wpd-space"></div>
+    <div class="wpd-comment-link wpd-hidden">
+    <span wpd-tooltip='Comment Link' wpd-tooltip-position='left'><i class='fas fa-link' aria-hidden='true' data-wpd-clipboard='https://programmingduck.com/articles/javascript-carousel#comment-9'></i></span>
+</div>
+</div>
+    <div class="wpd-comment-subheader">
+    
+    <div class="wpd-comment-date" title="5th March 2022 6:17 pm">
+    <i class='far fa-clock' aria-hidden='true'></i>
+    1 year ago
+</div>
+    
+</div>
+    
+    <div class="wpd-comment-text">
+    <p>Is aria-role and role the same ?I could find only role attribute in MDN docs.Is there any difference ?</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' class='svg-inline--fa fa-plus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+    <div class='wpd-vote-result wpd-up' title='2'>2</div>
+    <div class="wpd-vote-down wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z'/><path d='M0 0h24v24H0z' fill='none'/></svg>
+    <span>Reply</span>
+</div>
+<div class='wpd-wpanel'></div>
+    <div class="wpd-space"></div>
+    <div class="wpd-tool-wrap">
+    
+    <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies">
+    <i class='fas fa-chevron-up'></i>
+</div>
+</div>
+</div>
+</div>
+</div><div id='wpdiscuz_form_anchor-9_0'></div><div id='wpd-comm-11_9' class='comment byuser comment-author-sargalias bypostauthor odd alt depth-2 wpd-comment wpd-reply wpd_comment_level-2'><div class="wpd-comment-wrap wpd-blog-user wpd-blog-administrator wpd-blog-user wpd-blog-post_author">
+    <div class="wpd-comment-left ">
+    <div class="wpd-avatar ">
+    <a href='https://programmingduck.com/articles/author/sargalias' target='_blank' rel='noreferrer ugc'><img alt='Spyros Argalias' src='https://secure.gravatar.com/avatar/4408435267b54bf51dd363887f919b40?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/4408435267b54bf51dd363887f919b40?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/></a>
+</div>
+</div>
+    <div id="comment-11" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    <a href='https://programmingduck.com/articles/author/sargalias' rel='noreferrer ugc' target='_blank'>Spyros Argalias</a>
+</div>
+    <div class="wpd-comment-label" wpd-tooltip="Author" wpd-tooltip-position="top">
+    <span>Author</span>
+</div>
+    
+    <div class="wpd-comment-share wpd-hidden wpd-tooltip wpd-top">
+    <i class='fas fa-share-alt' aria-hidden='true'></i>
+    <div class="wpd-tooltip-content">
+        <a class='wc_tw' rel='noreferrer' target='_blank' href='https://twitter.com/intent/tweet?text=Ah thanks for raising this. It&#8217;s supposed to be role. aria-rol... &url=https%3A%2F%2Fprogrammingduck.com%2Farticles%2Fjavascript-carousel%23comment-11' title='Share On Twitter'><i class='fab fa-twitter wpf-cta' aria-hidden='true'></i></a><a class='wc_vk' rel='noreferrer' target='_blank' href='https://vk.com/share.php?url=https://programmingduck.com/articles/javascript-carousel' title='Share On VKontakte'><i class='fab fa-vk wpf-cta' aria-hidden='true'></i></a><a class='wc_ok' rel='noreferrer' target='_blank' href='https://connect.ok.ru/offer?url=https://programmingduck.com/articles/javascript-carousel' title='Share On Odnoklassniki'><i class='fab fa-odnoklassniki wpf-cta' aria-hidden='true'></i></a>
+    </div>
+</div>
+    
+    <div class="wpd-space"></div>
+    <div class="wpd-comment-link wpd-hidden">
+    <span wpd-tooltip='Comment Link' wpd-tooltip-position='left'><i class='fas fa-link' aria-hidden='true' data-wpd-clipboard='https://programmingduck.com/articles/javascript-carousel#comment-11'></i></span>
+</div>
+</div>
+    
+    <div class="wpd-reply-to">
+    <i class='far fa-comments'></i>
+    Reply to&nbsp;
+    <a href="#comment-9">
+        Simmy
+    </a>
+    <div class="wpd-comment-date" title="7th March 2022 6:04 pm">
+    <i class='far fa-clock' aria-hidden='true'></i>
+    1 year ago
+</div>
+</div>
+    <div class="wpd-comment-text">
+    <p>Ah thanks for raising this. It&#8217;s supposed to be <code>role</code>. <code>aria-role</code> isn&#8217;t a thing. I&#8217;ve updated the code above.</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' class='svg-inline--fa fa-plus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+    <div class='wpd-vote-result' title='0'>0</div>
+    <div class="wpd-vote-down wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z'/><path d='M0 0h24v24H0z' fill='none'/></svg>
+    <span>Reply</span>
+</div>
+
+    <div class="wpd-space"></div>
+    
+</div>
+</div>
+</div><div id='wpdiscuz_form_anchor-11_9'></div></div></div><div id='wpd-comm-13_0' class='comment even thread-even depth-1 wpd-comment wpd_comment_level-1'><div class="wpd-comment-wrap wpd-blog-guest">
+    <div class="wpd-comment-left ">
+    <div class="wpd-avatar ">
+    <img alt='Harmit' src='https://secure.gravatar.com/avatar/7841fcdabf799ba6b0347df46bac691c?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/7841fcdabf799ba6b0347df46bac691c?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/>
+</div>
+</div>
+    <div id="comment-13" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    Harmit
+</div>
+    
+    
+    <div class="wpd-comment-share wpd-hidden wpd-tooltip wpd-top">
+    <i class='fas fa-share-alt' aria-hidden='true'></i>
+    <div class="wpd-tooltip-content">
+        <a class='wc_tw' rel='noreferrer' target='_blank' href='https://twitter.com/intent/tweet?text=Is there anyway you could look at my code? For some reason the butto... &url=https%3A%2F%2Fprogrammingduck.com%2Farticles%2Fjavascript-carousel%23comment-13' title='Share On Twitter'><i class='fab fa-twitter wpf-cta' aria-hidden='true'></i></a><a class='wc_vk' rel='noreferrer' target='_blank' href='https://vk.com/share.php?url=https://programmingduck.com/articles/javascript-carousel' title='Share On VKontakte'><i class='fab fa-vk wpf-cta' aria-hidden='true'></i></a><a class='wc_ok' rel='noreferrer' target='_blank' href='https://connect.ok.ru/offer?url=https://programmingduck.com/articles/javascript-carousel' title='Share On Odnoklassniki'><i class='fab fa-odnoklassniki wpf-cta' aria-hidden='true'></i></a>
+    </div>
+</div>
+    
+    <div class="wpd-space"></div>
+    <div class="wpd-comment-link wpd-hidden">
+    <span wpd-tooltip='Comment Link' wpd-tooltip-position='left'><i class='fas fa-link' aria-hidden='true' data-wpd-clipboard='https://programmingduck.com/articles/javascript-carousel#comment-13'></i></span>
+</div>
+</div>
+    <div class="wpd-comment-subheader">
+    
+    <div class="wpd-comment-date" title="16th May 2022 6:19 pm">
+    <i class='far fa-clock' aria-hidden='true'></i>
+    1 year ago
+</div>
+    
+</div>
+    
+    <div class="wpd-comment-text">
+    <p>Is there anyway you could look at my code? For some reason the buttons won&#8217;t work but I know the javascript file is connected to the html doc.</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' class='svg-inline--fa fa-plus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+    <div class='wpd-vote-result wpd-up' title='1'>1</div>
+    <div class="wpd-vote-down wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z'/><path d='M0 0h24v24H0z' fill='none'/></svg>
+    <span>Reply</span>
+</div>
+<div class='wpd-wpanel'></div>
+    <div class="wpd-space"></div>
+    <div class="wpd-tool-wrap">
+    
+    <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies">
+    <i class='fas fa-chevron-up'></i>
+</div>
+</div>
+</div>
+</div>
+</div><div id='wpdiscuz_form_anchor-13_0'></div><div id='wpd-comm-16_13' class='comment byuser comment-author-sargalias bypostauthor odd alt depth-2 wpd-comment wpd-reply wpd_comment_level-2'><div class="wpd-comment-wrap wpd-blog-user wpd-blog-administrator wpd-blog-user wpd-blog-post_author">
+    <div class="wpd-comment-left ">
+    <div class="wpd-avatar ">
+    <a href='https://programmingduck.com/articles/author/sargalias' target='_blank' rel='noreferrer ugc'><img alt='Spyros Argalias' src='https://secure.gravatar.com/avatar/4408435267b54bf51dd363887f919b40?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/4408435267b54bf51dd363887f919b40?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/></a>
+</div>
+</div>
+    <div id="comment-16" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    <a href='https://programmingduck.com/articles/author/sargalias' rel='noreferrer ugc' target='_blank'>Spyros Argalias</a>
+</div>
+    <div class="wpd-comment-label" wpd-tooltip="Author" wpd-tooltip-position="top">
+    <span>Author</span>
+</div>
+    
+    <div class="wpd-comment-share wpd-hidden wpd-tooltip wpd-top">
+    <i class='fas fa-share-alt' aria-hidden='true'></i>
+    <div class="wpd-tooltip-content">
+        <a class='wc_tw' rel='noreferrer' target='_blank' href='https://twitter.com/intent/tweet?text=Hi Harmit,
+Sorry I missed this message. If you still need help, did ... &url=https%3A%2F%2Fprogrammingduck.com%2Farticles%2Fjavascript-carousel%23comment-16' title='Share On Twitter'><i class='fab fa-twitter wpf-cta' aria-hidden='true'></i></a><a class='wc_vk' rel='noreferrer' target='_blank' href='https://vk.com/share.php?url=https://programmingduck.com/articles/javascript-carousel' title='Share On VKontakte'><i class='fab fa-vk wpf-cta' aria-hidden='true'></i></a><a class='wc_ok' rel='noreferrer' target='_blank' href='https://connect.ok.ru/offer?url=https://programmingduck.com/articles/javascript-carousel' title='Share On Odnoklassniki'><i class='fab fa-odnoklassniki wpf-cta' aria-hidden='true'></i></a>
+    </div>
+</div>
+    
+    <div class="wpd-space"></div>
+    <div class="wpd-comment-link wpd-hidden">
+    <span wpd-tooltip='Comment Link' wpd-tooltip-position='left'><i class='fas fa-link' aria-hidden='true' data-wpd-clipboard='https://programmingduck.com/articles/javascript-carousel#comment-16'></i></span>
+</div>
+</div>
+    
+    <div class="wpd-reply-to">
+    <i class='far fa-comments'></i>
+    Reply to&nbsp;
+    <a href="#comment-13">
+        Harmit
+    </a>
+    <div class="wpd-comment-date" title="31st May 2022 4:43 pm">
+    <i class='far fa-clock' aria-hidden='true'></i>
+    1 year ago
+</div>
+</div>
+    <div class="wpd-comment-text">
+    <p>Hi Harmit,<br />
+Sorry I missed this message. If you still need help, did you have a GitHub link I can look at?</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' class='svg-inline--fa fa-plus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+    <div class='wpd-vote-result' title='0'>0</div>
+    <div class="wpd-vote-down wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z'/><path d='M0 0h24v24H0z' fill='none'/></svg>
+    <span>Reply</span>
+</div>
+
+    <div class="wpd-space"></div>
+    
+</div>
+</div>
+</div><div id='wpdiscuz_form_anchor-16_13'></div></div></div><div id='wpd-comm-20_0' class='comment even thread-odd thread-alt depth-1 wpd-comment wpd_comment_level-1'><div class="wpd-comment-wrap wpd-blog-guest">
+    <div class="wpd-comment-left ">
+    <div class="wpd-avatar ">
+    <img alt='Mario Sergio Verissimo' src='https://secure.gravatar.com/avatar/2d6661bd4fefd484bb7aa0ec547c5530?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/2d6661bd4fefd484bb7aa0ec547c5530?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/>
+</div>
+</div>
+    <div id="comment-20" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    <a href='http://www.curtirsuacidade.com.br' rel='noreferrer ugc nofollow' target='_blank'>Mario Sergio Verissimo</a>
+</div>
+    
+    
+    <div class="wpd-comment-share wpd-hidden wpd-tooltip wpd-top">
+    <i class='fas fa-share-alt' aria-hidden='true'></i>
+    <div class="wpd-tooltip-content">
+        <a class='wc_tw' rel='noreferrer' target='_blank' href='https://twitter.com/intent/tweet?text=Hi Spyros. Your tutorial is very useful. I have a Razor Pages app th... &url=https%3A%2F%2Fprogrammingduck.com%2Farticles%2Fjavascript-carousel%23comment-20' title='Share On Twitter'><i class='fab fa-twitter wpf-cta' aria-hidden='true'></i></a><a class='wc_vk' rel='noreferrer' target='_blank' href='https://vk.com/share.php?url=https://programmingduck.com/articles/javascript-carousel' title='Share On VKontakte'><i class='fab fa-vk wpf-cta' aria-hidden='true'></i></a><a class='wc_ok' rel='noreferrer' target='_blank' href='https://connect.ok.ru/offer?url=https://programmingduck.com/articles/javascript-carousel' title='Share On Odnoklassniki'><i class='fab fa-odnoklassniki wpf-cta' aria-hidden='true'></i></a>
+    </div>
+</div>
+    
+    <div class="wpd-space"></div>
+    <div class="wpd-comment-link wpd-hidden">
+    <span wpd-tooltip='Comment Link' wpd-tooltip-position='left'><i class='fas fa-link' aria-hidden='true' data-wpd-clipboard='https://programmingduck.com/articles/javascript-carousel#comment-20'></i></span>
+</div>
+</div>
+    <div class="wpd-comment-subheader">
+    
+    <div class="wpd-comment-date" title="15th January 2023 8:38 pm">
+    <i class='far fa-clock' aria-hidden='true'></i>
+    11 months ago
+</div>
+    
+</div>
+    
+    <div class="wpd-comment-text">
+    <p>Hi Spyros. Your tutorial is very useful. I have a Razor Pages app that implements 11 responsive carousels on the same page, showing different number of images in each one, using Bootstrap 4.3.1. After I upgrade my app to Net 7.0, the carousels have stopped and now they are only showing the first slide. I think that the problem is related with button routing (scr appointing to each carousel, normally &#8220;#id&#8221;), that Razor Pages is not recognizing anymore. My question is, can I use your code to control 11 carousels at the same time? I am already implementing the tests to check it. Regards.</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' class='svg-inline--fa fa-plus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+    <div class='wpd-vote-result wpd-up' title='1'>1</div>
+    <div class="wpd-vote-down wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z'/><path d='M0 0h24v24H0z' fill='none'/></svg>
+    <span>Reply</span>
+</div>
+<div class='wpd-wpanel'></div>
+    <div class="wpd-space"></div>
+    <div class="wpd-tool-wrap">
+    
+    <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies">
+    <i class='fas fa-chevron-up'></i>
+</div>
+</div>
+</div>
+</div>
+</div><div id='wpdiscuz_form_anchor-20_0'></div><div id='wpd-comm-22_20' class='comment byuser comment-author-sargalias bypostauthor odd alt depth-2 wpd-comment wpd-reply wpd_comment_level-2'><div class="wpd-comment-wrap wpd-blog-user wpd-blog-administrator wpd-blog-user wpd-blog-post_author">
+    <div class="wpd-comment-left ">
+    <div class="wpd-avatar ">
+    <a href='https://programmingduck.com/articles/author/sargalias' target='_blank' rel='noreferrer ugc'><img alt='Spyros Argalias' src='https://secure.gravatar.com/avatar/4408435267b54bf51dd363887f919b40?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/4408435267b54bf51dd363887f919b40?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/></a>
+</div>
+</div>
+    <div id="comment-22" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    <a href='https://programmingduck.com/articles/author/sargalias' rel='noreferrer ugc' target='_blank'>Spyros Argalias</a>
+</div>
+    <div class="wpd-comment-label" wpd-tooltip="Author" wpd-tooltip-position="top">
+    <span>Author</span>
+</div>
+    
+    <div class="wpd-comment-share wpd-hidden wpd-tooltip wpd-top">
+    <i class='fas fa-share-alt' aria-hidden='true'></i>
+    <div class="wpd-tooltip-content">
+        <a class='wc_tw' rel='noreferrer' target='_blank' href='https://twitter.com/intent/tweet?text=Hi Mario,
+Thank you for your kind words.
+The code should be able to ... &url=https%3A%2F%2Fprogrammingduck.com%2Farticles%2Fjavascript-carousel%23comment-22' title='Share On Twitter'><i class='fab fa-twitter wpf-cta' aria-hidden='true'></i></a><a class='wc_vk' rel='noreferrer' target='_blank' href='https://vk.com/share.php?url=https://programmingduck.com/articles/javascript-carousel' title='Share On VKontakte'><i class='fab fa-vk wpf-cta' aria-hidden='true'></i></a><a class='wc_ok' rel='noreferrer' target='_blank' href='https://connect.ok.ru/offer?url=https://programmingduck.com/articles/javascript-carousel' title='Share On Odnoklassniki'><i class='fab fa-odnoklassniki wpf-cta' aria-hidden='true'></i></a>
+    </div>
+</div>
+    
+    <div class="wpd-space"></div>
+    <div class="wpd-comment-link wpd-hidden">
+    <span wpd-tooltip='Comment Link' wpd-tooltip-position='left'><i class='fas fa-link' aria-hidden='true' data-wpd-clipboard='https://programmingduck.com/articles/javascript-carousel#comment-22'></i></span>
+</div>
+</div>
+    
+    <div class="wpd-reply-to">
+    <i class='far fa-comments'></i>
+    Reply to&nbsp;
+    <a href="#comment-20">
+        Mario Sergio Verissimo
+    </a>
+    <div class="wpd-comment-date" title="16th January 2023 10:19 am">
+    <i class='far fa-clock' aria-hidden='true'></i>
+    11 months ago
+</div>
+</div>
+    <div class="wpd-comment-text">
+    <p>Hi Mario,</p>
+<p>Thank you for your kind words.</p>
+<p>The code should be able to control 11 carousels. However, the code is set up to control them individually. For example, for carousel 1, if you click on the button for next slide, it will only switch the slide on carousel 1 and not the others.</p>
+<p>The code in this tutorial and the Bootstrap carousels should work in a Razor app. But, it&#8217;s important to understand how Razor works. Razor apps output HTML. You&#8217;ll need to get the Razor app to generate the correct HTML.</p>
+<p>For this tutorial, it&#8217;s important to check that the resulting HTML has the correct data attributes, because that&#8217;s how the elements are selected. For bootstrap, you&#8217;ll need to check that the resulting HTML has the correct classes and everything else Bootstrap needs for its carousels.</p>
+<p>You&#8217;ll also need to write your JavaScript and link it properly in the Razor app. The generated HTML should have something like <code>&lt;script src="/path/to/script.js"&gt;&lt;/script&gt;</code>. Bootstrap needs something like this instead:</p>
+<pre class="ql-syntax" spellcheck="false">&lt;script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"&gt;&lt;/script&gt;
+
+&lt;script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"&gt;&lt;/script&gt;
+
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"&gt;&lt;/script&gt;
+</pre>
+<p>If those steps are done correctly, the resulting carousels should work. It&#8217;s just HTML and JavaScript in the end.</p>
+<p>Note, I recommend using the Bootstrap carousels for a production application. The code in this tutorial probably needs more work and testing before it&#8217;s production-ready.</p>
+<p>I hope that helps.</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' class='svg-inline--fa fa-plus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+    <div class='wpd-vote-result' title='0'>0</div>
+    <div class="wpd-vote-down wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z'/><path d='M0 0h24v24H0z' fill='none'/></svg>
+    <span>Reply</span>
+</div>
+
+    <div class="wpd-space"></div>
+    <div class="wpd-tool-wrap">
+    
+    <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies">
+    <i class='fas fa-chevron-up'></i>
+</div>
+</div>
+</div>
+</div>
+</div><div id='wpdiscuz_form_anchor-22_20'></div><div id='wpd-comm-23_22' class='comment even depth-3 wpd-comment wpd-reply wpd_comment_level-3'><div class="wpd-comment-wrap wpd-blog-guest">
+    <div class="wpd-comment-left ">
+    <div class="wpd-avatar ">
+    <img alt='Mario Sergio Verissimo' src='https://secure.gravatar.com/avatar/2d6661bd4fefd484bb7aa0ec547c5530?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/2d6661bd4fefd484bb7aa0ec547c5530?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/>
+</div>
+</div>
+    <div id="comment-23" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    <a href='http://www.curtirsuacidade.com.br' rel='noreferrer ugc nofollow' target='_blank'>Mario Sergio Verissimo</a>
+</div>
+    
+    
+    <div class="wpd-comment-share wpd-hidden wpd-tooltip wpd-top">
+    <i class='fas fa-share-alt' aria-hidden='true'></i>
+    <div class="wpd-tooltip-content">
+        <a class='wc_tw' rel='noreferrer' target='_blank' href='https://twitter.com/intent/tweet?text=Hy Spyros. Thank you for your fast answer. My original razor carouse... &url=https%3A%2F%2Fprogrammingduck.com%2Farticles%2Fjavascript-carousel%23comment-23' title='Share On Twitter'><i class='fab fa-twitter wpf-cta' aria-hidden='true'></i></a><a class='wc_vk' rel='noreferrer' target='_blank' href='https://vk.com/share.php?url=https://programmingduck.com/articles/javascript-carousel' title='Share On VKontakte'><i class='fab fa-vk wpf-cta' aria-hidden='true'></i></a><a class='wc_ok' rel='noreferrer' target='_blank' href='https://connect.ok.ru/offer?url=https://programmingduck.com/articles/javascript-carousel' title='Share On Odnoklassniki'><i class='fab fa-odnoklassniki wpf-cta' aria-hidden='true'></i></a>
+    </div>
+</div>
+    
+    <div class="wpd-space"></div>
+    <div class="wpd-comment-link wpd-hidden">
+    <span wpd-tooltip='Comment Link' wpd-tooltip-position='left'><i class='fas fa-link' aria-hidden='true' data-wpd-clipboard='https://programmingduck.com/articles/javascript-carousel#comment-23'></i></span>
+</div>
+</div>
+    
+    <div class="wpd-reply-to">
+    <i class='far fa-comments'></i>
+    Reply to&nbsp;
+    <a href="#comment-22">
+        Spyros Argalias
+    </a>
+    <div class="wpd-comment-date" title="16th January 2023 6:56 pm">
+    <i class='far fa-clock' aria-hidden='true'></i>
+    11 months ago
+</div>
+</div>
+    <div class="wpd-comment-text">
+    <p>Hy Spyros. Thank you for your fast answer. My original razor carousel was based on Boostrap (carousel, carousel-inner and carousel-item classes), but implemented with HTML, CSS and Javascript, to control each carousel and change the slides. <span>This page looks like Netflix homepage, but for images, not video and was able to handle and show more than 100 images simultaneously. And I need to control individually each carousel, like you described before. </span> I have replaced these codes (including the classes), made some ajustments and now the page is working perfectly. Of course, I need to make more tests and add some controls, to garantee the code quality. But, at the end, Razor Pages are not friendly to integrate javascripts, specialy after Net 7.0 migration. I think that my problem is related with &#8220;#id&#8221; sent by control buttons to move the slides, that Razor is not recognizing anymore. I beleive your code is more independent and flexible than my old code. I will spend some time to improve it. Again, thank you very much and I will keep you informed.</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' class='svg-inline--fa fa-plus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+    <div class='wpd-vote-result' title='0'>0</div>
+    <div class="wpd-vote-down wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z'/><path d='M0 0h24v24H0z' fill='none'/></svg>
+    <span>Reply</span>
+</div>
+
+    <div class="wpd-space"></div>
+    
+</div>
+</div>
+</div><div id='wpdiscuz_form_anchor-23_22'></div></div></div></div><div id='wpd-comm-25_0' class='comment odd alt thread-even depth-1 wpd-comment wpd_comment_level-1'><div class="wpd-comment-wrap wpd-blog-guest">
+    <div class="wpd-comment-left ">
+    <div class="wpd-avatar ">
+    <img alt='Chris Ross' src='https://secure.gravatar.com/avatar/f83e254c10ad8739b689639e851bcab3?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/f83e254c10ad8739b689639e851bcab3?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/>
+</div>
+</div>
+    <div id="comment-25" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    <a href='http://chris@tenerifeinsurance.biz' rel='noreferrer ugc nofollow' target='_blank'>Chris Ross</a>
+</div>
+    
+    
+    <div class="wpd-comment-share wpd-hidden wpd-tooltip wpd-top">
+    <i class='fas fa-share-alt' aria-hidden='true'></i>
+    <div class="wpd-tooltip-content">
+        <a class='wc_tw' rel='noreferrer' target='_blank' href='https://twitter.com/intent/tweet?text=Excellent video &#8211; and the only one I have seen which also rais... &url=https%3A%2F%2Fprogrammingduck.com%2Farticles%2Fjavascript-carousel%23comment-25' title='Share On Twitter'><i class='fab fa-twitter wpf-cta' aria-hidden='true'></i></a><a class='wc_vk' rel='noreferrer' target='_blank' href='https://vk.com/share.php?url=https://programmingduck.com/articles/javascript-carousel' title='Share On VKontakte'><i class='fab fa-vk wpf-cta' aria-hidden='true'></i></a><a class='wc_ok' rel='noreferrer' target='_blank' href='https://connect.ok.ru/offer?url=https://programmingduck.com/articles/javascript-carousel' title='Share On Odnoklassniki'><i class='fab fa-odnoklassniki wpf-cta' aria-hidden='true'></i></a>
+    </div>
+</div>
+    
+    <div class="wpd-space"></div>
+    <div class="wpd-comment-link wpd-hidden">
+    <span wpd-tooltip='Comment Link' wpd-tooltip-position='left'><i class='fas fa-link' aria-hidden='true' data-wpd-clipboard='https://programmingduck.com/articles/javascript-carousel#comment-25'></i></span>
+</div>
+</div>
+    <div class="wpd-comment-subheader">
+    
+    <div class="wpd-comment-date" title="5th February 2023 6:02 pm">
+    <i class='far fa-clock' aria-hidden='true'></i>
+    10 months ago
+</div>
+    
+</div>
+    
+    <div class="wpd-comment-text">
+    <p>Excellent video &#8211; and the only one I have seen which also raising the issue of good code practices.</p>
+<p>My own 20 year old website will shortly benefit from this.</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' class='svg-inline--fa fa-plus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+    <div class='wpd-vote-result wpd-up' title='1'>1</div>
+    <div class="wpd-vote-down wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z'/><path d='M0 0h24v24H0z' fill='none'/></svg>
+    <span>Reply</span>
+</div>
+<div class='wpd-wpanel'></div>
+    <div class="wpd-space"></div>
+    
+</div>
+</div>
+</div><div id='wpdiscuz_form_anchor-25_0'></div></div><div id='wpd-comm-66_0' class='comment even thread-odd thread-alt depth-1 wpd-comment wpd_comment_level-1'><div class="wpd-comment-wrap wpd-blog-guest">
+    <div class="wpd-comment-left ">
+    <div class="wpd-avatar ">
+    <img alt='Orlando' src='https://secure.gravatar.com/avatar/75a03e494a730cff1b0965232f5f90d0?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/75a03e494a730cff1b0965232f5f90d0?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/>
+</div>
+</div>
+    <div id="comment-66" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    <a href='http://www.orca.cl' rel='noreferrer ugc nofollow' target='_blank'>Orlando</a>
+</div>
+    
+    
+    <div class="wpd-comment-share wpd-hidden wpd-tooltip wpd-top">
+    <i class='fas fa-share-alt' aria-hidden='true'></i>
+    <div class="wpd-tooltip-content">
+        <a class='wc_tw' rel='noreferrer' target='_blank' href='https://twitter.com/intent/tweet?text=I know it might be overkill but maybe adding a working example on yo... &url=https%3A%2F%2Fprogrammingduck.com%2Farticles%2Fjavascript-carousel%23comment-66' title='Share On Twitter'><i class='fab fa-twitter wpf-cta' aria-hidden='true'></i></a><a class='wc_vk' rel='noreferrer' target='_blank' href='https://vk.com/share.php?url=https://programmingduck.com/articles/javascript-carousel' title='Share On VKontakte'><i class='fab fa-vk wpf-cta' aria-hidden='true'></i></a><a class='wc_ok' rel='noreferrer' target='_blank' href='https://connect.ok.ru/offer?url=https://programmingduck.com/articles/javascript-carousel' title='Share On Odnoklassniki'><i class='fab fa-odnoklassniki wpf-cta' aria-hidden='true'></i></a>
+    </div>
+</div>
+    
+    <div class="wpd-space"></div>
+    <div class="wpd-comment-link wpd-hidden">
+    <span wpd-tooltip='Comment Link' wpd-tooltip-position='left'><i class='fas fa-link' aria-hidden='true' data-wpd-clipboard='https://programmingduck.com/articles/javascript-carousel#comment-66'></i></span>
+</div>
+</div>
+    <div class="wpd-comment-subheader">
+    
+    <div class="wpd-comment-date" title="27th June 2023 8:59 pm">
+    <i class='far fa-clock' aria-hidden='true'></i>
+    5 months ago
+</div>
+    
+</div>
+    
+    <div class="wpd-comment-text">
+    <p>I know it might be overkill but maybe adding a working example on your page would give us a better view of the component. I gave up asking chatgpt on the endless loop part because of the % modulo issue. That&#8217;s what i was needing. A human to tell me what was wrong. Many thanks!</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' class='svg-inline--fa fa-plus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+    <div class='wpd-vote-result' title='0'>0</div>
+    <div class="wpd-vote-down wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z'/><path d='M0 0h24v24H0z' fill='none'/></svg>
+    <span>Reply</span>
+</div>
+<div class='wpd-wpanel'></div>
+    <div class="wpd-space"></div>
+    <div class="wpd-tool-wrap">
+    
+    <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies">
+    <i class='fas fa-chevron-up'></i>
+</div>
+</div>
+</div>
+</div>
+</div><div id='wpdiscuz_form_anchor-66_0'></div><div id='wpd-comm-74_66' class='comment byuser comment-author-sargalias bypostauthor odd alt depth-2 wpd-comment wpd-reply wpd_comment_level-2'><div class="wpd-comment-wrap wpd-blog-user wpd-blog-administrator wpd-blog-user wpd-blog-post_author">
+    <div class="wpd-comment-left ">
+    <div class="wpd-avatar ">
+    <a href='https://programmingduck.com/articles/author/sargalias' target='_blank' rel='noreferrer ugc'><img alt='Spyros Argalias' src='https://secure.gravatar.com/avatar/4408435267b54bf51dd363887f919b40?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/4408435267b54bf51dd363887f919b40?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/></a>
+</div>
+</div>
+    <div id="comment-74" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    <a href='https://programmingduck.com/articles/author/sargalias' rel='noreferrer ugc' target='_blank'>Spyros Argalias</a>
+</div>
+    <div class="wpd-comment-label" wpd-tooltip="Author" wpd-tooltip-position="top">
+    <span>Author</span>
+</div>
+    
+    <div class="wpd-comment-share wpd-hidden wpd-tooltip wpd-top">
+    <i class='fas fa-share-alt' aria-hidden='true'></i>
+    <div class="wpd-tooltip-content">
+        <a class='wc_tw' rel='noreferrer' target='_blank' href='https://twitter.com/intent/tweet?text=It&#8217;s a good point. I&#8217;ll improve the post in the future. ... &url=https%3A%2F%2Fprogrammingduck.com%2Farticles%2Fjavascript-carousel%23comment-74' title='Share On Twitter'><i class='fab fa-twitter wpf-cta' aria-hidden='true'></i></a><a class='wc_vk' rel='noreferrer' target='_blank' href='https://vk.com/share.php?url=https://programmingduck.com/articles/javascript-carousel' title='Share On VKontakte'><i class='fab fa-vk wpf-cta' aria-hidden='true'></i></a><a class='wc_ok' rel='noreferrer' target='_blank' href='https://connect.ok.ru/offer?url=https://programmingduck.com/articles/javascript-carousel' title='Share On Odnoklassniki'><i class='fab fa-odnoklassniki wpf-cta' aria-hidden='true'></i></a>
+    </div>
+</div>
+    
+    <div class="wpd-space"></div>
+    <div class="wpd-comment-link wpd-hidden">
+    <span wpd-tooltip='Comment Link' wpd-tooltip-position='left'><i class='fas fa-link' aria-hidden='true' data-wpd-clipboard='https://programmingduck.com/articles/javascript-carousel#comment-74'></i></span>
+</div>
+</div>
+    
+    <div class="wpd-reply-to">
+    <i class='far fa-comments'></i>
+    Reply to&nbsp;
+    <a href="#comment-66">
+        Orlando
+    </a>
+    <div class="wpd-comment-date" title="20th July 2023 9:22 pm">
+    <i class='far fa-clock' aria-hidden='true'></i>
+    4 months ago
+</div>
+</div>
+    <div class="wpd-comment-text">
+    <p>It&#8217;s a good point. I&#8217;ll improve the post in the future. Thank you.</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' class='svg-inline--fa fa-plus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+    <div class='wpd-vote-result' title='0'>0</div>
+    <div class="wpd-vote-down wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z'/><path d='M0 0h24v24H0z' fill='none'/></svg>
+    <span>Reply</span>
+</div>
+
+    <div class="wpd-space"></div>
+    
+</div>
+</div>
+</div><div id='wpdiscuz_form_anchor-74_66'></div></div></div><div id='wpd-comm-72_0' class='comment even thread-even depth-1 wpd-comment wpd_comment_level-1'><div class="wpd-comment-wrap wpd-blog-guest">
+    <div class="wpd-comment-left ">
+    <div class="wpd-avatar ">
+    <img alt='Murod Akhmedov' src='https://secure.gravatar.com/avatar/339efb4bd326d4ca4bcffb0c38431ca6?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/339efb4bd326d4ca4bcffb0c38431ca6?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/>
+</div>
+</div>
+    <div id="comment-72" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    Murod Akhmedov
+</div>
+    
+    
+    <div class="wpd-comment-share wpd-hidden wpd-tooltip wpd-top">
+    <i class='fas fa-share-alt' aria-hidden='true'></i>
+    <div class="wpd-tooltip-content">
+        <a class='wc_tw' rel='noreferrer' target='_blank' href='https://twitter.com/intent/tweet?text=Hi Spyros 👋
+Hope you are doing well?
+I am Murod recently I have star... &url=https%3A%2F%2Fprogrammingduck.com%2Farticles%2Fjavascript-carousel%23comment-72' title='Share On Twitter'><i class='fab fa-twitter wpf-cta' aria-hidden='true'></i></a><a class='wc_vk' rel='noreferrer' target='_blank' href='https://vk.com/share.php?url=https://programmingduck.com/articles/javascript-carousel' title='Share On VKontakte'><i class='fab fa-vk wpf-cta' aria-hidden='true'></i></a><a class='wc_ok' rel='noreferrer' target='_blank' href='https://connect.ok.ru/offer?url=https://programmingduck.com/articles/javascript-carousel' title='Share On Odnoklassniki'><i class='fab fa-odnoklassniki wpf-cta' aria-hidden='true'></i></a>
+    </div>
+</div>
+    
+    <div class="wpd-space"></div>
+    <div class="wpd-comment-link wpd-hidden">
+    <span wpd-tooltip='Comment Link' wpd-tooltip-position='left'><i class='fas fa-link' aria-hidden='true' data-wpd-clipboard='https://programmingduck.com/articles/javascript-carousel#comment-72'></i></span>
+</div>
+</div>
+    <div class="wpd-comment-subheader">
+    
+    <div class="wpd-comment-date" title="20th July 2023 8:55 pm">
+    <i class='far fa-clock' aria-hidden='true'></i>
+    4 months ago
+</div>
+    
+</div>
+    
+    <div class="wpd-comment-text">
+    <p>Hi Spyros 👋<br />
+Hope you are doing well?<br />
+I am Murod recently I have started to learn Javascript<br />
+In order to get carousel I have researched so many youtube video blog.<br />
+Your approach really handy and useful!<br />
+Owe you say thank you so much indeed especially multiple carousel functions!<br />
+In future will contact with you if you do not mind! 👍👊🇬🇧</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' class='svg-inline--fa fa-plus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+    <div class='wpd-vote-result' title='0'>0</div>
+    <div class="wpd-vote-down wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z'/><path d='M0 0h24v24H0z' fill='none'/></svg>
+    <span>Reply</span>
+</div>
+<div class='wpd-wpanel'></div>
+    <div class="wpd-space"></div>
+    <div class="wpd-tool-wrap">
+    
+    <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies">
+    <i class='fas fa-chevron-up'></i>
+</div>
+</div>
+</div>
+</div>
+</div><div id='wpdiscuz_form_anchor-72_0'></div><div id='wpd-comm-73_72' class='comment byuser comment-author-sargalias bypostauthor odd alt depth-2 wpd-comment wpd-reply wpd_comment_level-2'><div class="wpd-comment-wrap wpd-blog-user wpd-blog-administrator wpd-blog-user wpd-blog-post_author">
+    <div class="wpd-comment-left ">
+    <div class="wpd-avatar ">
+    <a href='https://programmingduck.com/articles/author/sargalias' target='_blank' rel='noreferrer ugc'><img alt='Spyros Argalias' src='https://secure.gravatar.com/avatar/4408435267b54bf51dd363887f919b40?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/4408435267b54bf51dd363887f919b40?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/></a>
+</div>
+</div>
+    <div id="comment-73" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    <a href='https://programmingduck.com/articles/author/sargalias' rel='noreferrer ugc' target='_blank'>Spyros Argalias</a>
+</div>
+    <div class="wpd-comment-label" wpd-tooltip="Author" wpd-tooltip-position="top">
+    <span>Author</span>
+</div>
+    
+    <div class="wpd-comment-share wpd-hidden wpd-tooltip wpd-top">
+    <i class='fas fa-share-alt' aria-hidden='true'></i>
+    <div class="wpd-tooltip-content">
+        <a class='wc_tw' rel='noreferrer' target='_blank' href='https://twitter.com/intent/tweet?text=Thank you very much for the kind words. I&#8217;m glad it was helpfu... &url=https%3A%2F%2Fprogrammingduck.com%2Farticles%2Fjavascript-carousel%23comment-73' title='Share On Twitter'><i class='fab fa-twitter wpf-cta' aria-hidden='true'></i></a><a class='wc_vk' rel='noreferrer' target='_blank' href='https://vk.com/share.php?url=https://programmingduck.com/articles/javascript-carousel' title='Share On VKontakte'><i class='fab fa-vk wpf-cta' aria-hidden='true'></i></a><a class='wc_ok' rel='noreferrer' target='_blank' href='https://connect.ok.ru/offer?url=https://programmingduck.com/articles/javascript-carousel' title='Share On Odnoklassniki'><i class='fab fa-odnoklassniki wpf-cta' aria-hidden='true'></i></a>
+    </div>
+</div>
+    
+    <div class="wpd-space"></div>
+    <div class="wpd-comment-link wpd-hidden">
+    <span wpd-tooltip='Comment Link' wpd-tooltip-position='left'><i class='fas fa-link' aria-hidden='true' data-wpd-clipboard='https://programmingduck.com/articles/javascript-carousel#comment-73'></i></span>
+</div>
+</div>
+    
+    <div class="wpd-reply-to">
+    <i class='far fa-comments'></i>
+    Reply to&nbsp;
+    <a href="#comment-72">
+        Murod Akhmedov
+    </a>
+    <div class="wpd-comment-date" title="20th July 2023 9:22 pm">
+    <i class='far fa-clock' aria-hidden='true'></i>
+    4 months ago
+</div>
+</div>
+    <div class="wpd-comment-text">
+    <p>Thank you very much for the kind words. I&#8217;m glad it was helpful 🙂</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' class='svg-inline--fa fa-plus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+    <div class='wpd-vote-result' title='0'>0</div>
+    <div class="wpd-vote-down wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z'/><path d='M0 0h24v24H0z' fill='none'/></svg>
+    <span>Reply</span>
+</div>
+
+    <div class="wpd-space"></div>
+    
+</div>
+</div>
+</div><div id='wpdiscuz_form_anchor-73_72'></div></div></div><!-- // From wpDiscuz's Caches // -->                    <div class="wpdiscuz-comment-pagination">
+						                    </div>
+                </div>
+            </div>
+			    </div>
+	    </div>
+    <div id="wpdiscuz-loading-bar"
+         class="wpdiscuz-loading-bar-unauth"></div>
+    <div id="wpdiscuz-comment-message"
+         class="wpdiscuz-comment-message-unauth"></div>
+			</div>
+				</div>
+				<div class="elementor-element elementor-element-65a3d30 elementor-fixed elementor-widget elementor-widget-html" data-id="65a3d30" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;fixed&quot;}" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a
+    href="#top"
+    class="back-to-top"
+>
+    ^<span class="sr-only">Back to top</span>
+</a>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</div>
+				</div>
+		</div>
+				<div data-elementor-type="footer" data-elementor-id="301" class="elementor elementor-301 elementor-location-footer">
+		<div class="elementor-section-wrap">
+					<footer class="elementor-section elementor-top-section elementor-element elementor-element-1da9c90 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1da9c90" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c19422b" data-id="c19422b" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-10be1d9 elementor-shape-rounded elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="10be1d9" data-element_type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-social-icons-wrapper elementor-grid">
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-repeater-item-3453367" href="https://www.youtube.com/channel/UC_z7RDRYv7nH5AY1UFledWg" target="_blank">
+						<span class="elementor-screen-only">Youtube</span>
+						<i class="fab fa-youtube"></i>					</a>
+				</span>
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-67e0c03" href="https://www.linkedin.com/in/sargalias/" target="_blank">
+						<span class="elementor-screen-only">Linkedin</span>
+						<i class="fab fa-linkedin"></i>					</a>
+				</span>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-77325d4 elementor-nav-menu__align-center elementor-nav-menu--dropdown-none elementor-widget elementor-widget-nav-menu" data-id="77325d4" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;}}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+						<nav migration_allowed="1" migrated="0" role="navigation" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade"><ul id="menu-1-77325d4" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-763"><a href="https://programmingduck.com/policies/terms-of-service" class="elementor-item">Terms of Service</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-754"><a rel="privacy-policy" href="https://programmingduck.com/policies/privacy-policy" class="elementor-item">Privacy Policy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-755"><a href="https://programmingduck.com/policies/cookie-policy-uk" class="elementor-item">Cookie Policy (UK)</a></li>
+</ul></nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="eicon-menu-bar"></i>			<span class="elementor-screen-only">Menu</span>
+		</div>
+			<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" role="navigation" aria-hidden="true"><ul id="menu-2-77325d4" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-763"><a href="https://programmingduck.com/policies/terms-of-service" class="elementor-item" tabindex="-1">Terms of Service</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-754"><a rel="privacy-policy" href="https://programmingduck.com/policies/privacy-policy" class="elementor-item" tabindex="-1">Privacy Policy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-755"><a href="https://programmingduck.com/policies/cookie-policy-uk" class="elementor-item" tabindex="-1">Cookie Policy (UK)</a></li>
+</ul></nav>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-925529e elementor-widget elementor-widget-heading" data-id="925529e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-medium">© 2022 Programming Duck</p>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</footer>
+				</div>
+		</div>
+		
+<a nofollow noindex href='javascript:void(0);' id='wpdUserContentInfoAnchor' style='display:none;' rel='#wpdUserContentInfo' data-wpd-lity>wpDiscuz</a><div id='wpdUserContentInfo' style='overflow:auto;background:#FDFDF6;padding:20px;width:600px;max-width:100%;border-radius:6px;' class='lity-hide'></div><div id='wpd-editor-source-code-wrapper-bg'></div><div id='wpd-editor-source-code-wrapper'><textarea id='wpd-editor-source-code'></textarea><button id='wpd-insert-source-code'>Insert</button><input type='hidden' id='wpd-editor-uid' /></div>
+<!-- Consent Management powered by Complianz | GDPR/CCPA Cookie Consent https://wordpress.org/plugins/complianz-gdpr -->
+<div id="cmplz-cookiebanner-container"><div class="cmplz-cookiebanner cmplz-hidden banner-1 optin cmplz-bottom-right cmplz-categories-type-view-preferences" aria-modal="true" data-nosnippet="true" role="dialog" aria-live="polite" aria-labelledby="cmplz-header-1-optin" aria-describedby="cmplz-message-1-optin">
+	<div class="cmplz-header">
+		<div class="cmplz-logo"></div>
+		<div class="cmplz-title" id="cmplz-header-1-optin">Manage Cookie Consent</div>
+		<div class="cmplz-close" tabindex="0" role="button" aria-label="close-dialog">
+			<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+		</div>
+	</div>
+
+		<div class="cmplz-divider cmplz-divider-header"></div>
+		<div class="cmplz-body">
+			<div class="cmplz-message" id="cmplz-message-1-optin">We use cookies to optimize our website and our service.</div>
+			<!-- categories start -->
+			<div class="cmplz-categories">
+				<details class="cmplz-category cmplz-functional" >
+					<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Functional</span>
+							<span class='cmplz-always-active'>
+								<span class="cmplz-banner-checkbox">
+									<input type="checkbox"
+										   id="cmplz-functional-optin"
+										   data-category="cmplz_functional"
+										   class="cmplz-consent-checkbox cmplz-functional"
+										   size="40"
+										   value="1"/>
+									<label class="cmplz-label" for="cmplz-functional-optin" tabindex="0"><span>Functional</span></label>
+								</span>
+								Always active							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  height="18" ><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+							</span>
+						</span>
+					</summary>
+					<div class="cmplz-description">
+						<span class="cmplz-description-functional">The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network.</span>
+					</div>
+				</details>
+
+				<details class="cmplz-category cmplz-preferences" >
+					<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Preferences</span>
+							<span class="cmplz-banner-checkbox">
+								<input type="checkbox"
+									   id="cmplz-preferences-optin"
+									   data-category="cmplz_preferences"
+									   class="cmplz-consent-checkbox cmplz-preferences"
+									   size="40"
+									   value="1"/>
+								<label class="cmplz-label" for="cmplz-preferences-optin" tabindex="0"><span>Preferences</span></label>
+							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  height="18" ><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+							</span>
+						</span>
+					</summary>
+					<div class="cmplz-description">
+						<span class="cmplz-description-preferences">The technical storage or access is necessary for the legitimate purpose of storing preferences that are not requested by the subscriber or user.</span>
+					</div>
+				</details>
+
+				<details class="cmplz-category cmplz-statistics" >
+					<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Statistics</span>
+							<span class="cmplz-banner-checkbox">
+								<input type="checkbox"
+									   id="cmplz-statistics-optin"
+									   data-category="cmplz_statistics"
+									   class="cmplz-consent-checkbox cmplz-statistics"
+									   size="40"
+									   value="1"/>
+								<label class="cmplz-label" for="cmplz-statistics-optin" tabindex="0"><span>Statistics</span></label>
+							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  height="18" ><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+							</span>
+						</span>
+					</summary>
+					<div class="cmplz-description">
+						<span class="cmplz-description-statistics">The technical storage or access that is used exclusively for statistical purposes.</span>
+						<span class="cmplz-description-statistics-anonymous">The technical storage or access that is used exclusively for anonymous statistical purposes. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, information stored or retrieved for this purpose alone cannot usually be used to identify you.</span>
+					</div>
+				</details>
+				<details class="cmplz-category cmplz-marketing" >
+					<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Marketing</span>
+							<span class="cmplz-banner-checkbox">
+								<input type="checkbox"
+									   id="cmplz-marketing-optin"
+									   data-category="cmplz_marketing"
+									   class="cmplz-consent-checkbox cmplz-marketing"
+									   size="40"
+									   value="1"/>
+								<label class="cmplz-label" for="cmplz-marketing-optin" tabindex="0"><span>Marketing</span></label>
+							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  height="18" ><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+							</span>
+						</span>
+					</summary>
+					<div class="cmplz-description">
+						<span class="cmplz-description-marketing">The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes.</span>
+					</div>
+				</details>
+			</div><!-- categories end -->
+					</div>
+
+		<div class="cmplz-links cmplz-information">
+			<a class="cmplz-link cmplz-manage-options cookie-statement" href="#" data-relative_url="#cmplz-manage-consent-container">Manage options</a>
+			<a class="cmplz-link cmplz-manage-third-parties cookie-statement" href="#" data-relative_url="#cmplz-cookies-overview">Manage services</a>
+			<a class="cmplz-link cmplz-manage-vendors tcf cookie-statement" href="#" data-relative_url="#cmplz-tcf-wrapper">Manage vendors</a>
+			<a class="cmplz-link cmplz-external cmplz-read-more-purposes tcf" target="_blank" rel="noopener noreferrer nofollow" href="https://cookiedatabase.org/tcf/purposes/">Read more about these purposes</a>
+					</div>
+
+	<div class="cmplz-divider cmplz-footer"></div>
+
+	<div class="cmplz-buttons">
+		<button class="cmplz-btn cmplz-accept">Accept cookies</button>
+		<button class="cmplz-btn cmplz-deny">Deny</button>
+		<button class="cmplz-btn cmplz-view-preferences">View preferences</button>
+		<button class="cmplz-btn cmplz-save-preferences">Save preferences</button>
+		<a class="cmplz-btn cmplz-manage-options tcf cookie-statement" href="#" data-relative_url="#cmplz-manage-consent-container">View preferences</a>
+			</div>
+
+	<div class="cmplz-links cmplz-documents">
+		<a class="cmplz-link cookie-statement" href="#" data-relative_url="">{title}</a>
+		<a class="cmplz-link privacy-statement" href="#" data-relative_url="">{title}</a>
+		<a class="cmplz-link impressum" href="#" data-relative_url="">{title}</a>
+			</div>
+
+</div>
+
+
+</div>
+					<div id="cmplz-manage-consent" data-nosnippet="true"><button class="cmplz-btn cmplz-hidden cmplz-manage-consent manage-consent-1">Manage consent</button>
+
+</div>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVKGD7Q"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><link rel='stylesheet' id='elementor-icons-fa-regular-css' href='https://programmingduck.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.15.3' type='text/css' media='all' />
+<link rel='stylesheet' id='e-animations-css' href='https://programmingduck.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.6.4' type='text/css' media='all' />
+<script type="text/javascript" id="wpdiscuz-combo-js-js-extra">
+/* <![CDATA[ */
+var wpdiscuzAjaxObj = {"wc_hide_replies_text":"Hide Replies","wc_show_replies_text":"View Replies","wc_msg_required_fields":"Please fill out required fields","wc_invalid_field":"Some of field value is invalid","wc_error_empty_text":"please fill out this field to comment","wc_error_url_text":"url is invalid","wc_error_email_text":"email address is invalid","wc_invalid_captcha":"Invalid Captcha Code","wc_login_to_vote":"You Must Be Logged In To Vote","wc_deny_voting_from_same_ip":"You are not allowed to vote for this comment","wc_self_vote":"You cannot vote for your comment","wc_vote_only_one_time":"You've already voted for this comment","wc_voting_error":"Voting Error","wc_comment_edit_not_possible":"Sorry, this comment is no longer possible to edit","wc_comment_not_updated":"Sorry, the comment was not updated","wc_comment_not_edited":"You've not made any changes","wc_msg_input_min_length":"Input is too short","wc_msg_input_max_length":"Input is too long","wc_spoiler_title":"Spoiler Title","wc_cannot_rate_again":"You cannot rate again","wc_not_allowed_to_rate":"You're not allowed to rate here","wc_follow_user":"Follow this user","wc_unfollow_user":"Unfollow this user","wc_follow_success":"You started following this comment author","wc_follow_canceled":"You stopped following this comment author.","wc_follow_email_confirm":"Please check your email and confirm the user following request.","wc_follow_email_confirm_fail":"Sorry, we couldn't send confirmation email.","wc_follow_login_to_follow":"Please login to follow users.","wc_follow_impossible":"We are sorry, but you can't follow this user.","wc_follow_not_added":"Following failed. Please try again later.","is_user_logged_in":"","commentListLoadType":"0","commentListUpdateType":"0","commentListUpdateTimer":"30","liveUpdateGuests":"0","wordpressThreadCommentsDepth":"5","wordpressIsPaginate":"","commentTextMaxLength":"0","replyTextMaxLength":"0","commentTextMinLength":"1","replyTextMinLength":"1","storeCommenterData":"100000","socialLoginAgreementCheckbox":"1","enableFbLogin":"0","fbUseOAuth2":"0","enableFbShare":"0","facebookAppID":"","facebookUseOAuth2":"0","enableGoogleLogin":"0","googleClientID":"","googleClientSecret":"","cookiehash":"ec764a232fbad1c6add6a9caa402d336","isLoadOnlyParentComments":"0","scrollToComment":"1","commentFormView":"collapsed","enableDropAnimation":"1","isNativeAjaxEnabled":"1","enableBubble":"0","bubbleLiveUpdate":"0","bubbleHintTimeout":"45","bubbleHintHideTimeout":"10","cookieHideBubbleHint":"wpdiscuz_hide_bubble_hint","bubbleShowNewCommentMessage":"1","bubbleLocation":"content_left","firstLoadWithAjax":"0","wc_copied_to_clipboard":"Copied to clipboard!","inlineFeedbackAttractionType":"blink","loadRichEditor":"1","wpDiscuzReCaptchaSK":"","wpDiscuzReCaptchaTheme":"light","wpDiscuzReCaptchaVersion":"2.0","wc_captcha_show_for_guest":"0","wc_captcha_show_for_members":"0","wpDiscuzIsShowOnSubscribeForm":"0","wmuEnabled":"1","wmuInput":"wmu_files","wmuMaxFileCount":"1","wmuMaxFileSize":"2097152","wmuPostMaxSize":"536870912","wmuIsLightbox":"1","wmuMimeTypes":{"jpg":"image\/jpeg","jpeg":"image\/jpeg","jpe":"image\/jpeg","gif":"image\/gif","png":"image\/png","bmp":"image\/bmp","tiff":"image\/tiff","tif":"image\/tiff","ico":"image\/x-icon"},"wmuPhraseConfirmDelete":"Are you sure you want to delete this attachment?","wmuPhraseNotAllowedFile":"Not allowed file type","wmuPhraseMaxFileCount":"Maximum number of uploaded files is 1","wmuPhraseMaxFileSize":"Maximum upload file size is 2MB","wmuPhrasePostMaxSize":"Maximum post size is 512MB","wmuPhraseDoingUpload":"Uploading in progress! Please wait.","msgEmptyFile":"File is empty. Please upload something more substantial. This error could also be caused by uploads being disabled in your php.ini or by post_max_size being defined as smaller than upload_max_filesize in php.ini.","msgPostIdNotExists":"Post ID not exists","msgUploadingNotAllowed":"Sorry, uploading not allowed for this post","msgPermissionDenied":"You do not have sufficient permissions to perform this action","wmuKeyImages":"images","wmuSingleImageWidth":"auto","wmuSingleImageHeight":"200","version":"7.6.8","wc_post_id":"1178","isCookiesEnabled":"1","loadLastCommentId":"0","dataFilterCallbacks":[],"phraseFilters":[],"scrollSize":"32","is_email_field_required":"1","url":"https:\/\/programmingduck.com\/wp-admin\/admin-ajax.php","customAjaxUrl":"https:\/\/programmingduck.com\/wp-content\/plugins\/wpdiscuz\/utils\/ajax\/wpdiscuz-ajax.php","bubbleUpdateUrl":"https:\/\/programmingduck.com\/wp-json\/wpdiscuz\/v1\/update","restNonce":"067eb1d415"};
+var wpdiscuzUCObj = {"msgConfirmDeleteComment":"Are you sure you want to delete this comment?","msgConfirmCancelSubscription":"Are you sure you want to cancel this subscription?","msgConfirmCancelFollow":"Are you sure you want to cancel this follow?","additionalTab":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="wpdiscuz-combo-js-js-before">
+/* <![CDATA[ */
+        var wpdiscuzEditorOptions = {
+        modules: {
+        toolbar: "",
+        counter: {
+        uniqueID: "",
+        commentmaxcount : 0,
+        replymaxcount : 0,
+        commentmincount : 1,
+        replymincount : 1,
+        },
+                },
+        wc_be_the_first_text: "Be the First to Comment!",
+        wc_comment_join_text: "Join the discussion",
+        theme: 'snow',
+        debug: 'error'
+        };
+        
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://programmingduck.com/wp-content/plugins/wpdiscuz/assets/js/wpdiscuz-combo.min.js?ver=7.6.8" id="wpdiscuz-combo-js-js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-core.min.js?ver=1.23.0" id="prism-js-0-js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js?ver=1.23.0" id="prism-js-1-js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/line-numbers/prism-line-numbers.min.js?ver=1.23.0" id="prism-js-2-js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js?ver=1.23.0" id="prism-js-3-js"></script>
+<script type="text/javascript" src="https://programmingduck.com/wp-includes/js/clipboard.min.js?ver=2.0.11" id="clipboard-js"></script>
+<script type="text/javascript" id="cmplz-cookiebanner-js-extra">
+/* <![CDATA[ */
+var complianz = {"prefix":"cmplz_","user_banner_id":"1","set_cookies":[],"block_ajax_content":"","banner_version":"17","version":"6.3.4","store_consent":"","do_not_track":"","consenttype":"optin","region":"uk","geoip":"","dismiss_timeout":"","disable_cookiebanner":"","soft_cookiewall":"","dismiss_on_scroll":"","cookie_expiry":"365","url":"https:\/\/programmingduck.com\/wp-json\/complianz\/v1\/","locale":"lang=en&locale=en_US","set_cookies_on_root":"","cookie_domain":"","current_policy_id":"14","cookie_path":"\/","categories":{"statistics":"statistics","marketing":"marketing"},"tcf_active":"","placeholdertext":"Click to accept {category} cookies and enable this content","css_file":"https:\/\/programmingduck.com\/wp-content\/uploads\/complianz\/css\/banner-{banner_id}-{type}.css?v=17","page_links":{"uk":{"cookie-statement":{"title":"Cookie Policy ","url":"https:\/\/programmingduck.com\/policies\/cookie-policy-uk"},"privacy-statement":{"title":"Privacy Policy","url":"https:\/\/programmingduck.com\/policies\/privacy-policy"}}},"tm_categories":"1","forceEnableStats":"","preview":"","clean_cookies":""};
+/* ]]> */
+</script>
+<script defer type="text/javascript" src="https://programmingduck.com/wp-content/plugins/complianz-gdpr/cookiebanner/js/complianz.min.js?ver=6.3.4" id="cmplz-cookiebanner-js"></script>
+<script type="text/javascript" src="https://programmingduck.com/wp-content/plugins/complianz-gdpr/cookiebanner/js/migrate.min.js?ver=6.3.4" id="cmplz-migrate-js"></script>
+<script type="text/javascript" src="https://programmingduck.com/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.0.1" id="smartmenus-js"></script>
+<script type="text/javascript" src="https://programmingduck.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.4.2" id="elementor-pro-webpack-runtime-js"></script>
+<script type="text/javascript" src="https://programmingduck.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.6.4" id="elementor-webpack-runtime-js"></script>
+<script type="text/javascript" src="https://programmingduck.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.6.4" id="elementor-frontend-modules-js"></script>
+<script type="text/javascript" id="elementor-pro-frontend-js-before">
+/* <![CDATA[ */
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/programmingduck.com\/wp-admin\/admin-ajax.php","nonce":"4c3525eb7b","urls":{"assets":"https:\/\/programmingduck.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/programmingduck.com\/wp-json\/"},"i18n":{"toc_no_headings_found":"No headings were found on this page."},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/programmingduck.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://programmingduck.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.4.2" id="elementor-pro-frontend-js"></script>
+<script type="text/javascript" src="https://programmingduck.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" id="elementor-waypoints-js"></script>
+<script type="text/javascript" src="https://programmingduck.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://programmingduck.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6" id="swiper-js"></script>
+<script type="text/javascript" src="https://programmingduck.com/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.6.4" id="share-link-js"></script>
+<script type="text/javascript" src="https://programmingduck.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.9.0" id="elementor-dialog-js"></script>
+<script type="text/javascript" id="elementor-frontend-js-before">
+/* <![CDATA[ */
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Extra","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Extra","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.6.4","is_static":false,"experimentalFeatures":{"e_import_export":true,"e_hidden_wordpress_widgets":true,"landing-pages":true,"elements-color-picker":true,"favorite-widgets":true,"admin-top-bar":true,"form-submissions":true},"urls":{"assets":"https:\/\/programmingduck.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"body_background_background":"classic","active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":1178,"title":"Carousel%20slider%20tutorial%20with%20HTML%2C%20CSS%20and%20JavaScript%20%E2%80%93%20Programming%20Duck","excerpt":"Here's how to make a simple carousel slider with HTML, CSS and JavaScript. We use good code practices, make it accessible and discuss testing.","featuredImage":"https:\/\/programmingduck.com\/wp-content\/uploads\/2021\/05\/w-alan-PMjhRmQqEJg-unsplash-1024x683.jpg"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://programmingduck.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.6.4" id="elementor-frontend-js"></script>
+<script type="text/javascript" src="https://programmingduck.com/wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.min.js?ver=3.4.2" id="pro-preloaded-elements-handlers-js"></script>
+<script type="text/javascript" src="https://programmingduck.com/wp-content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.6.4" id="preloaded-modules-js"></script>
+<script type="text/javascript" src="https://programmingduck.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.4.2" id="e-sticky-js"></script>
+  <script id="auto_loader_config_scripts"> Prism.plugins.autoloader.languages_path = "https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/"; </script>  <script id="module-prism-line-number"> (function($) { $(function() { $("code").each(function() { var parent_div = $(this).parent("pre"); var pre_css = $(this).attr("class"); if (typeof pre_css !== "undefined" && -1 !== pre_css.indexOf("language-")) { parent_div.addClass("line-numbers"); } }); }); })(jQuery); </script>  <script id="module-clipboard"> (function($) { $(function() { var pre = document.getElementsByTagName("pre"); var pasteContent = document.getElementById("paste-content"); var hasLanguage = false; for (var i = 0; i < pre.length; i++) { var codeClass = pre[i].children[0].className; var isLanguage = codeClass.indexOf("language-"); var excludedCodeClassNames = [ "language-katex", "language-seq", "language-sequence", "language-flow", "language-flowchart", "language-mermaid", ]; var isExcluded = excludedCodeClassNames.indexOf(codeClass); if (isExcluded !== -1) { isLanguage = -1; } if (isLanguage !== -1) { var button = document.createElement("button"); button.className = "copy-button"; button.textContent = "Copy"; pre[i].appendChild(button); hasLanguage = true; } }; if (hasLanguage) { var copyCode = new ClipboardJS(".copy-button", { target: function(trigger) { return trigger.previousElementSibling; } }); copyCode.on("success", function(event) { event.clearSelection(); event.trigger.textContent = "Copied"; window.setTimeout(function() { event.trigger.textContent = "Copy"; }, 2000); }); } }); })(jQuery); </script> 
+</body>
+</html>
+
+<!-- Dynamic page generated in 1.502 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2023-12-20 13:38:21 -->
+
+<!-- Compression = gzip -->

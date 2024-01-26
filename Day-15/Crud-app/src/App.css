@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+}
+
+.box{
+  border: 2px solid black;
+  padding: 10px;
+  width: 300px;
+  margin: 10px auto;
+}
+
+.box-1,.box-2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+
+}
+
+button{
+  background:none;
+  border: 0.1px solid black;
+  padding: 10px;
+  border-radius: 3px;
+  margin: 10px;
+
+}

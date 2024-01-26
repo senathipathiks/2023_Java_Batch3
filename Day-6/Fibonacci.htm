@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Fibonacci</title>
+    <script>
+        function Fibonacci(n) {
+           let a = 3;
+           let b = 5;
+
+          if (n === 0) {
+                    return a;
+                      }
+
+         for (let i = 2; i <= n; i++) {
+        let c = a + b;
+         a = b;
+         b = c;
+         }
+         return 'The '+n+' th element is '+b;
+}
+    </script>
+</head>
+<body>
+    <script>
+        document.write(Fibonacci(1));
+    </script>
+    
+</body>
+</html>

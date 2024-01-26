@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="Reg.css">
+    <style>
+        body{
+            background: linear-gradient(to right,rgb(93, 3, 93),rgba(223, 4, 223, 0.685));
+        }
+        .h1{
+            color: rgb(249, 250, 251);
+        }
+        
+    
+        .b1{
+            font-size: large;
+            border-radius: 10px;
+            width: 100px;
+            border-color: rgb(1, 19, 35);
+            border-width: 5px;
+            margin: 5px;
+        }
+        .b2{
+            font-size: large;
+            border-radius: 10px;
+            width: 80px;
+            border-color: rgb(1, 19, 35);
+            border-width: 2px;
+            margin: 5px;
+        }
+        p{
+           
+            border-width: 20px;
+           
+        }
+        .i1{
+            height: 20%;
+            width: 450px;
+            object-fit: fill ;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form action=""><center>
+        
+            <div class="container">
+              <h1 class="h1">Register</h1>
+              <p><b>Please fill in this form to create an account.</b></p>
+              
+          
+              <label for="email"><b style="color: rgb(244, 245, 244) ;">Email</b></label>
+              <input type="text" placeholder="Enter Email" class="t1" id="email" required><br><br>
+          
+              <label for="psw"><b style="color: rgb(253, 255, 253);">Password</b></label>
+              <input type="password" placeholder="Enter Password" class="t2" id="psw" required><br><br>
+          
+              <label for="psw-repeat"><b style="color: rgb(249, 250, 249);">Re-enter password</b></label>
+              <input type="password" placeholder="Re-enter Password"  id="psw-repeat" required>
+            
+          
+              <p><b>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</b></p>
+              <button class="b1" type="submit" >Register</button>
+             </div>
+          
+            <div class="container signin">
+              <p><b>Already have an account? </b><a href="Login.html"><button class="b2">Log in</button></a>.</p>
+            </div>
+          </form>
+          <img class="i1" src="https://images5.alphacoders.com/400/400078.jpg" alt="img">
+
+    </form>
+</center>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function display() {
+        document.write("<br/>" + message);
+        for (let i in arguments) {
+          document.write("<br/>" + arguments[i]);
+        }
+      }
+
+      let message = "list of colours";
+
+      display(message, "red");
+      display(message, "blue", "yellow");
+      display(message, "blue", "yellow", "green");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+body{
+    background-color: aquamarine;
+}
+.h2 input[type="text"]{
+    padding: 20px; 
+    height: 35px;  
+    width: 200px;
+    background-color: rgb(222, 213, 200);
+    font-size: larger
+    
+}
+.calci{
+ 
+    border: 1px solid;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(136, 170, 158);
+
+}
+input[type="button"]{
+    font-size: 20px;
+    border-radius: 40px;
+    padding: 15px 15px
+    
+    
+}

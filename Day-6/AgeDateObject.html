@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Age Date Object</title>
+    <script>
+        function Date(data){
+        var dob = new Date(data);
+        //calculate month difference from current date in time
+        var month_diff = Date.now() - dob.getTime();
+        
+        //convert the calculated difference in date format
+        var age_dt = new Date(month_diff); 
+        
+        //extract year from date    
+        var year = age_dt.getUTCFullYear();
+        
+        //now calculate the age of the user
+        var age = Math.abs(year - 1970);
+        
+        //display the calculated age
+        return 'Age of the date entered:'+ age + 'years';
+        }
+    </script>
+</head>
+<body>
+    
+    <script>
+        document.write(Date("25-09-2001"));
+    </script>
+</body>
+</html>

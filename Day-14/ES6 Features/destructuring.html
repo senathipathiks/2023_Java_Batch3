@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let data = ["bike", "car", "lorry"];
+
+      const [twoWheeler, four, eight] = data; // using destructuring method
+
+      show = () => {
+        console.log(twoWheeler); // bike
+        console.log(four); // car
+        console.log(eight); //lorry
+      };
+      document.write(twoWheeler);
+      // document.write("<br/>" + show()); // console log calling
+
+      let Obj = {
+        car: "Ford",
+        Wheels: "Four",
+        Mileage: "120kmph",
+      };
+
+      display = ({ car, Wheels, Mileage }) => {
+        document.write(
+          ` The car name is ${car} <br/>  It have ${Wheels} wheels`
+        );
+      };
+      display(Obj);
+
+      const { car: motor, Wheels: wheel } = Obj;
+
+      document.write("<br/>" + motor);
+      document.write("<br />" + ` and it can run on ${wheel}`);
+    </script>
+  </body>
+</html>
