@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTDOWN TIMER</title>
+    <style>
+        body{
+           background-color:black ;
+        }
+        .countdown {
+        text-align: center;
+        border: 6px double rgb(247, 5, 77);
+        margin-left: 35%;
+        margin-right: 30%;
+        margin-top:15% ;
+        padding: 2%;
+        border-radius: 20px;
+        color: rgb(243, 160, 7);
+        }
+         #timer {
+            display: flex;
+            justify-content: center;
+            }
+            #timer span {
+                display: block;
+                 font-size: 24px;
+                }
+                #timer div {
+                   margin: 0 10px;
+                  }
+
+    </style>
+</head>
+<body>
+    <div class="countdown">
+        <h2>Countdown &#128151 !!</h2><br>
+        <div id="timer">
+          <div>
+            <span id="days">0</span>
+            <span>Days</span>
+          </div>
+          <div>
+            <span id="hours">0</span>
+            <span>Hours</span>
+          </div>
+          <div>
+            <span id="minutes">0</span>
+            <span>Minutes</span>
+          </div>
+          <div>
+            <span id="seconds">0</span>
+            <span>Seconds</span>
+          </div>
+        </div>
+      </div>
+      <script src="Countdown.js"></script>
+    
+</body>
+</html>

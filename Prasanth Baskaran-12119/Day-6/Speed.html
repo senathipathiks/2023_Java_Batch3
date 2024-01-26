@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed</title>
+    <script>
+        function Vehicle(speed){
+            var speed;
+            if (speed <= 50) {
+                document.write("Safe Driving")
+            }
+            else if (speed >50 && speed<=60) {
+                document.write("Speed Limit Crossed, reduce your Speed !!!")
+            } else {
+                document.write("Your speed is :"+ speed+" !!! It is Over speed !!!  Reduce your Speed ")
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        Vehicle(608);
+    </script>
+</body>
+</html>

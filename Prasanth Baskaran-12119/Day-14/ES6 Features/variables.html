@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let getmess = "Hello There!!!"; //let variable - block level scope
+      var another = "Bye!!"; // var global variable
+
+      function display(num) {
+        if (num == 1) {
+          let getmess = "hi!!";
+          document.write(`${getmess} and ${another}`);
+        } else {
+          let getmess = "okay!!";
+          document.write(`This is Message ${getmess} and ${another}`);
+        }
+        document.write("<br/>" + getmess);
+      }
+      display(2);
+
+      const obj = {
+        // object
+        name: "Prashanth",
+        degree: "B.E",
+      };
+      console.log("Name: " + obj.name + "\nDegree:" + obj.degree);
+      //we can't re-intialize the whole object , bcoz of const
+      // but you change the value of the object like : obj.name="surya"
+      obj.name = "surya";
+      console.log("Updated Name: " + obj.name);
+
+      let n = prompt("Enter the value of n");
+      function impure(a, b) {
+        document.write(a + "<br/>" + b + n);
+      }
+      impure("A" + "B");
+
+      let a = () => {
+        // return "I am an arrow function";
+        let s =5;
+        return () => {
+          return "And I am nested in it."+s;
+        };
+        // document.write(b()+"hell");
+      };
+      document.write(a()
+      .);
+    </script>
+  </body>
+</html>

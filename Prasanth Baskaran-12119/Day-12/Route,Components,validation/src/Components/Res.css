@@ -1,0 +1,39 @@
+
+
+div .input{
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-top: 20px;
+    /* background-color: aqua; */
+
+}
+
+div .container{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+  
+}
+
+
+#box{
+    width: 700px;
+    height: 600px;
+    border-style: inset;
+    border-color: black;
+}
+#btn2{
+    height:70px
+}
+/* #btn1{
+    padding-top: 40px;
+} */
+
+#title{
+    margin-top: 100px;
+}
+ 

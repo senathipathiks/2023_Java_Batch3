@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p id="Cars"></p>
+    <script>
+       class FourWheeler{
+         constructor(name){
+            this.CarName = name;
+         }
+
+         display(){
+            return "Car" +" The car name is :"+ this.CarName;
+         }
+       }
+       class Car extends FourWheeler{
+             constructor(name,wheels){
+               super(name);
+              this.Tires = wheels;
+             }
+             show=()=>{
+              
+              return `The car is ${this.display()} and it has ${this.Tires}`;
+             }
+
+       }
+       const mycar = new Car("Mustang",4);
+        let x = mycar.show();
+        console.log(x);
+        let para = document.createElement("p");
+        para.innerHTML = x;
+        document.body.appendChild(para);
+        console.log(para);
+      document.getElementById('Cars').innerHTML=x;
+      //   document.getElementById()
+      // document.querySelector(".Cars").appendChild(document.createTextNode(x));
+
+
+    </script>
+</body>
+</html>

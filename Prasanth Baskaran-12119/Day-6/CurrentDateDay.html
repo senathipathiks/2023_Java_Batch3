@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Date and Day</title>
+</head>
+<body>
+    
+    <script>
+        var d=new Date();
+        document.write(d);
+        var day= d.getDay();
+        var dat=d.getDate();
+        var month=d.getMonth()+1;
+        var year=d.getFullYear();
+        
+        document.write("<br>"+dat+"-"+month+"-"+year);
+        
+        var h=d.getHours();
+        var m=d.getMinutes();
+        var s=d.getSeconds();
+        document.write("Time is: "+ h+"/"+m+"/"+s);
+
+    </script>
+
+</body>
+</html>

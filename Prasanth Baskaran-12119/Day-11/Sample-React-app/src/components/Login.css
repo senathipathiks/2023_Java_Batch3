@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: seagreen;
+     /* background:url('desktop.jpg') no-repeat; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    background: url("https://images.unsplash.com/opengraph/1x1.png?blend=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1432821596592-e2c18b78144f%3Fblend%3D000000%26blend-alpha%3D10%26blend-mode%3Dnormal%26crop%3Dfaces%252Cedges%26h%3D630%26mark%3Dhttps%253A%252F%252Fimages.unsplash.com%252Fopengraph%252Fsearch-input.png%253Fh%253D84%2526txt%253Dlogin%2526txt-align%253Dmiddle%25252Cleft%2526txt-clip%253Dellipsis%2526txt-color%253D000000%2526txt-pad%253D80%2526txt-size%253D40%2526txt-width%253D660%2526w%253D750%2526auto%253Dformat%2526fit%253Dcrop%2526q%253D60%26mark-align%3Dmiddle%252Ccenter%26mark-w%3D750%26w%3D1200%26auto%3Dformat%26fit%3Dcrop%26q%3D60%26ixid%3DM3wxMjA3fDB8MXxzZWFyY2h8NHx8bG9naW58ZW58MHx8fHwxNzA0MzIxNzI4fDA%26ixlib%3Drb-4.0.3&blend-w=1&h=630&mark=https%3A%2F%2Fimages.unsplash.com%2Fopengraph%2Flogo.png&mark-align=top%2Cleft&mark-pad=50&mark-w=64&w=1200&auto=format&fit=crop&q=60");
+}
+.contain{
+    width: 500px;
+    background-color: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter:blur(20px);
+    box-shadow: 0 0 10px rgba(255,255,255,.2);
+    color: black;
+    height: 400px;
+    padding: 30px 40px;
+    border-radius: 10px;
+    font-weight: 700;
+   
+}
+.contain h1{
+    font-size: 36px;
+    text-align: center;
+    color: #333;
+}
+.contain .input_box{
+
+    width: 100%;
+    height: 70px;
+    margin: 30px 0;
+    
+    /* background-color: salmon; */
+}
+.input_box input{
+    width: 100%;
+    height: 50%;
+    background: transparent;
+    border: none;
+    outline-color:#333;
+    border: 2px solid rgb(11, 6, 6);
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    padding: 20px 45px 20px 20px;
+    
+    }
+    .input_box ::placeholder{
+        color: black;
+        font-weight: 600;
+    }
+    .contain button{
+        width: 100%;
+        height: 45px;
+        background-color: rgb(10, 190, 37);
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        box-shadow: 0 0 10px rgba(0,0,0, .1);
+        cursor: pointer;
+        font-size: 16px;
+        color: #333;
+        font-weight: 600
+    }

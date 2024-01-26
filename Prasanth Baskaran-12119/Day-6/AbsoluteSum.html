@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AbsoluteSum</title>
+
+    <script>
+        function AbsSum(arr,len){
+            var sum=0;
+            for (var i = 0; i < len; i++) {
+               for (var j = i+1; j < len; j++) {
+               sum=sum+Math.abs(arr[i] - arr[j]); //Math.abs --> gives the absolute value
+               }  
+            }
+            return sum;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var arr=[1,5,7,3,9];
+        var len=arr.length;
+        document.write(AbsSum(arr,len));
+    </script>
+</body>
+</html>

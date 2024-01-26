@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <style>
+      *{margin: 0; padding: 0;}
+      body {font-family: Arial, sans-serif;}
+      .container {max-width: 360px; margin: 24px
+      auto; text-align: center}
+      h1 {color: #5a5a5a; font-size: 2
+      4px;}
+      form {display: flex; flex-direction: column; align-items: center;
+      justify-content: center; width: 100%; max-width: 19
+      2px; padding: 16px; background-color: white; border-radius
+      : 8px; box-shadow: 0px 0px 10px
+      rgba(0,0,0,.1);}
+      label {display: block; color: #757575;}
+      input[type=text], input[type=password] {padding: 16px
+      ; display: inline-block; font-size: 14px; line-height
+      : 24px; vertical-align: top; color: #5d5d
+      d5; appearance: none; outline: none; border: 1px solid
+      #e0e0e0; border-radius: 4px; transition: all
+      .3s ease;}
+      ::placeholder {color: #bdbdbd;}
+      button {background-color: #ff5722; color: white; font-size: 16px;
+      line-height: 48px; letter-spacing: .5; text-transform: uppercase; cursor: pointer;
+      display: inline-block; font-weight: bold; appearance: none; outline: none
+      ; border: none; border-radius: 4px; transition: all .3s ease;}
+      @media (min-width: 640px) {form {padding:
+        32px;}}
+    </style>
+  </head>
+  <body>
+    <!-- create a login form for students -->
+    <form action="">
+      <label for="username">Username: </label><br />
+      <input type="text" id="username" name="username" /><br /><br />
+      <label for="password">Password: </label><br />
+      <input type="password" id="password" name="password" /><br /><br />
+      <input type="submit" value="Login" />
+    </form>
+  </body>
+</html>
