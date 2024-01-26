@@ -1,0 +1,34 @@
+<!-- you will be given two strings a and b and your task is to return the characters that are not common in the two strings. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Return the character</title>
+    <script>
+      let findUncommon = (str1, str2) => {
+        let res = [];
+        for (let i = 0; i < str1.length; i++) {
+        if (!str2.includes(str1[i])) {
+        res.push(str1[i]);
+             }
+         }
+         for (let i = 0; i < str2.length; i++) {
+        if (!str1.includes(str2[i])) {
+        res.push(str2[i]);
+            }
+        }
+        return res.join('');
+    }
+
+    </script>
+</head>
+<body>
+    <script>
+        let str1="Ranjitha";
+        let str2="Rajaraman";
+        let output=findUncommon(str1,str2)
+        document.write("String1 : "+str1);
+        document.write("<br>String2 : "+str2);
+        document.write("<br>Uncommon: "+output);
+    </script>
+</body>
+</html>

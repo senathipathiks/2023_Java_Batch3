@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=prompt("Enter your Name");//prompt is using to getting input from the user
+        alert("hello "+a);
+        function confirmsubmission(){
+            var c=confirm("Are you sure to open Gmail !!")
+            if(c==true)
+            open("http://www.gmail.com");
+        else
+        open("http://www.google.com");
+        }
+
+    </script>
+    <form>
+        <button onclick="confirmsubmission()">open the Gmail Account</button>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+.form-floating{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 50px;  
+ }
+ body{
+     background-image: url("./04gg.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+
+ #form{
+    color: white;
+    border: 2px solid white;
+    width: fit-content;
+    margin-left: 40%;
+    /* background: -moz-linear-gradient(white,grey,white); */
+    margin-top: 10%;
+    font-size: larger;
+   }
+
+   #submit {
+    float: right;
+    margin-bottom: 30px;
+    }
+
+    

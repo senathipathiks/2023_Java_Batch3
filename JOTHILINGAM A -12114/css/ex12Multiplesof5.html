@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="printMultiplesOfFive()">Click me</button>
+
+<div id="result"></div>
+
+<script>
+function printMultiplesOfFive() {
+    // Define an array
+    var arr = [1, 5, 10, 15, 20, 92, 25, 30, 35, 40, 45, 50, 68, 84];
+
+    // Create an empty string to store our results
+    var result = '';
+
+    // Iterate over the array
+    for (var i = 0; i < arr.length; i++) {
+        // Check if the current number is a multiple of 5
+        if (arr[i] % 5 === 0) {
+            // If it is, add it to our result string
+            result += arr[i] + '<br>';
+        }
+    }
+
+    // Display the result in our 'result' div
+    document.getElementById('result').innerHTML = result;
+}
+
+</script>
+
+</body>
+</html>

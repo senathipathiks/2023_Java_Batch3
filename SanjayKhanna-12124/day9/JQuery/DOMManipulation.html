@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <script src="jQuery.js"></script>
+</head>
+<body>
+    <button id="btn1">click</button>
+    <button id="btn2">DoubleClick</button>
+    <input type="text" id="input">
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                alert("Click Event");
+            });
+            $("#btn2").dblclick(function(){
+                alert("Double Click Event");
+            });
+            $("#input").mouseout(function(){
+                $("#input").css("background-color", "red");
+            })
+            $("#input").mouseenter(function(){
+                $("#input").css("background-color", "violet");
+            })
+
+        })
+    </script>
+</body>
+</html>

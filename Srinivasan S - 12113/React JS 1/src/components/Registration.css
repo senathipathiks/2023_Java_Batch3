@@ -1,0 +1,11 @@
+#h1{
+    padding-top: 70px;
+}
+#t1{
+    border: 2px solid black;
+    border-radius: 20px;
+    position: absolute;
+    margin-left: 38%;
+    padding: 25px;
+    margin-top: 5%;
+}

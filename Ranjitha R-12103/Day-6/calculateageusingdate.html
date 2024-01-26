@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> calculate age using date</title>
+    <script>
+        let calculateAge = (birthDate) => {
+        let today = new Date();
+        let birthDateObj = new Date(birthDate);
+        let age = today.getFullYear() - birthDateObj.getFullYear();
+        let monthDiff = today.getMonth() - birthDateObj.getMonth();
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDateObj.getDate())) {
+        age--;
+        }
+         return age;
+    }
+    </script>
+</head>
+<body>
+    <script>
+        document.write("Current Age is: " +calculateAge('2002-10-19'));
+    </script>
+</body>
+</html>

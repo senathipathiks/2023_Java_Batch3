@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function display(message,...msg){
+            document.write("<br> " + message);
+            for(let i in msg)
+            document.write("<br>" + msg[i]);
+        }
+        let message = "This is a message";
+        display(message,"hii");
+        display(message,"hii","hello");
+        display(message,"hii","hello","heyy");
+        
+    </script>
+</body>
+</html>

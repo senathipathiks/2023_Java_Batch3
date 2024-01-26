@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload=function(){checkTime();}
+        function checkTime(){
+            var d = new Date();
+            var h = d.getHours();
+            var m = d.getMinutes();
+            var s = d.getSeconds();
+            document.getElementById('Timer').innerHTML=h+":"+m+":"+s;
+            setTimeout(function(){checkTime()},1000);
+        }
+    </script>
+</body>
+</html>

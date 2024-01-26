@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=12345;
+        var reverse=0;
+        while(num>0){
+            remain=num%10;
+            reverse=reverse*10+remain;
+            num=Math.floor(num/10);
+        }
+        document.write("Reverse number is:"+ reverse);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nth fibonacci number</title>
+</head>
+<body>
+    <script>
+        function fibonacci(term){
+            let first = 0;
+            let second = 1;
+            if(term==1)
+            document.write(term+" term value : "+0);
+            else if((term==2)||(term==3))
+            document.write(term+" term value : "+1);
+            else{
+            let i=1;
+            let res=0;
+            while(i<=term){
+                res= first+second;
+                first=second;
+                second = res;
+                i++;
+            }
+            document.write(term+" - term Fibonacci value : "+res);
+        }
+        }
+
+        fibonacci(6);
+    </script>
+</body>
+</html>

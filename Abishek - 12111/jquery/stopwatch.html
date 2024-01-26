@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Stopwatch</title>
+    <style>
+        #time { font-size: 40px; }
+        #buttons { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div id="time">0</div>
+    <div id="buttons">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+    </div>
+    <script>
+        var seconds = 0;
+        var t;
+
+        function add() {
+            seconds++;
+            document.getElementById('time').textContent = seconds;
+            timer();
+        }
+        function timer() {
+            t = setTimeout(add, 1000);
+        }
+        document.getElementById('start').onclick = timer;
+
+        document.getElementById('stop').onclick = function() {
+            clearTimeout(t);
+        }
+
+        document.getElementById('reset').onclick = function() {
+            document.getElementById('time').textContent = "0";
+            seconds = 0;
+        }
+    </script>
+</body>
+</html>

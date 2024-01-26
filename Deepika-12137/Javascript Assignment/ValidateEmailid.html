@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail Validation</title>
+</head>
+<body>
+    <script>
+        function validateEmail(email) {
+        
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        
+            return re.test(String(email).toLowerCase());
+        }
+
+        var email = "deepikasuresh@yahoo.com";
+
+        if (validateEmail(email)) {
+            document.write(email + " is valid.");
+        } else {
+            document.write(email + " is invalid.");
+        }
+
+    </script>
+    
+</body>
+</html>

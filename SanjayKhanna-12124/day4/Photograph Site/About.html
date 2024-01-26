@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        h3{
+            margin-left: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-style: italic;
+            font-size: 36px;
+        }
+        u{
+            background-color: aliceblue;
+            opacity: 70%;
+        }
+        .zoom{
+            display: flex;
+            flex-direction: row;
+            justify-self: left;  
+        }
+        .Rotate{
+            margin-top: 100px;
+            display: flex;
+            flex-direction: row;
+            justify-self: left; 
+        }
+        .crop{
+            margin-top: 100px;
+            display: flex;
+            flex-direction: row;
+            justify-self: left; 
+        }
+        img{
+            margin-left: 80px;
+            position: relative;
+            border: 2px solid black;
+        }
+        p{  
+            margin-left: 50px;
+            padding-left: 20px;
+            font-size: 20px; 
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgb(198, 204, 210);
+        }
+        body{
+            background-image: url('https://media.istockphoto.com/id/170958625/photo/dark-blue-grunge-background.jpg?b=1&s=612x612&w=0&k=20&c=Njqazg0TAFGwJfTa9a6ByWvlumaa3wvtnEjdOgvwa1w=');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <h3><u>About Sk Photo Forum</u></h3>
+    <div class="zoom">
+        <img src="https://static.vecteezy.com/system/resources/previews/022/804/336/non_2x/free-line-art-and-hand-drawing-flower-art-black-and-white-flat-design-simple-flower-free-vector.jpg" id="image1" alt="image1" style="width: 40px;height: 40px;">
+        <p><b><u>Zoom Option :</u></b> This make a 4x zoom of uploaded image</p>
+        <img src="https://static.vecteezy.com/system/resources/previews/022/804/336/non_2x/free-line-art-and-hand-drawing-flower-art-black-and-white-flat-design-simple-flower-free-vector.jpg" id="image2" alt="image2" style="width: 40px;height: 40px; transform: scale(4);">
+    </div>
+    <div class="Rotate">
+        <img src="https://static.vecteezy.com/system/resources/previews/022/804/336/non_2x/free-line-art-and-hand-drawing-flower-art-black-and-white-flat-design-simple-flower-free-vector.jpg" id="image3" alt="image3" style="width: 70px;height: 70px;">
+        <p><b><u>Rotate Option :</u></b> This make a 90 degree Rotate of uploaded image</p>
+        <img src="https://static.vecteezy.com/system/resources/previews/022/804/336/non_2x/free-line-art-and-hand-drawing-flower-art-black-and-white-flat-design-simple-flower-free-vector.jpg" id="image4" alt="image4" style="width: 70px;height: 70px; transform:rotate(90deg);">
+    </div>
+    <div class="crop">
+        <img src="https://static.vecteezy.com/system/resources/previews/022/804/336/non_2x/free-line-art-and-hand-drawing-flower-art-black-and-white-flat-design-simple-flower-free-vector.jpg" id="image3" alt="image3" style="width: 70px;height: 70px;">
+        <p><b><u>Rotate Option :</u></b> This make a 90 degree Rotate of uploaded image</p>
+        <img src="https://static.vecteezy.com/system/resources/previews/022/804/336/non_2x/free-line-art-and-hand-drawing-flower-art-black-and-white-flat-design-simple-flower-free-vector.jpg" id="image4" alt="image4" style="width: 70px;height: 70px;">
+    </div>
+</body>
+</html>

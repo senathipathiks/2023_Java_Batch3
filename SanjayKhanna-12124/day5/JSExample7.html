@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loopings</title>
+</head>
+<body>
+    <script>
+        let n=5;
+        document.write("For loop : ");
+        for(i=0;i<=n;i++)
+            document.write(`${i} `);
+
+        document.write("<br>While loop : ");
+        let j=0;
+        while(true){
+            document.write(`${j} `);
+            if(j==n)
+                break
+                j++;
+        }
+
+        document.write("<br>Do While loop : ");
+        do{
+            document.write(`${n} `);  
+            n--;
+        }while(n>=0)
+    </script>
+</body>
+</html>

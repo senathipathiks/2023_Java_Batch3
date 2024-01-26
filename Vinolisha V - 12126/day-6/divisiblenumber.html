@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function divisible(num){
+            if (typeof num !=="number"){
+                return "Not a Number";
+            }
+           
+            else if(num %2==0 && num %3==0){
+                return "Fizz Buzz"
+            }
+             else if (num %2 == 0 ){
+                return "Fizz";
+            }
+            else if(num % 3 ==0){
+                return "Buzz";
+            }
+            else{
+                return num.toString();
+            }
+            
+        }
+    </script>
+    <title>Divisible</title>
+</head>
+<body>
+    <script>
+        let result=divisible("l");
+        document.write(result);
+    </script>
+</body>
+</html>

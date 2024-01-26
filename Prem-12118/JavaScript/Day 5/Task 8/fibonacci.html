@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    <script>
+      
+        let t1 = 0;
+        let t2 = 1;
+        var n = prompt("Enter the number of fibonacci series:");  
+        
+
+        // Display the initial two numbers explicitly
+        document.writeln("<b>Initial two numbers:<b/>"+"<br>");
+        document.write(t1 + "<br>");
+        document.write(t2+ "<br>");
+
+        // Calculate and display the rest of the Fibonacci sequence
+        document.writeln("<b>The fibonacci sequence start:<b/><br>")
+        for (let i = 3; i <= n; i++) {
+            let next = t1 + t2 ;
+            document.write(next + "<br>");
+
+            t1 = t2;
+            t2 = next;
+        }
+    </script>
+</body>
+</html>

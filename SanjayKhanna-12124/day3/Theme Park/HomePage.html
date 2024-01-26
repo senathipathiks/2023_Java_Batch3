@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        table{
+            border: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: aliceblue;
+            opacity: 70%;
+        }
+        .img{
+            display: flex;
+            flex-direction: row;
+            grid-row-start: auto;
+        }
+        td{
+            padding: 12px 24px;
+            color: black;
+            font-size: large;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+            font-size: large;  
+        }
+        
+        a:hover{
+            color: rgb(70, 226, 43);
+        }
+        #img1{
+            padding-right: 1px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+        <td><a href="HomePage.html" target="src">Home</a></td>
+        <td><a href="TicketBooking.html" target="src">Book Ticket</a></td>
+        <td><a href="GuideLine.html" target="src">Guide Lines</a></td>
+        <td><a href="ViewMap.html" target="src">Map</a></td>
+        </tr>
+    </table>
+
+    <div class="img">
+        <img src="https://thumbs.dreamstime.com/b/amusement-park-carousel-other-fun-rides-seaside-nj-33708537.jpg" alt="image1" id="img1">
+        <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2018/10/cover-parks.jpg" alt="image2" id="img2">
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Function Uncommon</title>
+</head>
+<body>
+    <script>
+        function match(str1,str2){
+            const res = [];
+
+        for (let i = 0; i < str1.length; i++)
+            if (!str2.includes(str1[i]))
+                res.push(str1[i]);
+
+
+        for (let i = 0; i < str2.length; i++)
+            if (!str1.includes(str2[i]))
+                res.push(str2[i]);
+
+        return res.join("");
+        }
+        let str1 = "aishek";
+        let str2 = "kumar";
+        const result = match(str1, str2);
+        document.write("String 1 : "+str1);
+        document.write("<br>String 2 : "+str2);
+        document.write("<br>Uncommon : "+result);
+        
+    </script>
+</body>
+</html>

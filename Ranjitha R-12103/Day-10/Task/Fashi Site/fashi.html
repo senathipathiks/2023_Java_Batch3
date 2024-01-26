@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <title>Fashi</title>
+    <style>
+        .img-container{
+        position: relative;
+        display: inline-block;
+        text-align: justify;
+        margin: lem 0 0 0;
+        margin: 0%;
+        }
+        .img-container img {
+         display: block;
+         /* width: 100px; */
+         height: auto;
+        } 
+        .content{
+        position: absolute;
+        bottom: 15px;
+        left:150px;
+        justify-items: auto;
+        justify-content: flex-start;
+        padding: 10px 20px;
+        font-size: 20px;
+        text-align: center;
+        text-align: justify;
+        margin: lem 0 0 0;
+            }
+        .p{
+            text-align: justify;
+            margin: lem 0 0 0;
+        }
+        .p+p{
+            text-indent: 2em;
+            margin: 0;
+        }
+        body{
+            background-color: whitesmoke;
+        }
+        .table{
+            border-radius: 2px;
+            border-color: black;
+        }
+        .color{
+            background-color: orange;
+        }
+    </style>
+    <script>
+        $document.ready(function(){
+            $("#a1").mouseover(function(){
+            $("#a1").addClass("color");
+            });
+        });
+    </script>
+</head>
+<body>
+    
+    <div class="container ">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm">
+            <ul class="col-12 navbar-nav">      
+               
+                <label for="" class="col-3"><i class="bi-envelope-fill" style="color: black; align-items: center;">hello.colorlib@gmail.com</i></label>
+                <label for="" class="col-4" style="text-align: initial;"> <i class="bi-telephone-fill"> +65 11188888 </i></label>
+                <a href=""><i class="bi-facebook" style="color: black;"></i></a>
+                <a href=""><i class="bi-twitter" style="color: black;"></i></a>
+                <a href=""><i class="bi-linkedin" style="color: black;"></i></a>
+                <a href=""><i class="bi-pinterest" style="color: black;"></i></a>
+                <i class="col-1"></i>
+                <button class="col-1 dropdown-toggle" data-bs-toggle="dropdown">English</button>
+                <i class="col-1"></i>
+                <label for="" class="col-2"><i class="bi-person-fill" style="right: 30px;align-items:end;">Login</i></label>
+            </ul>
+        </nav><hr>
+
+    </div>
+
+
+    <div class="Fashi container">
+        <nav class="navbar navbar-expand-sm">
+            <ul class="col-12 navbar-nav">
+                <h3 class="col-2" style="padding-left: 100px;align-items: flex-start;"><b>Fashi<b style="color:orange;">.</b></b></h3>
+                <li class="col-1"></li>
+                    <button class="col-2 btn dropdown-toggle" data-bs-toggle="dropdown" style="border-color: black;right: 1500px;">All categories</button>
+                    <input type="search" placeholder="What do you need?"class="col-4"  style="color: black;padding-right:200px;height: 45px;">
+                    <a href=""><i class=" col-1"></i></a>
+                    <li class="col-1"></li>
+                    <h6><i class="bi-heart"><sup style="shape-outside: circle();color:orange;">1</sup></i>
+                    <i class="bi-clipboard"><sup style="color: orange;">3</sup></i>  
+                    $150.00</h6>
+                    
+            </ul>
+        </nav>
+    </div>
+    
+
+    <div class="container">
+        <nav class="navbar navbar-expand-sm bg-dark">
+        
+            <ul class="navbar-nav col-12">
+                <li class="col-1"></li>
+                <button type="button" class=" col-3 btn  dropdown-toggle" data-bs-toggle="dropdown" style="color: white; text-align: center;">
+                   ALL DEPARTMENT</button>
+                    <div class="dropdown-menu"></div>
+               <li class="col-1 btn btn-warning active" id="a1">
+                  <a class=" nav-link" href="#" style="color: white;text-align: center;">HOME</a>
+               </li>
+               <li class=" col-1">
+                  <a class="nav-link" href="#" style="color: white;text-align: center;">SHOP</a>
+               </li>
+               <li class=" col-2 nav-item">
+                  <a class="nav-link" href="#" style="color: white;text-align: center;">COLLECTION</a>
+               </li>
+               <li class=" col-1 nav-item">
+                  <a class="nav-link" href="#" style="color:white;text-align:center ;">BLOG</a>
+               </li>
+               <li class=" col-1 nav-item">
+                <a href="#" class="nav-link" style="color: white;text-align: center;">CONTACT</a>
+               </li>
+               <li class=" col- 1 nav-item" >
+                <a href="" class="nav-link" style="color: white;text-align: center;" >PAGES</a>
+               </li>
+            </ul>
+         </nav>
+    </div>
+
+    <div class="img-container">
+        <div  class="col-12"  style="background-color: whitesmoke;">
+        <img src="img1.png" alt="image" style="padding-left: 618px;height: 390px;">
+    </div>
+    <div class="content">
+    <b><p  class="p" style="color:orange">BAG,KIDS</p></b>
+    <h1 style="font: bold;">Black friday</h1>
+    <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit,temporibus <br> itaque aut earum veniam provident voluptates dolores!</h6>
+    <br>
+    <button class="btn btn-warning" style="color: white;">
+        SHOP NOW
+    </button>
+</div>
+
+    </div>
+</div>
+</body>
+</html>

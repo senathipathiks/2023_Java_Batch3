@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- react es6 classs -->
+    <h1 id="course">course details</h1>
+    <script>
+        class Course{
+            constructor(name)
+            {
+                this.topic = name;
+
+            }
+            duration()
+            {
+                return "<br>" + this.topic + " duration is 1 week";
+
+            }
+        }
+        const mycourse = new Course("React"); 
+        document.write(mycourse.duration());
+    </script>
+   
+    
+</body>
+</html>

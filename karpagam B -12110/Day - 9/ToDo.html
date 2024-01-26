@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do list</title>
+    <style>
+       *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    /* background: #f10266; */
+    background-image: url('https://community.thriveglobal.com/wp-content/uploads/2021/08/To-Do-Lists-Pixabay-Altmann.jpg?w=1024');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.container{
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    background: white;
+    border: 10px solid rgb(87, 2, 90);
+    border-radius: 15px;
+    position: absolute;
+    min-height: 100px;
+    transform: translate(-50%,-50%);
+    /* box-shadow: 10px 10px rgb(226, 107, 236); */
+
+    /* box-shadow: 0 0 100px rgb(247, 1, 1); */
+}
+#newtask{
+    position: relative;
+    padding: 30px 20px;
+}
+#newtask input{
+    width: 75%;
+    height: 45px;
+    padding: 12px;
+    color: #111111;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+}
+
+#newtask input:focus{
+    outline: none;
+    border-color: #0d75ec;
+}
+#newtask button{
+    position: relative;
+    float: right;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #0d75ec;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    width: 20%;
+    height: 45px;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+}
+#tasks{
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    margin-top: 10px;
+}
+
+.task{
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px dashed #0c0c0c;
+    cursor: pointer;
+    background-color: #c5e1e6;
+    height: 50px;
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    display: flex;
+}
+
+.task button{
+    background-color: #f80606;
+    color: #fcfbfb;
+    cursor: pointer;
+    height: 100%;
+    width: 50px;
+    border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+<div class="container">
+        <br><h1 style="text-align: center;"><i>To-Do list !! Your Daily Planner</i>&#128204; </h1><br>
+
+            <div id="newtask">
+                <input type="text" style="border: 2px solid black;" placeholder="Add Tasks &#128522;">
+                <button id="push">Add</button>
+            </div>
+            <div id="tasks"></div>
+        </div>
+
+
+   <script>
+            document.querySelector('#push').onclick = function(){
+    if(document.querySelector('#newtask input').value.length == 0){
+        alert("Kindly Enter the Task Name to Add!!!!")
+    }
+
+    else{
+        document.querySelector('#tasks').innerHTML += `
+            <div class="task">
+                <span id="taskname">
+                    ${document.querySelector('#newtask input').value}
+                </span>
+                <button class="delete">
+                    <i class="far fa-trash-alt">Delete</i>
+                </button>
+            </div>
+        `;
+
+        var current_tasks = document.querySelectorAll(".delete");
+        for(var i=0; i<current_tasks.length; i++){
+            current_tasks[i].onclick = function(){
+                this.parentNode.remove();
+            }
+        }
+    }
+}
+        </script>
+
+
+  </body>
+</html>
+    

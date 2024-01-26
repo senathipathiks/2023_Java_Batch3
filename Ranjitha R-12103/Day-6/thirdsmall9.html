@@ -1,0 +1,21 @@
+<!-- Find the 3rd smallest element in an array<!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <title>Third smallest element</title>
+    <script>
+        function thirdsmall(arr){
+            arr.sort(function(a,b){
+                return a-b;
+            });
+            return arr[2];
+        }
+    </script>
+</head>
+<body>
+    <script>
+    let arr=[90,8,5,4,34];
+    let thirdsmallest=thirdsmall(arr);
+    document.write("The third element is: "+thirdsmallest);
+    </script>
+</body>
+</html>

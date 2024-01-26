@@ -1,0 +1,38 @@
+<html>
+<body>
+
+<h1>Day and Dates</h1>
+
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<script>
+// Create a new Date object
+let date = new Date();
+
+// Array of days
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+// Get the current day of the week
+let day = days[date.getDay()];
+
+// Get the current date
+let currentDate = date.getDate();
+
+// Get the current month
+let month = date.getMonth() + 1; // JavaScript months are 0-based counting
+
+// Get the current year
+let year = date.getFullYear();
+
+// Display the current day
+document.write("Today is " + day + "." + "<br\>"); 
+
+// Display the current date
+document.write("Current date is " + currentDate + " : " + month + " : " + year);
+
+
+</script>
+
+</body>
+</html>

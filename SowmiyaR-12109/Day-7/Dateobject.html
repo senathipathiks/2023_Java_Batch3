@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Object</title>
+</head>
+<body>
+    <h1>Today's date is:</h1>
+    <script>
+         var today=new Date();
+        document.write(today+"</br>");
+         var day =today.getDate();
+         var month=today.getMonth()+1;
+         var year=today.getFullYear();
+         document.write("</br> Date is:"+day+"/"+month+"/"+year+"</br>");
+         var h=today.getHours();
+         var m=today.getMinutes();
+         var s=today.getSeconds();
+         document.write("</br>Time is:"+h+":"+m+"/"+s+"</br>");
+    </script>
+    
+</body>
+</html>

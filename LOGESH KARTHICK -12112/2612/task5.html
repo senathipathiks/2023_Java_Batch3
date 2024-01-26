@@ -1,0 +1,37 @@
+<html>
+<body>
+
+<script>
+    var a=prompt("Enter your Name");
+    alert("Hello "+ a);
+    function cfmsubmission(){
+        var c=confirm("Are you Sure to open Gmail !!!")
+        if(c==true)
+        open("http://www.gmail.com");
+        else
+        open("http://www.google.com");
+    }
+</script>
+<form>
+    <button onclick="cfmsubmission()">Click to open Gmail </button>
+</form>
+</body>
+</html>
+<html>
+<body>
+    <script>
+        function goBack()
+        {
+            window.history.back();
+        }
+        function goForward()
+        {
+            window.history.forward();
+        }
+    </script>
+<form>
+    <button onclick=goBack()>Back </button>
+    <button onclick=goForward()>Forward </button>
+</form>
+</body>
+</html>

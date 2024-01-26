@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        #display {
+            font-size: 24px;
+        }
+    </style>
+    <title>Stopwatch</title>
+</head>
+<body>
+    <h1>Stopwatch</h1>
+    <div id="display">00:00:00</div>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+    <button onclick="resetTimer()">Reset</button>
+    <script>
+        var startTime;
+        var elapsedTime = 0;
+        var intervalId;
+
+        function startTimer() {
+            if (!startTime) {
+                startTime = new Date().getTime();
+                intervalId = setInterval(updateTimer, 1000);
+            } else {
+                startTime = new Date().getTime()-elapsedTime;
+                intervalId = setInterval(updateTimer, 1000);
+            }
+        }
+
+        function updateTimer() {
+            var currentTime = new Date().getTime();
+            elapsedTime = currentTime - startTime; 
+            var hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+            var minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
+            document.getElementById("display").innerHTML = `${hours}:${minutes}:${seconds}`;
+        }
+
+        function stopTimer() {
+            clearInterval(intervalId);
+        }
+
+        function resetTimer() {
+            clearInterval(intervalId);
+            startTime = null;
+            elapsedTime = 0;
+            document.getElementById("display").innerHTML = "00:00:00";
+        }
+    </script>
+</body>
+</html>

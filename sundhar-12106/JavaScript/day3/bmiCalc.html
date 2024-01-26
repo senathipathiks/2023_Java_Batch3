@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0%;
+      }
+      .container {
+        height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(45deg, blue, red);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .container > .in-con {
+        height: 40%;
+        width: 20%;
+        backdrop-filter: blur(100px);
+        border: 2px solid rgb(150, 47, 47);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+
+      form > h1 {
+        margin-left: 25px;
+      }
+      #res{
+        color: rgb(255, 0, 34);
+      }
+      #height,#weight{
+        width: 60%;
+        height: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- *Create a BMI calculator application using html, css and js.
+    *How to create a countdown timer application using html, css and js. -->
+
+    <div class="container">
+      <h1>BMI Calculator</h1>
+      <section class="in-con">
+        <form action="">
+          <table>
+            <!-- <tr>
+                        <td><label for="age">enter age </label></td>
+                        <td><input id="age" type="number"></td>
+                        <td>2 - 120</td>
+                    </tr> -->
+            <tr>
+              <td><label for="height">enter height </label></td>
+              <td>
+                <input id="height" user type="text" placeholder="in cms" />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="weight">enter weight </label></td>
+              <td>
+                <input id="weight" user type="text" placeholder="in kgs" />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center">
+                <input
+                  type="button"
+                  onclick="bmi()"
+                  value="calculate"
+                  style="
+                    width: 100px;
+                    height: 30px;
+                    margin-top: 30px;
+                    border-radius: 25px;
+                    border: 2px solid;
+                  "
+                />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center">
+                <span id="res"></span>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </section>
+    </div>
+
+    <script>
+      function bmi() {
+        // let age = parseInt(document.getElementById('age').value);
+        let h = parseInt(document.getElementById("height").value);
+        let w = parseInt(document.getElementById("weight").value);
+        let bmi = 0;
+
+        // if (age == "") {
+        //  alert("please enter age");
+        // }else
+        // console.log(isNaN(h));
+        
+        if (isNaN(h)) {
+          alert("please enter height");
+        } else if (isNaN(w)) {
+          alert("please enter weight");
+        }else {
+          console.log(h);
+          h = (h / 100) ** 2;
+          console.log("clg : " + h);
+          bmi = (w / h).toFixed(2);
+          console.log(bmi);
+          //    document.getElementById('res').innerHTML= "your BMI is : "+bmi;
+          if (bmi <= 18) {
+            document.getElementById("res").innerHTML = "<h1>under weight</h1>"+"<span>BMI value is : </span>"+bmi;
+          } else if (bmi <= 25 && bmi > 18) {
+            document.getElementById("res").innerHTML = "<h1>Normal</h1>"+"<span>BMI value is : </span>"+bmi;
+          } else if (bmi > 25 && bmi < 30) {
+            document.getElementById("res").innerHTML = "<h1>Over Weight</h1>"+"<span>BMI value is : </span>"+bmi;
+          } else {
+            document.getElementById("res").innerHTML = "<h1>Obesity</h1>"+"<span>BMI value is : </span>"+bmi;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

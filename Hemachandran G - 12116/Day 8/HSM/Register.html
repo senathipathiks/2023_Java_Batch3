@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body{
+        /* border: 2px solid black; */
+        color: rgb(0, 0, 0);
+        position: absolute;
+        left: 40%;
+        /* top: 5%; */
+        text-align: center;
+        /* height: 25%;
+        padding: 2%; */
+        font-size: large;
+        background-image: url(https://www.shutterstock.com/image-photo/doctor-works-management-mechanism-medical-260nw-1549990442.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* background-color: rgb(0, 247, 255); */
+        
+      }
+
+      
+
+      form{
+        /* background-color: aliceblue; */
+        text-align: center;
+        border: 2px solid black;
+        height: 100%;
+        width:  110%;
+        padding: 3%;
+        position:relative;
+        right: 20%;
+        bottom: 10%;
+        background-color: rgb(215, 221, 226);
+        border-radius: 5%;
+        
+      }
+
+      /* #login{
+        margin-top: 10%;
+        
+      } */
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <p><h1><b>Register</b></h1></p>
+   <form>
+        <label name="FullName" for="FullName">
+        FullName :      
+        <input type="text" placeholder="Enter your FullName" id="name" required autocomplete="off">
+    </label>
+    <br><br>
+    <label name="dob" for="DOB">
+        DOB :      
+        <input type="date" placeholder="Enter your Date of Birth"  required autocomplete="off">
+    </label>
+    <br><br>
+    <label name="gender" for="Gender">
+        Gender :     
+        <input type="radio">Male
+        <input type="radio">Female
+    </label>
+    <br><br>
+    <label name="email" for="Email">
+        Email :     
+        <input type="email" placeholder="Enter your email id" id="email" required>
+    </label>
+    <br><br>
+    <label name="password" for="Password">
+        Password :      
+        <input type="password" placeholder="Enter your password" id="password" onmouseleave="passwordLength()" required>
+    </label>
+    <br><br>
+    <label name="repassword" for="RePassword">
+        Re-Enter Password :      
+        <input type="password" placeholder="Enter your  Re-Enter Password" id="repassword" onmouseleave="passwordMatch()" required>
+    </label>
+    <br><br>
+    <label name="submit" for="Sumbit">
+        <input type="submit" placeholder="Register" onclick="validate()">
+    </label><br><br>
+    <label name="login" for="LogIn">
+      Already Have Account? <a href="login.html">Log In Here</a>
+    </label>
+  </form>
+  <script>
+    let validate = ()=>{
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var rePassword = document.getElementById("repassword").value;
+    var emailRegExp = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+    var passRegExp = /^[a-zA-z0-9@.$#]{8,20}$/
+    if(name=="")
+    alert("Name should not be empty");
+    else if(!email.match(emailRegExp))
+    alert("Email is Not Valid");
+    else if(!password.match(passRegExp))
+    alert("Password is not Valid");
+    else if(!rePassword.match(passRegExp))
+    alert("Password is not Valid");
+    }
+    let passwordLength = () =>{
+        var password = document.getElementById("password").value;
+        if(password.length<6)
+        alert("Password Should contain more six characters");
+    }
+    let passwordMatch = () =>{
+        var password = document.getElementById("password").value;
+        var rePassword = document.getElementById("repassword").value;
+        if(rePassword!=password)
+        alert("Password MisMatch");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Class</title>
+</head>
+<body>
+    <h1 id="course">Course Details</h1>
+    <p class="para"></p>
+    <script>
+        class Course{
+            constructor(cNmae){
+                this.topic = cNmae;  
+            }
+            duration() {
+                return("<br>"+this.topic+" duration is 1 week");
+            }
+        }
+        let courseObj = new Course("React Topics");
+        document.getElementsByClassName("para")[0].innerHTML=courseObj.duration();
+    </script>
+</body>
+</html>

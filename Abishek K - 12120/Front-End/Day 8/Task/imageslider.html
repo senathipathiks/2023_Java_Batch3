@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Slider</title>
+  <link rel="stylesheet" type="text/css" href="imageslider.css">
+</head>
+<body>
+  <div class="slider-container">
+    <img src="image1.jpg" alt="Image 1">
+    <img src="image2.jpg" alt="Image 2">
+    <img src="image3.jpg" alt="Image 3">
+    <img src="image4.jpg" alt="Image 4">
+    <button class="prev-btn">Previous</button>
+    <button class="next-btn">Next</button>
+  </div>
+
+  <script>
+    const sliderImages = document.querySelectorAll('.slider-container img');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+let currentImageIndex = 0;
+
+function showImage(index) {
+  sliderImages.forEach((image) => {
+    image.classList.remove('active');
+  });
+
+  sliderImages[index].classList.add('active');
+}
+
+function showPrevImage() {
+  currentImageIndex--;
+  if (currentImageIndex < 0) {
+    currentImageIndex = sliderImages.length - 1;
+  }
+  showImage(currentImageIndex);
+}
+
+function showNextImage() {
+  currentImageIndex++;
+  if (currentImageIndex >= sliderImages.length) {
+    currentImageIndex = 0;
+  }
+  showImage(currentImageIndex);
+}
+
+prevBtn.addEventListener('click', showPrevImage);
+nextBtn.addEventListener('click', showNextImage);
+
+// Initial image display
+showImage(currentImageIndex);
+
+  </script>
+
+ 
+</body>
+</html>

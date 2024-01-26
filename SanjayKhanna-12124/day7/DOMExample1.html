@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p id="para1">This is Para1</p>
+    <p class="para2">This is Para2</p>
+    <p name="para3">This is Para3</p>
+    <script>
+        var p1 = document.getElementById("para1");
+        var p2 = document.getElementsByClassName("para2");
+        var p3 = document.getElementsByName("para3");
+        var p4 = document.getElementsByTagName("p");
+        document.write(p1.innerHTML+"<br>");
+        document.write(p2[0].innerHTML+"<br>");
+        document.write(p3[0].innerHTML+ "<br>");
+        document.write(p4[0].innerHTML+p4[1].innerHTML+p4[2].innerHTML);  
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function reversigno(i){
+
+        var res=0;
+       
+    while(i>0)
+      {
+        rem=i%10;
+        res=res*10+rem; //32 //320
+        i=Math.floor(i/10); //1  //
+      }
+       return res;
+    }
+    </script>
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write(reversigno(12345))
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function findUniqueCharacters(a, b) {
+    const combined = a + b;
+    const charCount = new Map();
+
+    // Count occurrences of each character
+    for (const char of combined) {
+        charCount.set(char, (charCount.get(char) || 0) + 1);
+    }
+
+    // Filter out characters that occur more than once
+    const uniqueChars = [...charCount.keys()].filter(char => charCount.get(char) === 1);
+
+    return uniqueChars.join('');
+}
+
+// Example usage:
+const stringA = 'hello';
+const stringB = 'world';
+const result = findUniqueCharacters(stringA, stringB);
+document.write('Unique characters:', result);
+
+    </script>
+</body>
+</html>

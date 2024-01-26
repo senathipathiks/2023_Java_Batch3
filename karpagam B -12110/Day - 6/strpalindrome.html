@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>String palindrome</title>
+    
+</head>
+<body>
+    <script>
+        var str="abba";
+        
+        const len = str.length
+
+        for ( let i = 0; i < len / 2; i++) {
+        if (str[i] !== str[len- 1 - i]) {
+            document.write("It is not a palindrome");
+            }
+           
+    }
+     document.write("It is a palindrome");
+
+    </script>
+    
+</body>
+</html>

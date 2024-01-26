@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LongString</title>
+    <script>
+        function Longstring(str)
+          {
+        var string1 =str.match(/\w[a-z]{0,}/gi);
+        var output = string1[0];
+
+         for(var k = 1 ; k< string1.length ; k++)
+         {
+          if(output.length < string1[k].length)
+         {
+         output= string1[k];
+         } 
+         }
+         return"Longest String is : "+ output;
+        }
+    </script>
+</head>
+<body>
+    <script>
+     document.write(Longstring('I am working in batch 3'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+<script>
+
+</script>
+    </head>
+    <body>
+  
+<script>
+        let str = ("Hi I am Sherin DhanyaDhanu");
+        document.write("String : "+str);
+        var arr = str.split(" ");
+        let pos=0;
+        for(i=0;i<arr.length-1;i++)
+        {
+            if(arr[i].length < arr[i+1].length)
+                pos=i+1;
+        }
+        document.write("<br>Longest word : "+arr[pos]);
+    </script>
+        </script>
+    </body>
+</html>

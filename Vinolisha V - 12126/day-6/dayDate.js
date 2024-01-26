@@ -1,0 +1,2 @@
+console.log("Today:"+new Date().toLocaleDateString('en-us', { weekday : 'long'}));
+console.log("current Date is "+new Date().toLocaleString('en-us',{day: '2-digit'})+" :"+new Date().toLocaleString('en-us',{year: '2-digit'}));

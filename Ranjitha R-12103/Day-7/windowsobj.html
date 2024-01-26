@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <script>
+            var a=prompt("Enter your name");
+            alert("Hello "+a);
+            function form(){
+                var b=confirm("Are you sure to open Gmail !!!");
+                if(b==true)
+                    open("http://www.gmail.com");
+                    else
+                    open("http://www.google.com");
+            }
+        </script>
+        <form >
+            <button onclick="form()"> Click to open Gmail</button>
+        </form>
+    </body>
+</html>

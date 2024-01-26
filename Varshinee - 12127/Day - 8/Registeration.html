@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .reg {
+            border:4px solid black;
+            position: absolute;
+            left: 30%;
+            top: 20%;
+            padding-right: 5%;
+           
+
+            font-style: oblique;
+        } 
+        body{
+            background-image: url(https://c1.wallpaperflare.com/preview/224/10/460/hospital-ward-hospital-medical-room.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        }
+        .a{
+            color: black;
+        }
+    
+    </style>
+    <title>Registeration</title>
+    <h1  text align="center"> Registeration Portal</h1>
+    <script>
+        function Validation()
+        {
+            var emailRegEx ='^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$'; 
+            var passwordRegEx = '^[a-zA-Z0-9!@#$%^&*]{6,16}$';
+            var email = document.getElementById("email").value;
+            var pwd = document.getElementById("pwd").value;
+            var cpwd = document.getElementById("cpwd").value;
+            var address = document.getElementById("address").value;
+            // var submit=document.getElementById("submit").value
+            if(email == ""){
+                alert("Email can not be empty");
+            }
+            else if(! email.match(emailRegEx)){
+                alert("Enter valid email address")
+            }
+             else if(pwd == ""){
+                alert("Create your strong password");
+            }
+            else if(pwd.length <6 && ! pwd.match(passwordRegEx)){
+                alert("Enter Valid Password!")
+            }
+            else if(cpwd == ""){
+                alert(" enter your confirm Password");
+            }
+            else if(cpwd.length <6 && ! cpwd.match(passwordRegEx)){
+                alert("Enter Valid  Password!")
+            }
+           
+            else if(address == ""){
+                alert(" enter your current Address");
+            }
+       
+        }
+       
+    </script>
+</head>
+<body>
+            <div class="reg">
+                <form>
+               
+                    Enter Your E-Mail ID: <br> <input type="Text" id="email" /><br/> <br>
+                    Create your Password : <br> <input type="password" id="pwd" /><br/> <br>
+                    Confirm Your password : <br><input type="Text" id="cpwd" />  <br> <br>
+                    Enter Your Address : <br><textarea type="Text" id="address" col="1" row="3"></textarea> <br>  <br>
+                   <input type="Reset">  
+                   <button onclick="Validation()">Register</button> <br>
+            
+                   If you have already account,click
+                   <td> <a class="aStyle" href="LoginPage.html">Login </a></td>
+          
+            
+    </form>   
+    </div>
+    
+</body>
+</html>

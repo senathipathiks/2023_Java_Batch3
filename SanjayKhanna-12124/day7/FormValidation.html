@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form>
+        <label>
+            First Name : 
+            <input type="text" id="fName" required>
+        </label><br><br>
+        <label>
+            Last Name : 
+            <input type="text" id="lName" required>
+        </label><br><br>
+        <label>
+            Age : 
+            <input type="number" id="age" required>
+        </label><br><br>
+        <label>
+            Email: 
+            <input type="text" id="email" required>
+        </label><br><br>
+        <label>
+            Password : 
+            <input type="password" id="password" required>
+        </label><br><br>
+        <label>
+            <button onclick="validate()">Register</button>
+        </label><br><br>
+    </form>
+    <script>
+        function validate(){
+            var fName = document.getElementById("fName").value;
+            var lName = document.getElementById("lName").value;
+            var age = document.getElementById("age").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var emailRegExp = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+            var passRegExp = /^[a-zA-z0-9@.$#]{8,20}$/
+            if(fName=="")
+            window.alert("First Name not be Empty");
+            else if(lName=="")
+            window.alert("Last Name not be Empty");
+            else if(lName.length==1)
+            window.alert("Last Name not be a Single Character");
+            else if(age<=0)
+            window.alert("Age is Cannot be a Zero 0r Negative");
+            else if(!email.match(emailRegExp))
+            window.alert("Email is Not Valid");
+            else if(!password.match(passRegExp))
+            window.alert("Password is not Valid");
+            else
+            window.alert("Registration Successful")
+        }
+    </script>
+</body>
+</html>

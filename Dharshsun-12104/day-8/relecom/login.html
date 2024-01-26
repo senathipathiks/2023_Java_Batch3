@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <head>
+        <style>
+            * {box-sizing: border-box}
+    
+    /* Add padding to containers */
+    .container {
+      padding: 16px;
+    }
+    
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+    
+    input[type=text]:focus, input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+    
+    /* Overwrite default styles of hr */
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+    
+    /* Set a style for the submit/register button */
+    button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+    
+    button:hover {
+      opacity:1;
+    }
+   
+        </style>
+</head>
+<body><a href="load.html" target="link.html"></a></body>
+<form>  
+    <div class="container">   
+        <label>Email : </label>   
+        <input type="text" placeholder="Enter Email" name="email" id="email" required>  
+        <label>Password : </label>   
+        <input type="password" placeholder="Enter Password" name="password"  id="password"required>  
+        <button type="submit" onclick="validate()">Login</button>   
+        <input type="checkbox" checked="checked"> Remember me   
+     
+    </div>   
+</form>  
+<script>
+  let validate = ()=>{
+    var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var emailRegExp = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+        var passRegExp = /^[a-zA-z0-9@.$#]{8,20}$/
+        if(!email.match(emailRegExp))
+        alert("Email is Not Valid");
+        else if(!password.match(passRegExp))
+        alert("Password is not Valid");
+        else{
+        alert("Login Successful");
+  }
+}
+</script>  
+</html> 

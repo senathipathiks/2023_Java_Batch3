@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking</title>
+    <style>
+        .additional-buttons {
+            margin-top: 20px;
+        }
+
+        .additional-buttons button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        input {
+            background-color: #d9d2d4;
+            color: #000000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        body{
+            padding-top: 50px;
+            padding-left: 500px;
+            background-image: url('https://notlost.com/wp-content/uploads/Theme-Park-1050x675.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: large;
+        }
+        table{
+            background-color: #fff;
+            opacity: 70%;
+        }
+        a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        a:hover{
+            color: rgb(0, 4, 255);
+        }
+
+        .additional-buttons button:hover{
+            color: blue;
+        }
+        button#submit{
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            position: right;
+        }
+        #submit:hover{
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Ticket Booking Page</h2>
+    <table>
+        <tr>
+        <td>No of Ticket :</td>
+        <td><input type="text" id="ticketNumber" name="ticketNumber" placeholder="Enter ticket number" required></td>
+        </tr>
+        <tr>
+        <td>No of Adult :</td>
+        <td><input type="number" id="adult" name="adult" placeholder="Enter No of Adult"></td>
+        </tr>
+        <tr>
+        <td>No of child :</td>
+        <td><input type="number" id="child" name="child" placeholder="Enter No of Child"></td>
+        </tr>
+        <tr>
+        <td>Contact Number :</td>
+        <td><input type="number" id="contactNumber" name="ContactNumber" placeholder="Enter contact number" required></td>
+        </tr>
+        <tr>
+        <td>Email :</td>
+        <td><input type="email" id="email" name="email" placeholder="Enter your email id" required></td>
+        </tr>
+        <tr>
+        <td id="submit"><button type="submit" id="submit">Submit</button></td>
+        </tr>
+    </table>
+    <div class="additional-buttons">
+        <button id="printTicket">Print Ticket</button>
+        <button id="download">Download</button>
+        <button id="back"><a href="HomePage.html">Home</a></button>
+    </div>
+</body>
+</html>

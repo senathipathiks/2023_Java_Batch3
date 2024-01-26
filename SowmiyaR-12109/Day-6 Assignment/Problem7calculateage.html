@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      function CalculateAge(data) {
+    let today = new Date();
+    let birthDate = new Date(data);
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
+    return age;
+}
+</script>
+</head>
+<body>
+    <script>
+        let res=CalculateAge(("04/02/2005"));
+document.write(res);
+</script>
+    
+</body>
+</html>

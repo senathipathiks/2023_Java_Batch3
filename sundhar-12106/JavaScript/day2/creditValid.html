@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creditValidation</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0%;
+            /* font-size: 1em; */
+        }
+        .blk{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            border: 2px solid red;
+            height: 300px;
+            width: 350px;
+            display: flex;
+            align-items: center;
+            flex-direction: inherit;
+            justify-content: center;
+        }
+        #cvv{
+            width: 50px;
+            /* margin-left: -90px; */
+        }
+        .in{
+            display: inline;
+        }
+        #cv{
+            margin-right: 100px;
+        }
+        #exp{
+            margin-left: 20px;
+        }
+        #val,#num{
+            font-size: 1em;
+            height: 30px;
+            width: 220px;
+        }
+    </style>
+</head>
+<body>
+    <div class="blk">
+        <h1>Credit Card Validation</h1>
+        <section class="container">
+            <label for="num">enter card number</label>
+            <input id="num" type="text" placeholder="enter 16 digit card number"> <br><br>
+            <div class="in">
+                <label id="cv" for="cvv">CVV</label> <label for="exp">expiry date</label>
+            </div>    
+            <div class="in">
+                <!-- <label for="cvv">CVV</label> <label for="expiry date"></label> -->
+                <input type="text" id="cvv" placeholder="CVV">
+                <input type="month" id="exp" placeholder="enter expiry date"> <br><br>
+            </div>
+            <input id="val" onclick="validate()" type="submit" value="validate">
+            <br><br>
+            <span id="res"></span>
+            <!-- <hr> -->
+        </section>
+    </div>
+    <script src="./creditValid.js"></script>
+</body>
+</html>

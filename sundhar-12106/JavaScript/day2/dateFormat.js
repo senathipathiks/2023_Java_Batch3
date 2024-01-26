@@ -1,0 +1,2 @@
+console.log("DD:MM:YY, HH:MM:SS");
+console.log(new Date().toLocaleString('en-us',{ day : '2-digit'})+":"+new Date().toLocaleString('en-us',{ month : '2-digit'})+":"+new Date().toLocaleString('en-us',{ year : '2-digit'})+", "+new Date().getHours()+":"+new Date().toLocaleString('en-us',{ minute : '2-digit'})+":"+new Date().toLocaleString('en-us',{ second : '2-digit'}));

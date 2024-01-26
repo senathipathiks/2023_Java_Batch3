@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Spread</title>
+</head>
+<body>
+    <script>
+        function display(message,r,...Colors){
+            document.write("<br>"+message+" : "+r+", "+Colors[0]+", "+Colors[1]);
+        }
+        let message = "List of Colors";
+        const Colors = ["Red","Green","Blue"];
+        display(message,...Colors);
+    </script>
+</body>
+</html>

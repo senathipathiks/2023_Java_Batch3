@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed</title>
+</head>
+<body>
+    <script>
+        function speedCheck(speed){             //function definition
+            if(speed<=50)
+            document.write("<br>Safe Driving");
+            else if((speed>50)&&(speed<=60))                //if-else ladder
+            document.write("<br>Drive Safely");
+            else if((speed>60)&&(speed<=70))
+            document.write("<br>Speed Limit Crossed, reduce your Speed !!!");
+            else
+            document.write("<br>Over speed !!!");
+        }
+
+        speedCheck(45);                 //function call
+        speedCheck(100); 
+    </script>
+</body>
+</html>

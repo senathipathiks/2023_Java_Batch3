@@ -1,0 +1,28 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+// import App from './App';
+import reportWebVitals from './reportWebVitals';
+import FirstComponent from './components/FirstComponent';
+import MyClass from './components/MyClass';
+import Myapp from './components/Myapp';
+import Mylogin from './components/Mylogin';
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    {/* <App/> */}
+    <FirstComponent/>
+    <MyClass/>
+    <Myapp/>
+    <Mylogin />
+   
+    
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();

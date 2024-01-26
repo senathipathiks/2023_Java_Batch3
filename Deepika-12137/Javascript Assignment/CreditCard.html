@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardNumber</title>
+</head>
+<body>
+    <script>
+        function validateCreditCardNumber(cardNumber) {
+            var len = cardNumber.length;
+            var parity = len % 2;
+            var sum = 0;
+
+            for (var i = len - 1; i >= 0; i--) {
+                var digit = parseInt(cardNumber.charAt(i), 10);
+
+                if (i % 2 == parity) {
+                    digit *= 2;
+                }
+
+                if (digit > 9) {
+                    digit -= 9;
+                }
+
+                sum += digit;
+            }
+
+        return (sum % 10) == 0;
+        }
+
+        var cardNumber = "506245623018";
+        if (validateCreditCardNumber(cardNumber)) {
+            document.write("Card number is valid.");
+        } else {
+            document.write("Card number is invalid.");
+        }
+
+    </script>
+</body>
+</html>

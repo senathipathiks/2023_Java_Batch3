@@ -1,0 +1,37 @@
+<!-- 14. you will be given two strings a and b and your task is to return the characters that are not common in the two strings. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function UncommonString(a, b) {
+          let temp = [];
+          for (let i = 0; i < a.length; i++) {
+          if (!b.includes(a[i])) {
+          temp.push(a[i]);
+               }
+           }
+           for (let i = 0; i < b.length; i++) {
+          if (!a.includes(b[i])) {
+          temp.push(b[i]);
+              }
+          }
+          return temp.join('');
+      }
+  
+      </script>
+</head>
+<body>
+    <script>
+        let a="sowmiya";
+        let b="Hari";
+        let res=UncommonString(a,b)
+        document.write("String 1: "+a+"</br>"+"String 2:"+b+"</br>"+"uncommon string is :"+res);
+        
+    </script>
+    
+</body>
+</html>

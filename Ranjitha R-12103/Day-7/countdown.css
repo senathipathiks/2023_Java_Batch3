@@ -1,0 +1,26 @@
+
+    #timer {
+      font-size: 50px;
+      text-align: center;
+    }
+    #controls {
+      display: flex;
+      justify-content: center;
+    }
+    #controls button {
+      font-size: 20px;
+      margin: 10px;
+    }
+    #body{
+    background-color: aquamarine;
+
+    }
+    h1{
+      justify-content: center;
+      padding-left: 530px;
+    }
+    button{
+      color: brown;
+      background-color: lightslategray;
+      text-shadow: 2px;
+    }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+        $ (document).ready(function(){
+            $("#btn1").click(function(){
+                $("#para1").append("<b>created by Deepika suresh") 
+            })
+        })
+        $ (document).ready(function(){
+            $("#btn2").click(function(){
+                $("#para1").prepend("<b>Relevantz Welcomes you") 
+            })
+        })
+        $ (document).ready(function(){
+            $("#btn3").click(function(){
+                $("#para1").remove 
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <P id="para1">This My Paragraph</P>
+    <input type="button" id="btn1" value="append text">
+    <input type="button" id="btn2" value="prepend text">
+    <input type="button" id="btn3" value="remove text">
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script>
+        function Validation()
+        {
+            var emailRegEx ='^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$'; //'[a-z0-9]+@[a-z]+\.[a-z]{2,3}$';
+            var passwordRegEx = '^[a-zA-Z0-9!@#$%^&*]{6,16}$';
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("pwd").value;
+            if(fname == ""){
+                alert("First name can not be empty");
+            }
+            else if(lname == ""){
+                alert("Last name can not be empty");
+            }
+            else if(email == ""){
+                alert("Email can not be empty");
+            }
+            else if(! email.match(emailRegEx)){
+                alert("Enter valid email address")
+            }
+        
+            else if(password == ""){
+                alert("Password is must");
+            }
+            else if(password.length <6 && ! password.match(passwordRegEx)){
+                alert("Enter Valid Password!")
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <form>
+            Enter Your First Name : <input type="Text" id="fname" /> <br><br/>
+            Enter Your Last Name : <input type="Text" id="lname" /><br><br/>
+            Enter Your E-Mail ID: <input type="Text" id="email" /><br><br/>
+            Enter Your Password : <input type="password" id="pwd" /><br><br/>
+            <input type="Button" Value="Register" onclick="Validation()" /><br><br/>
+            
+        </form>
+    </body>
+</html>

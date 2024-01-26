@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let today = new Date();
+        let day = today.getDate();
+        let mon = today.getMonth()+1;
+        let year = parseInt(today.getFullYear());
+        let hour = today.getHours();
+        let min = today.getMinutes();
+        let sec = today.getSeconds();
+        document.write("DD : MM : YY, HH : MM : SS<br>");
+        document.write(day+" : "+mon+" : "+(year%100)+" , "+hour+" : "+min+" : "+sec);
+    </script>
+</body>
+</html>

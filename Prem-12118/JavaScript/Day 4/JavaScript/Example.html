@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+  <script>
+    let n=4;
+    let result=1;
+
+  for (let i = 1; i <= n; i++) {
+    result = result * i;
+  }
+  
+    document.write("The factorial of the nuumber of 4 is:"+result +"<br/>");
+
+    
+
+    let i=10;
+
+    while(i>=1) 
+    {     
+     document.write("page:" +i+"<br\>");
+     i--;
+    }   
+
+  </script>
+  <script>
+   
+    function reversing(i){
+        var res=0;
+        while(i>0)
+        {
+            rem=i%10;
+            res=res*10+rem;
+            i=Math.floor(i/10);
+        }
+        return res;
+    }
+
+  </script>
+
+  <script>
+    document.write("The reversed number:"+reversing(123)+"<br/>");
+  </script>
+
+<script>
+    var names =[ "Arun","prem","suriya"];
+    for (i=0;i<names.length;i++){
+
+        document.write( "The elemnts inside the array: "+names[i]+"<br/>")
+    }
+</script>
+
+<script>
+    let str = "Hello";
+ document.write(str.charAt(0));  
+
+</script>
+
+<script>
+ let str1="Hello";
+ document.write();
+</script>
+</body>
+
+
+</html>

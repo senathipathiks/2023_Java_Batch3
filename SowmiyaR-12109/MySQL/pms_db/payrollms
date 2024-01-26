@@ -1,0 +1,197 @@
+-- MySQL dump 10.13  Distrib 8.0.35, for Win64 (x86_64)
+--
+-- Host: localhost    Database: payrollms
+-- ------------------------------------------------------
+-- Server version	8.0.35
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `account`
+--
+
+DROP TABLE IF EXISTS `account`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `account` (
+  `accno` int NOT NULL,
+  `accname` varchar(100) DEFAULT NULL,
+  `empid` int DEFAULT NULL,
+  PRIMARY KEY (`accno`),
+  KEY `empid` (`empid`),
+  CONSTRAINT `account_ibfk_1` FOREIGN KEY (`empid`) REFERENCES `employee` (`empid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `account`
+--
+
+LOCK TABLES `account` WRITE;
+/*!40000 ALTER TABLE `account` DISABLE KEYS */;
+INSERT INTO `account` VALUES (331212009,'priyanka',1),(331212119,'kalpana',2),(331212129,'priya',3),(331212229,'Ram',4),(1212121289,'kaviya',5);
+/*!40000 ALTER TABLE `account` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `admin`
+--
+
+DROP TABLE IF EXISTS `admin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `admin` (
+  `Adminid` int NOT NULL,
+  `Adminname` varchar(10) DEFAULT NULL,
+  `phoneno` int DEFAULT NULL,
+  `city` varchar(10) DEFAULT NULL,
+  `sal` int DEFAULT NULL,
+  `empid` int DEFAULT NULL,
+  PRIMARY KEY (`Adminid`),
+  KEY `empid` (`empid`),
+  CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`empid`) REFERENCES `employee` (`empid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `admin`
+--
+
+LOCK TABLES `admin` WRITE;
+/*!40000 ALTER TABLE `admin` DISABLE KEYS */;
+INSERT INTO `admin` VALUES (1,'Hari',787878778,'chennai',100,1),(2,'magesh',337878778,'mumbai',200,2),(3,'Ram',997878778,'pune',300,3);
+/*!40000 ALTER TABLE `admin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `attendance`
+--
+
+DROP TABLE IF EXISTS `attendance`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `attendance` (
+  `empid` int DEFAULT NULL,
+  `empname` varchar(100) DEFAULT NULL,
+  `Intime` int DEFAULT NULL,
+  `Outtime` int DEFAULT NULL,
+  KEY `empid` (`empid`),
+  CONSTRAINT `attendance_ibfk_1` FOREIGN KEY (`empid`) REFERENCES `employee` (`empid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `attendance`
+--
+
+LOCK TABLES `attendance` WRITE;
+/*!40000 ALTER TABLE `attendance` DISABLE KEYS */;
+INSERT INTO `attendance` VALUES (1,'priya',9,6),(2,'priyanka',9,6),(3,'ram',9,6),(4,'kalpana',9,6),(5,'kaviya',8,6);
+/*!40000 ALTER TABLE `attendance` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `employee`
+--
+
+DROP TABLE IF EXISTS `employee`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `employee` (
+  `empid` int NOT NULL,
+  `empname` varchar(100) DEFAULT NULL,
+  `empphoneno` int DEFAULT NULL,
+  `empaddress` varchar(100) DEFAULT NULL,
+  `empsal` int DEFAULT NULL,
+  `empemailid` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`empid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `employee`
+--
+
+LOCK TABLES `employee` WRITE;
+/*!40000 ALTER TABLE `employee` DISABLE KEYS */;
+INSERT INTO `employee` VALUES (1,'kaviya',898989898,'madurai',1000,'kaviya@gmail.com'),(2,'kalpana',778989898,'dubai',2000,'kalpana@gmail.com'),(3,'priya',888989898,'canada',3000,'priya@gmail.com'),(4,'priyanka',988989898,'bangalore',4000,'priyanka@gmail.com'),(5,'ram',668989898,'vadallur',8000,'ram@gmail.com');
+/*!40000 ALTER TABLE `employee` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `payrollslip`
+--
+
+DROP TABLE IF EXISTS `payrollslip`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `payrollslip` (
+  `empid` int DEFAULT NULL,
+  `empname` varchar(200) DEFAULT NULL,
+  `sal` int DEFAULT NULL,
+  `deduction` int DEFAULT NULL,
+  `total` int DEFAULT NULL,
+  KEY `empid` (`empid`),
+  CONSTRAINT `payrollslip_ibfk_1` FOREIGN KEY (`empid`) REFERENCES `employee` (`empid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `payrollslip`
+--
+
+LOCK TABLES `payrollslip` WRITE;
+/*!40000 ALTER TABLE `payrollslip` DISABLE KEYS */;
+INSERT INTO `payrollslip` VALUES (1,'priya',100,20,80),(2,'priyanka',200,20,180),(3,'ram',500,20,480),(4,'kalpana',900,20,880),(5,'kaviya',1000,20,980);
+/*!40000 ALTER TABLE `payrollslip` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `salary`
+--
+
+DROP TABLE IF EXISTS `salary`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `salary` (
+  `Empid` int DEFAULT NULL,
+  `saldeduct` int DEFAULT NULL,
+  `salBonus` int DEFAULT NULL,
+  `accno` int DEFAULT NULL,
+  `saldate` date DEFAULT NULL,
+  KEY `Empid` (`Empid`),
+  KEY `accno` (`accno`),
+  CONSTRAINT `salary_ibfk_1` FOREIGN KEY (`Empid`) REFERENCES `employee` (`empid`),
+  CONSTRAINT `salary_ibfk_2` FOREIGN KEY (`accno`) REFERENCES `account` (`accno`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `salary`
+--
+
+LOCK TABLES `salary` WRITE;
+/*!40000 ALTER TABLE `salary` DISABLE KEYS */;
+INSERT INTO `salary` VALUES (1,1000,500,NULL,NULL),(2,2000,500,NULL,NULL),(3,1500,500,NULL,NULL),(4,1500,500,NULL,NULL),(5,1500,500,NULL,'0001-02-24');
+/*!40000 ALTER TABLE `salary` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2024-01-19 17:01:04

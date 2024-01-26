@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+          $(document).ready(function(){
+            $("#btn").click(function(){
+                var x=parseInt($("#t1").val());
+                var y=parseInt($(".t2").val());
+                var z=x+y;
+                $("#t3").val(z);
+
+                 });
+            });
+         </script>
+
+        <!-- <script>
+         function sum()
+       {
+           var x=parseInt(document.getElementById("num1").value);
+           var y=parseInt(document.getElementById("num2").value);
+           var z=x+y;
+           document.getElementById("total").value=z;
+       } -->
+
+   
+
+    </head>
+    <body>
+     <form>
+            Enter Number 1: <input type="Text" id="t1" /> <br/><br>
+            Enter Number 2: <input type="Text" class="t2" /><br/><br>
+            <input type="Button" Value="Calculate Sum" id="btn" /><br/><br>
+            Sum: <input type="Text" id="t3" />
+     </form>
+    </body>
+</html>

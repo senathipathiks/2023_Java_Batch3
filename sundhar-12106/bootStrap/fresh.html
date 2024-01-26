@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>fresh</title>
+    <style>
+      .slider {
+        width: 100%;
+        height: 510px;
+        position: relative;
+      }
+
+      .slider img {
+        width: 100%;
+        height: 500px;
+        border-radius: 4px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* transition: all 0.5s ease-in-out; */
+      }
+
+      .slider img:first-child {
+        z-index: 1;
+      }
+
+      .slider img:nth-child(2),.slider img:nth-child(3) {
+        z-index: 1;
+      }
+
+      .navigation-button {
+        text-align: center;
+        position: relative;
+      }
+
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        /* position: relative; */
+        z-index: 0;
+      }
+
+      .active,
+      .dot:hover {
+        background-color: #717171;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="border-bottom">
+      <div class="container-fluid bg-light flex-row d-inline-flex">
+        <div class="container">Super Value Deals - Save more with coupons</div>
+        <div class="container d-flex justify-content-end dropdown">
+          <select
+            name="lang"
+            id="language"
+            class="btn btn-sm bg-transparent text-reset"
+          >
+            <option class="dropdown-item">Tamil</option>
+            <option class="dropdown-item">English</option>
+          </select>
+        </div>
+      </div>
+      <div class="container">
+        <div class="container p-3 row">
+          <div class="container row align-items-center w-100">
+            <div class="nav col-3">
+              <img
+                src="https://freshcart.codescandy.com/assets/images/logo/freshcart-logo.svg"
+                alt=""
+              />
+            </div>
+            <div class="col-5 d-none d-lg-block">
+              <input
+                type="text"
+                class="rounded border p-2 w-100"
+                placeholder="Search for products"
+              />
+            </div>
+            <div class="col-2 d-none d-lg-block">
+              <!-- <input type="text" class="rounded border" placeholder="location"/> -->
+              <button class="btn btn-outline-grey btn-outline-dark">
+                <i class="fa-solid fa-location-dot"></i>
+                location
+              </button>
+            </div>
+            <div class="col-1 d-none d-sm-flex gap-3 justify-content-end">
+              <a href="#" class="text-reset"
+                ><i class="fa-regular fa-heart"></i
+              ></a>
+              <a href="#" class="text-reset"
+                ><i class="fa-regular fa-user"></i
+              ></a>
+              <a href="#" class="text-reset"
+                ><i class="fa-solid fa-bag-shopping"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="container row-cols-1">
+          <div class="container d-flex align-items-center">
+            <button
+              class="btn text-light col-2"
+              style="background-color: rgb(21, 141, 31)"
+            >
+              <i class="fa-solid fa-bars"></i>
+              <span class="fw-bold">All departments</span>
+            </button>
+            <div class="container row-cols-5 m-4">
+              <ul class="navbar-nav d-flex gap-4 list-group-horizontal">
+                <a href="#" class="text-reset nav-link dropdown-toggle"
+                  ><li class="list-group-item d-inline-block">Home</li>
+                </a>
+                <a href="#" class="text-reset nav-link dropdown-toggle"
+                  ><li class="list-group-item d-inline-block">Shop</li></a
+                >
+                <a href="#" class="text-reset nav-link dropdown-toggle"
+                  ><li class="list-group-item d-inline-block">Stores</li></a
+                >
+                <a href="#" class="text-reset nav-link dropdown-toggle"
+                  ><li class="list-group-item d-inline-block">megaMenu</li></a
+                >
+                <a href="#" class="text-reset nav-link dropdown-toggle"
+                  ><li class="list-group-item d-inline-block">Pages</li></a
+                >
+                <a href="#" class="text-reset nav-link dropdown-toggle"
+                  ><li class="list-group-item d-inline-block">Account</li></a
+                >
+                <a href="#" class="text-reset nav-link dropdown-toggle"
+                  ><li class="list-group-item d-inline-block">Dashboard</li></a
+                >
+                <a href="#" class="text-reset nav-link dropdown-toggle"
+                  ><li class="list-group-item d-inline-block">Docs</li></a
+                >
+              </ul>
+              <div class="container col-3 ">
+                <input type="text">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- main-block -->
+
+    <main>
+      <section class="mt-5">
+        <div class="container">
+          <div class="">
+            <div class="slider">
+              <!-- <span class="dot"></span> -->
+              <img id="img-1" src="./fresh1.png" alt="Image 1" />
+              <img id="img-2" src="./fresh2.png" alt="Image 2" />
+              <!-- <img
+                id="img-3"
+                src="https://cdn.pixabay.com/photo/2016/11/06/05/36/lake-1802337_1280.jpg"
+                alt="Image 3"
+              /> -->
+              <div class="navigation-button">
+                <span class="dot active" onclick="changeSlide(0)"></span>
+                <span class="dot" onclick="changeSlide(1)"></span>
+                <!-- <span class="dot" onclick="changeSlide(2)"></span> -->
+                <!-- <span class="dot" onclick="changeSlide(10)">S</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <div class="row">
+          <div class="col-3 container p-5 ">
+            <img src="	https://freshcart.codescandy.com/assets/images/icons/clock.svg" alt="img-1"><br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, labore? Lorem ipsum dolor sit amet.</div>
+          <div class="col-3 container p-5 ">
+            <img src="https://freshcart.codescandy.com/assets/images/icons/gift.svg" alt="img-1"><br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, labore? Lorem ipsum dolor sit amet.</div>
+          <div class="col-3 container p-5 ">
+            <img src="	https://freshcart.codescandy.com/assets/images/icons/package.svg" alt="img-1"><br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, labore? Lorem ipsum dolor sit amet.</div>
+          <div class="col-3 container p-5 ">
+            <img src="https://freshcart.codescandy.com/assets/images/icons/refresh-cw.svg" alt="img-1"><br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, labore? Lorem ipsum dolor sit amet.</div>
+        </div>
+      </div>
+    </main>
+
+    <div
+      class="container-fluid d-flex bg-dark bg-opacity-25 py-5 align-items-center justify-content-between"
+    >
+      <div class="container row g-4 py-4 border-1 border-black">
+        <div class="col-4">
+          <ul class="list-group">
+            <h6>catergories</h6>
+            <li class="list-group">items</li>
+            <li class="list-group">items</li>
+            <li class="list-group">items</li>
+            <li class="list-group">items</li>
+            <li class="list-group">items</li>
+          </ul>
+        </div>
+        <div class="col-8">
+          <ul class="list-group">
+            <h6>Products</h6>
+
+            <li class="list-group">items</li>
+            <li class="list-group">items</li>
+            <li class="list-group">items</li>
+            <li class="list-group">items</li>
+            <li class="list-group">items</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-2">
+        <ul class="list-group">
+          <h6>Get to know us</h6>
+          <li class="list-group">items</li>
+          <li class="list-group">items</li>
+          <li class="list-group">items</li>
+          <li class="list-group">items</li>
+          <li class="list-group">items</li>
+        </ul>
+      </div>
+      <div class="col-2">
+        <ul class="list-group">
+          <h6>For Customers</h6>
+          <li class="list-group">items</li>
+          <li class="list-group">items</li>
+          <li class="list-group">items</li>
+          <li class="list-group">items</li>
+          <li class="list-group">items</li>
+        </ul>
+      </div>
+      <div class="col-2">
+        <ul class="list-group">
+          <h6>Become a Shopper</h6>
+          <li class="list-group">items</li>
+          <li class="list-group">items</li>
+          <li class="list-group">items</li>
+          <li class="list-group">items</li>
+          <li class="list-group">items</li>
+        </ul>
+      </div>
+      <div class="col-2">
+        <ul class="list-group">
+          <h6>Fresh cart programs</h6>
+          <li class="list-group">items</li>
+          <li class="list-group">items</li>
+          <li class="list-group">items</li>
+          <li class="list-group">items</li>
+          <li class="list-group">items</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- js -->
+    <script>
+      var currentImg = 0;
+      var imgs = document.querySelectorAll(".slider img");
+      let dots = document.querySelectorAll(".dot");
+      var interval = 2000;
+
+      var timer = setInterval(changeSlide, interval);
+
+      function changeSlide(n) {
+        console.log(imgs.length);
+        for (var i = 0; i < imgs.length; i++) {
+          imgs[i].style.opacity = 0;
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        currentImg = (currentImg + 1) % imgs.length;
+
+        if (n != undefined) {
+          clearInterval(timer);
+          timer = setInterval(changeSlide, interval);
+          currentImg = n;
+        }
+
+        imgs[currentImg].style.opacity = 1;
+        dots[currentImg].className += " active";
+      }
+    </script>
+  </body>
+</html>

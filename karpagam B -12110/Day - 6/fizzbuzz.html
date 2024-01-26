@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Fizz Buzz</title>
+    <script>
+        function fizz(n){
+                if(n%2===0){
+                    return'fizz';
+                }
+                 else if(n%3===0){
+                    return'Buzz';
+                }
+                else if( n%2===0 && n%3===0){
+                    return'Fizz Buzz';
+                }     
+                else if(typeof n !=='number')   {
+                    return'Not a Number';
+                }
+                else{
+                    return n.toString();
+                }        
+            }
+</script>
+</head>
+<body>
+    <script>
+        let output= fizz(15);
+        document.write(output);
+    </script>
+</body>
+</html>

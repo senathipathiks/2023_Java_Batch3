@@ -1,0 +1,35 @@
+#vikky{
+    background-color: red;
+    margin-top: 40px;
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#mail{
+    width:250px;
+    border-style: hidden;
+}
+
+#em{
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border-style: none;
+    border:hotpink;
+    background-color: white;
+    
+}
+
+#add{
+    margin-bottom: 30px;
+}
+
+#bottom{
+    margin-bottom: 30px;
+}
+body{
+    background-color: #e4e4e4;
+}

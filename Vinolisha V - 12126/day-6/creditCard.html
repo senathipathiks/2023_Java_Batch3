@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit card validation</title>
+</head>
+<body>
+   <table>
+    <tr>
+        <td>Credit card number :</td>
+        <td><input type="number" placeholder="Enter the Credit card Number" id="cardNumber" required></td>
+        <td><button type="submit" onclick="validate()">Submit</button></td>
+    </tr>
+   </table> 
+   <script>
+    function validate(){
+        let defaultCardNo = /^[0-9]{16}$/;
+        let cardNo = parseInt(document.getElementById("cardNumber").value);
+        if(defaultCardNo.test(cardNo))
+            alert("Validation Success");
+        else
+            alert("Validation fails");
+    }
+   </script>
+</body>
+</html>

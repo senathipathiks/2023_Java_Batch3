@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      /* .new{
+        border: 3px solid rgb(59, 4, 4);
+        position: absolute;
+        left: 40%;
+        top: 35%;
+        text-align:justify;
+        height: 150px;
+        text-align: center; */
+        /* background-color: rgba(107, 185, 204, 0.445); */
+       
+        
+        
+        .user{
+          font-style:italic;
+          color: rgb(10, 22, 56);
+          padding-top: 5%;
+        }
+        .name{
+          padding-top: 5%;
+        }
+       
+  
+
+        body{
+          background-image: url(https://www.shutterstock.com/image-photo/doctor-works-management-mechanism-medical-260nw-1549990442.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          margin-top: 5%;
+          text-align: ce;
+
+        }
+        h1{
+          text-align: center;
+        }
+
+        form{
+        /* background-color: aliceblue; */
+        text-align: center;
+        border: 2px solid black;
+        height: 70%;
+        width:  40%;
+        padding: 3%;
+        position:relative;
+        right: 20%;
+        bottom: 5%;
+        background-color: rgb(215, 221, 226);
+        border-radius: 5%;
+        left: 27%;
+        /* text-align: center; */
+        
+
+        
+      }
+
+      .r1{
+        margin-right: 10%;
+      }
+
+    </style>
+   
+    <title>Document</title>
+  </head>
+  <body>
+
+    
+    <body>
+      <h1>Login</h1>
+      <form>
+       <label name="username" for="UserName">
+           Email ID :     
+           <input type="email" placeholder="Enter your email id" id="email" required>
+       </label>
+       <br><br>
+       <label name="password" for="Password">
+           Password :      
+           <input type="password" placeholder="Enter your password" id="password" required>
+       </label>
+       <br><br>
+       <label name="submit" for="Sumbit">
+           <input type="submit" placeholder="Submit" onclick="validate()">
+       </label><br><br>
+       <label name="register" for="Register">
+           Don't have an account? <a href="Register.html">Register Here</a>
+       </label>
+     </form>
+     <script>
+       function validate(){
+       var email = document.getElementById("email").value;
+       var password = document.getElementById("password").value;
+       var emailRegExp = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+       var passRegExp = /^[a-zA-z0-9@.$#]{8,20}$/
+       if(!email.match(emailRegExp))
+       alert("Email is Not Valid");
+       else if(!password.match(passRegExp))
+       alert("Password is not Valid");
+       else{
+       alert("Login Successful");
+       window.open("MainPage.html");
+       }
+       }
+     </script>
+   </body>
+</html>

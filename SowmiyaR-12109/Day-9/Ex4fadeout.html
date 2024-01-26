@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fadeout and fadein</title>
+    <script src="./jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#btn").click(function(){
+                // $("#img1").fadeOut(5000);
+                $("#img1").fadeIn(1000);//we must use style=display:none,when we are using fadein
+                $("#img1").show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <img src="https://live-production.wcms.abc-cdn.net.au/3adb5e64b9bd151ccdfa05c244b8a4f6?impolicy=wcms_crop_resize&cropH=1080&cropW=1920&xPos=0&yPos=0&width=862&height=485"  style="display: none;"  id="img1" >
+    <input type="button" id="btn" value="click">
+</body>
+</html>

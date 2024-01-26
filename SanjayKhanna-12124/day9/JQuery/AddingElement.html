@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Element</title>
+    <script src="jQuery.js"></script>
+</head>
+<body>
+    <p id="para">This is Paragraph</p>
+    <button id="btn1">Append Text</button>
+    <button id="btn2">Perpend Text</button>
+    <button id="btn3">Remove Text</button>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#para").append("<b>Created by SanjayKhanna</b>");
+        });
+        $("#btn2").click(function(){
+                $("#para").prepend("<u>SanjayKhanna did this para</u>");
+        });
+        $("#btn3").click(function(){
+                $("#para").remove();
+        });
+    });
+
+    </script>
+</body>
+</html>

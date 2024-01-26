@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+#todoBlock {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(aqua,rgb(11, 125, 255));
+  color: #fff;
+}
+#todoBlock > article {
+  width: 90%;
+  height: inherit;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+#todoBlock > article > header {
+  flex-basis: 30vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header > h1 {
+  font-size: 44px;
+  font-family: fantasy;
+  letter-spacing: 3px;
+  color: rgb(206, 136, 6);
+}
+header > form > input[type="text"] {
+  width: 450px;
+  padding: 20px 15px;
+  border-radius: 60px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+}
+header > form > input[type="text"]::placeholder {
+  color: orange;
+}
+header > form > input[type="text"]:focus {
+  border-bottom: 3px solid orange;
+  transition: all 0.3s ease-in;
+}
+header > form > input[type="submit"] {
+  padding: 20px 24px;
+  border: none;
+  border-radius: 60px;
+  font-size: 18px;
+  color: orange;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #fff;
+  transition: all 0.3s ease-in;
+}
+header > form > input[type="submit"]:hover {
+  background-color: orange;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+
+#todoBlock > article > main {
+  flex-basis: 70vh;
+}
+#todoBlock > article > main > h2 {
+  font-size: 34px;
+  font-family: fantasy;
+  letter-spacing: 3px;
+  color: orange;
+  text-align: center;
+}
+#todoBlock > article > main > #tasks {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main > #tasks > .task {
+  width: 450px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main > #tasks > .task > .content {
+  flex-basis: 60%;
+}
+main > #tasks > .task > .content > input {
+  width: 100%;
+  padding: 8px 20px;
+  border-radius: 60px;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease-in;
+}
+main > #tasks > .task > .content > input:focus {
+  border-bottom: 3px solid orange;
+}
+main > #tasks > .task > .actions {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+main > #tasks > .task > .actions > .edit {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 60px;
+  color: orange;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #fff;
+  transition: all 0.3s ease-in;
+}
+main > #tasks > .task > .actions > .edit:hover {
+  background-color: orange;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+main > #tasks > .task > .actions > .delete {
+  padding: 6px 14px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 60px;
+  color: orange;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #fff;
+  transition: all 0.3s ease-in;
+}
+main > #tasks > .task > .actions > .delete:hover {
+  background-color: orange;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}

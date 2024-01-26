@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object</title>
+</head>
+<body>
+    <button onclick="func()">Click to open gmail</button>
+    <script>
+        var name = window.prompt("Enter your Name");
+        window.alert("Welcome, "+name);
+        function func(){
+            var response= window.confirm("Are you Confirm ?...");
+            if(response==true)
+            open("https://mail.google.com");
+        else
+            open("https://www.google.com");
+        }
+    </script>    
+</body>
+</html>

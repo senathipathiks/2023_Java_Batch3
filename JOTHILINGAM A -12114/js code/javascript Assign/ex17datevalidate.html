@@ -1,0 +1,21 @@
+<html>
+<body>
+
+<form>
+  <label for="date">Enter a date (YYYY-MM-DD):</label><br>
+  <input type="text" id="date" name="date" onchange="validateDate()"><br>
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+function validateDate() {
+    const dateString = document.getElementById('date').value;
+    const date = new Date(dateString);
+    if (isNaN(date.getTime())) {
+        alert("Invalid date. Please enter a date in the format YYYY-MM-DD.");
+    }
+}
+</script>
+
+</body>
+</html>

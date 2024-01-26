@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+         function speed(num) {
+        if (typeof num > 70) {
+            return ' Over Speed ';
+        } else if (num > 60) {
+            return 'Speed Limit Crossed, reduce your Speed !!!';
+        } else if (num  > 50 && num <= 60) {
+            return 'Drive Safely';
+        } else if (num <= 50) {
+            return 'Safe Driving';
+        } else {
+            return num.toString();
+        }
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+         let result=speed(50);
+        document.write(result);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Fade in</title>
+        <script src="jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#btn").click(function(){
+                    $("#img1").fadeIn(10000);
+                });
+            });
+        </script>
+        <style>
+            #img1{
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <img  src="img1.jpg" id="img1" style="display: none;">
+        <input type="button" id="btn" value="Click">
+    </body>
+</html>

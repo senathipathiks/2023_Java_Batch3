@@ -1,0 +1,43 @@
+table{
+    background-color: grey;
+    padding: 10px 30px 10px 20px;
+    width: 10%;
+    height: 40%;
+}
+
+td.dis{
+    border: 3px solid rgb(0, 0, 0);
+    background-color: whitesmoke;
+    padding: 5px 8px 5px 8px;
+}
+
+input{
+    padding: 5px 8px 5px 8px;
+}
+
+tr{
+    display:block;
+    text-align: left;
+}
+
+
+button{
+    border: 2px solid black;
+    border-radius: 5px;
+    display: block;
+    width: 10px;
+    padding: 14px 28px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 1px whitesmoke;
+}
+
+button:hover{
+    color:blue;
+}
+
+*{
+    font-size: large;
+    justify-content: center;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDownTimer</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(43, 43, 43);
+    color:white;
+    display:inline-block;
+    /* align-items: center; */
+    justify-content: center;
+    /* height: 100px; */
+    margin-top: 300px;
+    margin-left: 600px;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #f70f0f;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#timer-display {
+    font-size: 48px;
+    margin: 0;
+}
+
+.controls {
+    display: flex;
+
+    align-items: center;
+     justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid rgb(35, 4, 102);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1b89f0;
+}
+    </style>
+</head>
+<body>
+    <div class="timer">
+        <h1 id="timer-display">00:00</h1>   </div>
+    <div class="controls">
+        <button id="start-button">Start</button>
+        <button id="pause-btn">Pause</button>
+        <button id="reset-btn">Reset</button>
+    </div>
+
+    <script>
+        
+      let timer = 0;
+      let minutes = 0;
+      let seconds = 0;
+
+     function updateDisplay() {
+     minutes = Math.floor(timer / 60);
+     seconds = timer % 60;
+
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    document.getElementById('timer-display').textContent = minutes + ':' + seconds;
+}
+
+      function startTimer() {
+    interval = setInterval(function () {
+        timer++;
+        updateDisplay();
+    }, 1000);
+}
+
+       function pauseTimer() {
+    
+    clearInterval(interval);
+}
+
+     function resetTimer() {
+    clearInterval(interval);
+    timer = 0;
+    updateDisplay();
+}
+
+   document.getElementById('start-button').addEventListener('click', startTimer);
+   document.getElementById('pause-btn').addEventListener('click', pauseTimer);
+   document.getElementById('reset-btn').addEventListener('click', resetTimer);
+    </script>
+</body>
+</html>
