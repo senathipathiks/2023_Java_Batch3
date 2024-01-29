@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    margin: 0;
+    
+}
+
+
+.calculator {
+    text-align: center;
+    padding: 20px;
+    border: 9px solid black;
+    border-radius: 8px;
+    background-color: grey;
+}
+#gend{
+    margin-right: 70px;
+}
+#result{
+   padding: 35px;
+   color: red;
+   font-size: larger;
+   font-family: Arial, sans-serif;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
