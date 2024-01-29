@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <script>
+        function rev(a){ 
+       let r=0;
+       while(a>0){
+        i=a % 10;
+        r=r * 10 + i;
+        a=Math.floor(a/10);
+       }
+       return r;
+    }
+    </script>
+</head>
+<body>
+    
+<script>
+    document.write(rev(45678))
+</script>
+</body>
+</html>

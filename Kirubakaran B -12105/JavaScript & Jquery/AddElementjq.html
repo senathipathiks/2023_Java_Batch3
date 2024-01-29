@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+         $(document).ready(function(){
+           
+            $("#b1").click(function(){
+                $("#p1").append("<b> Created by kiruba");
+
+            });
+            $("#b2").click(function(){
+                $("#p1").prepend("<b> welcome to this page");
+
+            });
+            $("#b3").click(function(){
+                $("#p1").remove();
+
+            });
+});
+    </script>
+</head>
+<body>
+    <p id="p1">  this is my paragraph  </p>
+    <input type="button" value="AppendText" id="b1">
+    <br><br>
+    <input type="button" value="PrependText" id="b2">
+    <br><br>
+    <input type="button" value="RemoveText" id="b3">
+    <br><br>
+</body>
+</html>

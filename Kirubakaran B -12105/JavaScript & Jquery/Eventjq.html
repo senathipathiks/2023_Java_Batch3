@@ -1,0 +1,55 @@
+<html>
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <script src="jquery.js"></script>
+   <script>
+   $(document).ready(function(){
+      
+      $("#t1").focus(function(){
+       $(this).css("background-color","blue");
+       });
+
+       $("#btn1").click(function(){
+       alert("Button1 Clicked");
+       });
+
+       $("#btn2").dblclick(function(){
+       alert("Button2 Double Clicked");
+       });
+
+       $("#btn3").mouseover(function(){
+       $(this).css("background-color","white");
+       });
+
+       $("#btn3").mouseout(function(){
+       $(this).css("background-color","cyan");
+       });
+
+       $("#t2").keydown(function(){
+       alert("Key Pressed");
+       });
+
+       $("#t2").keyup(function(){
+         $(this).css("color","red");
+       });
+
+      
+       
+   });
+</script>
+</head>
+<body>
+
+<form>
+<input type="button" id="btn1" value="OnClick"/> <br><br>
+<input type="button" id="btn2" value="Dblclick"/> <br><br>
+<input type="text" id="t1"> <br><br>
+<input type="button" id="btn3" value="OnMouseover"/> <br><br>
+<input type="text" id="t2" />
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#bt").click(function(){
+               $("#q1").fadeOut(1000);
+            })
+            
+            $("#bt1").click(function(){
+            $("#q2").fadeIn(1000);
+          })
+        });
+        
+    </script>
+      <img src="flow.jpg" alt="" id="q1" style="height: 300px;">
+      <input type="button" value="click" id="bt">
+      <br>
+      <br>
+      <img src="flow.jpg" alt="" id="q2" style="display: none ;height: 300px;">
+      <input type="button" value="click" id="bt1">
+</body>
+</html>

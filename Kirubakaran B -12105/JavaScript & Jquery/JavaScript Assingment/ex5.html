@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sen(a) {
+            let word=a.split(" ");
+            let long="";
+            for(i=0;i<word.length;i++)
+            {
+                if(long.length < word[i].length)
+                {
+                    long=word[i];
+                }
+            }
+            return long;
+            
+        }
+       document.write( sen("kiruba is a good and intelligent boy and smart too"));
+    </script>
+</body>
+</html>

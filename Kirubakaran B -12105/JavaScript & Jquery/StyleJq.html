@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <style>
+        .style1{
+            color: blue;
+        }
+        .style2{
+            color: aqua;
+            font-size: larger;
+            border: 1px dotted grey;
+        }
+        .style3{
+            background: green;
+            color: red;
+            font-size: 40px;
+        }
+    </style>
+    <script>
+         $(document).ready(function(){
+           
+            $("#b1").click(function(){
+                $("#p1").addClass("style2");
+
+            });
+            $("#b2").click(function(){
+                $("#p1").removeClass("style2 style3");
+
+            });
+            $("#b3").click(function(){
+                $("#p1").toggleClass("style3");
+
+            });
+});
+</script>
+</head>
+<body>
+    <p id="p1" class="style1">  this is my paragraph  </p>
+    <input type="button" value="Addclass" id="b1" >
+    <br><br>
+    <input type="button" value="Removeclass" id="b2">
+    <br><br>
+    <input type="button" value="Toggleclass" id="b3">
+    <br><br>
+</body>
+</html>

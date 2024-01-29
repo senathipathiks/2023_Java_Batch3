@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+          $(document).ready(function(){
+
+              $("#bt1").click(function(){
+
+              var x=parseInt($("#a1").val())+;
+              var y=parseInt($("#a2").val());
+              var z=x+y;
+              $("#a3").val(z);
+})
+});
+
+    </script>
+</head>
+<body>
+    <form action="">
+       Enter number 1: <input type="text" id="a1"> <br><br>
+       Enter number 2:<input type="text" id="a2"> <br><br>
+        <input type="button" value="Calculatesum" id="bt1"> <br><br>
+        Total <input type="text" id="a3">
+    </form>
+</body>
+</html>
