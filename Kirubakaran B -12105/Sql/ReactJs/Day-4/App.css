@@ -1,0 +1,56 @@
+#head{
+  border: 1px solid ;
+  background-color: whitesmoke;
+  padding: 7px;
+  justify-content: center;
+  color: black;
+  margin: 10px 290px;
+}
+#outputrow{
+  background-color: floralwhite;
+  
+}
+body{
+  background-image: url(bg5.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#form{
+  background-color:rgb(174, 180, 187);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: bold;
+  font-size: large;
+  width: 500px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid gray;
+  padding: 20px;
+  width: 300px;
+  height: 550px;
+  margin-left: -100px;
+  margin-top: -20px;
+  /* margin-left: 350px; */
+}
+
+#table{
+  border: 1px solid;
+  margin:  -480px 200px;
+  /* margin-top: 300px; */
+}
+#update{
+    border: 2px solid green;
+  
+}
+#edit{
+  border: 2px solid darkgray;
+  background-color: darkgray;
+  cursor: pointer;
+
+}
+#delete{
+  float: left;
+  
+  border: 2px solid maroon;
+}
