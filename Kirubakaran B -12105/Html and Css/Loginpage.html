@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loginpage</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+        form{
+            background-image: url(office\ pic.jpg);
+            background-repeat: no-repeat;
+            height: 400px;
+            
+        }
+        #first,#last,#mail,#pass{
+            margin: 10px 0px;
+        }
+        label{
+            margin: 20px 30px;
+            color: black;
+        }
+    </style>
+
+</head>
+<body>
+     
+    <form action="">
+       <label for="">Enter your first name: </label> <input type="text" placeholder="Enter your firstname" id="first">
+        <br> <br>
+       <label for=""> Enter your last name:</label> <input type="text" placeholder="Enter your last name" id="last"> <br> <br>
+        <label for="">Enter your mail ID:</label> <input type="text" placeholder="Enter your mail " id="mail"> <br> <br>
+        <label for="">Enter your password:</label> <input type="text" placeholder="Enter your password" id="pass"> <br> <br>
+
+        <button onclick="valid()"> <a href="Registration.html">Register </a></button> <br> <br>
+        <button>Login</button>
+    </form>
+    <script>
+        function valid() {
+            let mailex='^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$'; //'[a-z0-9]+@[a-z]+\.[a-z]{2,3}$';
+            let passex= '^[a-zA-Z0-9!@#$%^&*]{6,16}$';
+           let first=document.getElementById("first").value;
+           let last=document.getElementById("last").value;
+           let mail=document.getElementById("mail").value;
+           let pass=document.getElementById("pass").value;
+
+           if(first==""){
+            alert("First name cannot be empty");
+           }
+           else if(last==""){
+            alert("last name cannot be empty");
+           }
+           else if(mail==""){
+            alert("mail cannot be empty");
+           }
+           else if(!mail.match(mailex)){
+            alert("enter valid mail id");
+           }
+           else if(pass==""){
+            alert("password cannot be empty");
+           }
+           else if(!pass.match(passex)){
+            alert("enter valid pasword");
+           }
+           
+            
+        }
+    </script>
+
+
+
+
+
+
+
+    
+    <!-- <center><div class="divu">
+    <form action="">
+       <label for="">Name:</label>  <input class="userbox" type="text" name="" id="" placeholder="Enter your name"> <br> <br>
+        <label for="">Password:</label> <input class="passbox" type="password" name="" id="" placeholder="Enter your password"><br> <br>
+        <button>Login</button> <br> <br>
+       <a href="Registration.html"><button>Register</button></a>
+       
+
+      </form>
+    </div>
+</center> -->
+</body>
+</html>
