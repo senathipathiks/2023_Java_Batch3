@@ -1,7 +1,8 @@
 package com.sms.util;
 
-import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.Connection;
+//import java.sql.DriverManager;
 
 public class DBUtil {
 
