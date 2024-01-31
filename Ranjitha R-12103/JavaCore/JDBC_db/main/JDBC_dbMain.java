@@ -25,10 +25,17 @@ public class JDBC_dbMain {
 		System.out.println("Enter the student ID to delete");
 		return (sc.nextInt());
 	}
+
 	public static Students updateStudents() {
 		System.out.println("Enter the student no & student name to update");
-		return new Students(sc.nextInt(),sc.next());
+		return new Students(sc.nextInt(), sc.next());
 	}
+
+	public static int findStudents() {
+		System.out.println("Enter the student ID to find");
+		return (sc.nextInt());
+	}
+
 
 	public static void main(String[] args) {
 		String msg = "";
@@ -52,16 +59,37 @@ public class JDBC_dbMain {
 				else
 					System.out.println("Record deleted failure");
 				break;
-				
+
 			case 3:
-				Students st2=updateStudents();
-				n=dao.updateStudents(st2);
-				if(n==1)
+				Students st2 = updateStudents();
+				n = dao.updateStudents(st2);
+				if (n == 1)
 					System.out.println("Record updated Successfully");
 				else
 					System.out.println("Record update failure");
+				break;
+
+			case 4:
+				int no1 = findStudents();
+				n = dao.findStudents(no1);
+				if (n == 1)
+					System.out.println("Record found successfully");
+				else
+					System.out.println("Record not found");
+				break;
+
+			case 5:
+				n = dao.findallStudents();
+				if (n == 1)
+					System.out.println("All Record found successfully");
+				else
+					System.out.println("Record not found");
+				break;
+			case 6:
+				System.out.println("You are exit Successfully");
+				System.exit(0);
 			}
-			
+
 			System.out.println("Do you wish to continue(yes/no)");
 			msg = sc.next();
 		} while (msg.equals("yes"));
