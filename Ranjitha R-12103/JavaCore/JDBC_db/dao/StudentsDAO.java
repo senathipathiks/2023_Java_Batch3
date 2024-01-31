@@ -2,6 +2,7 @@ package com.JDBC_db.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import com.JDBC_db.bean.Students;
 import com.JDBC_db.util.DBUtil;
@@ -54,4 +55,44 @@ public class StudentsDAO {
 
 		return n;
 	}
+
+	public int findStudents(int no) {
+		int n = 0;
+		try {
+			Connection con = DBUtil.getDBConnection();
+			String sql = "select * from Students where no=?";
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setInt(1, no);
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				System.out.println("no:" + rs.getInt(1) + " \nname: " + rs.getString(2));
+				n = 1;
+			}
+
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return n;
+
+	}
+
+	public int findallStudents() {
+		int n = 0;
+		try {
+			Connection con = DBUtil.getDBConnection();
+			String sql = "select*from Students";
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				System.out.println("no: " + rs.getInt(1) + "\nname: " + rs.getString(2));
+				n = 1;
+			}
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return n;
+	}
+
 }
