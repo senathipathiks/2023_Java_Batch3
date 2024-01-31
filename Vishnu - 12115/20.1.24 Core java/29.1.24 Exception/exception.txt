@@ -1,0 +1,21 @@
+Exception Handling :
+
+Excption:
+
+	- try block
+		- {} which make exception
+	- catch
+		- to handle the exception
+	- finally
+		- similar like defaultfault one
+		- garanty execution
+	- throw
+		- exception explicity
+	- throws
+		- indicate the mentod make throw this type excption
+
+Custom exception:
+
+	
+
+ 

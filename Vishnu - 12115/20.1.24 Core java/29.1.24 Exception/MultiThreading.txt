@@ -1,0 +1,14 @@
+MultiThreading 
+	- Doing more then one task 
+	- Concurently or parallely
+
+Types  of Multi Tasking
+	- Process based
+		example : When document typing in process on the same time spelling mistake task also work-at-a time
+	- Thread based
+
+Two ways to implement multi tasking
+	- using extends thread class (Thread class is pre defined class
+	- runable
+		- Over tide run method 
+

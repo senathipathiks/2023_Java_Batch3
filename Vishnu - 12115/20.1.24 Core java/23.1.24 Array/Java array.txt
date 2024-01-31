@@ -1,0 +1,7 @@
+Java array :
+
+In array should not declear 
+		
+	int arr3[]=new int[5]{10,20,30,40,50};
+
+00 01 02 03 04
