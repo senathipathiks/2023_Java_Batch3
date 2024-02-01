@@ -16,6 +16,8 @@ public class BatchExecution {
 			Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/school", "root", "root");
 			PreparedStatement ps = c.prepareStatement("insert into student values(?,?,?,?)");
 			
+			
+			
 			System.out.println("enter number data do you want to insert");
 			int num = sc.nextInt();
 			for (int i = 0; i < num; i++) {
