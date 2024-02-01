@@ -1,0 +1,8 @@
+Mata data:
+	- set of data provide information about other data.
+
+	Today create package 	
+	- com.sms.bean(model)
+	- com.sms.util (Establishing the connection between database and user)
+	- com.sms.dao (Data access object - Delete, insesion)
+	- com.sms.main (Controling
