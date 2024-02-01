@@ -1,0 +1,27 @@
+td{
+    width: 70px;
+    height: 70px;
+    border: none;
+}
+
+div{
+    margin: 10px 620px;
+    font-size: 60px;
+}
+
+table{
+    border: 5px solid black;
+    margin-left: 400px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    background-color: black;
+
+}
+
+.blackbox{
+    background-color: black;
+}
+
+.whitebox{
+    background-color: white;
+}
