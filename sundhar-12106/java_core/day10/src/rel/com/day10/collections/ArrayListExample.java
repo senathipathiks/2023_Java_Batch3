@@ -30,10 +30,11 @@ public class ArrayListExample {
 		while(i.hasNext())
 			System.out.println(i.next());
 		
+		
 		for (Integer i1 : arr) 
 			System.out.print(i1 + " : ");
 		
-		
+		System.out.println("\n");
 		arr.forEach((j)->{
 			System.out.println(j+" - "+(char)3);
 		});
