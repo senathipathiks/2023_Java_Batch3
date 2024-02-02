@@ -1,0 +1,65 @@
+.google{
+    
+    height: 300px;
+    align-items: center;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    font-family: "PT Sans";
+    font-size: 90px;
+    font-weight: 495;
+    color: #6d5192;
+}
+
+#bar{
+    width: 13px;
+    height: 18px;
+}
+
+#input{
+    border: none;
+    width: 330px;
+    border-color: transparent;
+}
+
+#input:focus{
+    outline: none;
+}
+
+.searchbox{
+    background-color: white;
+    height: 35px;
+    border-radius: 25px;
+    box-shadow:
+     7.8px 6.9px 10px rgba(0, 0, 0, 0.095),
+        62px 55px 80px rgba(0, 0, 0, 0.19);
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.lens{
+    margin-left: 10px;
+}
+
+.rc{
+    padding-top: 20px;
+    font-size: 12px;
+    display: flex;
+    justify-content: end;
+    
+}
+
+.block{
+    margin-right: 30px;
+   
+}
+

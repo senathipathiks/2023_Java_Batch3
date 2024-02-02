@@ -1,0 +1,31 @@
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    font-style: italic;
+
+}
+
+.LargeC{
+    border : 2px black;
+    height: 300px;
+    width : 600px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    
+
+}
+
+.top{
+    background-color: orange;
+}
+
+.middle{
+    background-color: white;
+}
+
+
+.bottom{
+    background-color: green;
+}

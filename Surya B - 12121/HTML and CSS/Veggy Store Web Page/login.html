@@ -1,0 +1,20 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Welcome from './component/Welcome';
+<Welcome name="Arun" topic="React">
+    <p>Hello All</p>
+</Welcome>
+
+
+import React from 'react'
+
+function Welcome(props) {
+  return (
+    <div class = "div1">
+      <p>This is my First Component{props.name} created using {props.topic}</p>
+      
+    </div>
+  )
+}
+
+export default Welcome

@@ -1,0 +1,52 @@
+body{
+    background-color: #f2f2f2;
+}
+form{
+    background-color: white;
+    width: 300px;
+    border-radius: 15px;
+    border: #f2f2f2;
+    margin: 100px auto;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input[type=text], input[type=email]{
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.b{
+    padding-left: 85px;
+    padding-right: 80px;
+    padding-top: 15px;
+}
+
+button{
+    background-color: green;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 30px;
+    border: white;
+}
+
+.head{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.header{
+    background-color: green;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding-top: 5px;
+    color : white;
+    height : 60px;
+    width : auto;
+}

@@ -1,0 +1,13 @@
+h1{
+    color: blue;
+    font-size: xx-large;
+    border: 2px solid green;
+    text-align: center;
+    border-radius: 20px;
+    cursor:zoom-in;
+}
+
+b{
+    color: red;
+    font-weight: bolder;
+}

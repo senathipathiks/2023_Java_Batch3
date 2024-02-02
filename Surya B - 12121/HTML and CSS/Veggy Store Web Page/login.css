@@ -1,0 +1,60 @@
+body {
+    background-color: #f2f2f2;
+  }
+  form {
+    background-color: white;
+    border: 3px solid #f1f1f1;
+    border-radius: 15px;
+    margin: 100px auto;
+    padding: 20px;
+    width: 300px;
+  }
+  label{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  h1{
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+  }
+  input[type=text], input[type=password] {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  button:hover {
+    opacity: 0.8;
+    background-color: darkgreen;
+  }
+  
+  .new{
+      padding: 20px;
+      align-content: center;
+  }
+  a{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+.header{
+    background-color: green;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding-top: 5px;
+    color : white;
+    height : 60px;
+    width : auto;
+}
