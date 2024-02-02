@@ -7,22 +7,36 @@ public class StringJoinerEg {
 	public static void main(String[] args) {
 
 		StringJoiner s = new StringJoiner(",");
-		s.add("html");
-		s.add("css");
-		s.add("js");
-////		s.add("");
+//		s.add("html");
+//		s.add("css");
+//		s.add(null);
+//		s.add("js");
+		
+		s.setEmptyValue("hello");
 //		
-		s.setEmptyValue("node");
-//		
-//		System.out.println(s);
+		System.out.println(s);
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		StringJoiner s1 = new StringJoiner("$", "\\", "/");
 		s1.add("java");
 		s1.add(" python");
 		s1.add(" PHP");
-
-//		System.out.println(s1.merge(s));
-		System.out.println(s);
+//
+		System.out.println(s1.merge(s));
+//		System.out.println(s1);
 
 //		 StringJoiner joinNames = new StringJoiner(",","[","]"); // passing comma(,) as delimiter   
 //         
