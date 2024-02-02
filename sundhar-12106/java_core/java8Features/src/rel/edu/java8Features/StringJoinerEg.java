@@ -11,25 +11,11 @@ public class StringJoinerEg {
 //		s.add("css");
 //		s.add(null);
 //		s.add("js");
-		
+
 		s.setEmptyValue("hello");
 //		
 		System.out.println(s);
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		StringJoiner s1 = new StringJoiner("$", "\\", "/");
 		s1.add("java");
 		s1.add(" python");
