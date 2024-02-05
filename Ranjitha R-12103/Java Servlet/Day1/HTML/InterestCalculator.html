@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+	function checkNumber() {
+		var number = document.getElementById("number").value;
+		if (number = "")
+			alert("Type a number between 0 and 9");
+	}
+</script>
+</head>
+<body>
+	<form action=InterestCalculator>
+		<label for="Prinicipal"><b>Principal:</b></label> 
+		<input type="text" placeholder="Enter Principal Amount" name="principal" id="number">
+		<br> <br> 
+		<label for="rateofInterest"><b>
+		Rate of Interest:</b></label> <input type="text" placeholder="Enter Rate of Interest" name="interest" id="number">
+			 <br> <br> 
+			<label for="noofyears"><b>Number of Years:</b></label> 
+			<input type="text" placeholder="Enter no years" name="noofyears" id="number"> <br>
+		<br>
+
+		<button onclick="checkNumber()">Calculate</button>
+	</form>
+
+</body>
+</html>
