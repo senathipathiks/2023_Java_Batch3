@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+</head>
+
+<body>
+<form action="LoginValidation">
+Enter Username:<input type="text" id="fname" name="name1"><br><br>
+Enter Password:<input type="text" id="pwd" name="pwd1"><br>
+<button onclick="Validation()">SUBMIT</button>
+
+<script >
+function Validation()
+{
+    var userRegEx ='^[A-Za-z]\\w{5,29}$';
+    var passwordRegEx = '^[a-zA-Z0-9!@#$%^&*]{6,16}$';
+    var uname = document.getElementById("fname").value;
+    var password = document.getElementById("pwd").value;
+    if(fname == ""){
+        alert("First name can not be empty");
+    }
+    else if(pwd == ""){
+        alert("Password can not be empty");
+    }
+    
+    else if(! uname.match(userRegEx)){
+        alert("Enter valid Username ")
+    }
+
+    else if(password == " "){
+        alert("Password is must");
+    }
+   else if(password.length <6 && ! password.match(passwordRegEx)){
+        alert("Enter Valid Password!")
+    }
+}
+</script>
+
+</form> 
+
+</body>
+</html>
