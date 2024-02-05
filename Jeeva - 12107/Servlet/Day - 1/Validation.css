@@ -1,0 +1,19 @@
+@charset "ISO-8859-1";
+
+
+h1{
+	color:white;
+	padding-left:190px
+}
+.Content{
+	border:2px solid #00ff80;
+    width:500px;
+    height:550px;
+    Margin-left:350px;
+    Margin-top:60px;
+    background-image: linear-gradient(to right, red , yellow);
+}
+label{
+	padding-left:100px;
+	Padding-top:300px;
+}
