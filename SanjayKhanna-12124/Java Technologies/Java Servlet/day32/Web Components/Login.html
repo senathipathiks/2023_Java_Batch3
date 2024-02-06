@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+<link rel="stylesheet" href="Login.css">
+</head>
+<body>
+<form action="FormValidation" onsubmit="validate()">
+<table Style="border:none">
+<tr><td>User Name : </td><td><input type="text" name="username" autocomplete="off" id="user"/></td></tr>
+<tr><td>Password : </td><td><input type="text" name="password" autocomplete="off" id="pass"/></td></tr>
+<tr><td colspan="2"><button type="submit">Login</button></td></tr>
+</table>
+</form>
+<script>
+function validate(){
+	let emailRegex = "/^[a-zA-Z0-9]+@[a-zA-Z0-9]+[a-z]{2,3}$/";
+	let passwordRegex = "/^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/";
+	let username = document.getElementById('user').value;
+	let password = document.getElementById('pass').value;
+	console.log(username);
+	console.log(password);
+	if(username == "")
+		alert("Username should not be empty")
+	else if(password == "")
+		alert("Password should not be empty")
+	else if(!emailRegex.match(username) && !passwordRegex.match(password))
+		alert("Login Successful");
+	else if(!emailRegex.match(username))
+		alert("Username is not Valid");
+	else
+		alert("Password is not Valid");
+}
+</script>
+</body>
+</html>

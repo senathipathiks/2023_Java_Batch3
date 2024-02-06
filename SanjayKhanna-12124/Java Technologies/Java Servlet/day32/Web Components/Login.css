@@ -1,0 +1,19 @@
+@charset "ISO-8859-1";
+table {
+	border: none;
+	background-color: grey;
+	padding:20px 30px ;
+	margin:90px 570px;
+}
+
+tr {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 10px 14px;
+}
+
+td{
+	font-family: serif;
+	font-size: medium;
+}
