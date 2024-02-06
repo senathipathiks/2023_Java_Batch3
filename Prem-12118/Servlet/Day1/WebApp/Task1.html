@@ -1,0 +1,26 @@
+<script>
+
+function validateform() {
+	  var x = document.forms["myForm"]["Uname"].value;
+	  if (x == "") {
+	    alert("Name must be filled out");
+	    return false;
+	  }
+	  var y = document.forms["myForm"]["Upswd"].value;
+	  if (y == "") {
+	    alert("Password must be filled out");
+	    return false;
+	}
+}
+</script>
+<html>
+<body>
+	<form name="myForm" method="post" action="DemoServlet2"
+		onsubmit="return validateform()">
+		Name: <input type="text" name="Uname" Placeholder="Enter your username"><br /> Password: <input type="password" name="Upswd" placeholder="Enter valid password"><br/>
+		 <input type="submit"
+			value="Login">
+			<h4>Login here !!</h4>
+	</form>
+</body>
+</html>
