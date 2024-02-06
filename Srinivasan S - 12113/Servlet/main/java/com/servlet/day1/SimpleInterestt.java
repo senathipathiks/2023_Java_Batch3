@@ -19,7 +19,7 @@ public class SimpleInterestt extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out=response.getWriter();
-		int p=Integer.parseInt(request.getParameter("principle"));
+		float p=Integer.parseInt(request.getParameter("principle"));
 		float r=Float.parseFloat(request.getParameter("interest"));
 		float t=Float.parseFloat(request.getParameter("time"));
 		
