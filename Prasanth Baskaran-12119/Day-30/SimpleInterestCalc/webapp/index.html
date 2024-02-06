@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Simple Interest Calc</title>
+
+<link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+
+<form action="SimpleInterest" method="Post" class="d-flex  flex-column align-items-center gap-2 mt-5">
+    <h1>Simple Interest Calculator</h1>
+    <div class="col-md-4 col-sm-6  col-xs-12">
+        <label for="validationCustomUsername" class="form-label">Pricipal Amount</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+          <input type="text" class="form-control" id="validationCustomUsername"  name="princ"   aria-describedby="inputGroupPrepend" required>
+          <div class="invalid-feedback">
+            Please Enter a Principal value.
+          </div>
+        </div>
+
+        <div class="col-md-12">
+            <label for="validationCustomUsername" class="form-label">Rate of Interest</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend">@</span>
+              <input type="text" class="form-control" id="validationCustomUsername" name="inter" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+                Please Enter a ROI.
+              </div>
+            </div>
+
+            <div class="col-md-12">
+                <label for="validationCustomUsername" class="form-label">Time</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text" id="inputGroupPrepend">@</span>
+                  <input type="text" class="form-control" id="validationCustomUsername" name="time" aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">
+                    Please Enter a Time.
+                  </div>
+                </div>
+                <br>
+                <div class="col-6">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                  </div>
+            </form>
+
+
+</body>
+</html>
