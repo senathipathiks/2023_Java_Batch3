@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+</head>
+<body style="margin-left: 40%">
+
+<form action="LoginServlet">
+
+Enter Name:<input id=tb1 name=uname type="text"><br><br>
+Enter Password:<input id=tb2 name=pwd type="text"><br><br>
+<button onclick="Validation()">SUBMIT</button>
+
+<script type="text/javascript">
+function Validation(){
+	var usernameReg='^[a-zA-Z0-9]{5,16}$';
+	var pwdReg='^[a-zA-Z0-9!@#$%^&*]{6,16}$';
+	
+	var username=document.getElementById("tb1").value;
+
+	var password=document.getElementById("tb2").value;
+	
+	if(!username.match(usernameReg)){
+		alert("Enter valid username");
+	}
+	else if(!password.match(pwdReg)){
+		alert("Enter valid password");
+	}
+	else if(password==" "){
+		alert("Password cannot be empty");
+	}
+	else
+	alert("Successfully logined");
+	
+	
+	}
+</script>
+
+</form>
+
+</body>
+</html>
