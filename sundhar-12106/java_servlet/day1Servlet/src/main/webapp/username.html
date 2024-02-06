@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>username</title>
+
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+	crossorigin="anonymous">
+</head>
+<body>
+	<section class="mt-5">
+		<div
+			class="container flex-wrap  d-flex flex-column  align-items-center justify-content-center  mt-5 pt-5 p-0">
+			<h1 class="mb-3">Login form</h1>
+			<form id="form" >
+				<div>
+					<label for="inp" class="fw-bold mb-2">enter username</label> <input
+						type="text" name="usr_name" id="inp" class="mb-3" />
+				</div>
+				<div>
+					<label for="inp2" class="fw-bold mb-2">enter password</label> <input
+						type="password" name="pass" id="inp2" class="mb-3" />
+				</div>
+				<div class="container d-flex  justify-content-center ">
+					<button type="submit" class="btn btn-primary">Login</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		let ele = document.querySelector("#form");
+		ele.addEventListener("submit", function(e) {
+			validate();
+		});
+		
+		
+		function validate() {
+			  let pass = document.querySelector("#inp2").value;
+			  console.log(pass);
+
+			  let usr = document.querySelector("#inp").value;
+			  console.log(usr);
+
+			  let pass_reg = /^[a-zA-Z0-9!@#$%^&*]{6,}$/;
+			  let usr_reg = /^[a-zA-Z\-0-9]{6,}$/;
+
+			  console.log("password : " + pass_reg.test(pass));
+			  console.log("username : " + usr_reg.test(usr));
+
+			  if (pass_reg.test(pass) && usr_reg.test(usr)) {
+				  alert("successfull");
+			  }else{
+				  alert("Invalid inputs...!"); }
+			  
+			}
+	</script>
+
+
+</body>
+</html>
