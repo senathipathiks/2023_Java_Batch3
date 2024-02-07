@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Interest calculator</title>
+<style>
+.button-2 {
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-2:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 468px) {
+  .button-2 {
+    padding: 10px 30px;
+  }
+}
+</style>
+</head>
+<body>
+<h1 style="color:blue">Interest calculator</h1>
+<form action="InterestServlet">
+<label>
+<b>Enter Amount:<input type="number" name="p"/>
+Enter Rate:<input type="number" name="r"/>
+Enter Time:<input type="number" name="n"/></b>
+<button class="button-2" role="button">Submit</button>
+</label></form>
+</body>
+</html>
