@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+</head>
+<body>
+
+<form action="Login">
+<label>Enter the User Name : </label> 
+<input type="text" id = "uname" name = "uname" placeholder="Enter your fullname">
+<br>
+
+<label>Enter the Password : </label> 
+<input type="password" id = "pword" name = "pword" placeholder="Enter your Passwoard">
+<br>
+
+<button onclick="val()" type="submit">Login</button>
+
+<script type="text/javascript">
+function val(){
+	var passwordRegEx = '^[a-zA-Z0-9!@#$%^&*]{6,16}$';
+	 
+	var uname = document.getElementById("uname").value ; 
+	
+	var pass = document.getElementById("pword").value ;
+	
+	if (uname == " ") {
+		alert("Enter the name");		
+		}
+    else if(pass == " "){
+	    alert("Enter the valid password");
+	    }
+	else if(pass.length <6 && ! pass.match(passwordRegEx)){
+                alert("Enter Valid Password!")
+            }
+	else
+		alert ("Vlidation Matches");
+	    }
+</script>
+
+</form>
+
+</body>
+</html>
