@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  <display-name>ServeltDay3</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Inboxpage</display-name>
+    <servlet-name>Inboxpage</servlet-name>
+    <servlet-class>com.day3.Inboxpage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Inboxpage</servlet-name>
+    <url-pattern>/Inboxpage</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SendItem</display-name>
+    <servlet-name>SendItem</servlet-name>
+    <servlet-class>com.day3.SendItem</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SendItem</servlet-name>
+    <url-pattern>/SendItem</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Profile</display-name>
+    <servlet-name>Profile</servlet-name>
+    <servlet-class>com.day3.Profile</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Profile</servlet-name>
+    <url-pattern>/Profile</url-pattern>
+  </servlet-mapping>
+</web-app>
