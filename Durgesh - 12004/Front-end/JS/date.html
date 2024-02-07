@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <h1>Today's Date is: </h1>
+        <script>
+            var Today=new Date();
+            document.write(Today+"<br\>");
+            var day=Today.getDate();
+            var month=Today.getMonth()+1;
+            var year=Today.getFullYear();
+            document.write("<br>Date is: "+day+"/"+month+"/"+year+"<br/");
+            var h=Today.getHours();
+            var m=Today.getMinutes();
+            var s=Today.getSeconds();
+            document.write("<br>Time is:" +h+":"+m+":"+s+"</br>")
+
+        </script>
+    </body>
+</html>
