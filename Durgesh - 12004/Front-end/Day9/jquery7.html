@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#bn1").click(function(){
+                    $("#para1").append("Created by Jeff Bezos.");
+                });
+
+                $("#bn2").click(function(){
+                    $("#para1").prepend("Welcome to Amazon.");
+                });
+
+                $("#bn3").click(function(){
+                    $("#para1").remove();
+                });
+            })
+        </script>
+    </head>
+    <body>
+        <p id="para1">This is an shopping application.</p>
+        <input type="button" id="bn1" value="Append">
+        <input type="button" id="bn2" value="Prepend">
+        <input type="button" id="bn3" value="Remove">
+    </body>
+</html>

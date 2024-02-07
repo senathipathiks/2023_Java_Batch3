@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#bn").click(function(){
+                    var x=parseInt($("t1").val());
+                    var y=parseInt($(".t2").val());
+                    var z=x+y;
+                    $("#t3").val(z);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <form>
+            Enter Number 1: <input type="Text" id="t1" /> <br/>
+            Enter Number 2: <input type="Text" id="t2" /><br/>
+            <input type="Button" id="bn" Value="Calculate Sum" onclick="z" /><br/>
+            Sum: <input type="Text" id="t3" />
+         </form>
+    </body>
+</html>
