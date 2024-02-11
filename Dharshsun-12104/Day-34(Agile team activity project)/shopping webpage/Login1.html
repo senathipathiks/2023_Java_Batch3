@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index-page</title>
+    <style>
+        .log{
+            text-align: center;
+        }
+        
+        body{
+            
+            background: #4d82f4;
+            display: flex;
+            font-family: sans-serif;
+        }
+        .container{
+            margin-top: 10px;
+            margin-left: none;
+            width:600px;
+            max-width: 80%;
+           padding-left: 30px;
+           padding-right: 20px;
+        }
+         form{
+            width:350px;
+            height: 550px;
+            padding: 10PX;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0,0,0,3); 
+        }
+        .form-group{
+            padding-top: 20px;
+        }
+
+       .form-control{
+        
+        border-radius: 5px;
+        border-color: none;
+        border: 1px solid #ccc;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 10px 10px;
+        margin: 12px, 0;
+        margin-top: 7px;
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 3)
+        
+       }
+       .btn{
+        width: 80px;
+        outline: none;
+        background-color: green;
+        margin-top: 10px;
+        margin-left: 100px;
+        padding-left: 10px;
+        padding-top: 5px;
+        color: white;
+        font-size: 16px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        cursor: pointer;
+       box-shadow: 0 5px 15px rgba(0, 0, 0, 3)
+       }
+       .btn:hover{
+        opacity: .7;
+       }
+       .btnn{
+        border-radius: 5px;
+        outline: none;
+        background-color:rgb(56, 56, 217);
+        margin-top: 20px;
+        display: inline-block;
+        padding-left: 30px;
+        align-items: center;
+        padding-right: 30px;
+        margin-left: 80px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        cursor: pointer;
+        border-color: none;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 2)
+       }
+       .btnn:hover{
+        opacity: .8;
+       }
+       .check{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-top: 10px;
+
+       }
+       .new{
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        padding: 10px;
+
+
+       }
+
+       a{
+        color: rgb(23, 98, 218);
+        margin-top: 10px;
+        margin-bottom: 10px;
+       }
+       .box2{
+        margin-bottom:10px;
+       }
+       .Login{
+        padding: 5px;
+       }
+       .slider{
+        width: 90%;
+        height: 500px;
+        margin: 20px auto;
+       }
+       #img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+       }
+       .container main-container{
+        margin: auto;
+        height:200%;
+        width: 300%;
+        padding-left: 50px;
+       }
+       
+       .carousel { 
+        width:500px; 
+        height:500px; 
+    padding-left: 20px;
+padding-top: 50px;}
+        
+     
+    </style>
+    <script>
+        function fun(){
+            alert("OTP has sent");
+        }
+        var img=document.getElementById('slider');
+        var slides=['bankimage-1.jpg','bankimage-2.jpg']
+        var start=0;
+        function slider(){
+            if(Start<slides.length){
+                Start=Start+1;
+            }
+            else{
+                start=1;
+            }
+            console.log(slider);
+            img.innerHTML="<img src="+slides[start+1]+">";
+        }
+        setInterval(slider,2000);
+    </script>
+</head>
+<body>
+   <div class="box2">
+    <div class="container">
+        <form action="">
+            <h3 class="log">Login Form</h3>
+            <div class="form-group">
+                <label for="">User Name / Account Number</label>
+                <input type="text" class="form-control" placeholder="Enter User name or Account Number" required>
+            </div>
+            
+            
+
+            <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" placeholder="Enter Password" required>
+            </div>
+
+            <button class="btnn" onclick="fun();" >Send OTP  </button>
+
+
+            <div class="form-group">
+                <label for="">Enter OTP</label>
+                <input type="password" class="form-control" placeholder="Enter Your OTP" required>
+            </div>
+        <div class="Login">
+            <a href="./bankhome.html">
+            <input type="Login" class="btn" value="Login">
+            </a>
+        </div>
+
+
+
+            <div class="new">
+            <a href="./register.html">New User ? Register here/Activate</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container main-container ">
+        <div id="myCarousel" class="carousel slide mt-lg-3 " data-ride="carousel" col>
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+  
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img
+                src="./bankimage-1.jpg"
+                alt="Los Angeles"
+                style="width: 100%"
+              />
+            </div>
+  
+            <div class="item">
+              <img src="./bankimage-2.jpg" alt="Chicago" style="width: 100%" />
+            </div>
+  
+            <div class="item">
+              <img src="./bankimage-1.jpg" alt="New york" style="width: 100%" />
+            </div>
+          </div>
+  
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+</div>
+</body>
+</html>
