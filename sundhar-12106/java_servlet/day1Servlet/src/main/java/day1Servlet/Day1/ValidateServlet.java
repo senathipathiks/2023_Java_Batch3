@@ -26,15 +26,19 @@ public class ValidateServlet extends HttpServlet {
 		String pass_inp = req.getParameter("pass");
 		boolean res = false;
 		
+//		String s = "shree78";
+//		String pas = "Gopi@678";
+		
 		for (String s : al) {
 			if(s.equals(user_inp) && pass_inp.equals(pass))
 				res = true;
 		}
 		
-		if(res)
-			resp.getWriter().print("<h1>Username validated successfully...!</h1>");
+		if(res) {
+			resp.sendRedirect("welcome.jsp?usr_name="+user_inp);
+			}
 		else
-			resp.getWriter().print("<h1>Entered user id not present</h1>");
+			resp.sendRedirect("invalid.jsp");
 	   
 	}
 
