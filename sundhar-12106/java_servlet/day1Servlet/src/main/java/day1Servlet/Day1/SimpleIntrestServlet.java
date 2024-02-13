@@ -21,7 +21,7 @@ public class SimpleIntrestServlet extends HttpServlet {
 		double n = d/365;
 		double res = ((p*n*r)/100)+p;
 		
-		resp.getWriter().print("<h1>the simple intrest is : "+Math.+"</h1>");
+		resp.getWriter().print("<h1>the simple intrest is : "+Math.round(res)+"</h1>");
 	}
 
 }
