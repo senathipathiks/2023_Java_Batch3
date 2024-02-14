@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+#box1 {
+	margin-top: 50px;
+}
+
+#f, #f1 {
+	margin-top: 20px;
+}
+button{
+margin-top: 20px;
+}
+</style>
+</head>
+<body>
+	
+	<center>
+		<h1>Login page</h1>
+	</center>
+
+	<form name ="fn ">
+		<center>
+			Username:<input type="text" name="user" id="f">
+			<br> password:<input type="text" name="pass" id="f1">
+			<br>
+			<button type="submit">submit</button>
+		</center>
+	</form>
+
+<script type="text/javascript">
+
+let form = document.querySelector("form");
+
+form.addEventListener("submit",e=>{
+	validation();
+});
+		function validation() {
+			var user = document.querySelector("#f").value;
+			var pass = document.querySelector("#f1").value; 
+			console.log("hello " + user)
+
+			if (user == "" && pass == "") {
+				console.log("crt")
+				alert("First name can not be empty");
+			} else {
+				form.setAttribute("action","Login");
+			}
+
+		}
+	</script>
+</body>
+</html>
