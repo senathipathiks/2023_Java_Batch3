@@ -67,12 +67,12 @@ public class StudentDAO {
 		return n;
 	}
 	
-	public static List<Student> fetchAll() throws SQLException {
+	public static ArrayList<Student> fetchAll() throws SQLException {
 		Connection c = DbUtil.getConnection();
 		PreparedStatement ps;
 		ResultSet rs = null;
 		Student s = null;
-		List<Student> list = new ArrayList<Student>();
+		ArrayList<Student> list = new ArrayList<Student>();
 		try {
 			ps = c.prepareStatement("select * from smsjdbc.student ;");
 			rs = ps.executeQuery();
