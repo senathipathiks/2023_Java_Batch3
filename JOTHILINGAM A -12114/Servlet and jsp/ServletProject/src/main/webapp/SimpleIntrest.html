@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="ISO-8859-1" />
+    <title>Simple Interest</title>
+    <style>
+      #box1 {
+        margin-top: 50px;
+      }
+
+      #f,
+      #f1,
+      #f2 {
+        margin-top: 20px;
+      }
+      button {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      #Login {
+        border: 2px solid;
+        margin-top: 50px;
+        margin-left: 500px;
+        width: 300px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="Login">
+      <center>
+        <h1>Simple Intrest</h1>
+      </center>
+      <div>
+        <form id="form">
+          <center>
+            Principle Amount:<input type="number" name="p" id="p1" /><br />
+            Rate Of Intrest:<input type="number" name="r" id="r1" /><br />
+            Tenure in Months:<input type="number" name="t" id="t1" /><br />
+
+            <button type="submit">submit</button>
+          </center>
+        </form>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      let form = document.querySelector("form");
+	  console.log(form);
+
+      form.addEventListener("submit", (e) => {
+		// e.preventDefault();
+        validation();
+      });
+      function validation() {
+        var principle = document.querySelector("#p1").value;
+        var Rate = document.querySelector("#r1").value;
+        var Tenure = document.querySelector("#r1").value;
+        console.log("principle " + principle);
+
+        if (principle == 0 || Rate ==0 || Tenure == 0) {
+          console.log("crt");
+          alert("First name can not be empty");
+        } else {
+        	
+          console.log("validated successfully...!");
+          form.setAttribute("action","SimpleIntrest");
+        }
+      }
+    </script>
+  </body>
+</html>
