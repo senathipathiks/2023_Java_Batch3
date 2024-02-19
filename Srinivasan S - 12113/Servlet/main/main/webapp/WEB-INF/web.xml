@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
-  <display-name>mvcServletProject1</display-name>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" version="6.0">
+  <servlet>
+    <description></description>
+    <display-name>EmployeeServlet</display-name>
+    <servlet-name>EmployeeServlet</servlet-name>
+    <servlet-class>com.employee.dao.EmployeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeServlet</servlet-name>
+    <url-pattern>/EmployeeServlet</url-pattern>
+  </servlet-mapping>
+  <display-name>EmployeeMS</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
     <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
     <description></description>
-    <display-name>InsertServlet</display-name>
-    <servlet-name>InsertServlet</servlet-name>
-    <servlet-class>com.sms.controller.InsertServlet</servlet-class>
+    <display-name>EmployeeServletFile</display-name>
+    <servlet-name>EmployeeServletFile</servlet-name>
+    <servlet-class>com.employee.controller.EmployeeServletFile</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>InsertServlet</servlet-name>
-    <url-pattern>/InsertServlet</url-pattern>
+    <servlet-name>EmployeeServletFile</servlet-name>
+    <url-pattern>/EmployeeServletFile</url-pattern>
   </servlet-mapping>
 </web-app>
