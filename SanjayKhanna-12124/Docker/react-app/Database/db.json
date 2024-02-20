@@ -1,0 +1,12 @@
+{
+  "laptop": [
+    {
+      "id": "cb5b",
+      "brand": "Leveno",
+      "configure": "12345",
+      "allocated_user": "Vinolisha",
+      "allocated_on": "20/02/2024",
+      "allocation_period": "6month"
+    }
+  ]
+}
