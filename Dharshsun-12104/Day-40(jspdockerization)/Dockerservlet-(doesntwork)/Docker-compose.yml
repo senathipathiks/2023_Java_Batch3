@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+
+  api:
+
+    image: webapp
+
+    container_name: mywebapp
+
+    build:
+
+      context: .
+
+      dockerfile: Dockerfile
+
+    ports:
+
+      - 80:8080

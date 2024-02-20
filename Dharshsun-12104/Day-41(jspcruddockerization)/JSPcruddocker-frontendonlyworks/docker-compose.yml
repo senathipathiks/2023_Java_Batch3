@@ -1,0 +1,27 @@
+web:
+  image: .
+  ports:
+   - "8080:8080"
+  links:
+   - mysql:db
+
+dbdata:
+  image: mysql:latest
+  volumes:
+   - /var/lib/mysql
+   
+mysql:
+  image: mysql:latest
+  ports:
+   - "6603:3306"
+  volumes:
+   - ./data:var/lib/mysql
+   - ./src/main/db:/docker-entrypoint-initdb.d/:MYSQL_ROOT_PASSWORD
+  environment:
+    MYSQL_ROOT_PASSWORD: Password@12345
+  # web:
+  #   container_name:tomcat
+  #   image:app
+  #   build: . 
+  #   ports:
+  #    - "8080:8080"
