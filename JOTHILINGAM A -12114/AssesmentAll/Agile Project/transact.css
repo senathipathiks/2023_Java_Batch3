@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .history-container {
+    padding: 30px;
+    border: 1px solid gray;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.45);
+  }
+  
+  .history-container > .header {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: normal;
+  }
+  
+  .account-balance {
+    display: flex;
+    flex-grow: 1;
+    align-items: baseline;
+    margin-top: 15px;
+  }
+  
+  .account-balance > .label {
+    font-size: 14px;
+  }
+  
+  .account-balance > amount {
+    font-size: 16px;
+  }
+  
+  .dots {
+    border-bottom: 1px dotted #ccc;
+    flex-grow: 1;
+  }
+  
+  .transactions {
+    background-color: #ededed;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+  
+  .transactions > table {
+    width: 100%;
+    border-collapse: collapse;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .transactions > table td {
+    padding: 0;
+  }
+  
+  h3 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: normal;
+    padding: 10px 0;
+  }
+  
+  .transaction-row {
+    height: 30px;
+    white-space: pre;
+  }
+  
+  .transaction-date {
+    width: 23%; /*?*/
+  }
+  
+  .transaction-amount {
+    text-align: right;
+  }
