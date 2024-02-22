@@ -1,0 +1,24 @@
+version: "3"
+services:
+  api:
+    image: webapp
+    container_name: mywebapp
+    build:
+      context: .
+      dockerfile: D:\hands-on\sundhar-12106\java_servlet\mvc-form\DockerTomcat\Dockerfile
+    ports:
+      - 80:8080
+  database:
+    image: mysql
+    container_name: jspmysql
+    build: D:\hands-on\sundhar-12106\java_servlet\mvc-form\DockerMySQL\Dockerfile
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=jsptutorial
+    ports:
+      - "6703:3306"
+    volumes:
+      - .DockerMySQL/db.sql:/docker-entrypoint-initdb.d/setup.sql
+      - db_data:/var/lib/mysql
+volumes:
+  db_data:
