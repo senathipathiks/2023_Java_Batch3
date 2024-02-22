@@ -11,4 +11,11 @@
     <servlet-name>UserMain</servlet-name>
     <url-pattern>/UserMain</url-pattern>
   </servlet-mapping>
+  <resource-ref>
+  <description>MySQL Datasource</description>
+  <res-ref-name>jdbc/MySQLDS</res-ref-name>
+  <res-type>javax.sql.DataSource</res-type>
+  <res-auth>Container</res-auth>
+  <res-sharing-scope>Shareable</res-sharing-scope>
+</resource-ref>
 </web-app>

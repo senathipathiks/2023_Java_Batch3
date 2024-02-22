@@ -9,7 +9,7 @@ public class DBUtil {
 	public static Connection getDBConnection() {
 
 		Connection con = null;
-		final String url = "jdbc:mysql://localhost:3306/ums";
+		final String url = "jdbc:mysql://localhost:6703/jsptutorial";
 		final String user = "root";
 		final String Pass = "root";
 

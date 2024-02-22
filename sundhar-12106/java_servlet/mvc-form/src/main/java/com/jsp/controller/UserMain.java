@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-import com.jsp.bean.UserBean;
+import com.jsp.bean.*;
 import com.jsp.dao.UserDAO;
 
 import jakarta.servlet.RequestDispatcher;
@@ -156,7 +156,10 @@ public class UserMain extends HttpServlet {
 		String email = request.getParameter("email");
 		String country = request.getParameter("country");
 
-		UserBean ub = new UserBean(name, email, country);
+		UserBean ub = new UserBean();
+		ub.setName(name);
+		ub.setCountry(country);
+		ub.setEmail(email);
 
 		UserDAO dao = new UserDAO();
 
