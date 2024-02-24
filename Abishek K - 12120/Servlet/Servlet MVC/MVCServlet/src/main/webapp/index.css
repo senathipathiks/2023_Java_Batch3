@@ -1,0 +1,13 @@
+@charset "ISO-8859-1";
+
+body{
+	background-color:gray;
+}
+.banner{
+	background-color: black;
+	color:white;
+}
+#link{
+	background-color: black;
+	color:white;
+}
