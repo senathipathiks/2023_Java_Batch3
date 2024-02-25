@@ -1,0 +1,17 @@
+Hibernate select next_val as id_val from hibernate_sequence for update
+Hibernate update hibernate_sequence set next_val=  where next_val=
+Hibernate insert into Registeration (password, username, id) values (, , )
+
+
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: insert into Student1 (city, name, id) values (?, ?, ?)
+Hibernate: insert into Student1 (city, name, id) values (?, ?, ?)
+Hibernate: insert into Student1 (city, name, id) values (?, ?, ?)
+
+Hibernate: update Student1 set city=?, name=? where id=?
+Hibernate: update Student1 set city=?, name=? where id=?
