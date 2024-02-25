@@ -1,0 +1,52 @@
+@charset "ISO-8859-1";
+.card{
+	height:650px;
+	width:500px;
+	margin-left:30%;
+	margin-top:40px;
+	padding:30px;
+	margin-bottom:30px;
+}
+#card1{
+	height:300px;
+	width:500px;
+	margin-left:30%;
+	margin-top:40px;
+	padding:30px;
+	
+}
+#btnFind{
+	margin-left:50px;
+}
+#banner{
+	margin-top:10px;
+	margin-left:30%;
+	width:70%;
+	height:80px;
+	color:white;
+	
+	align-items: center;
+}
+.nav-link{
+	color:white;
+}
+img{
+	height:80px;
+	width:80px;
+	margin-left:0px;
+}
+#Bname{
+	margin-left:0px;
+	margin-top:12px;
+	
+}
+
+#MB{
+	
+	background-color:#A7BEAE;
+}
+#poster{
+	margin-top:8px;
+	height:420px;
+	width:700px;
+}
