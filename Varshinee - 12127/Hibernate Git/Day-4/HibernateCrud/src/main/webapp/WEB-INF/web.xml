@@ -1,0 +1,27 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>insertHb</servlet-name>
+  	<display-name>insertHb</display-name>
+  	<description></description>
+  	<servlet-class>com.hibernate.controller.insertHb</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>InsertServlet</servlet-name>
+  	<display-name>InsertServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.hibernate.controller.InsertServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>insertHb</servlet-name>
+  	<url-pattern>/insertHb</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>InsertServlet</servlet-name>
+  	<url-pattern>/InsertServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
