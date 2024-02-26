@@ -1,0 +1,9 @@
+Hibernate: insert into employeesmanytomany1 (first_name, last_name) values (?, ?)
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: insert into projects (title, project_id) values (?, ?)
+Hibernate: insert into projects (title, project_id) values (?, ?)
+Hibernate: insert into employees_projects (employee_id, project_id) values (?, ?)
+Hibernate: insert into employees_projects (employee_id, project_id) values (?, ?)
