@@ -1,1 +1,0 @@
-Explain the steps involved in creating a TODO task using Redux. Provide a step-by-step explanation or an outline that illustrates the process, including the Redux concepts and actions needed to add a new task to the TODO list.
