@@ -1,0 +1,205 @@
+
+Display all:
+Hibernate: select employee0_.eid as eid1_0_, employee0_.dept as dept2_0_, employee0_.ename as ename3_0_ from EmployeeHQL employee0_
+Employee [eid=1, ename=Name1, dept=2]
+Employee [eid=2, ename=Name2, dept=0]
+Employee [eid=3, ename=Name3, dept=1]
+Employee [eid=4, ename=Name4, dept=2]
+Employee [eid=5, ename=Name5, dept=2]
+Employee [eid=6, ename=Name6, dept=1]
+Employee [eid=7, ename=Name7, dept=3]
+Employee [eid=8, ename=Name8, dept=0]
+Employee [eid=9, ename=Name9, dept=1]
+Employee [eid=10, ename=Name10, dept=2]
+Employee [eid=11, ename=Name11, dept=0]
+Employee [eid=12, ename=Name12, dept=0]
+Employee [eid=13, ename=Name13, dept=2]
+Employee [eid=14, ename=Name14, dept=3]
+Employee [eid=15, ename=Name15, dept=2]
+Employee [eid=16, ename=Name16, dept=1]
+Employee [eid=17, ename=Name17, dept=1]
+Employee [eid=18, ename=Name18, dept=1]
+Employee [eid=19, ename=Name19, dept=2]
+Employee [eid=20, ename=Name20, dept=2]
+Employee [eid=21, ename=Name21, dept=0]
+Employee [eid=22, ename=Name22, dept=2]
+Employee [eid=23, ename=Name23, dept=1]
+Employee [eid=24, ename=Name24, dept=1]
+Employee [eid=25, ename=Name25, dept=2]
+Employee [eid=26, ename=Name26, dept=1]
+Employee [eid=27, ename=Name27, dept=2]
+Employee [eid=28, ename=Name28, dept=1]
+Employee [eid=29, ename=Name29, dept=0]
+
+Condtional statement where dept>1:
+Hibernate: select employee0_.eid as eid1_0_, employee0_.dept as dept2_0_, employee0_.ename as ename3_0_ from EmployeeHQL employee0_ where employee0_.dept>1
+Employee [eid=1, ename=Name1, dept=2]
+Employee [eid=4, ename=Name4, dept=2]
+Employee [eid=5, ename=Name5, dept=2]
+Employee [eid=7, ename=Name7, dept=3]
+Employee [eid=10, ename=Name10, dept=2]
+Employee [eid=13, ename=Name13, dept=2]
+Employee [eid=14, ename=Name14, dept=3]
+Employee [eid=15, ename=Name15, dept=2]
+Employee [eid=19, ename=Name19, dept=2]
+Employee [eid=20, ename=Name20, dept=2]
+Employee [eid=22, ename=Name22, dept=2]
+Employee [eid=25, ename=Name25, dept=2]
+Employee [eid=27, ename=Name27, dept=2]
+
+
+From Employee where eid=10
+Hibernate: select employee0_.eid as eid1_0_, employee0_.dept as dept2_0_, employee0_.ename as ename3_0_ from EmployeeHQL employee0_ where employee0_.eid=10
+Employee [eid=10, ename=Name10, dept=2]
+
+aggregate function
+Hibernate: select employee0_.eid as col_0_0_, employee0_.ename as col_1_0_, employee0_.dept as col_2_0_ from EmployeeHQL employee0_ where employee0_.dept>1
+1:Name1:2
+4:Name4:2
+5:Name5:2
+7:Name7:3
+10:Name10:2
+13:Name13:2
+14:Name14:3
+15:Name15:2
+19:Name19:2
+20:Name20:2
+22:Name22:2
+25:Name25:2
+27:Name27:2
+
+select count(eid) From Employee where dept>1:
+Hibernate: select count(employee0_.eid) as col_0_0_ from EmployeeHQL employee0_ where employee0_.dept>1
+13
+
+select sum(dept) From Employee:
+Hibernate: select sum(employee0_.dept) as col_0_0_ from EmployeeHQL employee0_
+38
+
+select avg(eid) From Employee:
+Hibernate: select avg(employee0_.eid) as col_0_0_ from EmployeeHQL employee0_
+15.0
+
+
+delete from Employee where id=29
+Hibernate: delete from EmployeeHQL where eid=29
+Deleted successfully
+
+HCQL:
+Criteria criteria = session.createCriteria(Employee.class);
+Hibernate: select this_.eid as eid1_0_0_, this_.dept as dept2_0_0_, this_.ename as ename3_0_0_ from EmployeeHQL this_
+Employee [eid=1, ename=Name1, dept=2]
+Employee [eid=2, ename=Name2, dept=0]
+Employee [eid=3, ename=SanjayKhanna, dept=1]
+Employee [eid=4, ename=Name4, dept=2]
+Employee [eid=5, ename=Name5, dept=2]
+Employee [eid=6, ename=Name6, dept=1]
+Employee [eid=7, ename=Name7, dept=3]
+Employee [eid=8, ename=Name8, dept=0]
+Employee [eid=9, ename=Name9, dept=1]
+Employee [eid=10, ename=Name10, dept=2]
+Employee [eid=11, ename=Name11, dept=0]
+Employee [eid=12, ename=Name12, dept=0]
+Employee [eid=13, ename=Name13, dept=2]
+Employee [eid=14, ename=Name14, dept=3]
+Employee [eid=15, ename=Name15, dept=2]
+Employee [eid=16, ename=Name16, dept=1]
+Employee [eid=17, ename=Name17, dept=1]
+Employee [eid=18, ename=Name18, dept=1]
+Employee [eid=19, ename=Name19, dept=2]
+Employee [eid=20, ename=Name20, dept=2]
+Employee [eid=21, ename=Name21, dept=0]
+Employee [eid=22, ename=Name22, dept=2]
+Employee [eid=23, ename=Name23, dept=1]
+Employee [eid=24, ename=Name24, dept=1]
+Employee [eid=25, ename=Name25, dept=2]
+Employee [eid=26, ename=Name26, dept=1]
+Employee [eid=27, ename=Name27, dept=2]
+Employee [eid=28, ename=Name28, dept=1]
+
+criteria.add(Restrictions.gt("eid",10));  :
+
+Hibernate: select this_.eid as eid1_0_0_, this_.dept as dept2_0_0_, this_.ename as ename3_0_0_ from EmployeeHQL this_ where this_.eid>?
+Employee [eid=11, ename=Name11, dept=0]
+Employee [eid=12, ename=Name12, dept=0]
+Employee [eid=13, ename=Name13, dept=2]
+Employee [eid=14, ename=Name14, dept=3]
+Employee [eid=15, ename=Name15, dept=2]
+Employee [eid=16, ename=Name16, dept=1]
+Employee [eid=17, ename=Name17, dept=1]
+Employee [eid=18, ename=Name18, dept=1]
+Employee [eid=19, ename=Name19, dept=2]
+Employee [eid=20, ename=Name20, dept=2]
+Employee [eid=21, ename=Name21, dept=0]
+Employee [eid=22, ename=Name22, dept=2]
+Employee [eid=23, ename=Name23, dept=1]
+Employee [eid=24, ename=Name24, dept=1]
+Employee [eid=25, ename=Name25, dept=2]
+Employee [eid=26, ename=Name26, dept=1]
+Employee [eid=27, ename=Name27, dept=2]
+Employee [eid=28, ename=Name28, dept=1]
+
+Order.desc("eid"):
+Hibernate: select this_.eid as eid1_0_0_, this_.dept as dept2_0_0_, this_.ename as ename3_0_0_ from EmployeeHQL this_ order by this_.eid desc
+Employee [eid=28, ename=Name28, dept=1]
+Employee [eid=27, ename=Name27, dept=2]
+Employee [eid=26, ename=Name26, dept=1]
+Employee [eid=25, ename=Name25, dept=2]
+Employee [eid=24, ename=Name24, dept=1]
+Employee [eid=23, ename=Name23, dept=1]
+Employee [eid=22, ename=Name22, dept=2]
+Employee [eid=21, ename=Name21, dept=0]
+Employee [eid=20, ename=Name20, dept=2]
+Employee [eid=19, ename=Name19, dept=2]
+Employee [eid=18, ename=Name18, dept=1]
+Employee [eid=17, ename=Name17, dept=1]
+Employee [eid=16, ename=Name16, dept=1]
+Employee [eid=15, ename=Name15, dept=2]
+Employee [eid=14, ename=Name14, dept=3]
+Employee [eid=13, ename=Name13, dept=2]
+Employee [eid=12, ename=Name12, dept=0]
+Employee [eid=11, ename=Name11, dept=0]
+Employee [eid=10, ename=Name10, dept=2]
+Employee [eid=9, ename=Name9, dept=1]
+Employee [eid=8, ename=Name8, dept=0]
+Employee [eid=7, ename=Name7, dept=3]
+Employee [eid=6, ename=Name6, dept=1]
+Employee [eid=5, ename=Name5, dept=2]
+Employee [eid=4, ename=Name4, dept=2]
+Employee [eid=3, ename=SanjayKhanna, dept=1]
+Employee [eid=2, ename=Name2, dept=0]
+Employee [eid=1, ename=Name1, dept=2]
+
+Order.asc("eid"):
+Hibernate: select this_.eid as eid1_0_0_, this_.dept as dept2_0_0_, this_.ename as ename3_0_0_ from EmployeeHQL this_ order by this_.eid asc
+Employee [eid=1, ename=Name1, dept=2]
+Employee [eid=2, ename=Name2, dept=0]
+Employee [eid=3, ename=SanjayKhanna, dept=1]
+Employee [eid=4, ename=Name4, dept=2]
+Employee [eid=5, ename=Name5, dept=2]
+Employee [eid=6, ename=Name6, dept=1]
+Employee [eid=7, ename=Name7, dept=3]
+Employee [eid=8, ename=Name8, dept=0]
+Employee [eid=9, ename=Name9, dept=1]
+Employee [eid=10, ename=Name10, dept=2]
+Employee [eid=11, ename=Name11, dept=0]
+Employee [eid=12, ename=Name12, dept=0]
+Employee [eid=13, ename=Name13, dept=2]
+Employee [eid=14, ename=Name14, dept=3]
+Employee [eid=15, ename=Name15, dept=2]
+Employee [eid=16, ename=Name16, dept=1]
+Employee [eid=17, ename=Name17, dept=1]
+Employee [eid=18, ename=Name18, dept=1]
+Employee [eid=19, ename=Name19, dept=2]
+Employee [eid=20, ename=Name20, dept=2]
+Employee [eid=21, ename=Name21, dept=0]
+Employee [eid=22, ename=Name22, dept=2]
+Employee [eid=23, ename=Name23, dept=1]
+Employee [eid=24, ename=Name24, dept=1]
+Employee [eid=25, ename=Name25, dept=2]
+Employee [eid=26, ename=Name26, dept=1]
+Employee [eid=27, ename=Name27, dept=2]
+Employee [eid=28, ename=Name28, dept=1]
+
+
+
