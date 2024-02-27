@@ -1,0 +1,25 @@
+
+Hipernate:
+	It's a framework to store the object in to the database.
+	By using ORM-Object Relational Mapping tool.
+	It uses JPA 
+			-> where it can store, manipulate and access the data in database.
+	
+	
+	Here we considered as ->
+		Classes are tables.
+		Objects are Rows.
+		Attributes are Columns.
+		
+	We have the methods to operate the crud :
+		create method. 
+		save method.
+		update mthod.
+		delete method.
+		
+	Here we have language:
+		HQL-Hibernate Query Language.
+	
+	In Mysql all the database are dependent.
+	In HQL the database are independent.
+	
