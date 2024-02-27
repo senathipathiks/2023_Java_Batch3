@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+</head>
+<script>
+	function validateform(){
+		var fname=document.my.fname.value;
+		var fpass=document.my.fpass.value;
+		
+		if(fname=null){
+			alert("Name cannot be empty");
+			
+		}
+		else if(fpass.length<6){
+			alert("Password must be atleast 6 character");
+		}
+		
+	}
+</script>
+<style>
+	#box{
+		align-items: center;
+		border-radius: 2px;
+		padding: 300px;
+		margin-left: 300px;
+		font-size: large;
+		margin-top: 10px;
+		
+	}
+</style>
+<body>
+<form action="LoginPage" name="my" onsubmit="validateform()" >
+	<div id="box">
+	Enter Username : <input type="text" name="fname">
+	<br><br>
+	Enter Password : <input type="password" name="fpass">
+	<br><br>
+	<button>Submit	</button>
+	</div>
+	</form>
+</body>
+</html>
