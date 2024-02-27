@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SumOfArray.html</title>
+</head>
+<body>
+    <h2>Absolute Sum of Array Values</h2>
+    <div id="resultDisplay"></div> <!-- Placeholder for displaying the result -->
+
+    <script>
+        function absoluteSum(arr) {
+            let sum = 0;
+
+            // Loop through the array and calculate the sum of absolute values
+            for (let i = 0; i < arr.length; i++) {
+                sum += Math.abs(arr[i]); // Using Math.abs() to get the absolute value
+            }
+
+            return sum;
+        }
+
+        // Get input from the user
+        let input = prompt("Enter array values separated by spaces:");
+        let array = input.split(' ').map(Number); // Convert the input string into an array of numbers
+
+        let result = absoluteSum(array);
+
+        // Display the result on the webpage
+        let resultDisplay = document.getElementById("resultDisplay");
+        resultDisplay.innerHTML = "<p>Absolute sum of array values: " + result + "</p>";
+    </script>
+</body>
+</html>

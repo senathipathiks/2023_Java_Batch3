@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today Date and time</title>
+</head>
+<body>
+    <h1>Date and Time</h1>
+    <label> Current date & time:</label>
+    <label id="lblDT"></label>
+    <br/><label >Current Day:</label>
+    <label id="lblDay"></label>
+
+    <script>
+        var currentDateTime=document.getElementById ('lblDT');
+        var currentday=document.getElementById('lblDay');
+        var currentDateTime=new Date();
+        var cdate=appendZero(currentDateTime.getDate());
+        var cmonth=appendZero(currentDateTime.getMonth()+1);
+        var cyear=currentDateTime.getFullYear();
+
+        var chour=appendZero(currentDateTime.getHours());
+        var cminutes=appendZero(currentDateTime.getMinutes());
+        var csec=appendZero(currentDateTime.getSeconds());
+
+        var daysofweek=['sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+        var currentDay=daysofweek[currentDateTime.getDay()];
+
+        var dispDate=cdate +'-'+cmonth+'-'+cyear +' '+chour+':'+cminutes+':'+csec;
+        lblDT.innerText=dispDate;
+        lblDay.innerText=currentDay;
+
+    function appendZero(number) {
+    return (number < 10 ? '0' : '') + number;
+}
+
+    </script>
+    
+    
+</body>
+</html>
