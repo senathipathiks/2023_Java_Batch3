@@ -1,0 +1,141 @@
+@charset "ISO-8859-1";
+body, html {
+	height: 100%;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.bg-image {
+	/* The image used */
+	background-image:
+		url("https://wallpapers.com/images/hd/best-ipad-mountain-range-6cjfwy1xmtn3alsp.jpg");
+	filter: blur(8px);
+	-webkit-filter: blur(8px);
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bg-text {
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+	color: white;
+	font-weight: bold;
+	border: 2px solid gray;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 50%;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	min-width: 200px;
+}
+
+#inputbox{
+	background-color: transparent;
+	margin: 5px;
+	border: 1px solid white;
+	border-radius: 40px;
+	width: 70%;
+	padding: 10px;
+	position: relative;
+}
+
+::placeholder{
+	color: white;
+}
+
+#inputboxbtn{
+	color: white;
+	background-color: transparent;
+	border-radius: 40px;
+	margin: 10px;	
+}
+
+#inputboxbtn:hover{
+	color: white;
+	background-color: rgba(0, 0, 0, 0.4);;
+	border-radius: 40px;
+	margin: 10px;	
+}
+
+.linkbarbtn{	
+	position: absolute;
+  	color: white;
+
+	
+}
+
+.btnlink{
+	display: flex;
+	position: relative;
+	z-index: 10;
+	
+}
+
+
+.maincontainer{
+	position: relative;
+}
+
+.bg-textlink{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 50%;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	
+}
+
+#link{
+	margin: 10px;
+	border: 1px solid white;
+	border-radius: 40px;
+	width: 50%;
+	padding: 10px;
+	position: relative;	
+}
+
+a{
+	color: white;
+	min-width: 105px;
+}
+
+a:hover{
+	background-color: rgb(0, 0, 0); 
+	background-color: rgba(0, 0, 0, 0.4);
+	color: white;
+	
+}
+
+.bg-textbanner{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 90%;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	font-family: sans-serif;
+	font-style:italic;
+	color: white;
+	
+}
+
+
+
+
