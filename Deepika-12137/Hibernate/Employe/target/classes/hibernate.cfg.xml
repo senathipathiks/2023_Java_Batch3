@@ -13,8 +13,9 @@
         
         
         <property name="hbm2ddl.auto">create</property>
-        <mapping class="com.day1.Employee.Employee.Employee"/>
-        <mapping class="com.day1.Employee.Employee.Laptop"/>
+        <mapping class="com.day1.HQL.Employe"/>
+        
+        
     
     </session-factory>
 </hibernate-configuration>

@@ -12,8 +12,9 @@
         <property name="show_sql">true</property>
         
         
-        <property name="hbm2ddl.auto">update</property>
-        <mapping class="com.maven.day2.Employee.Employee"/>
+        <property name="hbm2ddl.auto">create</property>
+        <mapping class="com.day1.Employee.Employee.Employee"/>
+        <mapping class="com.day1.Employee.Employee.Laptop"/>
     
     </session-factory>
 </hibernate-configuration>

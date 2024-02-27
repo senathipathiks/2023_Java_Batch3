@@ -13,8 +13,10 @@
         
         
         <property name="hbm2ddl.auto">create</property>
-        <mapping class="com.day1.Employee.Employee.Employee"/>
-        <mapping class="com.day1.Employee.Employee.Laptop"/>
+        <mapping class="com.day1.Inheritance.Employees.EmployeeData"/>
+        <mapping class="com.day1.Inheritance.Employees.RegularEmp"/>
+        <mapping class="com.day1.Inheritance.Employees.ContractEmp"/>
+        
     
     </session-factory>
 </hibernate-configuration>
