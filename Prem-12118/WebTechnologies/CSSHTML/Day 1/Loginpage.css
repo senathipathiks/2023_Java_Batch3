@@ -1,0 +1,46 @@
+*{
+    font: size 100px;;
+}
+
+.table-container {
+    position: relative;
+    right: 60px;
+    border: 2px solid black;
+    top: 45px;
+    font-size:120%;
+    background-color:rgb(243, 221, 191);
+    margin-top:10%;
+    height: 100%;    
+}
+ 
+a:hover{
+    color: rgb(2, 229, 245);
+    cursor: pointer;
+}
+ 
+body{
+    background-image:url( loginimage.png);
+}
+.formlayer{
+    
+    margin-left:50%;
+};
+.cr{
+    position: absolute;
+    bottom: 100px;
+}
+ #newid{ 
+     
+    background-color:rgb(97, 168, 168); /* Yellow background color */
+    color: black; /* White text color */
+    border:black; /* Remove button border */
+    padding: 10px 20px; /* Add padding to the button */
+    font-size: 13px; /* Font size */
+    border-radius: 100px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    /* Add more styles to make it creative */
+}
+
+    
+   
+ 

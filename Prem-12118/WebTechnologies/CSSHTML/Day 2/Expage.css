@@ -1,0 +1,39 @@
+p,b{
+    color: blue;
+    font-size: large;
+    font-weight:bold;
+    border: 2px solid green;
+    width: 300px; height: 100px;
+    text-align: center;
+    border-radius: 100px;
+    cursor:grabbing;
+}
+div{
+    width: 20%;
+    height:10%;
+    border:3px solid;
+
+}
+
+#h1style{
+    color: blue;
+    font-size: large;
+    font-weight:bold;
+    border: 2px solid green;
+    width: 220px; height: 100
+    px;;
+    text-align: center;
+    border-radius: 100px;
+    cursor:grabbing;
+}
+
+.classstyle{
+    width: 20%;
+    height:10%;
+    border:3px solid;
+
+
+}
+*{
+    border: solid;
+}
