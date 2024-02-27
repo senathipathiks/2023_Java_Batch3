@@ -1,6 +1,7 @@
 package sms.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.servlet.RequestDispatcher;
@@ -24,11 +25,11 @@ public class ControllerServlet extends HttpServlet {
 		else if (action.equals("delete"))
 			delete(req, resp);
 		else if (action.equals("deleteAll")) {
-
+			deleteAll(req, resp);
 		} else if (action.equals("find")) {
 			get(req, resp);
 		} else if (action.equals("findAll")) {
-			
+			getAll(req, resp);
 		} else if (action.equals("update")) {
 			update(req, resp);
 		}
@@ -65,7 +66,7 @@ public class ControllerServlet extends HttpServlet {
 		}
 	}
 
-	public static void update(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	public static void update(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
 		Student s = new Student();
 		s.setCity(req.getParameter("city"));
 		s.setName(req.getParameter("name"));
@@ -75,10 +76,26 @@ public class ControllerServlet extends HttpServlet {
 
 		if (res == 1) {
 			req.setAttribute("res", "tru");
-			rd.include(req, resp);
+			try {
+				rd.include(req, resp);
+			} catch (ServletException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		} else {
 			req.setAttribute("res", "fal");
-			rd.include(req, resp);
+			try {
+				rd.include(req, resp);
+			} catch (ServletException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 
@@ -97,7 +114,8 @@ public class ControllerServlet extends HttpServlet {
 	}
 
 	public static void getAll(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		List<Student> ls = StudentDAO.getAll();
+		ArrayList<Student> ls = (ArrayList<Student>) StudentDAO.getAll();
+		System.out.println(ls);
 		RequestDispatcher rd = req.getRequestDispatcher("Find.jsp");
 		if (ls != null) {
 			req.setAttribute("students", ls);
