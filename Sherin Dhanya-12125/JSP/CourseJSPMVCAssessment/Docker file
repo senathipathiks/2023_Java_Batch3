@@ -1,0 +1,8 @@
+[Friday 14:58] Vishnu Venkatachalam
+FROM tomcat:8.0-alpine
+ 
+COPY CourseJSPMVCAssessment.war  /usr/local/tomcat/webapps/webapp.war
+ 
+EXPOSE 8080
+ 
+CMD ["catalina.sh", "run"]

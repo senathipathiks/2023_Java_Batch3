@@ -1,0 +1,25 @@
+version: "3"
+services:
+  api:
+    image: webapp
+    container_name: mywebapp
+    build:
+      context: .
+      dockerfile: C:\Users\senathipathi.k\eclipse-workspace\JavaDB\JSPMVC\DockerTomcat\Dockerfile
+    ports:
+      - 80:8080
+  database:
+    image: mysql
+    container_name: jspmysql
+    build:
+      dockerfile:C:\Users\senathipathi.k\eclipse-workspace\JavaDB\JSPMVC\DockerMySQL\Dockerfile
+    environment:
+      - MYSQL_ROOT_PASSWORD=jsppassword
+      - MYSQL_DATABASE=jspmvc
+    ports:
+      - "6703:3306"
+    volumes:
+      - .DockerMySQL/jsp_backup.sql:/docker-entrypoint-initdb.d/setup.sql
+      - db_data:/var/lib/mysql
+volumes:
+    db_data:

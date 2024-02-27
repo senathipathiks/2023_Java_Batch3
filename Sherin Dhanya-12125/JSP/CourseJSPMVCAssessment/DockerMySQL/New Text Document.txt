@@ -1,0 +1,3 @@
+#dump.sh
+mysql -uroot -pjsppassword jspmvc < jsp_backup.sql 
+#end of dump.sh
