@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function validateMobileNumber(number) {
+        var regex = /^[0-9]{10}$/;
+        if (number.match(regex)) {
+            return true;
+        } else {
+            return false;
+        }
+        }
+
+        document.write("Valid Number : "+validateMobileNumber("1234567890")+"<br>"); // Outputs: true
+        document.write("Valid Number : "+validateMobileNumber("12345")+"<br>"); // Outputs: false
+
+    </script>
+</body>
+</html>
