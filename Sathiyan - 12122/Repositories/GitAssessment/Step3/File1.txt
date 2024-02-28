@@ -1,0 +1,24 @@
+<<<<<<< HEAD
+SAthiyan
+12122
+<<<<<<< HEAD
+
+
+
+
+=======
+releavntz
+Chennai 
+Virudhunagar
+
+>>>>>>> Branch1
+=======
+Sathiyan
+12122
+Reelavntz technology services Pvt.ltd
+Batch-3
+Sathiyan
+Sivarajan
+Git assessment
+Conflict cleared
+>>>>>>> Branch2

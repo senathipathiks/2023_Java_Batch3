@@ -1,0 +1,83 @@
+.image{
+    width: 100%;
+}
+
+#imagetwo{
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 80px;
+}
+
+#imagescontainer{
+    margin-bottom: 20px;
+}
+
+#imageone,#image,#imagethree{
+    width: 100%;
+    height: 100%;
+}
+
+.specialOffer{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#offerzone{
+    text-align: center;
+    font-size: 123px;
+}
+
+#capturesofpics{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10px;
+}
+
+#final_contained_part{
+    background-color: rgb(213, 127, 65);
+}
+
+#humanimage,#womenimage{
+    width: 300px;
+    margin-left: 20%;
+}
+
+#footersection{
+    background-color: black;
+    color: white;
+}
+
+h2{
+    margin-bottom: 40px;
+}
+
+li{
+    color: gray;
+    text-decoration-color: transparent;
+}
+
+a{
+    text-decoration-color: transparent;
+}
+
+#navbarNav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(188, 188, 188);
+
+}
+
+#navbarNavtwo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.naming{
+    font-size: 50px;
+    font-family: cursive;
+    margin-left: -150px;
+
+}

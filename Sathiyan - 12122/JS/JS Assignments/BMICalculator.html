@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+      body{
+        background-color: lightblue;
+      }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            border: 1px solid black;
+        }
+        .input-field {
+            margin: 10px 0;
+        }
+        .total {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <h1>Calculate BMI</h1>
+        <div class="input-field">
+            Enter weight (kg): <input type="text" id="weight">
+        </div>
+        <div class="input-field">
+            Enter height (cm): <input type="text" id="height">
+        </div>
+        <button id="calculate">Calculate BMI</button>
+        <div class="total"></div>
+    </div>
+
+    <script>
+        document.querySelector('#calculate').addEventListener('click', function() {
+            var weight = document.querySelector('#weight').value;
+            var height = document.querySelector('#height').value;
+
+            if(weight!="" && height!="") {
+                var bmi = (weight / ((height / 100) * (height / 100))).toFixed(2);
+                document.querySelector('.total').textContent = 'Your BMI is ' + bmi;
+            } else {
+                alert('Please enter both weight and height');
+            }
+        });
+    </script>
+</body>
+</html>

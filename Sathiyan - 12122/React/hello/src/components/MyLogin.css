@@ -1,0 +1,17 @@
+.name,.pass{
+    color: lightblue;
+    font-size: 20px;
+}
+
+.namebox,.passbox{
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+.subbutton{
+    background-color: lightblue;
+    color: black;
+    border: 1px solid black;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
