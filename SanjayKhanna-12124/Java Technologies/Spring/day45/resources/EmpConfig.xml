@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+ 	<bean name="emp" class="com.sample.example2.Employee" scope="prototype">
+ 	 	<property name="epmId" value="1"/>
+ 	 	<property name="empName" value="Sanjay Khanna"/>
+ 	 	<property name="dept">
+ 	 	<map>
+ 	 	<entry key="1" value="UIUX" />
+ 	 	<entry key="2" value="Java" />
+ 	 	<entry key="3" value="donet" />
+ 	 	<entry key="4" value="Testing" />
+ 	 	</map>
+ 	 	</property>
+ 	</bean>
+    </beans>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+ 	<bean name="add1" class="com.sample.example1.Address">
+ 	<!-- <property name="doorNumber" value="87"/>
+ 	<property name="street" value="Gandhi Nagar"/>
+ 	<property name="city" value="Chennai"/> -->
+ 	<constructor-arg name="doorNumber" value="87"/>
+ 	<constructor-arg name="street" value="Gandhi Nagar"/>
+ 	<constructor-arg name="city" value="Chennai"/>
+ 	</bean>
+ 	<bean name="add2" class="com.sample.example1.Address">
+ 	<!-- <property name="doorNumber" value="67"/>
+ 	<property name="street" value="Nethaji Street"/>
+ 	<property name="city" value="Madurai"/> -->
+ 	<constructor-arg name="doorNumber" value="67"/>
+ 	<constructor-arg name="street" value="Nethaji Street"/>
+ 	<constructor-arg name="city" value="Madurai"/>
+ 	</bean>
+ 	<bean name="add3" class="com.sample.example1.Address">
+ 	<!-- <property name="doorNumber" value="191"/>
+ 	<property name="street" value="Jayaraman Street"/>
+ 	<property name="city" value="Vellore"/> -->
+ 	<constructor-arg name="doorNumber" value="191"/>
+ 	<constructor-arg name="street" value="Jayaraman Street"/>
+ 	<constructor-arg name="city" value="vellore"/>
+ 	</bean>
+ 	<bean name="stu" class="com.sample.example1.Student">
+ 	<!-- <property name="stuId" value="10"/>
+ 	<property name="stuName" value="Sanjay khanna"/>
+ 	<property name="address">
+ 	<list>
+ 	<ref bean="add1"/>
+ 	<ref bean="add2"/>
+ 	<ref bean="add3"/>
+ 	</list>
+ 	</property> -->
+ 	<constructor-arg name="stuId" value="99"/>
+ 	<constructor-arg name="stuName" value="Sanjay"/>
+ 	<constructor-arg name="address">
+ 	<list>
+ 	<ref bean="add1"/>
+ 	<ref bean="add2"/>
+ 	<ref bean="add3"/>
+ 	</list>
+ 	</constructor-arg>
+ 	</bean>
+    </beans>
