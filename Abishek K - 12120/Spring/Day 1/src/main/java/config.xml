@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+ 
+     <bean class="com.abi.day6.SpringD1.Bike" name="b1">
+     
+     
+     </bean>
+     
+     <bean class="com.abi.day6.SpringD1.Car" name="c1">
+     
+     
+     </bean>
+     
+     
+    <!-- This will invoke the setter method. It is known as Setter Injection. --> 
+      
+     <bean class="com.abi.day6.SpringD1.Student" name="s1"> 
+     <property  name="sid" value="12120" />
+     <property  name="sname" value="Abishek" />
+     <property  name="scity" value="Namakkal" />
+     
+     
+     
+     </bean>
+     
+     
+     <!-- This will invoke the Field constructor in the Bean Class. This is known as Constructor Injecting -->
+     <bean class="com.abi.day6.SpringD1.Student" name="s2">
+     
+     <constructor-arg name="sid" value="12120" />
+     <constructor-arg name="sname" value="Abishek" />
+     <constructor-arg name="scity" value="Namakal" />
+     
+     
+     </bean>
+     
+     </beans>
