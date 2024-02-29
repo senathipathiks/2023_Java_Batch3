@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+ 
+      <!--This is our beans meta data and We use Setter Injection here  -->
+    <!-- This one for car & bike -->
+    <!--    <bean class="com.jeeva.springDay1.SpringDay1.Bike" name="b1">-->
+     <!-- </bean>-->
+      <!--Class & name is mandatory  -->
+      
+     <!-- <bean class="com.jeeva.springDay1.SpringDay1.Car" name="c1">-->
+     <!-- </bean>-->
+     
+     
+     
+     <!-- This one for Student Using Only Getter & setters -->
+     
+     <bean class="com.jeeva.springDay1.SpringDay1.Student" id="s1">
+     <property name="studentId" value="123" />     
+     <property name="studentName" value="Singam" />     
+     <property name="studentCity" value="Arni" />     
+    <!--   This  proprty will invoke the Setter methods in Student Class  [This Is Known as Setter Injuction]   -->
+     </bean>  
+      
+     <!-- This Below one for Constructor Injunction -->
+     <bean class="com.jeeva.springDay1.SpringDay1.Student" name="c1">
+     <constructor-arg name="studentId" value="200"/>
+     <constructor-arg name="studentName" value="Steve"/>
+     <constructor-arg name="studentCity" value="Spain"/>
+    </bean>
+   </beans>
