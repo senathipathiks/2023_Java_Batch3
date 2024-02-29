@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+    
+    <bean class="com.abi.qns.Answer" name="ans1">
+    <property name="ans" value="It is OOPS Language" />
+    </bean>
+    
+    
+    <bean class="com.abi.qns.Answer" name="ans2">
+    <property name="ans" value="It has many In-build functions" />
+    </bean>
+    
+    <bean class="com.abi.qns.User" name="u1">
+    <property name="uname" value="Abishek"  />
+    </bean>
+    
+    <bean class="com.abi.qns.User" name="u2">
+    <property name="uname" value="Jeeva" />
+    </bean>
+    
+    <bean class="com.abi.qns.Question" name="question">
+    <property name="qid" value="1"></property>
+    <property name="qname" value="What is a JAVA language ?" />
+    <property name="qns" >
+    <map>
+    <entry key-ref="ans1" value-ref="u1" ></entry>
+    <entry key-ref="ans2" value-ref="u2" ></entry>
+    </map>
+    </property>
+    </bean>
+    
+    </beans>

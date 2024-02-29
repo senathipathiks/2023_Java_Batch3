@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+    
+    
+    <!-- Setter Injection -->
+    <!-- <bean class="com.abi.blife.Student" name="stud">
+    <property name="sid" value="12120"></property>
+    <property name="sname" value="Abishek"></property>
+    <property name="address">
+    
+    <list>
+    <value>2/357, Nehru Nagar,</value>
+    <value>Mohanur,Namakkal</value>
+    <value>pin-637015</value>
+    
+    </list>
+    </property>
+    
+    
+    </bean> -->
+    
+    
+    <!-- Constructor Injection -->
+   <!--  <bean class="com.abi.blife.Student" name="stud1">
+    <constructor-arg name="sid" value="18425"></constructor-arg>
+    <constructor-arg name="sname" value="Kumar"></constructor-arg>
+    <constructor-arg name="address">
+    <list>
+    <value>2/357, Nehru Nagar,</value>
+    <value>Mohanur, Namakkal,</value>
+    <value>Pin-637015</value>
+    </list>
+    
+    </constructor-arg>
+    
+    
+    
+    </bean> -->
+    
+    <bean class="com.abi.blife.Address" name="add1">
+    <property name="doorno" value="2357"></property>
+    <property name="street" value="Nehru Nagar"></property>
+    <property name="city" value="Mohanur"></property>
+    
+    </bean>
+    
+    <bean class="com.abi.blife.Address" name="add2">
+    <property name="doorno" value="2120"></property>
+    <property name="street" value="Gandhi Nagar"></property>
+    <property name="city" value="Salem"></property>
+    
+    </bean>
+    
+    <bean class="com.abi.blife.Student2" name="std">
+    <property name="sid" value="12120"></property>
+    <property name="sname" value="Abishek"></property>
+    <property name="address">
+    <list>
+    <ref bean="add1" />
+    <ref bean="add2" />
+    </list>
+    </property>
+    
+    
+    </bean>
+    
+    
+    
+    
+    </beans>

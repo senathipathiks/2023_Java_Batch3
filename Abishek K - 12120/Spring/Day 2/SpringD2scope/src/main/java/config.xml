@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+ 
+ <!-- prototype will careate a new bean for each requset. -->
+ <!-- singleton will only one bean. -->
+ 
+ <bean class="com.abi.day2.SpringD2scope.Student" name="student" scope="prototype">  
+ <property name="sid" value="12120"></property>
+ <property name="sname" value="Abishek"></property>
+ <property name="scity" value="Namakkal"></property>
+ 
+ </bean>
+ 
+ 
+ <!-- It is used for the bean life-cycle. Here class attribute is taken as connection with App.java -->
+ <bean class="com.abi.scope2.Student" name="std" init-method="init" destroy-method="destroy">
+ 
+ </bean>
+ 
+ 
+ </beans>
