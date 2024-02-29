@@ -1,0 +1,57 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!--This is our beans meta data and We use Setter Injection here  -->
+	
+	<!-- <bean class="com.day1.Scope.Address" name="add1">
+<property name="doorNo" value="1"></property>
+<property name="street" value="Ganthi Nagar"></property>
+<property name="city" value="chennai"></property>
+</bean>
+
+<bean class="com.day1.Scope.Address" name="add2">
+<property name="doorNo" value="3"></property>
+<property name="street" value="Ganthi Nagar"></property>
+<property name="city" value="chennai"></property>
+</bean>
+
+<bean class="com.day1.Scope.Student3" name="ss1">
+<property name="id" value="65"></property>
+<property name="name" value="Gowtham"></property>
+<property name="address">
+	<list>
+		<ref bean="add1"></ref>
+		<ref bean="add2"></ref>
+	</list>
+</property>
+</bean>
+-->
+
+<bean class="com.day1.Scope.Address" name="add1">
+	<constructor-arg name="doorNo" value="3"> </constructor-arg>
+	<constructor-arg name="street" value="Anna nagar"> </constructor-arg>
+	<constructor-arg name="city" value="Chennai"> </constructor-arg>
+	</bean>
+	
+
+<bean class="com.day1.Scope.Address" name="add2">
+	<constructor-arg name="doorNo" value="8"> </constructor-arg>
+	<constructor-arg name="street" value="Annai nagar"> </constructor-arg>
+	<constructor-arg name="city" value="Chennai"> </constructor-arg>
+	</bean>
+
+<bean class="com.day1.Scope.Student3" name="ss1">
+		<constructor-arg name="id" value="123" />
+		<constructor-arg name="name" value="gowtham" />
+		<constructor-arg name="address">
+			<list>
+			<ref bean="add1"></ref>
+			<ref bean="add2"></ref>
+			</list>
+			</constructor-arg>
+</bean>
+</beans>
