@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- This is Setter Injection -->
+	<!-- <bean class="setandconsInjection.Student" name="injection">
+	 <property 
+		name="studentId" value="123" />
+		 <property name="studentName" value="Singam" 
+		/>
+		 <property name="studentAddress">
+		  <list> <value>39,Divine Residency</value> 
+		<value>Cheran Managar</value>
+		 <value>Covai</value>
+		  </list>
+		   </property> </bean> -->
+
+	<!-- This is Constructor Injection -->
+
+	<!-- <bean class="setandconsInjection.Student" name="consInjection">
+
+		<constructor-arg name="studentId" value="1000"></constructor-arg>
+		<constructor-arg name="studentName" value="Oscar"></constructor-arg>
+		<constructor-arg name="studentAddress">
+			<list>
+				<value>100,MLS Street</value>
+				<value>Rosario</value>
+				<value>Argentina</value>				
+
+			</list>
+		</constructor-arg>
+	</bean> -->
+	
+	<!-- below this for address plus  student class-->
+	
+	
+	<!-- <bean class="setandconsInjection.Address" name="add1">
+	<property 	name="doorNo" value="23" />
+	  <property name="street" value="nethaji" />
+	   <property name="city"  value="chennai"/>
+	
+	</bean>
+	<bean class="setandconsInjection.Address" name="add2">
+	<property 	name="doorNo" value="33" />
+	  <property name="street" value="Kumaran" />
+	   <property name="city"  value="Covai"/>
+	
+	</bean>
+	 -->
+	
+	<!-- <bean class="setandconsInjection.AddStudent" name="Addinjection">
+	 <property 	name="studentId" value="213" />
+	  <property name="studentName" value="Singam" />
+	   <property name="studentAddress">
+	    <list>
+	    <ref bean="add1"/>
+	     <ref bean="add2"/>
+	    </list>
+	    </property>
+		  </bean> --> 
+	
+	<!-- 
+	<bean class="setandconsInjection.AddStudent" name="Consinjection">
+	<constructor-arg name="studentId" value="213"/>
+	<constructor-arg name="studentName" value="Oscar"/>	
+	<constructor-arg name="studentAddress" >
+	<list>
+	    <ref bean="add1"/>
+	     <ref bean="add2"/>
+	    </list>
+	</constructor-arg>
+	
+		  </bean>  -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</beans>

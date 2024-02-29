@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+    
+    <!-- This is Map Injection -->
+	 <!-- <bean class="Mapinjection.Employee" name="map">
+	 <property name="employeeId" value="123" />
+	 <property name="employeeName" value="Jasprit"/>
+	 <property name="employeeAddress">
+	 <map>
+
++	 <entry key="10" value="Arm Street"/>
+	  <entry key="20" value="Crm Street"/>
+	  <entry key="30" value="Orm Street"/>
+	 
+	 </map>		 
+</property>
+</bean> -->
+
+	 <!-- This is Address plus Employee Injection -->
+
+		<bean class="Mapinjection.Address" name="ad1">
+		<property name="street" value="Anna Nagar"></property>
+		<property name="city" value="Chennai"></property>
+		</bean>
+		<bean class="Mapinjection.DoorNo" name="ad2">
+		<property name="employeeDoorNo" value="1234"></property>
+		</bean>
+		
+		
+		
+		<bean class="Mapinjection.EmpAdd" name="empadd">
+		<property name="employeeId" value="800"></property>
+		<property name="employeeName" value="Oscar"></property>
+		<property name="employeeAddress">
+		<map>
+		<entry key-ref="ad2" value-ref="ad1">
+		</entry>
+		</map>	
+		</property>
+		
+		
+		</bean>
+		
+		
+		
+		
+		
+		
+    
+     
+ </beans>
