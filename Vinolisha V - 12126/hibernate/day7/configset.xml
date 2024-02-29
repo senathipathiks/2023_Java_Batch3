@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+    
+    <!-- for Student class -->
+    
+      <!--   <bean class="com.day7.SpringSetMethod.Student" name="Student">
+     <property name="id" value="22"></property> 
+     <property name="name" value="vinisha"></property>
+     <property name="city" value="nagercoil"/>
+      <property name="address">
+     <set>
+     	<value>130/ Velacherry</value>
+     	<value>Nagercoil</value>
+     	<value>Kanniyakumari</value>
+     	
+     </set>
+     </property>
+     </bean>
+     
+      <bean class="com.day7.SpringSetMethod.Student" name="Stud">
+     <constructor-arg name="id" value="111"></constructor-arg>
+     <constructor-arg name="name" value="Vinolisha"></constructor-arg>
+     <constructor-arg name="city" value="Attoor"></constructor-arg>
+     <constructor-arg name="address">
+     <set>
+     	<value>11/102 Villukuri</value>
+     	<value>Thinavilai</value>
+     	<value>Kanniyakumari</value>
+     </set>
+     </constructor-arg>
+     </bean>
+     </beans>  -->
+     
+     
+    <!-- for Student2 and address class -->
+     <bean class="com.day7.SpringSetMethod.Address" name="Add1">
+    <property name="doorNo" value="33"></property>
+    <property name="streetName" value="Thinavali"></property>
+    <property name="city" value="Nagercoil"></property>
+    </bean>
+
+	<bean class="com.day7.SpringSetMethod.Address" name="Add2">
+    <property name="doorNo" value="53"></property>
+    <property name="streetName" value="Thinavali"></property>
+    <property name="city" value="Nagercoil"></property>
+    </bean>
+    
+    <bean class="com.day7.SpringSetMethod.Student2" name="Student2"> 
+    <property name="id" value="223"></property>
+    <property name="name" value="Vino"></property>
+    <property name="City" value="Kanniyakumari"></property>
+    <property name="address">
+    <set>
+    <ref bean="Add1"></ref>
+    <ref bean="Add2"></ref>
+    </set>
+    </property>
+    </bean>
+    
+    </beans>  
