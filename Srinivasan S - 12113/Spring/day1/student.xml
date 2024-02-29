@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+ 
+      <!--This is our beans meta data and We use Setter Injection here  -->
+     <!--   <bean class="com.spring.day1.Project1.Car" name="c1"></bean>
+      <bean class="com.spring.day1.Project1.Bike" name="b1"></bean>-->
+      
+     <!--    <bean class="com.spring.day2.Student" name="s" scope="singleton">
+      <bean class="com.spring.day2.Student" name="s" scope="prototype">
+      <property name="sId" value="111"></property>
+      <property name="sName" value="Srini"></property>
+      <property name="sCity" value="Neyveli"></property>
+      </bean> -->
+      
+      <bean class="com.spring.day2.beanlifecycle.Student" name="s"  init-method="init" destroy-method="destroy">
+      <constructor-arg name="sid" value="111"></constructor-arg>
+       <constructor-arg name="sname" value="Srini"></constructor-arg>
+      </bean>
+      
+ </beans>
