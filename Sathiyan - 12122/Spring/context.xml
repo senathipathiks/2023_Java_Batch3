@@ -1,0 +1,43 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <!-- ===================================== Day1 XML ======================================== -->
+    
+    <!--  
+   <bean name="b1" class="com.day1.spring.Basics.Bike"></bean> 
+    <bean name="c1" class="com.day1.spring.Basics.Car"></bean> 
+    
+   <bean class="com.day1.spring.Basics.Student" name="s1">
+    	<property name="sid" value="123"></property>
+    	<property name="sname" value="Sathya"></property>
+    	<property name="scity" value="TVM"></property>
+    </bean> 
+    
+    <bean class="com.day1.spring.Basics.Student" name="s2">
+	    <constructor-arg name="sid" value="124" /> 
+	    <constructor-arg name="sname" value="Sathiyan" /> 
+	    <constructor-arg name="scity" value="Coimbatore" />
+    </bean>
+    
+    -->
+    
+    <!-- ======================================= Day2 XML Scopes ============================================== -->
+    
+    <!--  <bean class="com.day2.scopes.Student" name="student" scope="prototype">
+    	<property name="id" value="333"></property>
+    	<property name="sname" value="Sathya"></property>
+    	<property name="scity" value="TVM"></property>
+    </bean> -->
+    
+    <!-- ======================================= Day2 XML lifecycle ============================================== -->
+    
+    <bean class="com.day2.lifecycle.Student" name="student" init-method="init" destroy-method="destroy" />
+       
+    
+    
+    </beans>

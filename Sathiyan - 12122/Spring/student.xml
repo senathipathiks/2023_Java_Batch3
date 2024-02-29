@@ -1,0 +1,123 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+    <!-- =============================Setter Injection================================= -->
+    
+    <!-- <bean class="com.day1.spring.Basics.Student2" name="student2">
+    	<property name="sid" value="123"></property>
+    	<property name="sname" value="Sathya"></property>
+    	<property name="address">
+    		<list>
+    		<value>57,Padasalai st</value>
+    		<value>Vazhur</value>
+    		<value>Vandavasi</value>
+    		</list>
+    	</property>
+    </bean> -->
+    
+    <!-- =============================Constructor Injection================================= -->
+    
+    <!-- <bean class="com.day1.spring.Basics.Student2" name="student2">
+	    <constructor-arg name="sid" value="124" /> 
+	    <constructor-arg name="sname" value="Sathiyan" /> 
+	    <constructor-arg name="address">
+	    <list>
+	    	<value>57,Padasalai st</value>
+    		<value>Vazhur</value>
+    		<value>Vandavasi</value>
+	    </list>
+	    
+	    </constructor-arg>
+    </bean> -->
+    
+    <!-- ========================== Injection with objects ================================ -->
+    
+   <!--  <bean name="address1" class="com.day1.spring.Basics.Address">
+    	<property name="doorNo" value="57"></property>
+    	<property name="street" value="Padasalai st, Vandavasi"></property>
+    	<property name="city" value="Chennai"></property>    
+    </bean>
+    
+    <bean name="address2" class="com.day1.spring.Basics.Address">
+    	<property name="doorNo" value="58"></property>
+    	<property name="street" value="Anna st, Vandavasi"></property>
+    	<property name="city" value="Chennai"></property>    
+    </bean>
+    
+    <bean name="student" class="com.day1.spring.Basics.Student3">
+    	<property name="sid" value="45"></property>
+    	<property name="sname" value="Tamizh"></property>
+    	<property name="address">
+    		<list>
+    			<ref bean="address1"/>
+    			<ref bean="address2"/>
+    		</list>
+    	
+    	</property>    
+    </bean> -->
+    
+    <!-- ================================ Using Set ================================ -->
+    
+     <!-- <bean name="address1" class="com.day1.spring.Basics.Address">
+    	<constructor-arg name="doorNo" value="57" /> 
+	    <constructor-arg name="street" value="padasalai street, vandavasi" /> 
+	    <constructor-arg name="city" value="TVM" />    
+    </bean>
+    
+    <bean name="address2" class="com.day1.spring.Basics.Address">
+    	<constructor-arg name="doorNo" value="157" /> 
+	    <constructor-arg name="street" value="Anna salai street, Guindy" /> 
+	    <constructor-arg name="city" value="Chennai" />    
+    </bean>
+    
+    <bean name="student" class="com.day1.spring.Basics.Student4">
+    	<constructor-arg name="sid" value="124" /> 
+	    <constructor-arg name="sname" value="Sathiyan" /> 
+	    <constructor-arg name="address" > 
+    		<list>
+    			<ref bean="address1"/>
+    			<ref bean="address2"/>
+    		</list>
+    		</constructor-arg>
+    </bean> -->
+    
+    <!-- ================================ Using Map ================================ -->
+    
+    <bean name="address1" class="com.day1.spring.Basics.Address">
+    	<property name="doorNo" value="57"></property>
+    	<property name="street" value="Padasalai st, Vandavasi"></property>
+    	<property name="city" value="Chennai"></property>    
+    </bean>
+    
+    <bean name="address2" class="com.day1.spring.Basics.Address">
+    	<property name="doorNo" value="58"></property>
+    	<property name="street" value="Anna st, Vandavasi"></property>
+    	<property name="city" value="Chennai"></property>    
+    </bean>
+    
+    <bean name="student" class="com.day1.spring.Basics.Student5">
+    	<property name="sid" value="45"></property>
+    	<property name="sname" value="Tamizh"></property>
+    	<property name="address">
+    		
+    		<map>  
+				<entry key="1">
+						<ref bean="address1"/>
+				</entry>  
+				<entry key="2">
+						<ref bean="address2"/>
+				</entry>  
+			</map>
+    	
+    	</property>    
+    </bean>
+    
+    
+    
+   </beans>
