@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+    
+    
+	<!--<bean class = "com.Springday2.SpringLifecycle.Student2" name="Student2" scope="prototype">
+		
+		<property name="sid" value="123"/>
+		<property name="sname" value="Dharshsun"/>
+		<property name="scity" value="Puducherry"/>
+		<property name="address">
+		<list>
+			<value>No.140,Thendral street</value>
+			<value>Sudhana nagar,Nainarmandabam</value>
+			<value>Puducherry</value>
+		</list>
+		</property>
+	</bean>-->
+	
+	
+	<bean class = "com.Springday2.SpringLifecycle.Employee" name="employee" scope="prototype">
+		
+		<constructor-arg name="eid" value="158"/>
+		<constructor-arg name="ename" value="Dharshsun"/>
+		<constructor-arg name="dept">
+		<map>
+			<entry key="256" value="Data engineering"/>
+			<entry key="379" value="Marketing"/>
+			<entry key="645" value="Business analysis"/>
+			<entry key="793" value="Product engineering"/>
+		</map>
+		</constructor-arg>
+	</bean>
+	<!--<bean class = "com.Springday2.SpringLifecycle.Employee" name="employee" scope="prototype">
+		
+		<property name="eid" value="158"/>
+		<property name="ename" value="Dharshsun"/>
+		<property name="dept">
+		<map>
+			<entry key="256" value="Data engineering"/>
+			<entry key="379" value="Marketing"/>
+			<entry key="645" value="Business analysis"/>
+			<entry key="793" value="Product engineering"/>
+		</map>
+		</property> 
+	</bean>-->
+	<!--<bean class = "com.Springday2.SpringLifecycle.Student" name="Student" init-method="init" destroy-method="destroy">
+		
+		
+	</bean>
+	-->
+	
+	
+	
+	
+</beans>

@@ -1,0 +1,31 @@
+getters and setters:
+com.Springday2.SpringLifecycle.Student2@36b4fe2a
+ID123
+nameDharshsun
+Address
+No.140,Thendral street
+Sudhana nagar,Nainarmandabam
+Puducherry
+
+constructor:
+com.Springday2.SpringLifecycle.Student2@2d2ffcb7
+ID123
+nameDharshsun
+Address
+No.140,Thendral street
+Sudhana nagar,Nainarmandabam
+Puducherry
+
+getters and setters using property and map:
+Employee id:158 Employee name:Dharshsun
+256: Data engineering
+379: Marketing
+645: Business analysis
+793: Product engineering
+
+Using constructor args for bean class:
+Employee id:158Employee name:Dharshsun
+256: Data engineering
+379: Marketing
+645: Business analysis
+793: Product engineering

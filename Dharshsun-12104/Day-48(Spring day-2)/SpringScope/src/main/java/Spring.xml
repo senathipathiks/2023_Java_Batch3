@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+    
+    
+	<!--<bean class = "com.Springday2.SpringLifecycle.Student2" name="Student2" scope="prototype">
+		
+		<property name="sid" value="123"/>
+		<property name="sname" value="Dharshsun"/>
+		<property name="scity" value="Puducherry"/>
+		<property name="address">
+		<list>
+			<value>No.140,Thendral street</value>
+			<value>Sudhana nagar,Nainarmandabam</value>
+			<value>Puducherry</value>
+		</list>
+		</property>
+	</bean>-->
+	
+	<bean class = "com.Springday2.SpringLifecycle.Address" name="add1">
+		
+		<property name="doorNo" value="12"/>
+		<property name="street" value="Sudhana villa"/>
+		<property name="city" value="Puducherry"/>
+		
+	</bean>
+	<bean class = "com.Springday2.SpringLifecycle.Address" name="add2">
+		
+		<property name="doorNo" value="140"/>
+		<property name="street" value="Sudhana nagar"/>
+		<property name="city" value="Puducherry"/>
+		
+	</bean>
+	<bean class = "com.Springday2.SpringLifecycle.Student3" name="Student3">
+		
+		<property name="sid" value="123"/>
+		<property name="sname" value="Dharshsun"/>
+		<property name="address">
+		<list>
+			<ref bean="add1"/>
+			<ref bean="add2"/>
+		</list>
+		</property>
+	</bean>
+	<!--<bean class = "com.Springday2.SpringLifecycle.Student" name="Student" init-method="init" destroy-method="destroy">
+		
+		
+	</bean>
+	-->
+	
+	
+	
+	
+</beans>

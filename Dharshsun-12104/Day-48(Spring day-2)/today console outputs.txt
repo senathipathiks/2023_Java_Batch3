@@ -1,0 +1,18 @@
+getters and setters:
+com.Springday2.SpringLifecycle.Student2@36b4fe2a
+ID123
+nameDharshsun
+Address
+No.140,Thendral street
+Sudhana nagar,Nainarmandabam
+Puducherry
+
+constructor:
+com.Springday2.SpringLifecycle.Student2@2d2ffcb7
+ID123
+nameDharshsun
+Address
+No.140,Thendral street
+Sudhana nagar,Nainarmandabam
+Puducherry
+
