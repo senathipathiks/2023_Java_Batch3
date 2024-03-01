@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+    
+  <!--   <bean class="" name="student" scope="singleton">
+    <property name="sid" value="101"></property>
+    <property name="sname" value="Sathish"></property>
+    <property name="scity" value=""></property>
+    </bean> --> 
+    
+    <bean class="com.Spring.Day2.SpringDay2LifeCycleBean.Student" name="student" init-method="init" destroy-method="destroy"></bean>
+    </beans>
+    
+    
+    
+    
+    
+    
+    

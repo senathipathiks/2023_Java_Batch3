@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+   <!--  
+     <bean class="com.Spring.Day2.SpringDay2Example.Student2" name="student2">
+    <property name="sid" value="1"></property>
+    <property name="sname" value="sowmiya"></property>
+    <property name="address">
+    <list>
+    <value>2/150 Varshee Residency</value>
+    <value>Cheran Manaagar</value>
+    <value>Mumbai</value>
+    </list>
+    
+    </property>  
+    </bean> -->
+   <!--  =============================================================== -->
+   <!--  <bean class="com.Spring.Day2.SpringDay2Example.Student3" name="student2">
+    <constructor-arg name="sid" value="101"></constructor-arg>
+    <constructor-arg name="sname" value="sena"></constructor-arg>
+    <constructor-arg name="address">
+    <list>
+    <value>25,Ranjee Residency</value>
+    <value>Cheran Manaagar</value>
+    <value>Mumbai</value>
+    </list>
+    </constructor-arg>
+    </bean> -->
+    
+   <!--  ===================================================================List -->
+  <!--   <bean class="com.Spring.Day2.SpringDay2Example.Address" name="add1">
+    <property name="doorNo" value="10"></property>
+    <property name="street" value="Varshii nagar"></property>
+    <property name="city" value="canada"></property>
+    
+    </bean>
+    <bean class="com.Spring.Day2.SpringDay2Example.Address" name="add2">
+    <property name="doorNo" value="15"></property>
+    <property name="street" value="Gandhi nagar"></property>
+    <property name="city" value="Trichy"></property>
+   </bean>
+   
+   <bean class="com.Spring.Day2.SpringDay2Example.Student3" name="Student3">
+    <property name="sid" value="122"></property>
+    <property name="sname" value="Gowtham"></property>
+    <property name="address">
+    <list>
+    <ref bean="add1"/>
+    <ref bean="add2"/>
+    
+    </list>
+    </property>
+   </bean> -->
+  <!-- ========================================================================== List-Constructor-->
+    
+    <!-- <bean class="com.Spring.Day2.SpringDay2Example.Address" name="add1">
+    <constructor-arg name="doorNo" value="11"></constructor-arg>
+    <constructor-arg name="street" value="ashok nagar"></constructor-arg>
+    <constructor-arg name="city" value="pune"></constructor-arg>
+    </bean>
+        <bean class="com.Spring.Day2.SpringDay2Example.Address" name="add2">
+    <constructor-arg name="doorNo" value="101"></constructor-arg>
+    <constructor-arg name="street" value="sathya nagar"></constructor-arg>
+    <constructor-arg name="city" value="chennai"></constructor-arg>
+    </bean>
+        <bean class="com.Spring.Day2.SpringDay2Example.Student3" name="Student3">
+    <constructor-arg name="sid" value="110"></constructor-arg>
+    <constructor-arg name="sname" value="Kiran"></constructor-arg>
+    <constructor-arg name="address">
+    <list>
+    <ref bean="add1"/>
+    <ref bean="add2"/>
+    
+    </list>
+    </constructor-arg>
+    </bean> -->
+   <!-- ================================== ======================SET -->
+   
+     <!--   <bean class="com.Spring.Day2.SpringDay2Example.Address" name="add1">
+    <property name="doorNo" value="10"></property>
+    <property name="street" value="Varshii nagar"></property>
+    <property name="city" value="canada"></property>
+    
+    </bean>
+    <bean class="com.Spring.Day2.SpringDay2Example.Address" name="add2">
+    <property name="doorNo" value="15"></property>
+    <property name="street" value="Gandhi nagar"></property>
+    <property name="city" value="Trichy"></property>
+   </bean>
+   
+   <bean class="com.Spring.Day2.SpringDay2Example.Student4" name="Student3">
+    <property name="sid" value="122"></property>
+    <property name="sname" value="Gowtham"></property>
+    <property name="address">
+    <set>
+    <ref bean="add1"/>
+    <ref bean="add2"/>
+    
+    </set>
+    </property>
+   </bean>  -->
+ <!--   ==========================================MAP -->
+ 
+  <bean class="com.Spring.Day2.SpringDay2Example.Address" name="add1">
+    <property name="doorNo" value="10"></property>
+    <property name="street" value="Varshii nagar"></property>
+    <property name="city" value="canada"></property>
+    
+   </bean>
+   
+   <bean class="com.Spring.Day2.SpringDay2Example.mapStudentClass" name="map">
+    <property name="sid" value="122"></property>
+    <property name="sname" value="Gowtham"></property>
+    <property name="Address">
+    <map>
+    <entry key="1">
+    <ref bean="add1"/>
+    </entry>
+    
+    </map>
+    </property>
+   </bean> 
+    
+    
+    
+    
+    
+     
+    </beans>
