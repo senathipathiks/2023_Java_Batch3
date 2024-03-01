@@ -21,7 +21,7 @@
 			<form action="ControllerServlet" method="get">
 
 				<div class="vw-25">
-					<input type="number" class="form-control" name="uid">
+					<input type="number" class="vw-25" name="uid">
 					<button type="submit" class="btn btn-primary" value="find"
 						name="button">find</button>
 					<a href="ControllerServlet?button=findAll"><button
@@ -48,21 +48,34 @@
 			+ "<th>Operation2</th>" 
 			+ "</tr>" 
 			+ "<tr>" 
-			+ "<td>" + s.getId() 
+			+"<form action =\"ControllerServlet\">"
+			+ "<td> <input type=\"text\" name=\"uid\" readonly=\"readonly\" value=\""+s.getId() + "\" >"
 			+ "</td>" 
-			+ "<td>"
-			+ s.getName() 
+			+ "<td> <input type=\"text\" name=\"name\" value=\""+s.getName() + "\"+>"
+		
 			+ "</td>" 
-			+ "<td>" 
-			+ s.getCity() 
+			+ "<td> <input type=\"text\" name=\"city\" value=\""+s.getCity()  + "\"+>" 
+		
 			+ "</td>"
 
-			+ "<td>" + "<a href=\"ControllerServlet?button=update&uid=" + s.getId() + "\" />Edit</a>" + "</td>" + "<td>"
-			+ "<a href=\"ControllerServlet?button=delete&uid=" + s.getId() + " \" />Delete</a>" + "</td>" + "</tr>"
+			+ "<td>" + "<button value=\"update\" name=\"button\" class=\"btn btn-warning\" type=\"submit\" />Edit</button>" + "</td>" + "<td>"
+		
+			+ "<a class=\"btn btn-danger\" href=\"ControllerServlet?button=delete&uid=" + s.getId() + " \" />Delete</a>" + "</td>" + "</tr>"
+					+"</form>"
 			+ "</table>" + "</div>");
 		}
 		%>
 	</div>
+	
+	<%
+		if (request.getAttribute("res") == "tru") {
+			out.print("<span class=\"text-success fs-4\">Updated successfully</span>");
+			//request.setAttribute("button", "findAll");
+			response.sendRedirect("ControllerServlet?button=findAll");
+
+		} else if (request.getAttribute("res") == "fal")
+			out.print("<span class=\"text-danger fs-4\">Updation failure</span>");
+		%>
 
 	<div class="container" align="center">
 		<%
@@ -84,18 +97,21 @@
 					);
 			for(Student sob : ls){
 			out.println(" " 
-			+ "<tr>" 
-			+ "<td>" + sob.getId() 
-			+ "</td>" 
-			+ "<td>"
-			+ sob.getName() 
-			+ "</td>" 
-			+ "<td>" 
-			+ sob.getCity() 
-			+ "</td>"
+					+ "<tr>" 
+					+"<form action =\"ControllerServlet\">"
+					+ "<td> <input type=\"text\" name=\"uid\" readonly=\"readonly\" value=\""+sob.getId() + "\" >"
+					+ "</td>" 
+					+ "<td> <input type=\"text\" name=\"name\" value=\""+sob.getName() + "\"+>"
+				
+					+ "</td>" 
+					+ "<td> <input type=\"text\" name=\"city\" value=\""+sob.getCity()  + "\"+>" 
+				
+					+ "</td>"
 
-			+ "<td>" + "<a class=\"btn btn-warning\" href=\"ControllerServlet?button=update&uid=" + sob.getId() + "\" />Edit</a>" + "</td>" + "<td>"
-			+ "<a class=\"btn btn-danger\" href=\"ControllerServlet?button=delete&uid=" + sob.getId() + " \" />Delete</a>" + "</td>" + "</tr>"
+					+ "<td>" + "<button value=\"update\" name=\"button\" class=\"btn btn-warning\" type=\"submit\" />Edit</button>" + "</td>" + "<td>"
+				
+					+ "<a class=\"btn btn-danger\" href=\"ControllerServlet?button=delete&uid=" + sob.getId() + " \" />Delete</a>" + "</td>" + "</tr>"
+							+"</form>"
 			);
 		}
 			out.println("</table>" + "</div>");

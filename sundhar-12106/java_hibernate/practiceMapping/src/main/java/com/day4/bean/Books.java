@@ -1,11 +1,13 @@
 package com.day4.bean;
 
+import java.util.List;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.ManyToMany;
 
 @Entity
 public class Books {
@@ -14,8 +16,8 @@ public class Books {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int bid;
 	private String bname;
-	@ManyToOne(cascade = CascadeType.ALL)
-	private Student student;
+	@ManyToMany
+	private List<Student> student;
 
 	public Books() {
 		// TODO Auto-generated constructor stub
@@ -40,12 +42,18 @@ public class Books {
 		this.bname = bname;
 	}
 
-	public Student getStudent() {
+
+
+
+	public List<Student> getStudent() {
 		return student;
 	}
 
-	public void setStudent(Student student) {
+
+	public void setStudent(List<Student> student) {
 		this.student = student;
 	}
+
+	
 
 }

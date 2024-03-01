@@ -68,15 +68,18 @@ public class ControllerServlet extends HttpServlet {
 
 	public static void update(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
 		Student s = new Student();
+		s.setId(Integer.parseInt(req.getParameter("uid")));
 		s.setCity(req.getParameter("city"));
 		s.setName(req.getParameter("name"));
+		System.out.println(s+": controller");
 		int res = StudentDAO.update(s);
 
-		RequestDispatcher rd = req.getRequestDispatcher("Update.jsp");
+		RequestDispatcher rd = req.getRequestDispatcher("Find.jsp");
 
 		if (res == 1) {
 			req.setAttribute("res", "tru");
 			try {
+				System.out.println(res);
 				rd.include(req, resp);
 			} catch (ServletException e) {
 				// TODO Auto-generated catch block

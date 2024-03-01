@@ -31,7 +31,7 @@ public class ControllerServlet extends HttpServlet {
 		String edit = req.getParameter("edit");
 		String delete = req.getParameter("delete");
 		String fetch = req.getParameter("fetchAll");
-		
+		System.out.println(edit);
 		int summa = Integer.parseInt(edit);
 		System.out.println(summa);
 		
