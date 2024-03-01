@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+    
+    <bean class="com.day2.collection.Book" name="book1">
+        <property name="id" value="1"></property>
+        <property name="name" value="One murder marriage"></property>
+    </bean>
+    
+      <bean class="com.day2.collection.Book" name="book2">
+        <property name="id" value="2"></property>
+        <property name="name" value="Half girlfriend"></property>
+    </bean>
+    
+    <bean class="com.day2.collection.Book" name="book3">
+        <property name="id" value="3"></property>
+        <property name="name" value="2 States"></property>
+    </bean>
+    
+    <bean class="com.day2.collection.Author" name="author">
+       <property name="authorId" value="9864"></property>
+              <property name="author" value="Chetan Bhagat"></property>
+              <property name="book">
+                    <list>
+                       <ref bean="book1"/>
+                       <ref bean="book2"/> 
+                       <ref bean="book3"/>                      
+                    </list>
+              </property>
+       
+    </bean>
+    
+    </beans>

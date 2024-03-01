@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+    
+   <bean class="com.day2.lifecycle.Author" name="author1">
+   
+      <!--  <property name="authorId" value="10754"></property>
+    <property name="author" value="J.K.Rowling"></property>
+    <property name="book">
+    <list>
+    <value>Harry Potter</value>
+    <value>Christmas in Hogwarts</value>
+    <value>Quidditch Through the Ages </value>
+  
+    </list></property> -->
+     
+    <constructor-arg name="authorId" value="12435"></constructor-arg>
+    <constructor-arg name="author" value="Dan Brown"></constructor-arg>
+    <constructor-arg name="book" >
+    <list>
+    <value>Deception Point</value>
+    <value>The Da vinci code</value>
+    <value>Angels and Demons</value>
+    </list>
+        </constructor-arg>
+        
+    </bean> 
+    
+    </beans>
