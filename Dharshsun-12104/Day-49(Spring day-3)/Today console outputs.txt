@@ -1,0 +1,14 @@
+SPRING ANNOTATION
+
+without parent autowired:
+Student [sid=113, sName=Dharshsun, sCity=Puducherry]
+
+
+with autowired:
+Student [sid=113, sName=Dharshsun, sCity=Puducherry]
+Parent [fatherName=Srinivasan, motherName=Meerabai]
+
+Person [pid=0, name=null]
+
+0
+Person [pid=0, name=null]
