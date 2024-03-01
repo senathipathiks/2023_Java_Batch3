@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+    
+    <bean class="com.Spring.day2.Spring.Student3" name="s3">
+    <constructor-arg name="id" value="124"></constructor-arg>
+    <constructor-arg name="name" value="Ranjitha"></constructor-arg>
+    <constructor-arg name="address">
+    <map>
+    <entry key="12" value="Ganghi nagar"></entry>
+    <entry key="34" value="KK Nagar"></entry>
+    
+    </map>
+    
+    </constructor-arg>
+    </bean>
+    
+    
+    
+   <!--  <bean class="com.Spring.day2.Spring.Address" name="add1">
+    <property name="doorNo" value="1"></property>
+    <property name="Street" value="Gandhi nagar"></property>
+    <property name="city" value="Chennai"></property>
+    </bean>
+    
+    <bean class="com.Spring.day2.Spring.Address" name="add2">
+    <property name="doorNo" value="11"></property>
+    <property name="Street" value="Ashok nagar"></property>
+    <property name="city" value="Chennai"></property>
+    </bean>
+    
+    <bean class="com.Spring.day2.Spring.Student3" name="Student3">
+    <property name="id" value="111"></property>
+    <property name="name" value="Ranjitha"></property>
+    <property name="address" >
+    <set>
+    <ref bean="add1"></ref>
+    <ref bean="add2"></ref>
+    </set>
+    </property>
+    </bean> -->
+    
+    
+    
+   <!--  <bean class="com.Spring.day2.Spring.Student2" name="Student2">
+    <property name="id" value="123"/>
+    <property name="name" value="Ram"/>
+    <property name="address"> -->
+    
+    <!-- <constructor-arg name="id" value="123"></constructor-arg>
+    <constructor-arg name="name" value="Thamizh"></constructor-arg>
+    <constructor-arg name="address">
+    <list>
+    <value>2/150 Devinr Residency</value>
+    <value>Cheran Manager</value>
+    <value>Mumbi</value>
+    </list>
+    </constructor-arg> 
+    </bean>-->
+    </beans> 
