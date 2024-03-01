@@ -1,9 +1,13 @@
 package sms.bean;
 
+import java.awt.print.Book;
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -43,6 +47,7 @@ public class Student {
 	public void setCity(String city) {
 		this.city = city;
 	}
+
 
 	@Override
 	public String toString() {

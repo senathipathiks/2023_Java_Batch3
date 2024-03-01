@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- <bean name="s1" class="com.demoSpring.bean.Student" p:id="101" p:name="Sundhar" 
+		p:gender="male" p:address="Avadi"></bean> -->
+
+	<bean name="s1" class="com.demoSpring.bean.Student1" p:id="101"
+		p:name="Sundhar" p:gender="male">
+		<property name="address">
+			<list>
+				<value>2907, TSP camp road</value>
+				<value>veerapuram avadi</value>
+				<value>chennai - 55</value>
+			</list>
+		</property>
+	</bean>
+	<bean name="s2" class="com.demoSpring.bean.Student1">
+		<constructor-arg name="id" value="102" />
+		<constructor-arg name="name" value="Srinivasan" />
+		<constructor-arg name="gender" value="male" />
+		<constructor-arg name="address">
+			<list>
+				<value>2907, TSP camp road</value>
+				<value>neyveli</value>
+				<value>cuddalore - 55</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean name="a1" class="com.demoSpring.bean.Address" p:dno="2907"
+		p:street="TSP camp road" p:city="avadi" />
+	<bean name="a2" class="com.demoSpring.bean.Address" p:dno="22"
+		p:street="Wellington street" p:city="Newyork" />
+
+	<!-- <bean name="s3" class="com.demoSpring.bean.Student3" p:id="101" p:name="Sundhar" 
+		p:gender="male"> <property name="address"> <list> <ref bean="a1"/> <ref bean="a2"/> 
+		</list> </property> </bean> -->
+
+	<!-- <bean name="s4" class="com.demoSpring.bean.Student3" > <constructor-arg 
+		name="id" value="90"/> <constructor-arg name="name" value="Sundhar Raj S"/> 
+		<constructor-arg name="gender" value="Male"/> <constructor-arg name="address"> 
+		<list> <ref bean="a1"/> <ref bean="a2"/> </list> </constructor-arg> </bean> -->
+
+	<!-- <bean name="s5" class="com.demoSpring.bean.Student3" c:id="101"
+		c:name="Sundhar" c:gender="male">
+		<constructor-arg name="address">
+			<list>
+				<ref bean="a1" />
+				<ref bean="a2" />
+			</list>
+		</constructor-arg>
+	</bean> -->
+
+	<!-- <bean name="s6" class="com.demoSpring.bean1.Student" p:id="101" p:name="Sundhar" p:gender="male">
+		<property name="address">
+			<list>
+				<ref bean="a1" />
+				<ref bean="a2" />
+			</list>
+		</property>
+	</bean> -->
+	
+	<bean name="s7" class="com.demoSpring.bean1.Student1" p:id="101" p:name="Srinivasan" p:gender="male">
+		<property name="address">
+			<map>
+				<entry key="101" value-ref="a1"/>
+				<entry key="102" value-ref="a2"/>
+			</map>
+		</property>
+	</bean>
+</beans>

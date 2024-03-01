@@ -2,12 +2,11 @@ package com.day4.bean;
 
 import java.util.List;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToMany;
 
 @Entity
 public class Student {
@@ -16,7 +15,7 @@ public class Student {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name;
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "student")
+	@ManyToMany(mappedBy = "student")
 	private List<Books> book;
 
 	public Student() {
