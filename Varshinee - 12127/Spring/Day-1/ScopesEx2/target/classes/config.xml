@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+    
+    <!-- <bean class="com.scope.day_1.ScopesEx.Student2" name="student"> 
+   
+    <property name="sid" value="1"></property>
+    <property name="sname" value="Varshinee"></property>
+    <property name="address">
+    <list>
+    <value>2/150 Varshee Residency</value>
+   <value>Cheran Manager</value>
+   <value>Chennai</value>
+    </list></property>
+    
+    </bean> -->
+    
+    <!-- <bean class="com.scope.day_1.ScopesEx.Student2" name="student2"> 
+   
+    <constructor-arg name="sid" value="1"></constructor-arg >
+    <constructor-arg  name="sname" value="Yokesh"></constructor-arg >
+    <constructor-arg  name="address">
+    <list>
+    <value>2/150 Canada Residency</value>
+   <value>Cheran Manager</value>
+   <value>Toronto</value>
+    </list>
+    </constructor-arg>
+    </bean> -->
+    
+    <!-- <bean class="com.scope.day_1.ScopesEx.Address" name="add1"> 
+    <property name="doorNo" value="5"></property>
+    <property name="street" value="Anna Nagar"></property>
+    <property name="city" value="Tiruchirappalli"></property>
+    </bean>
+    <bean class="com.scope.day_1.ScopesEx.Address" name="add2"> 
+    <property name="doorNo" value="6"></property>
+    <property name="street" value="KK Nagar"></property>
+    <property name="city" value="Tiruchirappalli"></property>
+    </bean>
+    <bean class="com.scope.day_1.ScopesEx.Student3" name="student3"> 
+    <property name="sid" value="1"></property>
+    <property name="sname" value="Varshinee"></property>
+    <property name="address">
+    <list>
+    <ref bean="add1"/>
+    <ref bean="add2"/>
+    </list></property>
+    </bean> -->
+    
+    <!-- <bean class="com.scope.day_1.ScopesEx.Address" name="add1"> 
+    <constructor-arg name="doorNo" value="5"></constructor-arg>
+    <constructor-arg name="street" value="Anna Nagar"></constructor-arg>
+    <constructor-arg name="city" value="Tiruchirappalli"></constructor-arg>
+    </bean>
+    <bean class="com.scope.day_1.ScopesEx.Address" name="add2"> 
+    <constructor-arg name="doorNo" value="6"></constructor-arg>
+    <constructor-arg name="street" value="KK Nagar"></constructor-arg>
+    <constructor-arg name="city" value="Tiruchirappalli"></constructor-arg>
+    </bean>
+    <bean class="com.scope.day_1.ScopesEx.Student3" name="student3"> 
+    <constructor-arg name="sid" value="1"></constructor-arg>
+    <constructor-arg name="sname" value="Varshinee"></constructor-arg>
+    <constructor-arg name="address">
+    <list>
+    <ref bean="add1"/>
+    <ref bean="add2"/>
+    </list></constructor-arg>
+    </bean> -->
+    
+   <!--  <bean class="com.scope.day_1.ScopesEx.Address" name="add1"> 
+     <property name="doorNo" value="5"></property>
+    <property name="street" value="Anna Nagar"></property>
+    <property name="city" value="Tiruchirappalli"></property>
+    </bean>
+    <bean class="com.scope.day_1.ScopesEx.Address" name="add2"> 
+    <property name="doorNo" value="6"></property>
+    <property name="street" value="KK Nagar"></property>
+    <property name="city" value="Tiruchirappalli"></property>
+    </bean>
+    <bean class="com.scope.day_1.ScopesEx.Student4" name="student"> 
+    <property name="sid" value="1"></property>
+    <property name="sname" value="Varshinee"></property>
+    <property name="address">
+    <set>
+    <ref bean="add1"/>
+    <ref bean="add2"/>
+    </set></property>
+    </bean>  -->
+    
+     <bean class="com.scope.day_1.ScopesEx.Address" name="add1"> 
+     <property name="doorNo" value="5"></property>
+    <property name="street" value="Anna Nagar"></property>
+    <property name="city" value="Tiruchirappalli"></property>
+    </bean>
+    <bean class="com.scope.day_1.ScopesEx.Address" name="add2"> 
+    <property name="doorNo" value="6"></property>
+    <property name="street" value="KK Nagar"></property>
+    <property name="city" value="Tiruchirappalli"></property>
+    </bean>
+    <bean class="com.scope.day_1.ScopesEx.Student5" name="student5"> 
+    <property name="sid" value="1"></property>
+    <property name="sname" value="Varshinee"></property>
+    <property name="address">
+    <map>
+    <entry key="add1"/>
+    <entry key="add2"/>
+    </map></property>
+    </bean> 
+    
+    
+    
+    
+    </beans>
