@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+	<bean class="com.spring.object.Address" name="a1">
+
+		<!-- Setter Injection -->
+		
+		<constructor-arg type="int" value="223"> </constructor-arg>
+       <constructor-arg type="String" value="Pralogam"> </constructor-arg>
+        <constructor-arg  type="String" value="Selam"> </constructor-arg>
+		
+		
+		
+
+
+		<!-- Property Injection -->
+		<!-- <property name="doorno" value="99"></property>
+		<property name="street" value="Gandi Nagar"></property>
+		<property name="city" value="Arani"></property> -->
+
+	</bean>
+	
+	<bean class="com.spring.object.Address" name="a2"> 
+       
+      <!-- Setter Injection -->
+      
+      <!-- Property Injection -->
+     <!--  <property name="doorno" value="99"></property>
+      <property name="street" value="Sarthar Ji Nagar"></property>
+       <property name="city" value="New Delhi"></property>  -->
+      
+      
+      <constructor-arg type="int" value="99"> </constructor-arg>
+       <constructor-arg type="String" value="Thoppadi"> </constructor-arg>
+        <constructor-arg  type="String" value="TTP"> </constructor-arg>
+       
+       </bean>
+       
+         <bean class="com.spring.object.Student2" name="s1"> 
+      
+      <!-- Property Injection -->
+      <!-- <property name="sid" value="123"></property>
+      <property name="sname" value="Surya"></property>
+       <property name="scity" value="Arani"></property> 
+       <property name="address">
+       <list>
+       
+       <ref bean="a1"/>
+       
+       <ref bean="a2"/>
+       </list>
+       
+       </property> -->
+       
+       <constructor-arg type="int" value="99"> </constructor-arg>
+       <constructor-arg type="String" value="Prasanth"> </constructor-arg>
+        <constructor-arg  type="String" value="TTP"> </constructor-arg>
+       <constructor-arg name="address">
+       
+       <list>
+       <ref bean="a1"/>
+        <ref bean="a2"/>
+       </list>
+       </constructor-arg>
+  
+       </bean>
+
+</beans>
