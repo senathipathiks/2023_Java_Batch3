@@ -1,0 +1,29 @@
+{
+  "course": [
+    {
+      "id": 1,
+      "name": "React",
+      "duration": "4 weeks",
+      "coursemode": "online",
+      "instructor": "Balasubramanyam",
+      "fee": 10000
+    },
+    {
+      "id": 1,
+      "name": "React",
+      "duration": "6 Months",
+      "coursemode": "online",
+      "instructor": "Balasubramanyam",
+      "fee": 10000,
+      "mode": "Offline"
+    },
+    {
+      "id": 1,
+      "name": "React",
+      "duration": "4 weeks",
+      "coursemode": "online",
+      "instructor": "Balasubramanyam",
+      "fee": 10000
+    }
+  ]
+}
