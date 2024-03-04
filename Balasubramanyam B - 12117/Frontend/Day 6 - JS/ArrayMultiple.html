@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple of Five</title>
+</head>
+<body>
+    <script>
+        function cal(arr){
+            for(i=0;i<arr.length;i++)
+                if(arr[i]%5==0)
+                    document.write(" "+arr[i]);
+        }
+        let arr = [10,23,35,50,69,75,80];
+        document.write("Array : "+arr);
+        document.write("<br>Multiple of 5's : ")
+        cal(arr);
+    </script>
+</body>
+</html>

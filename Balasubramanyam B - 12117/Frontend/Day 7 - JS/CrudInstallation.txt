@@ -1,0 +1,26 @@
+create client folder using ---> ---- npx create-react-app [name]
+server folder 
+ npm init --yes
+ npm i --save json-server 
+ db.json create file 
+  {
+  "user":
+  {
+    "id": "1",
+    "name": "bala",
+    "email": "balasubramanip@gmail.com"
+  }}
+package.json ---  change
+
+run--- npm start
+
+cliet
+npm i axios
+router   -- npm install react-router-dom
+bootrap --- npm install react-bootstrap bootstrap
+public --- <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+  crossorigin="anonymous"
+/>

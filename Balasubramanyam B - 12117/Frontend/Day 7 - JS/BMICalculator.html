@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{font-size: 30px;
+  text-align: center;padding: 10% 0; background-color: rgb(75, 128, 65);}
+     #weight:hover{background-color: orangered;}
+     #height:hover{background-color: aqua;}
+     button:hover{background-color: brown;}
+     button{cursor: auto;}
+     h1{border-style: solid; background-color: brown;}
+     
+    </style>
+</head>
+<body>
+    <h1>BMI Calculator</h1>
+    <label for ="weight">Weight :</label>
+    <input id="weight" type="numbers"><br>
+    <label for ="height">Height :</label>
+    <input id="height" type="numbers"><br>
+    <button onclick="bmicalculator()">Submit</button> 
+    <button onclick="reloade()">Clear</button>
+
+    
+    <script>
+      function bmicalculator(){
+        let weight = document.getElementById('weight').value
+        let height = document.getElementById('height').value
+        let bmi =(weight/(height*height)*703)
+      document.getElementById('Heading').innerHTML='Your BMI is :'
+      document.getElementById('bmi-output').innerHTML= bmi}
+       function reloade(){
+        window.location.reload();
+      }
+    </script>
+</body>
+</html>
