@@ -14,7 +14,7 @@
 	<frame name="banner" src="Banner" />
 	<frameset cols="20%,80%">
 		<frame name="frame2" src="Links" class="border" />
-		<frame name="frame3" src="Insert" class="border" />
+		<frame name="frame3" src="View" class="border" />
 	</frameset>
 </frameset>
 </head>

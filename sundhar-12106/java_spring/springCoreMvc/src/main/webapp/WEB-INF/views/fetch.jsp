@@ -28,8 +28,9 @@
 	<div
 		class="container mt-5 d-flex flex-column justify-content-center  align-items-center">
 		<h1 class="text-center">Fetch operations</h1>
-		<form action="fetch" method="get" class="mt-3">
-			<table class="table">
+		<form action="fetch" method="get" class="rounded shadow m-3"
+			modelAttribute="student">
+			<table class="">
 				<tr>
 					<td><h2 class="font-weight-bold">Student ID :</h2></td>
 					<td><select name="id" class="form-select" id="opti">
@@ -57,45 +58,54 @@
 			<input class="btn btn-warning" type="submit" name="button"
 				value="Find All">
 		</form>
-		<form id="form-2" action="update">
-			<table class="table">
-				<tr>
-					<th>Student ID</th>
-					<th>Student Name</th>
-					<th>Student City</th>
-					<th>Operation1</th>
-					<th>Operation2</th>
-				</tr>
+		<div class="container d-flex justify-content-center rounded mt-5 p-3 border shadow">
+		<table class="">
+			<tr>
+				<th>Student ID</th>
+				<th>Student Name</th>
+				<th>Student City</th>
+				<th>Operation1</th>
+				<th>Operation2</th>
+			</tr>
 
-				<%
-				Student s = (Student) request.getAttribute("stu");
-				List<Student> lsStu = (List<Student>) request.getAttribute("ls");
-				System.out.println(s);
-				if (s != null) {
-					out.println("<tr><td><input type=\"text\" name=\"id\" class=\"form-control\" readonly=\"readonly\" value="
-					+ s.getId() + "></td>" + "<td><input type=\"text\" name=\"sname\" class=\"form-control\" value="
-					+ s.getSname() + "></td>" + "<td><input type=\"text\" name=\"city\" class=\"form-control\" value="
-					+ s.getCity() + "></td>"
-					+ "<td><input type=\"submit\" class=\"btn btn-warning\" value=\"update\"/></form></td>" + "<td>"
-					+ "<input type=\"text\" id=\"del\" name=\"id\" class=\"form-control\" readonly=\"readonly\" value="
-					+ s.getId() + ">"
-					+ "<form action=\"Deletion\" method=\"post\"><input type=\"submit\" class=\"btn btn-danger\" value=\"delete\"/></form></td></tr>");
-				}
-				if (lsStu != null) {
-					for (Student s1 : lsStu) {
-						out.println("<tr><td><input type=\"text\" name=\"id\" class=\"form-control\" readonly=\"readonly\" value="
-						+ s1.getId() + "></td>" + "<td><input type=\"text\" name=\"sname\" class=\"form-control\" value="
-						+ s1.getSname() + "></td>" + "<td><input type=\"text\" name=\"city\" class=\"form-control\" value="
-						+ s1.getCity() + "></td>"
-						+ "<td><input type=\"submit\" class=\"btn btn-warning\" value=\"update\"/></form></td>" + "<td>"
+			<%
+			Student s = (Student) request.getAttribute("stu");
+			List<Student> lsStu = (List<Student>) request.getAttribute("ls");
+			System.out.println("student1 " + lsStu);
+			if (s != null) {
+				//out.println("<input type=\"text\" name=\"id\" class=\"form-control\" value=\"" + s.getSname() + "\">");
+				out.println(
+				"<form id=\"form-2\" action=\"update\" modelAttribute=\"student\"><tr><td><input type=\"text\" name=\"id\" class=\"form-control\" value=\""
+						+ s.getId() + "\"></td>" + "<td><input type=\"text\" name=\"sname\" class=\"form-control\" value=\""
+						+ s.getSname() + "\"></td>"
+						+ "<td><input type=\"text\" name=\"city\" class=\"form-control\" value=\"" + s.getCity()
+						+ "\"></td>" + "<td><input type=\"submit\" class=\"btn btn-warning\" value=\"update\"/></form></td>"
+						+ "<td>" + "<form action=\"Deletion\" method=\"post\">"
 						+ "<input type=\"text\" id=\"del\" name=\"id\" class=\"form-control\" readonly=\"readonly\" value="
-						+ s1.getId() + ">"
-						+ "<form action=\"Deletion\" method=\"post\"><input type=\"submit\" class=\"btn btn-danger\" value=\"delete\"/></form></td></tr>");
-					}
-				}
-				%>
+						+ s.getId() + ">"
+						+ "<input type=\"submit\" class=\"btn btn-danger\" value=\"delete\"/></form></td></tr>");
+			}
+			if (lsStu != null) {
+				for (Student s1 : lsStu) {
 
-			</table>
+					out.println(
+					"<form id=\"form-2\" action=\"update\" modelAttribute=\"student\"><tr><td><input type=\"text\" name=\"id\" class=\"form-control\" value=\""
+							+ s1.getId() + "\"></td>"
+							+ "<td><input type=\"text\" name=\"sname\" class=\"form-control\" value=\""
+							+ s1.getSname() + "\"></td>" + "<td><input type=\"text\" name=\"city\" class=\"form-control\" value=\"" + s1.getCity()
+							+ "\"></td>"
+							+ "<td><input type=\"submit\" class=\"btn btn-warning\" value=\"update\"/></form></td>" + "<td>"
+							+ "<input type=\"text\" id=\"del\" name=\"id\" class=\"form-control\" readonly=\"readonly\" value="
+							+ s1.getId() + ">" + "<form action=\"Deletion\" method=\"post\">"
+							+ "<input type=\"text\" id=\"del\" name=\"id\" class=\"form-control\" readonly=\"readonly\" value="
+							+ s1.getId() + ">"
+							+ "<input type=\"submit\" class=\"btn btn-danger\" value=\"delete\"/></form></td></tr>");
+				}
+			}
+			%>
+
+		</table>
+		</div>
 	</div>
 </body>
 </html>
