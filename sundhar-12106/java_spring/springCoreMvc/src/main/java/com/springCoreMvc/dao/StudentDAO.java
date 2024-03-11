@@ -99,5 +99,21 @@ public class StudentDAO {
 		System.out.println(ls);
 		return ls;
 	}
+	
+	public List<Student> fetchByName(String name){
+		
+		EntityManager em = utility.getConnection();
+		EntityTransaction et = em.getTransaction();
+		
+		et.begin();
+		Query q = em.createQuery("select u from Student u where u.sname ="+name);
+//		q.setParameter(1, name);
+		List<Student> ls = q.getResultList();
+		System.out.println(ls);
+		et.commit();
+		
+		return ls;
+		
+	}
 
 }

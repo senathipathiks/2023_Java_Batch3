@@ -47,10 +47,19 @@ public class MyController {
 
 		return mv;
 	}
+	
+	@RequestMapping("View")
+	public ModelAndView loadView() {
+		ModelAndView mv = new ModelAndView("View");
+
+		return mv;
+	}
 
 	@RequestMapping("Insert")
-	public ModelAndView loadView() {
+	public ModelAndView loadInsert() {
 		ModelAndView mv = new ModelAndView("Insert");
+		List<Student> ls = dao.fetchByName("Kirubakaran");
+		System.out.println(ls);
 
 		return mv;
 	}
@@ -82,6 +91,7 @@ public class MyController {
 	@PostMapping("Deletion")
 	public ModelAndView deletionReq(@ModelAttribute("student") Student student) {
 
+		System.out.println(student);
 		int n = dao.delete(student);
 		List<Integer> ls = dao.idlist();
 		ModelAndView mv = new ModelAndView("Delete");
@@ -113,6 +123,8 @@ public class MyController {
 		student = dao.updateStudent(student);
 		ModelAndView mv = new ModelAndView("fetch");
 		mv.addObject("stu", student);
+		List<Integer> ls = dao.idlist();
+		mv.addObject("idList", ls);
 		return mv;
 	}
 	
@@ -121,6 +133,8 @@ public class MyController {
 		
 		ModelAndView mv = new ModelAndView("fetch");
 		mv.addObject("ls", dao.fetchAll());
+		List<Integer> ls = dao.idlist();
+		mv.addObject("idList", ls);
 		return mv;
 	}
 	

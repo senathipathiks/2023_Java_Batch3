@@ -17,18 +17,18 @@
 <body>
 	<div class="container d-flex flex-column justify-content-center  align-items-center mt-5">
 		<form id="form-1" action="Deletion" method="post">
-			<table id="table-1" class="table table-bordered">
+			<table id="table-1" class="table ">
 				<tr>
 
 					<td>Student ID</td>
-					<td><select name="id">
+					<td><select class="" name="id" data-bs-toggle="dropdown">
 							<%
 							List<Integer> ls = (List<Integer>) request.getAttribute("idList");
 
 							if (ls != null) {
 								for (Integer i : ls) {
 							%>
-							<option><%=i%></option>
+							<option class="form-control"><%=i%></option>
 							<%
 							}
 							}
