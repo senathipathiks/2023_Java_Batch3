@@ -48,6 +48,7 @@ public class EmployeeService {
 		
 	}
 	
+	//update Employee
 	public ResponseStructure<Employee> updateEmployee(Employee employee) {
 		
 		System.out.println(employee);
@@ -72,6 +73,28 @@ public class EmployeeService {
 
 		return rs;
 
+	}
+	
+	
+	//delete employee
+	public ResponseStructure<String> deleteEmployeeById(int id) {
+		
+		ResponseStructure<String> rs = new ResponseStructure<String>();
+		rs.setStatusCode(HttpStatus.ACCEPTED.value());
+		rs.setMessage("Employee record deleted successfully...!");
+		System.out.println("hello from service"+id);
+		rs.setData(dao.deleteById(id));
+		return rs;
+	}
+	
+	//fetch employee by name
+	public ResponseStructure<List<Employee>> fetchByName(String name){
+		
+		ResponseStructure<List<Employee>> rs = new ResponseStructure<List<Employee>>();
+		rs.setStatusCode(HttpStatus.FOUND.value());
+		rs.setMessage("data fetched successfully...!");
+		rs.setData(dao.fetchByName(name));
+		return rs;
 	}
 
 }
