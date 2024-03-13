@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+ 
+      <!--This is our beans meta data and We use Setter Injection here  
+      <bean class="com.day1.Bike" name="b1"></bean>
+      <bean class="com.day1.Car" name="c1"></bean>
+       <bean class="com.day1.Student.Student" name="s1">
+       <property name="id" value="123"></property>
+       <property name="name" value="Balu"></property>
+       <property name="city" value="Tiruttani"></property>
+      </bean>
+       <bean class="com.day1.Student.Student" name="s2">
+       <property name="id" value="123"></property>
+       <property name="name" value="Abhishek"></property>
+       <property name="city" value="chennai"></property>
+      </bean>
+       <bean class="com.day1.Student.Student" name="s3">
+       <constructor-arg name="id" value="123"></constructor-arg>
+       <constructor-arg name="name" value="Jothi"></constructor-arg>
+       <constructor-arg name="city" value="tirupathur"></constructor-arg>
+      </bean>
+       <bean class="com.day1.Student.Student" name="s4"/>
+       <bean class="com.day2.Student" name="s1" scope="prototype">
+       <property name="id" value="123"></property>
+       <property name="name" value="Balu"></property>
+       <property name="city" value="Tiruttani"></property></bean>
+       <bean class="com.day2.Student1" name="s1" init-method="init" destroy-method="destroy">
+       </bean>
+       </bean> 
+       
+       <bean class="com.day2.Employee" name="e1" scope="prototype">
+       <property name="id" value="123"></property>
+       <property name="name" value="Balu"></property>
+       <property name="age" value="22"></property></bean>
+       <bean class="com.day2.Student2" name="s1" >
+       <property name="id" value="123"></property>
+       <property name="name" value="Balu"></property>
+       <property name="address" >  
+       <list>
+       <value>215,Aravasapatteda village</value>
+       <value>Pallipattu - 631207</value>
+       <value>Tiruvallur, Tamilnadu</value>
+       </list>
+       </property></bean>
+        <bean class="com.day2.Student2" name="s2" >
+       <constructor-arg name="id" value="123"></constructor-arg>
+       <constructor-arg name="name" value="Balu"></constructor-arg>
+       <constructor-arg name="address" >  
+       <list>
+       <value>215,Aravasapatteda village</value>
+       <value>Pallipattu - 631207</value>
+       <value>Tiruvallur, Tamilnadu</value>
+       </list>
+       </constructor-arg></bean>
+       <bean class="com.day2.Address" name="add1">
+		<property name="doorno" value="001" />
+		<property name="street" value="2nd" />
+		<property name="city" value="anna nagar">
+
+		</property>
+
+	</bean>
+	<bean class="com.day2.Address" name="add2">
+		<property name="doorno" value="002" />
+		<property name="street" value="1st" />
+		<property name="city" value="Guindy">
+
+		</property>
+
+	</bean>
+	<bean class="com.day2.Student3" name="s1">
+		<property name="id" value="001" />
+		<property name="name" value="Balasubramanyam" />
+		<property name="address">
+			<list>
+				<ref bean="add1" />
+				<ref bean="add2" />
+			</list>
+
+		</property>
+
+	</bean>-->
+	 <bean class="com.day2.Student4" name="s1" >
+       <property name="id" value="123"></property>
+       <property name="name" value="Balu"></property>
+       <property name="Address">
+       <map>
+       <entry key="No" value="123"></entry>
+       <entry key="street name" value="Aravasapatteda"></entry>
+       <entry key="city" value="tiruttani"></entry>
+       </map>
+       </property></bean>
+       
+ </beans>

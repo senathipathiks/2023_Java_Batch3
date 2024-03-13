@@ -1,0 +1,3 @@
+#dump.sh
+mysql -uroot -proot pms < jsp_backup.sql 
+#end of dump.sh
