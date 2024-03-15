@@ -11,6 +11,13 @@
 	rel="stylesheet"
 	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 	crossorigin="anonymous">
+<style type="text/css">
+.sel {
+	width: 180px;
+	border-radius: 8px;
+	border: 2px solid #C7C7C7;
+}
+</style>
 </head>
 <body>
 	<div
@@ -22,9 +29,9 @@
 
 				<tr>
 					<th>Select Employee Name</th>
-					<td><select name="empName" class="form-control">
+					<td><select name="empName" class="sel">
 
-							<option>select</option>
+							<option class="disabled">select</option>
 
 							<c:if test="${ls != null}">
 								<c:forEach items="${ls}" var="ls">

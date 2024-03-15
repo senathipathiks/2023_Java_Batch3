@@ -30,7 +30,13 @@ public class EmpController {
 	@PostMapping("save")
 	public ResponseStructure<Employee> save(@RequestBody Employee employee) {
 		System.out.println(employee);
-		return service.saveEmployee(employee);
+		
+		ResponseStructure<Employee> rs = service.saveEmployee(employee);
+		employee = rs.getData();
+		String body = "Welcome to Relevantz MR/MRS : "+employee.getName()+"\nEmployee ID : "+employee.getId();
+		String subject = "Congratulation from Relevantz";
+		service.sendEmail(employee.getEmail(), subject, body);
+		return rs;
 	}
 	
 	@GetMapping("Test")
@@ -64,6 +70,14 @@ public class EmpController {
 	public ResponseStructure<List<Employee>> getByName(@RequestParam String name) {
 		return service.fetchByName(name);
 	}
+	
+	@GetMapping("search")
+	public ResponseStructure<List<Employee>> searchEmployee(@RequestParam String input) {
+		
+		
+		return service.searchEmployee(input);
+	}
+	
 	
 
 }

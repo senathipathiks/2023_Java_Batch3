@@ -51,13 +51,13 @@ public class EmployeeDAO {
 	// getting employees from selected name
 	public List<Employee> getEmployeesByName(String name) {
 
-		return repo.findByName(name);
+		return repo.findByEmpName(name);
 	}
 
 	// delete employee by name
 	public String deleteEmployeeByName(String name) {
 		System.out.println("dao : " + name);
-		repo.deleteByName(name);
+		repo.deleteByEmpName(name);
 		return "Success";
 	}
 
@@ -67,24 +67,16 @@ public class EmployeeDAO {
 
 	}
 
-	// update record request from fetchAll page
-	public Employee updateEmpoyeeById(int id,Employee employee) {
-		
-		Employee emp = repo.findById(id).get();
-		
-		if(emp != null) {
-			employee.setEmpId(id);
-			System.out.println(employee);
-			return repo.save(employee);
-		}
-		
-		return null;
-	}
 	
 	//delete record by using id
 	public String deleteById(int id) {
 		repo.deleteById(id);
 		return "Deleted successfully";
+	}
+	
+	//fetch employee like given string
+	public List<Employee> findEmployeeLike(String name) {
+		return repo.findByEmpNameContaining(name);
 	}
 
 }
