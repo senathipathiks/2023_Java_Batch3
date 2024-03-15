@@ -11,6 +11,9 @@ public interface EmployeeRepo extends JpaRepository<Employee, Integer>{
 	
 	
 	public List<Employee> findByName(String name);
-
+	
+	
+	public List<Employee> findByNameContaining(String name);
+		
 
 }

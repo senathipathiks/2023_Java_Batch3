@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
 import com.employeeApplication.dao.EmployeeDAO;
@@ -15,6 +17,24 @@ public class EmployeeService {
 
 	@Autowired
 	EmployeeDAO dao;
+	
+	
+	@Autowired
+	private JavaMailSender mailSender;
+	
+	public void sendEmail(String toMail, String subject, String body) {
+		
+		SimpleMailMessage message = new SimpleMailMessage();
+		
+		message.setFrom("sundharrajs.m.s422@gmail.com");
+		message.setTo(toMail);
+		message.setText(body);
+		message.setSubject(subject);
+		
+		mailSender.send(message);
+		
+		System.out.println("mail send successfully...!");
+	}
 
 	public ResponseStructure<Employee> saveEmployee(Employee employee) {
 
@@ -94,6 +114,16 @@ public class EmployeeService {
 		rs.setStatusCode(HttpStatus.FOUND.value());
 		rs.setMessage("data fetched successfully...!");
 		rs.setData(dao.fetchByName(name));
+		return rs;
+	}
+	
+	//calling name like operations
+	public ResponseStructure<List<Employee>> searchEmployee(String name) {
+		
+		ResponseStructure<List<Employee>> rs = new ResponseStructure<List<Employee>>();
+		rs.setStatusCode(HttpStatus.FOUND.value());
+		rs.setMessage("Employee record found from database");
+		rs.setData(dao.fetchLikeEmployees(name));
 		return rs;
 	}
 

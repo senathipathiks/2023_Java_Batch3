@@ -52,5 +52,10 @@ public class EmployeeDAO {
 	public List<Employee> fetchByName(String name) {
 		return repo.findByName(name);
 	}
+	
+	//fetch the employee for search opertion like operation
+	public List<Employee> fetchLikeEmployees(String name){
+		return repo.findByNameContaining(name);
+	}
 
 }
