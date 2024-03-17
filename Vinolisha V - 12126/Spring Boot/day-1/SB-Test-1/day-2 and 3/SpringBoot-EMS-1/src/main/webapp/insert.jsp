@@ -1,0 +1,113 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<style>
+#container {
+	background-color: #d3d3d3;
+	margin-left: none;
+	padding: 25px 50px;
+	margin-top: 50px;
+}
+
+table {
+	border: 30px solid transparent;
+	align-items: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	border-radius: 20px;
+}
+
+input {
+	height: 40px;
+	width: 300px;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+#button {
+	padding: 10px 10px;
+	font-weight: bold;
+	justify-content: center;
+	border-radius: 10px;
+	width: 200px;
+	border-radius: 5px;
+	outline: none;
+	background-color: #fffff;
+	margin-top: 30px;
+	display: inline-block;
+	padding-left: 30px;
+	align-items: center;
+	color: black;
+	cursor: pointer;
+	border: none;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 2);
+}
+
+td {
+	padding: 10px;
+	outline: none;
+	color: black;
+}
+
+h3 {
+	align-items: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#img{
+
+}
+</style>
+</head>
+<body>
+	<form action="performAddition">
+		<div class="head"></div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<img alt="" id="img"
+					src="https://img.freepik.com/premium-vector/account-info-personal-data-line-icon_116137-7896.jpg">
+			</div>
+			<div class="col-md-6">
+				<table id="container" align="center">
+					<tr>
+						<td>Employee Id</td>
+						<td><input type="text" class="form-control" name="eid"
+							required="required" /></td>
+					</tr>
+					<tr>
+						<td>Employee Name</td>
+						<td><input type="text" class="form-control" name="ename"
+							required="required" /></td>
+					</tr>
+					<tr>
+						<td>Employee Salary</td>
+						<td><input type="text" class="form-control" name="esalary"
+							required="required" /></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="left"><input id="button"
+							class="form-control" type="submit" value="insert" name="button" /></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+
+	</form>
+
+	<center>
+
+   <h1> ${msg}</h1>
+
+	</center>
+
+</body>
+</html>
