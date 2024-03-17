@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+		<class name="com.sts.day1.Employee.Employee2" table="empdetail">
+        <id name="eid" column="eid">
+        <generator class="native"></generator>
+        </id>
+        <property name="ename" type="string"/>
+        <property name="dept" type="string"/>
+    </class>
+    
+    <query name="findEmployeeByName">  
+		<![CDATA[from Employee2 e where e.name = :name]]>  
+	</query>
+	
+		
+</hibernate-mapping>

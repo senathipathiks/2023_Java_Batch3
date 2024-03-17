@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #8c9596;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+#img-slide {
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#img-slide div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#img-slide img {
+    width: 100%;
+    height: 100%;
+}
+
+#button {
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+    </style>
+</head>
+<body>
+    <h1>Image Slider</h1>
+    <div id="img-slide">
+        <div id="d1" style="display: none;"><img src="https://th.bing.com/th/id/R.ea567cc31b45506e4058432fb1da0987?rik=2rnpolheoI%2frOA&riu=http%3a%2f%2fautonxt.net%2fwp-content%2fuploads%2f2016%2f09%2fautocontentexp.comwp-contentuploads2015062016-Cadillac-CTS-V-Sedan-006_2500-902d85b88d5f4da3159cb486feaf092252f15685.jpg&ehk=eirgqNxvRaC3FJG%2fRl7yssNUW6OlOMOK1itAqk%2fYuNM%3d&risl=&pid=ImgRaw&r=0" alt="Image1"></div>
+        <div id="d2" style="display: none;"><img src="https://bestwallpapers.net/wp-content/uploads/2020/01/Most-Popular-Super-Sport-Bikes-HD-Wallpapers-Free-Download-31.jpeg" alt="Image2"></div>
+        <div id="d3" style="display: none;"><img src="https://th.bing.com/th/id/R.b8336168d70340b7f5852a526c2072ad?rik=yldJPJnzB6aIow&riu=http%3a%2f%2fpreviewcf.turbosquid.com%2fPreview%2f2014%2f07%2f08__15_22_46%2fiPhone_15.jpg62eb4404-8ff4-4b58-827d-68333d155af1Large.jpg&ehk=ANFKGfT0MtHiKld%2bSTnBNB8NIdOQ4u%2fLGpDjG%2b%2bz%2bYM%3d&risl=&pid=ImgRaw&r=0" alt="Image3"></div>
+        <div id="d4" style="display: none;"><img src="https://i5.walmartimages.com/asr/2aa59abd-3809-4cf5-9ebf-66365c38cb2e.1b3c37d9a592da238fd30c2100356ad7.jpeg" alt="Image4"></div>
+        <div id="d5" style="display: none;"><img src=" https://e0.pxfuel.com/wallpapers/279/410/desktop-wallpaper-cattle-livestock.jpg "alt="Image5"></div>
+    </div>
+    <div id="button">
+        <button id="btn-previous">Previous</button>
+        <button id="btn-next">Next</button>
+    </div>
+        <script>
+        var currPos = 1;
+        var totalImages = 5;
+
+        function display() {
+            for (var i = 1; i <= totalImages; i++) {
+                document.getElementById("d" + i).style.display = "none";
+            }
+            document.getElementById("d" + currPos).style.display = "block";
+        }
+
+        document.getElementById('btn-next').addEventListener("click", function() {
+            if (currPos < totalImages) {
+                currPos++;
+            } else {
+                currPos = 1;
+            }
+            display();
+        });
+
+        document.getElementById('btn-previous').addEventListener("click", function() {
+            if (currPos > 1) {
+                currPos--;
+            } else {
+                currPos = totalImages;
+            }
+            display();
+        });
+
+        display();
+    </script>
+</body>
+</html>
