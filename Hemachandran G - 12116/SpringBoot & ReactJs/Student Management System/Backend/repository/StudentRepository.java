@@ -1,0 +1,15 @@
+package com.sms.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.sms.model.Student;
+
+public interface StudentRepository extends JpaRepository<Student, Integer>{
+	
+	@Query("select id from Student order by id asc")
+	public List<Integer> fetchStuIds();
+
+}
