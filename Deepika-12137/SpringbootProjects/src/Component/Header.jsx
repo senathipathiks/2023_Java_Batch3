@@ -6,14 +6,14 @@ const Header = () => {
   return (
     <div>
       <br></br>
-      <Link to="/customer">
+      <Link to="/brand">
         <button className="btn btn-primary px-4">
-          Customer Management System
+          Brand Management System
         </button>
       </Link>
-      <Link to="/shop">
+      <Link to="/inventory">
         <button className="btn btn-warning ms-5 px-4">
-          Shop Management System
+          Inventory Management System
         </button>
       </Link>
       <br></br>
