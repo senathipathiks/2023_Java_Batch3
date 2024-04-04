@@ -2,10 +2,10 @@ package com.employeeApplication.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,16 +20,23 @@ import com.employeeApplication.util.ResponseStructure;
 
 @RestController
 @CrossOrigin("http://localhost:3000/")
+//@CrossOrigin("http://localhost:3001")
 //@CrossOrigin("http://localhost:3000/add-employees/")
 public class EmpController {
 	
-	@Autowired
-	EmployeeService service;
+	
+	
+	private EmployeeService service;
 	
 	 
+	public EmpController(EmployeeService service) {
+		super();
+		this.service = service;
+	}
+
+
 	@PostMapping("save")
 	public ResponseStructure<Employee> save(@RequestBody Employee employee) {
-		System.out.println(employee);
 		
 		ResponseStructure<Employee> rs = service.saveEmployee(employee);
 		employee = rs.getData();
@@ -39,10 +46,6 @@ public class EmpController {
 		return rs;
 	}
 	
-	@GetMapping("Test")
-	public String test() {
-		return "Test";
-	}
 	
 	@GetMapping("getEmp")
 	public ResponseStructure<Employee> getEmployee(@RequestParam int id) {
@@ -54,6 +57,17 @@ public class EmpController {
 		return service.fetchAllEmployee();
 	}
 	
+	@GetMapping("getAllId")
+	public ResponseStructure<List<Integer>> getAllEmployeeId(){
+		return service.getIdList();
+	}
+	
+	@GetMapping("getAllnames")
+	public ResponseStructure<List<String>> getAllEmployeeNames() {
+		return service.getAllNames();
+	}
+	
+	
 	
 	@PutMapping("update")
 	public ResponseStructure<Employee> updateEmployee(@RequestBody Employee employee){
@@ -62,7 +76,6 @@ public class EmpController {
 	
 	@DeleteMapping("delete")
 	public ResponseStructure<String> deleteEmployee(@RequestParam int id){
-		System.out.println("hello from controller "+id);
 		return service.deleteEmployeeById(id);
 	}
 	
@@ -78,6 +91,11 @@ public class EmpController {
 		return service.searchEmployee(input);
 	}
 	
+	
+	@DeleteMapping("deleteByName/{name}")
+	public ResponseStructure<String> deleteByEmployeeName(@PathVariable String name){
+		return service.deleteByName(name);
+	}
 	
 
 }

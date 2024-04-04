@@ -16,7 +16,6 @@ public class Employee {
 	private double salary;
 
 	public Employee() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Employee(int id, String name, String email, double salary) {
