@@ -1,0 +1,12 @@
+{
+  "laptop": [
+    {
+      "id": "632a",
+      "brand": "Hp",
+      "configure": "Version",
+      "allocated_user": "Vishnu",
+      "allocated_on": "12/01/2024",
+      "allocation_period": "1year"
+    }
+  ]
+}
