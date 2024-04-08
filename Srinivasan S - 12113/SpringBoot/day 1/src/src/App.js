@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       {/* <NewImage /> */}
       <ImageUploader />
+    //DIV
     </div>
   );
 }
