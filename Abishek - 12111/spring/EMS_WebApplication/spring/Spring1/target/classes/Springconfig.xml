@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+    
+    <!-- <bean class="com.spring2.day2.Student2" name="s2">
+    <property name="id" value="001"></property>
+    <property name="name" value="Emperor"/>
+    <property name="city">
+    <list>
+    <value>Ambattur</value>
+    <value>Chennai</value>
+    <value>TamilNadu</value>
+    
+    </list>
+    </property>
+    
+    </bean> -->
+    
+    
+    <bean class="com.spring2.day2.Address" name="add1">
+    <property name="doorno" value="001"/>
+    <property name="street" value="2nd"/>
+    <property name="city" value="anna nagar">
+   
+    </property>
+    
+    </bean>
+    <bean class="com.spring2.day2.Address" name="add2">
+    <property name="doorno" value="002"/>
+    <property name="street" value="1st"/>
+    <property name="city" value="Guindy">
+   
+    </property>
+    
+    </bean>
+    <bean class="com.spring2.day2.Student2" name="s3">
+    <property name="id" value="001"/>
+    <property name="name" value="Emperor"/>
+    <property name="location" >
+    <list>
+    <ref bean="add1" />
+    <ref bean="add2" />
+    </list>
+   
+    </property>
+    
+    </bean>
+ 
+    </beans>

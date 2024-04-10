@@ -15,6 +15,14 @@
 	rel="stylesheet"
 	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 	crossorigin="anonymous">
+	
+	<style type="text/css">
+		.sel{
+			width: 180px;
+			border-radius: 8px;
+			border: 2px solid #C7C7C7;
+		}
+	</style>
 </head>
 <body>
 
@@ -27,20 +35,20 @@
 
 				<tr>
 					<th>Select Employee ID</th>
-					<td><select name="empId" class="form-control">
-					
-							<option>select </option>
+					</tr>
+					<tr>
+					<td><select name="empId" class="sel">
+
+							<option>select</option>
 
 							<c:if test="${ls != null}">
 								<c:forEach items="${ls}" var="ls">
 									<option>${ls}</option>
+
 								</c:forEach>
 
 							</c:if>
-						
-					</select>
-					
-					</td>
+					</select></td>
 				</tr>
 				<c:if test="${res == 'failure' }">
 					<tr>

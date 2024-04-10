@@ -1,0 +1,44 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+ 
+      <!--This is our beans meta data and We use Setter Injection here  -->
+    
+       <bean class = "com.spring.day4.sampleprg.Address" name="add1">
+		   <property name="doorNo" value="123"></property>
+		   <property name="street" value="Parameswaran street"></property>
+		   <property name="city" value="Nagercoil"></property>
+		    
+	   </bean>
+	    <bean class = "com.spring.day4.sampleprg.Address" name="add2">
+		   <property name="doorNo" value="3"></property>
+		   <property name="street" value="kamaraj street"></property>
+		   <property name="city" value="villukuri"></property>
+		    
+	   </bean>
+	   
+	   <bean class = "com.spring.day4.sampleprg.Student3" name="sw">
+		   <constructor-arg name="sid" value="30"></constructor-arg>
+		   <constructor-arg name="sname" value="sherin"></constructor-arg>
+		   <constructor-arg name="scity" value="parvathipuram"></constructor-arg>
+		   <constructor-arg name="address"><list>
+			   <ref  bean="add1"/>
+			   <ref  bean="add2"/>
+		   </list></constructor-arg>
+		    
+	   </bean>
+	   <!--bean class = "com.spring.day4.sampleprg.Student2" name="s2">
+	   <constructor-arg name="sid" value="123"></constructor-arg>
+	   <constructor-arg name="sname" value="Kiruba"></constructor-arg>
+	   <constructor-arg name="scity" value="chennai"></constructor-arg>
+	   <constructor-arg name="address"><list>
+				<value>21, paramewswaran street</value>
+				<value>vetturnimadam</value>
+				<value>Nagercoil</value>
+			</list></constructor-arg>
+	   </bean -->
+      </beans>

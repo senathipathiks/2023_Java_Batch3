@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+     
+    <!-- <bean class ="com.spring.day1.Spring1.Car" name = "c1">
+     </bean>
+     
+     <bean class = "com.spring.day1.Spring1.Bike" name = "b1">
+     </bean>  -->
+     
+     	<!-- <bean class="com.spring2.day1.Student" name="s1">
+       <property name="id" value="001"></property>
+       <property name="name" value="Emperor"></property>
+       <property name="city" value="Chennai"></property>
+      </bean>-->
+      
+      <!-- <bean class="com.spring.day2.Student" name="s1" scope="prototype">
+       <constructor-arg name="id" value="002"/>
+       <constructor-arg name="name" value="King"/>
+       <constructor-arg name="city" value="Tiruttni"/>
+      </bean>-->
+      
+     <!--  <bean class="com.spring2.day1.Student" name="s3"/>-->
+     <bean class="com.spring2.day2.Student2" name="student" init-method="init" destroy-method= "destroy"></bean>
+      
+</beans>   

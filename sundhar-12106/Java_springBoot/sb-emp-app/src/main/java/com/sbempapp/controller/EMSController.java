@@ -35,8 +35,8 @@ public class EMSController {
 	@GetMapping("View")
 	public ModelAndView loadInsertPage() {
 
-//		List<Integer> idList = dao.getIdList();
-//		System.out.println("ID List : " + idList);
+		List<Employee> empls = dao.findEmployeeLike("sri");
+		System.out.println(empls);
 		return new ModelAndView("Insert");
 	}
 
@@ -65,6 +65,7 @@ public class EMSController {
 	public ModelAndView loadFindPageFromLink() {
 		List<Integer> ls = dao.getIdList();
 		ModelAndView mv = new ModelAndView("Find");
+		System.out.println(ls);
 		mv.addObject("ls", ls);
 		return mv;
 	}
@@ -115,13 +116,14 @@ public class EMSController {
 		return mv;
 	}
 
-	@PostMapping("GetEmpFind")
-	public ModelAndView getEmployeByFind(@RequestParam("empId") int id) {
+	@GetMapping("GetEmpFind")
+	public ModelAndView getEmployeByFind(@RequestParam("id") int id) {
 		ModelAndView mv = new ModelAndView("Find");
 		List<Integer> ls = null;
 		try {
 			Employee employee = dao.getEmployee(id);
 			ls = dao.getIdList();
+			System.out.println(ls +" : list");
 			mv.addObject("emp", employee);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -266,7 +268,8 @@ public class EMSController {
 		ModelAndView mv = new ModelAndView("FindAll");
 		System.out.println("id : "+id +" : employee "+employee);
 		try {
-			dao.updateEmpoyeeById(id, employee);
+//			dao.updateEmpoyeeById(id, employee);
+			dao.saveEmployee(employee);
 			List<Employee> empls = dao.getAllRecord();
 			mv.addObject("empls", empls);
 
@@ -291,5 +294,24 @@ public class EMSController {
 		}
 		return mv;
 	}
+	
+	//insert operation from find all page
+	@PostMapping("InsertNew")
+	public ModelAndView processInsertFromFA(Employee employee) {
+		
+		ModelAndView mv = new ModelAndView("FindAll");
+		try {
+			System.out.println(employee);
+			dao.saveEmployee(employee);
+			List<Employee> empls = dao.getAllRecord();
+			mv.addObject("empls", empls);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			mv.addObject("res", "failure");
+		}
+		return mv;
+	}
+	
 
 }

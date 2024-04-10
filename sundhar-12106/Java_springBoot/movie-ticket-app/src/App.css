@@ -1,0 +1,86 @@
+img {
+  height: 200px;
+  width: 150px;
+}
+
+.frame {
+  cursor: pointer;
+}
+.screen-selection {
+  padding: 1rem;
+  /* margin-left: 1rem; */
+  display: flex;
+  gap: 2px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen-selection .screen {
+  margin: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 1rem;
+}
+
+.screen-selection .screen:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.screen-seleted .screeen .selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.screen-selection .screen:not(.available) {
+  background-color: #ccc;
+  color: #444;
+  cursor: not-allowed;
+}
+
+.screen-selection .screen-number {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.screen-selection .screen-time {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+.screen-selection .screen-seats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* gap: 3px; */
+}
+
+.screen-selection .screen-seats .seat {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 4px;
+  /* background-color: #007bff; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.screen-selection .screen-seats .seat .selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.screen-selection .screen-seats .seat.screen:not(.available) {
+  background-color: #ccc;
+  color: #444;
+  cursor: not-allowed;
+}

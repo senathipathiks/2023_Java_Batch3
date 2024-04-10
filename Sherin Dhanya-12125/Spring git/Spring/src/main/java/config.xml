@@ -1,0 +1,32 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+ 
+      <!--This is our beans meta data and We use Setter Injection here  -->
+    
+       <bean class = "com.spring.day4.sampleprg.Student2" name="student">
+		   <property name="sid" value="123"></property>
+		   <property name="sname" value="Sherin Dhanya"></property>
+		   <property name="scity" value="Nagercoil"></property>
+		    <property name="address"><list>
+				<value>21, paramewswaran street</value>
+				<value>vetturnimadam</value>
+				<value>Nagercoil</value>
+			</list></property>
+	   </bean>
+	   
+	   <bean class = "com.spring.day4.sampleprg.Student2" name="s2">
+	   <constructor-arg name="sid" value="123"></constructor-arg>
+	   <constructor-arg name="sname" value="Kiruba"></constructor-arg>
+	   <constructor-arg name="scity" value="chennai"></constructor-arg>
+	   <constructor-arg name="address"><list>
+				<value>21, paramewswaran street</value>
+				<value>vetturnimadam</value>
+				<value>Nagercoil</value>
+			</list></constructor-arg>
+	   </bean >
+      </beans>

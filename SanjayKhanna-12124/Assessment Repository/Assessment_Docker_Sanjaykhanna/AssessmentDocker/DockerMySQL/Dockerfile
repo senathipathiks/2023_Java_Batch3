@@ -1,0 +1,5 @@
+FROM mysql:latest
+ 
+ENV MYSQL_ROOT_PASSWORD sam@6383587926
+
+ENTRYPOINT [ "dump.sh" ]

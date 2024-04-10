@@ -1,0 +1,91 @@
+.header,body{
+    background-image:url('https://cdn.wallpapersafari.com/21/42/unyStW.jpg');
+    background-repeat: none;
+    background-size: cover;  
+}
+#text{
+font-size: 36px;
+font-weight: bolder;
+}
+
+#heading1{
+    font-size: 36px;
+    padding: 1%;
+    font-weight: bolder;
+}
+
+#content,#AddButton{
+    padding: 3%;
+}
+
+a:hover{
+    color:blue;
+    background-color:orange;
+}
+
+@media(max-width:1200px){
+
+    html{
+        font-size: 90%;     
+    }
+
+}
+
+@media(max-width:991px){
+    html{
+        font-size: 75%;
+    }
+    img{
+        width: 350px;
+        height: 350px;
+    }
+    #text,#heading1{
+        font-size: 30px;
+    }
+}
+
+@media(max-width:768px)
+{
+    html{
+        font-size: 62%;
+    }
+    img{
+        width: 300px;
+        height: 300px;
+    }
+    #text,#heading1{
+        font-size: 26px;
+    }
+}
+@media(max-width:538px)
+{
+    html{
+        font-size: 80%;
+    }
+    img{
+        width: 300px;
+        height: 300px;
+    }
+    #text,#heading1{
+        font-size: 26px;
+    }
+}
+
+
+@media(max-width:450px){
+
+    html{
+        font-size: 80%;
+    }
+    img{
+        width: 300px;
+        height: 300px;
+    }
+    #heading1{
+        font-size: 24px;
+    }
+    #text{
+        font-size: 24px;
+        text-align: center;
+    }
+}
