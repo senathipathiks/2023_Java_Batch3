@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=NTR&display=swap');
+
+#Mform{
+    height: auto;
+    width: 550px;
+    border: 2px solid #ff0000;
+    border-radius: 0px 30px 30px 0px;
+    margin-left: 440px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+#header{
+    background-color:#03DAC6 ;
+    border-radius: 0px 30px 30px 0px;
+    color: black;
+}
+body{
+    background-color:#64666b;
+}
+.error{
+    color: #ff0000;
+}
+.tbl{
+    height: auto;
+    width: 750px;
+    margin-left: 350px;
+    margin-bottom: 50px;
+    border-radius: 0px 30px 30px 30px;
+}
+#findall{
+    margin-top: 40px;
+    width: 80%;
+    height: auto;
+
+    
+}
+#fheader{
+    background-color:greenyellow;
+    color: black;
+
+}
+#ubtl{
+    height: auto;
+    width: 900px;
+    margin-left: 250px;
+    margin-bottom: 50px;
+    border-radius: 0px 30px 30px 30px;
+}
