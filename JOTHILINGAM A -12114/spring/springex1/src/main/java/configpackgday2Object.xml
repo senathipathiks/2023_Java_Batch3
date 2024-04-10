@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.day2.objectIntialize.Address" name="add1">
+		<property name="doorno" value="101"></property>
+		<property name="street" value="jothi"></property>
+		<property name="city" value="coimbattore">
+		</property>
+	</bean>
+
+
+	<bean class="com.day2.objectIntialize.Address" name="add2">
+		<property name="doorno" value="102"></property>
+		<property name="street" value="Abi"></property>
+		<property name="city" value="chennai">
+		</property>
+	</bean>
+
+	<bean class="com.day2.objectIntialize.Student2" name="s1">
+		<property name="sid" value="101"></property>
+		<property name="sname" value="Balu"></property>
+		<property name="scity">
+			<list>
+				<ref bean="add1"></ref>
+				<ref bean="add2"></ref>
+			</list>
+		</property>
+	</bean>
+	
+	
+	 <!-- Invoking arguments Student constructor -->
+   <bean class="com.day2.objectIntialize.Student2" name="s2">
+   <constructor-arg name="sid" value="124"/> 
+   <constructor-arg name="sname" value="Balu"/> 
+   <constructor-arg name="scity"> 
+   <list>
+				<ref bean="add1"></ref>
+				<ref bean="add2"></ref>
+	</list>
+	</constructor-arg>
+   </bean>
+
+
+
+
+
+</beans>
