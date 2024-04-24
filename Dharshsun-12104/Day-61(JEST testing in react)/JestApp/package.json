@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "react-test-renderer": "^18.2.0"
+  }
+}
