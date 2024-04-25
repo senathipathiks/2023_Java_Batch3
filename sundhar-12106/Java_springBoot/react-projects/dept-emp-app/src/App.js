@@ -7,6 +7,7 @@ import CreateComponent from "./pages/CreateComponent";
 import Landing from "./pages/Landing";
 import DeptCreate from "./pages/DeptCreate";
 import ImageUploader from "./pages/ImageUploader";
+import SignIn from "./components/Signin";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           <Route path="/add" Component={CreateComponent} />
         </Routes>
       </Router> */}
-      <ImageUploader />
+      {/* <ImageUploader /> */}
+      <SignIn />
     </div>
   );
 }

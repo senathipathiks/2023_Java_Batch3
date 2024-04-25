@@ -35,10 +35,6 @@ public class EmployeeService {
 		mailSender.send(message);
 
 	}
-	
-	public void sendAttachment() {
-		
-	}
 
 	public ResponseStructure<List<Integer>> getIdList() {
 

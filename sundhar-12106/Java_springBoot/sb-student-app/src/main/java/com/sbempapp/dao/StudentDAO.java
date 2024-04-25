@@ -10,10 +10,14 @@ import org.springframework.stereotype.Repository;
 
 import com.sbempapp.model.Student;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
 @Repository
 public class StudentDAO {
 
-	@Autowired
 	StudentRepo repo;
 
 	// save
@@ -27,18 +31,16 @@ public class StudentDAO {
 	public ResponseEntity<byte[]> getImage(int id) {
 
 		Student s = repo.findById(id).get();
-//		byte[] Image = Base64.getEncoder().encode(s.getPicture());
-                             byte[]Image =   s.getPicture();
-		return ResponseEntity.status(HttpStatus.OK)
-				.contentType(MediaType.IMAGE_PNG).body(Image);
+		byte[] image = s.getPicture();
+		return ResponseEntity.status(HttpStatus.OK).contentType(MediaType.IMAGE_PNG).body(image);
 
 	}
-	
-	public List<byte[]> getAllImage(){
-		
-		    List<byte[]>ImageData =repo.findAllByPicture();
-		    
-		    return ImageData;
+
+	public List<byte[]> getAllImage() {
+
+		List<byte[]> ImageData = repo.findAllByPicture();
+
+		return ImageData;
 	}
 
 }

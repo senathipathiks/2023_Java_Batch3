@@ -22,28 +22,21 @@ import jakarta.ws.rs.core.MediaType;
 @CrossOrigin("http://localhost:3000/")
 public class MyController {
 
-//	@Autowired
-//	private EmailService emailService;
-
-	@Autowired
 	private StudentService service;
-	
+
 	Logger logger = LoggerFactory.getLogger(MyController.class);
 
-//	@GetMapping("hello")
-//	public String sendEmail() {
-//		
-//		String body = "this mail is from sundhar raj to his friend from java codes";
-//		String subject = "Urgent Immediate..!";
-//		
-//		emailService.sendEmail("jothilingamtpt@gmail.com", subject, body);
-//		System.out.println("hello");
-//		return "success";
-//	}
+	public MyController() {
+
+	}
+
+	public MyController(StudentService service, Logger logger) {
+		super();
+		this.service = service;
+	}
 
 	@PostMapping(path = "save", consumes = MediaType.MULTIPART_FORM_DATA)
 	public String postStudent(@RequestParam("file") MultipartFile file) throws IOException {
-//		System.out.println("hello from controller : " + file);
 		logger.debug("hello from controller");
 		return service.saveStudentPicture(file);
 	}
@@ -53,10 +46,10 @@ public class MyController {
 
 		return service.getImage(id);
 	}
-	
+
 	@GetMapping("getImage")
-	public List<byte[]> getAllImage(){
-		
+	public List<byte[]> getAllImage() {
+
 		return service.getAll();
 	}
 
