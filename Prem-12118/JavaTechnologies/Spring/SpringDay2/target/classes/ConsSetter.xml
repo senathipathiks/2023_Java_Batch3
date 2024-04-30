@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+	<bean class="com.SpringDay2.ConsSetterInjection.Address"
+		name="add1">
+
+
+		<property name="dNo" value="3" />
+		<property name="sName" value="Magudanchavadi" />
+		<property name="pincode" value="637103" />
+
+	</bean>
+
+	<bean class="com.SpringDay2.ConsSetterInjection.Address"
+		name="add2">
+
+
+		<property name="dNo" value="5" />
+		<property name="sName" value="KG" />
+		<property name="pincode" value="637103" />
+
+	</bean>
+
+	<bean class="com.SpringDay2.ConsSetterInjection.Student"
+		name="student">
+
+
+		<property name="sid" value="3" />
+		<property name="sname" value="Prem" />
+		<property name="scity" value="Salem" />
+
+		<property name="address">
+			<list>
+
+				<ref bean="add1" />
+				<ref bean="add2" />
+
+			</list>
+		</property>
+
+	</bean>
+
+
+	<!--<bean class="com.SpringDay2.Lifecycle.Student" name="student" init-method="init" 
+		destroy-method="destroy" ></bean> -->
+
+
+
+</beans>
