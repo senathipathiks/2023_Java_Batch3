@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test suite for App Snapshot test 1`] = `
+<div
+  className="App"
+>
+  <h1>
+    Welcome to my page!!
+  </h1>
+  <br />
+  <h2>
+    Hi Welcome to relevantz
+  </h2>
+  <br />
+  <h2>
+    Hello Welcome to jest
+  </h2>
+  <br />
+  <h2>
+    Updated Jest
+  </h2>
+</div>
+`;
