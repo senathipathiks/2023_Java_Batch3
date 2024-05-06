@@ -1,0 +1,99 @@
+.container{
+  margin-top: 2%;
+}
+.navbar navbar-expand-lg navbar-dark bg-secondary{
+  height: 100px;
+}
+#navbar-custom{
+  height: 90px;
+}
+#search{
+  width: 500px;
+  background-color:#e3e6e3;
+  font-weight: bolder;
+  border: 3px solid black;
+}
+span {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+#main{
+  margin-top: 1%;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the form fields and labels */
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input {
+  width: 70%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Styles for error messages */
+span {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Styles for the submit button */
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+#navbarSupportedContent{
+  margin-left:-50%;
+
+}
+#navbarSupportedContent1{
+  margin-left:50%;
+
+}
+#navbarSupportedContent2{
+  margin-left:-45%;
+
+}
+
+.mx{
+  margin: 0 5px;
+}
+#navbar-custom-i{
+  height: 110px;
+}
+
+.icon{
+  color: white;
+ 
+}
