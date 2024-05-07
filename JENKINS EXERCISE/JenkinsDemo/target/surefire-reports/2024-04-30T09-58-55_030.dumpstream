@@ -1,0 +1,5 @@
+# Created at 2024-04-30T09:58:57.178
+Boot Manifest-JAR contains absolute paths in classpath 'D:\SpringTool Workspace\JenkinsDemo\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
