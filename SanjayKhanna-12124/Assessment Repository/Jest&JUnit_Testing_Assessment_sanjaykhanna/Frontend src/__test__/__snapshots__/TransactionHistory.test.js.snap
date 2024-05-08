@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checking Transaction History Page Snapshot Testing for History Page 1`] = `
+<div>
+  <section
+    className="container container-lg"
+  >
+    <div
+      className="card card-lg mt-5 shadow-lg p-2 mx-auto"
+    >
+      <div
+        className="card-header card-title border-0 text-center h1"
+      >
+        History Of Transaction
+      </div>
+      <div
+        className="card-body"
+      >
+        <div
+          className="container row mt-3"
+        >
+          <div
+            className="col-6"
+            style={
+              Object {
+                "textAlign": "left",
+              }
+            }
+          />
+        </div>
+        <div
+          className="container"
+        >
+          <table
+            className="table table-bordered table-striped table-hover mt-3"
+            data-testid="historyTable"
+          >
+            <thead
+              className="bg-secondary text-white text-center"
+            >
+              <tr>
+                <td>
+                  Transaction Number
+                </td>
+                <td>
+                  Transaction Date
+                  <small
+                    style={
+                      Object {
+                        "fontSize": "12px",
+                        "marginLeft": "5px",
+                      }
+                    }
+                  >
+                    (DD/MM/YYYY)
+                  </small>
+                </td>
+                <td>
+                  Transaction Time
+                  <small
+                    style={
+                      Object {
+                        "fontSize": "12px",
+                        "marginLeft": "5px",
+                      }
+                    }
+                  >
+                    (hh/mm/ss)
+                  </small>
+                </td>
+                <td>
+                  Transaction Amount
+                </td>
+                <td>
+                  Account Number
+                </td>
+                <td>
+                  Account Holder
+                </td>
+                <td>
+                  Transaction Status
+                </td>
+              </tr>
+            </thead>
+            <tbody />
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
