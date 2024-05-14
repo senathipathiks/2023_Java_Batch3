@@ -8,7 +8,8 @@ import org.junit.platform.suite.api.Suite;
 
 @Suite
 @SelectClasses({ Test1.class, Test2.class, Test3.class })
-//@ExcludePackages("com.myJunit.second")
+@ExcludePackages("com.myJunit.second")
 public class AllTests {
+	
 
 }

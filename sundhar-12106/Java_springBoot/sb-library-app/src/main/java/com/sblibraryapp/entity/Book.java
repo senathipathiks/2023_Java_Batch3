@@ -14,8 +14,6 @@ import lombok.Setter;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
 public class Book {
 
 	@Id
@@ -25,5 +23,32 @@ public class Book {
 	private double bookPrice;
 	@ManyToOne(cascade = CascadeType.REMOVE )
 	private Author author;
+	
+	
+	public int getbId() {
+		return bId;
+	}
+	public void setbId(int bId) {
+		this.bId = bId;
+	}
+	public String getBookName() {
+		return bookName;
+	}
+	public void setBookName(String bookName) {
+		this.bookName = bookName;
+	}
+	public double getBookPrice() {
+		return bookPrice;
+	}
+	public void setBookPrice(double bookPrice) {
+		this.bookPrice = bookPrice;
+	}
+	public Author getAuthor() {
+		return author;
+	}
+	public void setAuthor(Author author) {
+		this.author = author;
+	}
+	
 
 }
