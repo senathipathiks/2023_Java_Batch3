@@ -30,13 +30,14 @@ public class MyController {
 
 	}
 
-	public MyController(StudentService service, Logger logger) {
+	public MyController(StudentService service) {
 		super();
 		this.service = service;
 	}
 
 	@PostMapping(path = "save", consumes = MediaType.MULTIPART_FORM_DATA)
 	public String postStudent(@RequestParam("file") MultipartFile file) throws IOException {
+		
 		logger.debug("hello from controller");
 		return service.saveStudentPicture(file);
 	}
