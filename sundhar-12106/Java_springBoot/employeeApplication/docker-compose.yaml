@@ -1,0 +1,59 @@
+version: "3.7"
+
+# Define services
+services:
+  # App backend service
+  backend:
+    # Configuration for building the docker image for the backend service
+    image: emp-back-end
+    container_name: emp-back-end
+    build:
+      context: ../employeeApplication # Use an image built from the specified dockerfile in the `polling-app-server` directory.
+    ports:
+      - "1101:1101" # Forward the exposed port 8080 on the container to port 8080 on the host machine
+    # restart: always
+    depends_on:
+      - db # This service depends on mysql. Start that first.
+    environment: # Pass environment variables to the service
+      SPRING_DATASOURCE_URL: jdbc:mysql://172.24.0.1:6704/springboot_employee?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    networks: # Networks to join (Services on the same network can communicate with each other using their name)
+      - backend
+      # - frontend
+
+  # # Frontend Service
+
+  # frontend:
+  #   image: emp-front-end
+  #   container_name: emp-front-end
+  #   build:
+  #     context: ./src/main/resources
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - backend
+  #   networks:
+  #     - frontend
+  # Database Service (Mysql)
+  db:
+    image: mysql:5.7
+    ports:
+      - "6704:3306"
+    restart: always
+    environment:
+      MYSQL_DATABASE: sb-stu-db
+      # MYSQL_USER: root
+      # MYSQL_PASSWORD: Admin@123
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - backend
+# Volumes
+volumes:
+  db-data:
+
+# Networks to be created to facilitate communication between containers
+networks:
+  backend:
