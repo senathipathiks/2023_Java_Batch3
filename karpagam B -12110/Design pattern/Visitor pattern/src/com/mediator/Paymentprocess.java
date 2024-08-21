@@ -8,14 +8,11 @@ abstract class PaymentProcessabst {
 		transferMoney();
 		updateDatabase();
 	}
-
-
 	// abstract methods
 	public abstract void validatePayment();
 
 	public abstract void transferMoney();
 
-	public abstract void updateDatabase();
 	
 }
 
